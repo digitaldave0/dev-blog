@@ -37,9 +37,9 @@ We need to start thinking of **chaos as a feature** of intelligence — not a bu
 
 ## Learning Brick by Brick
 
-I’m currently studying foundation model architecture from the ground up — brick by brick. I believe to influence the future of AI, I need to understand not just how these systems behave, but **how they’re built**.
+I’m currently studying foundation model architecture from the ground up — brick by brick. I believe we need to understand not just how these systems behave, but **how they’re built**.
 
-This process is helping me think critically about how we train, what we keep, and what we throw away. And it’s becoming clear: **we’re still throwing away too much**.
+This process is helping me think critically about how we train, what we keep, and what we throw away. And it’s becoming clear: **we’re still throwing away too much** to achive zero one shot, responses.
 
 ---
 
@@ -50,6 +50,25 @@ AI today is powerful — but still narrow. To move forward, we must treat intell
 Let’s stop resetting.  
 Let’s start remembering.  
 Let’s embrace chaos.  
+
+In my humble opinion, this may sound unconventional — but think about how a toddler learns. They don’t just observe. They touch, taste, feel. They explore the world through mess, sensation, and trial.
+
+Current models don’t do that. They see data patterns and adjust weights — but without experience.  
+
+For example: does a foundation model really understand the **sea**? Or a **beach**?
+
+It can recognize a photo. It can predict text about “waves crashing” or “sand underfoot.” But these are abstractions, not experiences. The model builds a probabilistic illusion — a *delusion model* — based on data correlations, not sensory reality.
+
+What’s missing is the chaos:  
+- The roar of surf in the ears  
+- The salt sting on lips  
+- The unpredictability of motion and sound and texture  
+
+These are millions of additional parameters that no current model truly engages with.
+
+> *In cognitive science, this idea aligns with embodied cognition: that real intelligence isn’t learned from labels — it’s learned from the body interacting with the world.*
+
+Until AI can grapple with this messy, embodied input — not just vision and language — its intelligence will remain confined.
 
 ---
 
