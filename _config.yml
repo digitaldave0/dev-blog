@@ -5,8 +5,8 @@
 # Name of your site (displayed in the header)
 remote_theme: pages-themes/minimal@v0.2.0
 name: Dave’s Dev Blog
-description: DevOps, MLOps, automation, and everything I break and fix.
-avatar: https://avatars.githubusercontent.com/u/your-github-id # optional
+description: DevOps, MLOps, automation, and everything else
+
 
 #
 # Flags below are optional
