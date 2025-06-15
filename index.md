@@ -2,17 +2,22 @@
 layout: default
 ---
 
-<div class="posts">
+<section class="post-list">
   {% for post in site.posts %}
-    <article class="post">
+    <article class="post-preview">
+      <header>
+        <h2 class="post-title">
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </h2>
+      </header>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
+      <div class="post-excerpt">
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <footer>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More →</a>
+      </footer>
     </article>
   {% endfor %}
-</div>
+</section>
