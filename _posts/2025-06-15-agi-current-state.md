@@ -4,9 +4,9 @@ title: "Thoughts on AI Today – Why Persistence Matters"
 description: "Why foundation models must evolve beyond pattern recognition and embrace memory, messiness, and embodied learning."
 ---
 
----
+Thoughts on AI Today – Why Persistence Matters
 
-## Thoughts on AI Today – Why Persistence Matters
+---
 
 **By Dave Hibbitts | June 2025**
 
