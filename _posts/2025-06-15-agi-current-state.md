@@ -7,6 +7,8 @@ description: "Why foundation models must evolve beyond pattern recognition and e
 Artificial Intelligence has come a long way in a short time. We’ve seen models generate text, code, images, and even simulate conversation. But as impressive as these capabilities are, I believe we’re still missing something fundamental on the path to true intelligence.
 ---
 
+## Thoughts on AI Today – Why Persistence Matters
+
 **By Dave Hibbitts | June 2025**
 
 Artificial Intelligence has come a long way in a short time. We’ve seen models generate text, code, images, and even simulate conversation. But as impressive as these capabilities are, I believe we’re still missing something fundamental on the path to true intelligence.
