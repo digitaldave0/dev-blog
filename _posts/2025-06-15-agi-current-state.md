@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "🧠 Artificial Intelligence AGI"
-description: "Thoughts on AI Today – Why Persistence Matters and Why more compute, power and resources is not the answer"
+title: "Thoughts on AI Today – Why Persistence Matters"
+description: "Why foundation models must evolve beyond pattern recognition and embrace memory, messiness, and embodied learning."
 ---
 
 **By Dave Hibbitts | June 2025**
