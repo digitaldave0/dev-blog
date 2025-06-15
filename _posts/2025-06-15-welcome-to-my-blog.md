@@ -4,9 +4,6 @@ title: "How I Built This Blog with GitHub Pages & Jekyll"
 description: "A quick guide to how I set up my blog using GitHub Pages, Jekyll, and is-a.dev"
 ---
 
-<!-- Remove this line -->
-<!-- ## How I Set Up This Blog Using GitHub Pages & Jekyll -->
-
 Setting up this blog was simpler than you’d think — and **completely free**. Here’s how I did it:
 
 ## 🍥 The Stack
