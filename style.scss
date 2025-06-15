@@ -276,10 +276,16 @@ nav {
     margin-top: 10px;
   }
 
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
+.read-more {
+  text-transform: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   }
+}
+
+.post-description {
+  text-transform: none;
 }
 
 .wrapper-footer {
