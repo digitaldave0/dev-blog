@@ -49,4 +49,3 @@ No local dev setup needed. Once I committed the `.md` file, GitHub Pages rebuilt
 ---
 
 Want to do this too? [Here’s a full guide you can follow](https://github.com/barryclark/jekyll-now). Or just fork my [blog repo](https://github.com/digitaldave0/dev-blog) and start writing!
-"""
