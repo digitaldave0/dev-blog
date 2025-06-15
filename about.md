@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
 ## About
@@ -21,5 +22,4 @@ You’ll find posts on:
 
 ## Contact
 
-Have feedback or want to collaborate offer me role?
 Reach me at [LinkedIn](https://linkedin.com/in/davehibbitts).
