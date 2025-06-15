@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-## About
-
 This blog is my digital notebook — a place where I jot down my thoughts, lessons, and experiments from my journey through DevOps, MLOps, and automation.
 
 ## Purpose
