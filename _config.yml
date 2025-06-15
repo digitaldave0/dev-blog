@@ -1,7 +1,7 @@
 markdown: kramdown
 remote_theme: pages-themes/slate@v0.2.0
 title: "Dave’s Dev Blog"
-description: "DevOps, MLOps, and experiments worth documenting."
+description: ""
 author: "David Hibbitts"
 email: "REMOVED_EMAIL"
 show_downloads: false
