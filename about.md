@@ -1,15 +1,25 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
-Some information about you!
+## About
 
-### More Information
+This blog is my digital notebook — a place where I jot down my thoughts, lessons, and experiments from my journey through DevOps, MLOps, and automation.
 
-A place to include any other types of information that you'd like to include about yourself.
+## Purpose
 
-### Contact me
+I use this space to capture ideas, code snippets, and technical discoveries that might help others (and future me) solve real-world problems faster.
 
-[email@domain.com](mailto:email@domain.com)
+## Topics
+
+You’ll find posts on:
+- Cloud infrastructure (AWS, Terraform, Serverless)
+- CI/CD pipelines and automation
+- Learning experiments in AI/MLOps
+- Tools
+
+## Contact
+
+Have feedback or want to collaborate offer me role?
+Reach me at [LinkedIn](https://linkedin.com/in/davehibbitts).
