@@ -1,10 +1,29 @@
-_site
+
+# Obsidian workspace and plugin cache
+.obsidian/
+.obsidian/plugins/
+.obsidian/workspace
+
+# OS-specific
 .DS_Store
-.jekyll
+Thumbs.db
+
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-.bundle
-.sass-cache
-Gemfile
-Gemfile.lock
-node_modules
-package.json
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Backup or swap files
+*~
+*.swp
+*.bak
+*.tmp
+
+# Optional: VSCode or JetBrains settings if you use an editor
+.vscode/
+.idea/
