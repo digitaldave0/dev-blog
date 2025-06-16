@@ -1,4 +1,10 @@
-**Title: How AI Sees the World: A Peek Inside Multimodal Models and the Future of Machine Understanding**
+---
+layout: post
+title: "🧠 How AI Sees the World: A Peek Inside Multimodal Models and the Future of Machine Understanding"
+description: "I want to break down how something as seemingly simple as answering, "What color is grass?" actually showcases the incredible layers of software engineering and AI design behind tools like ChatGPT."
+---
+
+**Title: **
 
 In today's blog, I want to break down how something as seemingly simple as answering, "What color is grass?" actually showcases the incredible layers of software engineering and AI design behind tools like ChatGPT.
 
