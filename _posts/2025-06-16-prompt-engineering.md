@@ -1,6 +1,8 @@
-**Title: Prompt Engineering: How to Talk to AI and Get What You Need**
-
-Prompt engineering is the art of crafting clear and specific instructions for AI models to produce accurate, useful results. Think of it like writing a recipe for an AI chef you're not just asking for a meal, you're specifying the ingredients, technique, and presentation.
+---
+layout: post
+title: "🧠 Prompt Engineering: How to Talk to AI and Get What You Need"
+description: "Prompt engineering is the art of crafting clear and specific instructions for AI models to produce accurate, useful results. Think of it like writing a recipe for an AI chef you're not just asking for a meal, you're specifying the ingredients, technique, and presentation."
+---
 
 ## What is Prompt Engineering?
 
