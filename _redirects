@@ -1,1 +1,2 @@
-/* 200! Authorization=Basic ZGF2ZTpwYXNzMTIzNCU=
+/* /:splat 401!
+/* /:splat 200! X-Auth-Required=true

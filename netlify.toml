@@ -5,5 +5,9 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Basic-Auth = "dave:pass1234%"
-    WWW-Authenticate = '''Basic realm="Restricted Area"'''
+    Netlify-Auth = "Basic ZGF2ZTpwYXNzMTIzNCU="
+    WWW-Authenticate = "Basic realm=\"Restricted Area\""
+    X-Auth-Required = "true"
+
+[auth]
+  enable = true
