@@ -100,13 +100,13 @@ a {
 
 // Navigation
 .wrapper-masthead {
-  background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(31, 41, 55, 0.95) 100%);
+  background: linear-gradient(to bottom, $gradient-start, #203a43, $gradient-end);
   backdrop-filter: blur(10px);
   margin-bottom: 3rem;
   border: 4px solid transparent;
   background-clip: padding-box;
   position: relative;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
 
   &::before {
     content: '';
@@ -181,8 +181,8 @@ a {
 .posts > .post {
   padding: 2rem;
   margin-bottom: 2rem;
-  background-color: $bg-overlay;
-  backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom, $gradient-start, #203a43, $gradient-end);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   border: 4px solid transparent;
   background-clip: padding-box;
@@ -246,12 +246,12 @@ a {
 // Footer
 .wrapper-footer {
   margin-top: 3rem;
-  background: linear-gradient(135deg, $gradient-start 0%, $gradient-end 100%);
+  background: linear-gradient(to bottom, $gradient-start, #203a43, $gradient-end);
   backdrop-filter: blur(10px);
   border: 4px solid transparent;
   background-clip: padding-box;
   position: relative;
-  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.2);
 
   &::before {
     content: '';
