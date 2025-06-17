@@ -7,7 +7,7 @@
   to = "/401.html"
   status = 401
   force = true
-  conditions = {Authorization = null}
+  conditions = {Basic-Auth = ":false"}
 
 [[headers]]
   for = "/*"
