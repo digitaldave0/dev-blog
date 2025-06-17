@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "🧠 Prompt Engineering: How to Talk to AI and Get What You Need"
-description: "Prompt engineering is the art of crafting clear accurate, useful results."
+description: "Prompt engineering is the art of crafting clear, accurate, useful results."
+excerpt: "Learn how to structure your prompts for better responses from AI. This guide covers techniques, examples, and common pitfalls so you can master the art of talking to machines."
 ---
 
 Have you ever heard the saying *"garbage in, garbage out"*? It applies perfectly here. If you give vague, poorly structured prompts, you'll get equally vague or irrelevant results. Precise inputs lead to meaningful outputs it's that simple.
