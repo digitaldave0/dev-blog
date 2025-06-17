@@ -96,7 +96,7 @@ a {
 
 // Navigation
 .wrapper-masthead {
-  background: $bg-overlay;
+  background: linear-gradient(135deg, $gradient-start 0%, $gradient-end 100%);
   backdrop-filter: blur(8px);
   margin-bottom: 3rem;
   border: 4px solid transparent;
@@ -259,7 +259,7 @@ a {
 // Footer
 .wrapper-footer {
   margin-top: 3rem;
-  background: $bg-overlay;
+  background: linear-gradient(135deg, $gradient-start 0%, $gradient-end 100%);
   backdrop-filter: blur(8px);
   border: 4px solid transparent;
   background-clip: padding-box;
