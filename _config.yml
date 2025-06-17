@@ -5,6 +5,8 @@ description: ""
 author: "David Hibbitts"
 email: "REMOVED_EMAIL"
 show_downloads: false
+include:
+  - "_headers"
 
 # Optional links in the footer
 footer-links:
