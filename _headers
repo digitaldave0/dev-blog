@@ -1,14 +1,21 @@
 /*
   Basic-Auth: dave:pass1234%
   WWW-Authenticate: Basic realm="Restricted Area"
-  Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private, post-check=0, pre-check=0
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private
   Surrogate-Control: no-store
   Pragma: no-cache
   Expires: 0
-  Clear-Site-Data: "cache", "cookies", "storage"
-  X-Robots-Tag: noindex, nofollow
+  Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
   X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: document-domain=()
+
+/401.html
+  Status: 401
+  Cache-Control: no-store
+  Clear-Site-Data: "*"
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-only
