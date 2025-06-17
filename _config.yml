@@ -1,5 +1,8 @@
 markdown: kramdown
 remote_theme: pages-themes/slate@v0.2.0
+include: [_headers]
+title: "Dave's Dev Blog"kdown: kramdown
+remote_theme: pages-themes/slate@v0.2.0
 title: "Dave’s Dev Blog"
 description: ""
 author: "David Hibbitts"
