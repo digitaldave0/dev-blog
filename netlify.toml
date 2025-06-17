@@ -1,7 +1,8 @@
 [build]
   command = "bundle exec jekyll build"
   publish = "_site"
-  [[headers]]
+
+[[headers]]
   for = "/*"
   [headers.values]
     Basic-Auth = "dave:pass1234%"
