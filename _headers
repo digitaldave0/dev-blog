@@ -1,3 +1,4 @@
 /*
   Basic-Auth: dave:pass1234%
   WWW-Authenticate: Basic realm="Restricted Area"
+  Authorization: Basic ZGF2ZTpwYXNzMTIzNCU=

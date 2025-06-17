@@ -11,4 +11,5 @@ plugins:
   - jekyll-seo-tag
 include:
   - _headers
+  - _redirects
 show_downloads: false
