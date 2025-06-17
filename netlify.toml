@@ -2,8 +2,10 @@
   command = "bundle exec jekyll build"
   publish = "_site"
 
+[auth]
+  enable = true
+
 [[headers]]
   for = "/*"
   [headers.values]
-    WWW-Authenticate = "Basic realm=\"Restricted Area\""
-    Authorization = "Basic ZGF2ZTpwYXNzMTIzNCU="
+    Basic-Auth = "dave:pass1234%"
