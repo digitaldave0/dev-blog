@@ -1,2 +1,11 @@
-/* /401.html 401! Basic=:false
-/* /:splat 200 Basic=:true
+/index.html  /401.html  401!  Basic=:false
+/2025/*      /401.html  401!  Basic=:false
+/about/*     /401.html  401!  Basic=:false
+/feed.xml    /401.html  401!  Basic=:false
+/*           /401.html  401!  Basic=:false
+
+/index.html  /          200   Basic=:true
+/2025/*      /:splat    200   Basic=:true
+/about/*     /:splat    200   Basic=:true
+/feed.xml    /feed.xml  200   Basic=:true
+/*           /:splat    200   Basic=:true

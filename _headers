@@ -1,7 +1,8 @@
 /*
   Basic-Auth: dave:pass1234%
   WWW-Authenticate: Basic realm="Restricted Area"
-  Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private, post-check=0, pre-check=0
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Surrogate-Control: no-store
   Pragma: no-cache
   Expires: 0
