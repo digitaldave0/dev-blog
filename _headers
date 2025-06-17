@@ -1,4 +1,3 @@
 /*
-  Netlify-Auth: Basic ZGF2ZTpwYXNzMTIzNCU=
   WWW-Authenticate: Basic realm="Restricted Area"
-  X-Auth-Required: true
+  Basic-Auth: dave:pass1234%
