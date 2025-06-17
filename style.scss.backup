@@ -20,13 +20,13 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.7;
-  color: $text-color;
+  color: #ffffff;
   background: 
     radial-gradient(circle at 0% 0%, rgba(0, 191, 255, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 100% 0%, rgba(0, 150, 255, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 100% 100%, rgba(0, 100, 255, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 0% 100%, rgba(0, 70, 255, 0.3) 0%, transparent 50%),
-    linear-gradient(135deg, $gradient-start 0%, $gradient-end 100%);
+    linear-gradient(135deg, rgba(0, 40, 80, 0.95) 0%, rgba(0, 20, 40, 0.98) 100%);
   min-height: 100vh;
 }
 
@@ -40,7 +40,7 @@ body {
 // Headers
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
-  color: $text-color;
+  color: #ffffff;
   font-weight: 600;
   line-height: 1.4;
   margin: 1em 0 15px;
@@ -51,7 +51,6 @@ h1 {
   font-size: 2.5rem;
   a {
     color: inherit;
-    text-decoration: none;
     &:hover {
       color: $primary-color;
     }
@@ -78,7 +77,7 @@ a {
 
 // Navigation
 .wrapper-masthead {
-  background-color: $bg-overlay;
+  background-color: rgba(0, 20, 40, 0.75);
   backdrop-filter: blur(8px);
   margin-bottom: 3rem;
   border-bottom: 4px solid $primary-color;
@@ -87,42 +86,10 @@ a {
 .masthead {
   padding: 1.5rem 0;
   
-  .site-avatar {
-    float: left;
-    width: 70px;
-    height: 70px;
-    margin-right: 15px;
-
-    img {
-      border-radius: 50%;
-      border: 3px solid $primary-color;
-    }
-  }
-
-  .site-info {
-    float: left;
-
-    .site-name {
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 0;
-      color: $text-color;
-    }
-
-    .site-description {
-      font-size: 1rem;
-      color: darken($text-color, 20%);
-    }
-  }
-
   nav {
-    float: right;
-    margin-top: 1.5rem;
-
     a {
-      color: $text-color;
+      color: #ffffff;
       font-weight: 500;
-      margin-left: 1.5rem;
       &:hover {
         color: $primary-color;
       }
@@ -134,7 +101,7 @@ a {
 .posts > .post {
   padding: 2rem;
   margin-bottom: 2rem;
-  background-color: $bg-overlay;
+  background-color: rgba(0, 20, 40, 0.75);
   backdrop-filter: blur(8px);
   border-radius: 16px;
   border: 4px solid transparent;
@@ -197,7 +164,7 @@ a {
 // Footer
 .wrapper-footer {
   margin-top: 3rem;
-  background-color: $bg-overlay;
+  background-color: rgba(0, 20, 40, 0.75);
   backdrop-filter: blur(8px);
   border-top: 4px solid $primary-color;
 }
@@ -205,88 +172,13 @@ a {
 footer {
   padding: 1.5rem 0;
   text-align: center;
-  color: $text-color;
+  color: #ffffff;
 }
 
-// Animations
 @keyframes borderGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-// Code blocks
-pre, code {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #e0e0e0;
-  border-radius: 4px;
-  font-family: 'Monaco', 'Courier New', monospace;
-}
-
-pre {
-  padding: 1rem;
-  overflow-x: auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-code {
-  padding: 0.2em 0.4em;
-}
-
-// Blockquotes
-blockquote {
-  margin: 1.8em 0.8em;
-  border-left: 4px solid $primary-color;
-  padding: 0.1em 1em;
-  color: darken($text-color, 15%);
-  font-size: 1.1rem;
-  font-style: italic;
-  background-color: rgba(0, 191, 255, 0.1);
-  border-radius: 0 8px 8px 0;
-}
-
-// Lists
-ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
-}
-
-ul {
-  list-style-type: disc;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-// Tables
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th, td {
-  padding: 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-th {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: $primary-color;
-  font-weight: 600;
-}
-
-// Images
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 1rem 0;
 }
 
 // Responsive
@@ -298,33 +190,6 @@ img {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
   h3 { font-size: 1.4rem; }
-
-  .masthead {
-    text-align: center;
-    
-    .site-avatar {
-      float: none;
-      display: block;
-      margin: 0 auto 1rem;
-    }
-    
-    .site-info {
-      float: none;
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    nav {
-      float: none;
-      margin-top: 1rem;
-      text-align: center;
-      
-      a {
-        margin: 0 0.75rem;
-      }
-    }
-  }
 
   .posts > .post {
     padding: 1.5rem;

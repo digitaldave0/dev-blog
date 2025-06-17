@@ -4,7 +4,13 @@
 //
 
 // Colors
-$blue: #4183C4;
+$primary-color: #00bfff;
+$secondary-color: #0066ff;
+$gradient-start: rgba(0, 40, 80, 0.95);
+$gradient-end: rgba(0, 20, 40, 0.98);
+$text-color: #ffffff;
+$bg-overlay: rgba(0, 20, 40, 0.75);
+$blue: $primary-color;
 
 // Grays
 $black: #000;
