@@ -12,4 +12,5 @@ plugins:
 include:
   - _headers
   - _redirects
+  - .htpasswd
 show_downloads: false
