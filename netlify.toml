@@ -2,17 +2,15 @@
   command = "bundle exec jekyll build --trace"
   publish = "_site"
 
-[[redirects]]
-  from = "/*"
-  to = "/401.html"
-  status = 401
-  force = true
-  conditions = {Basic-Auth = ":false"}
+[[plugins]]
+  package = "@netlify/plugin-basic-auth"
+
+[plugins.inputs]
+  username = "dave"
+  password = "pass1234%"
 
 [[headers]]
   for = "/*"
   [headers.values]
-    WWW-Authenticate = "Basic realm=\"Restricted Area\""
-    Basic-Auth = "dave:pass1234%"
     Cache-Control = "no-store, no-cache, must-revalidate"
     Pragma = "no-cache"
