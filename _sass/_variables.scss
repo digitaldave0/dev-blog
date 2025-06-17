@@ -6,10 +6,10 @@
 // Colors
 $primary-color: #60a5fa;     // Brighter, more vibrant blue
 $secondary-color: #3b82f6;   // Complementary blue for gradients
-$gradient-start: rgba(17, 24, 39, 0.97);   // Darker, richer background
-$gradient-end: rgba(31, 41, 55, 0.98);     // Softer gradient end
+$gradient-start: #0f2027;    // Dark navy start
+$gradient-end: #2c5364;      // Navy blue end
 $text-color: #f3f4f6;        // Slightly off-white for better eye comfort
-$bg-overlay: rgba(15, 23, 42, 0.85);    // Richer overlay with better transparency
+$bg-overlay: rgba(15, 32, 39, 0.95);    // Matching overlay for content
 $blue: $primary-color;
 
 // Grays
