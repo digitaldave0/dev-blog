@@ -4,12 +4,12 @@
 //
 
 // Colors
-$primary-color: #00bfff;
-$secondary-color: #0066ff;
-$gradient-start: rgba(0, 40, 80, 0.95);
-$gradient-end: rgba(0, 20, 40, 0.98);
-$text-color: #ffffff;
-$bg-overlay: rgba(0, 20, 40, 0.75);
+$primary-color: #60a5fa;     // Brighter, more vibrant blue
+$secondary-color: #3b82f6;   // Complementary blue for gradients
+$gradient-start: rgba(17, 24, 39, 0.97);   // Darker, richer background
+$gradient-end: rgba(31, 41, 55, 0.98);     // Softer gradient end
+$text-color: #f3f4f6;        // Slightly off-white for better eye comfort
+$bg-overlay: rgba(15, 23, 42, 0.85);    // Richer overlay with better transparency
 $blue: $primary-color;
 
 // Grays
