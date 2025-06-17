@@ -4,20 +4,14 @@
 
 [[redirects]]
   from = "/*"
-  to = "/login"
+  to = "/401.html"
   status = 401
   force = true
-  conditions = {Role = ["anonymous"]}
-
-[[redirects]]
-  from = "/login"
-  to = "/"
-  status = 200
-  force = true
-  conditions = {Role = ["authenticated"]}
 
 [[headers]]
   for = "/*"
   [headers.values]
     WWW-Authenticate = "Basic realm=\"Restricted Area\""
     Basic-Auth = "dave:pass1234%"
+    Cache-Control = "no-store, no-cache, must-revalidate"
+    Pragma = "no-cache"
