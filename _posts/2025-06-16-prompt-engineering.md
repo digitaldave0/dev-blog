@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "🧠 Prompt Engineering: How to Talk to AI and Get What You Need"
-description: "Prompt engineering is the art of crafting clear and specific instructions for AI models to produce accurate, useful results. Think of it like writing a recipe for an AI chef you're not just asking for a meal, you're specifying the ingredients, technique, and presentation."
+description: "Prompt engineering is the art of crafting clear accurate, useful results."
 ---
-
-## What is Prompt Engineering?
 
 Have you ever heard the saying *"garbage in, garbage out"*? It applies perfectly here. If you give vague, poorly structured prompts, you'll get equally vague or irrelevant results. Precise inputs lead to meaningful outputs it's that simple.
 
