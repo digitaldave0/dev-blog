@@ -2,10 +2,27 @@
   command = "bundle exec jekyll build --trace"
   publish = "_site"
 
+[[redirects]]
+  from = "/*"
+  to = "/401.html"
+  status = 401
+  force = true
+  conditions = {Basic = ":false"}
+
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 200
+  force = true
+  conditions = {Basic = ":true"}
+
 [[headers]]
   for = "/*"
   [headers.values]
     Basic-Auth = "dave:pass1234%"
     WWW-Authenticate = "Basic realm=\"Restricted Area\""
-    Cache-Control = "no-store, no-cache, must-revalidate"
+    Cache-Control = "no-store, no-cache, must-revalidate, private"
     Pragma = "no-cache"
+    X-Robots-Tag = "noindex, nofollow"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"

@@ -1,5 +1,10 @@
 /*
-  X-Content-Type-Options: nosniff
+  Basic-Auth: dave:pass1234%
+  WWW-Authenticate: Basic realm="Restricted Area"
+  Cache-Control: no-store, no-cache, must-revalidate, private
+  Pragma: no-cache
+  X-Robots-Tag: noindex, nofollow
   X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-only
