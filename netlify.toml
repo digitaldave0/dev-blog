@@ -5,29 +5,21 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    WWW-Authenticate = "Basic realm=\"Restricted Area\""
     Basic-Auth = "dave:pass1234%"
-    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
-    Pragma = "no-cache"
-    Clear-Site-Data = "\"cache\", \"cookies\", \"storage\""
-    Content-Security-Policy = "frame-ancestors 'none'"
-    X-Frame-Options = "DENY"
 
 [[redirects]]
   from = "/*"
   to = "/401.html"
   status = 401
   force = true
-  conditions = {Basic = ":false"}
-  headers = {WWW-Authenticate = "Basic realm=\"Restricted Area\""}
+  conditions = {Basic = false}
 
 [[redirects]]
   from = "/*"
   to = "/:splat"
   status = 200
   force = true
-  conditions = {Basic = ":true"}
-  headers = {Cache-Control = "private, no-cache, no-store, must-revalidate"}
+  conditions = {Basic = true}
 
 [build.processing.html]
   pretty_urls = true
