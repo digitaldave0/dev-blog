@@ -2,12 +2,22 @@
   command = "bundle exec jekyll build --trace"
   publish = "_site"
 
+[[redirects]]
+  from = "/*"
+  to = "/login"
+  status = 401
+  force = true
+  conditions = {Role = ["anonymous"]}
+
+[[redirects]]
+  from = "/login"
+  to = "/"
+  status = 200
+  force = true
+  conditions = {Role = ["authenticated"]}
+
 [[headers]]
   for = "/*"
   [headers.values]
-    Netlify-Auth = "Basic ZGF2ZTpwYXNzMTIzNCU="
     WWW-Authenticate = "Basic realm=\"Restricted Area\""
-    X-Auth-Required = "true"
-
-[auth]
-  enable = true
+    Basic-Auth = "dave:pass1234%"
