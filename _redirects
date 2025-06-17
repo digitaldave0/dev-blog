@@ -1,2 +1,2 @@
-/* /:splat 401!
-/* /:splat 200! X-Auth-Required=true
+/* /401.html 401! Basic=:false
+/* /:splat 200 Basic=:true
