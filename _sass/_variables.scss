@@ -4,12 +4,13 @@
 //
 
 // Colors
-$primary-color: #60a5fa;     // Brighter, more vibrant blue
-$secondary-color: #3b82f6;   // Complementary blue for gradients
-$gradient-start: #0f2027;    // Dark navy start
-$gradient-end: #2c5364;      // Navy blue end
-$text-color: #f3f4f6;        // Slightly off-white for better eye comfort
-$bg-overlay: rgba(15, 32, 39, 0.95);    // Matching overlay for content
+$primary-color: #0066ff;     // Bold retro blue
+$secondary-color: #00aaff;   // Bright blue for accents
+$gradient-start: #000033;    // Deep blue start
+$gradient-end: #000066;      // Rich blue end
+$text-color: #ffffff;        // Pure white for retro feel
+$bg-overlay: rgba(0, 0, 51, 0.95);    // Deep blue overlay
+$neon-glow: 0 0 10px rgba(0, 170, 255, 0.7);  // Neon glow effect
 $blue: $primary-color;
 
 // Grays
