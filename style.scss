@@ -153,14 +153,15 @@ a {
 
     .site-name {
       font-family: 'Press Start 2P', $heading-font;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 400;
       margin: 0;
       color: #ffffff;
       text-shadow: $neon-glow;
-      animation: textScroll 20s linear infinite;
+      animation: textScrollBackAndForth 4s linear infinite alternate;
       white-space: nowrap;
       overflow: hidden;
+      padding: 0 20px;
     }
 
     .site-description {
@@ -283,9 +284,9 @@ footer {
 }
 
 // Animations
-@keyframes textScroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+@keyframes textScrollBackAndForth {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-20px); }
 }
 
 @keyframes borderGradient {
