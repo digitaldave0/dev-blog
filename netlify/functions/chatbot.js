@@ -11,23 +11,29 @@ exports.handler = async (event) => {
   }
 
   const HF_API_KEY = process.env.HF_API_KEY;
+  const model = "microsoft/phi-3-mini-4k-instruct";
 
-  const formattedPrompt = `You are a helpful chatbot for Dave's website, knowledgeable about DevOps, AI, and software development. Answer politely and professionally.\nUser: ${prompt}\nBot:`;
+  const systemPrompt = `You are a helpful chatbot for Dave's website, knowledgeable about DevOps, AI, and software development. Answer politely and professionally.\n\nUser: ${prompt}\nBot:`;
 
   const response = await fetch(
-    "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha",
+    `https://api-inference.huggingface.co/models/${model}`,
     {
       headers: {
         Authorization: `Bearer ${HF_API_KEY}`,
         'Content-Type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify({ inputs: formattedPrompt })
+      body: JSON.stringify({ inputs: systemPrompt })
     }
   );
 
   const data = await response.json();
-  const reply = data?.[0]?.generated_text?.split('Bot:')[1]?.trim() || '🤖 No response.';
+  console.log("Raw response from Hugging Face:", data);
+
+  const reply = data?.[0]?.generated_text?.split('Bot:')?.[1]?.trim()
+              || data?.generated_text
+              || data?.error
+              || '🤖 No response.';
 
   return {
     statusCode: 200,
