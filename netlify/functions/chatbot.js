@@ -7,7 +7,7 @@ exports.handler = async (event) => {
   const model = "microsoft/Phi-3-mini-4k-instruct";
 
   const response = await fetch(
-    "https://api.huggingface.co/v1/chat/completions",
+    "https://api-inference.huggingface.co/v1/chat/completions",
     {
       headers: {
         Authorization: `Bearer ${HF_API_KEY}`,
