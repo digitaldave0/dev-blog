@@ -4,7 +4,7 @@ exports.handler = async (event) => {
   const { prompt } = JSON.parse(event.body || '{}');
 
   const HF_API_KEY = process.env.HF_API_KEY;
-  const model = "tiiuae/falcon-7b-instruct";
+  const model = "HuggingFaceH4/zephyr-7b-alpha";
 
   // Classic prompt for instruct/chat models
   const systemPrompt = `You are a helpful chatbot.\n\nUser: ${prompt}\nBot:`;
