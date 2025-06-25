@@ -4,9 +4,9 @@ exports.handler = async (event) => {
   const { prompt } = JSON.parse(event.body || '{}');
 
   const HF_API_KEY = process.env.HF_API_KEY;
-  const model = "meta-llama/Meta-Llama-3-8B-Instruct";
+  const model = "mistralai/Mixtral-8x7B-Instruct-v0.1";
 
-  // Format prompt for Llama model
+  // Format prompt for Mixtral model
   const systemPrompt = `<s>[INST] ${prompt} [/INST]`;
 
   let reply = '🤖 No response.';
@@ -27,7 +27,7 @@ exports.handler = async (event) => {
     );
     clearTimeout(timeout);
     if (response.status === 404) {
-      reply = '⚠️ Meta-Llama-3 model not available on free tier. Please check your Hugging Face API key permissions.';
+      reply = '⚠️ Mixtral-8x7B model not available on free tier. Please check your Hugging Face API key permissions.';
     } else {
       const data = await response.json();
       console.log("Raw Hugging Face response:", data);
