@@ -30,10 +30,19 @@ exports.handler = async (event) => {
   const data = await response.json();
   console.log("Raw response from Hugging Face:", data);
 
-  const reply = data?.[0]?.generated_text?.split('Bot:')?.[1]?.trim()
-              || data?.generated_text
-              || data?.error
-              || '🤖 No response.';
+  let reply;
+  if (Array.isArray(data)) {
+    reply = data[0]?.generated_text || '🤖 No response.';
+    // Remove the system prompt and user input from the response
+    const userPromptIndex = reply.indexOf('User:');
+    if (userPromptIndex !== -1) {
+      reply = reply.substring(reply.indexOf('Bot:') + 4).trim();
+    }
+  } else {
+    reply = data?.generated_text || data?.error || '🤖 No response.';
+  }
+
+  console.log("Processed reply:", reply);
 
   return {
     statusCode: 200,
