@@ -3,24 +3,35 @@ const fetch = require('node-fetch');
 exports.handler = async (event) => {
   const { prompt } = JSON.parse(event.body || '{}');
 
+  if (!prompt) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ reply: '⚠️ No prompt provided.' })
+    };
+  }
+
+  const HF_API_KEY = process.env.HF_API_KEY;
+
+  const formattedPrompt = `You are a helpful chatbot for Dave's website, knowledgeable about DevOps, AI, and software development. Answer politely and professionally.\nUser: ${prompt}\nBot:`;
+
   const response = await fetch(
-    "https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1",
+    "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-alpha",
     {
       headers: {
-        Authorization: `Bearer ${process.env.HF_API_KEY}`,
+        Authorization: `Bearer ${HF_API_KEY}`,
         'Content-Type': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify({ inputs: prompt })
+      body: JSON.stringify({ inputs: formattedPrompt })
     }
   );
 
   const data = await response.json();
-  const text = data?.[0]?.generated_text?.split(prompt)?.[1]?.trim() || "🤖 No response";
+  const reply = data?.[0]?.generated_text?.split('Bot:')[1]?.trim() || '🤖 No response.';
 
   return {
     statusCode: 200,
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ reply: text })
+    body: JSON.stringify({ reply })
   };
 };
