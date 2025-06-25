@@ -4,10 +4,10 @@ exports.handler = async (event) => {
   const { prompt } = JSON.parse(event.body || '{}');
 
   const HF_API_KEY = process.env.HF_API_KEY;
-  const model = "HuggingFaceH4/zephyr-7b-alpha";
+  const model = "meta-llama/Meta-Llama-3-8B-Instruct";
 
-  // Classic prompt for instruct/chat models
-  const systemPrompt = `You are a helpful chatbot.\n\nUser: ${prompt}\nBot:`;
+  // Format prompt for Llama model
+  const systemPrompt = `<s>[INST] ${prompt} [/INST]`;
 
   let reply = '🤖 No response.';
   try {
@@ -27,7 +27,7 @@ exports.handler = async (event) => {
     );
     clearTimeout(timeout);
     if (response.status === 404) {
-      reply = '⚠️ Model not found or unavailable on free tier.';
+      reply = '⚠️ Meta-Llama-3 model not available on free tier. Please check your Hugging Face API key permissions.';
     } else {
       const data = await response.json();
       console.log("Raw Hugging Face response:", data);
@@ -38,9 +38,10 @@ exports.handler = async (event) => {
       } else if (data.error) {
         reply = `⚠️ API Error: ${data.error}`;
       }
-      // Try to extract after 'Bot:' if present
-      if (reply && reply.includes('Bot:')) {
-        reply = reply.split('Bot:').pop().trim();
+      // Clean up the response - remove prompt and special tokens
+      if (reply) {
+        reply = reply.replace(systemPrompt, '').trim();
+        reply = reply.replace(/<\/s>$/, '').trim();
       }
     }
   } catch (err) {
@@ -49,11 +50,14 @@ exports.handler = async (event) => {
     } else {
       reply = `⚠️ Error: ${err.message}`;
     }
+    console.error('Error:', err);
   }
 
   return {
     statusCode: 200,
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({ reply })
   };
 };
