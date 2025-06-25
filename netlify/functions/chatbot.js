@@ -28,21 +28,27 @@ exports.handler = async (event) => {
   );
 
   const data = await response.json();
-  console.log("Raw response from Hugging Face:", data);
+  let reply = '🤖 No response.';
 
-  let reply;
-  if (Array.isArray(data)) {
-    reply = data[0]?.generated_text || '🤖 No response.';
-    // Remove the system prompt and user input from the response
-    const userPromptIndex = reply.indexOf('User:');
-    if (userPromptIndex !== -1) {
-      reply = reply.substring(reply.indexOf('Bot:') + 4).trim();
-    }
-  } else {
-    reply = data?.generated_text || data?.error || '🤖 No response.';
+  // Handle array or object response
+  let generated = '';
+  if (Array.isArray(data) && data[0]?.generated_text) {
+    generated = data[0].generated_text;
+  } else if (typeof data === 'object' && data.generated_text) {
+    generated = data.generated_text;
+  } else if (data.error) {
+    generated = data.error;
   }
 
-  console.log("Processed reply:", reply);
+  if (generated) {
+    // Try to extract after 'Bot:' if present
+    const botIndex = generated.indexOf('Bot:');
+    if (botIndex !== -1) {
+      reply = generated.substring(botIndex + 4).trim();
+    } else {
+      reply = generated.trim();
+    }
+  }
 
   return {
     statusCode: 200,
