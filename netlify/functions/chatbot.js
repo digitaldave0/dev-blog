@@ -3,17 +3,10 @@ const fetch = require('node-fetch');
 exports.handler = async (event) => {
   const { prompt } = JSON.parse(event.body || '{}');
 
-  if (!prompt) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ reply: '⚠️ No prompt provided.' })
-    };
-  }
-
   const HF_API_KEY = process.env.HF_API_KEY;
   const model = "microsoft/phi-3-mini-4k-instruct";
 
-  const systemPrompt = `You are a helpful chatbot for Dave's website, knowledgeable about DevOps, AI, and software development. Answer politely and professionally.\n\nUser: ${prompt}\nBot:`;
+  const systemPrompt = `You are a helpful chatbot.\n\nUser: ${prompt}\nBot:`;
 
   const response = await fetch(
     `https://api-inference.huggingface.co/models/${model}`,
@@ -28,26 +21,22 @@ exports.handler = async (event) => {
   );
 
   const data = await response.json();
-  let reply = '🤖 No response.';
+  console.log("Raw Hugging Face response:", data);
 
-  // Handle array or object response
-  let generated = '';
-  if (Array.isArray(data) && data[0]?.generated_text) {
-    generated = data[0].generated_text;
-  } else if (typeof data === 'object' && data.generated_text) {
-    generated = data.generated_text;
-  } else if (data.error) {
-    generated = data.error;
+  let reply = '';
+
+  if (Array.isArray(data)) {
+    reply = data?.[0]?.generated_text;
+  } else if (data?.generated_text) {
+    reply = data.generated_text;
+  } else if (data?.error) {
+    reply = `⚠️ API Error: ${data.error}`;
+  } else {
+    reply = '🤖 No response.';
   }
 
-  if (generated) {
-    // Try to extract after 'Bot:' if present
-    const botIndex = generated.indexOf('Bot:');
-    if (botIndex !== -1) {
-      reply = generated.substring(botIndex + 4).trim();
-    } else {
-      reply = generated.trim();
-    }
+  if (reply && reply.includes('Bot:')) {
+    reply = reply.split('Bot:').pop().trim();
   }
 
   return {
