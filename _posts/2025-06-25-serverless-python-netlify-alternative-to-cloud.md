@@ -37,7 +37,28 @@ netlify-python/
 ├── netlify/
 │   └── functions/
 │       └── hello.py
-└── netlify.toml
+├── netlify.toml
+└── .gitignore  # For Python and Netlify specific files
+```
+
+Add a `.gitignore` file to exclude unnecessary files:
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Netlify
+.netlify/
+.netlify.toml.backup
+
+# Node (for Netlify CLI)
+node_modules/
+
+# IDE and OS
+.vscode/
+.DS_Store
 ```
 
 ### 2. Create the Python Function
