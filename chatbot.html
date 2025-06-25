@@ -1,25 +1,60 @@
 ---
 layout: default
-title: ChatBot Demo
+title: DaveBot
 ---
 
-<h2>💬 ChatBot Demo</h2>
+<h2>🤖 DaveBot</h2>
 <div id="chat-box" style="border:1px solid #ccc; padding:10px; height:300px; overflow-y:auto; background:#f9f9f9;"></div>
-<input id="user-input" type="text" placeholder="Type your message..." style="width:80%;">
-<button onclick="sendMessage()">Send</button>
+<div class="input-container" style="margin-top: 10px; display: flex; gap: 10px;">
+  <input id="user-input" type="text" placeholder="Ask DaveBot something..." style="flex-grow: 1; padding: 8px;">
+  <button onclick="sendMessage()" style="padding: 8px 16px; background: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer;">Send</button>
+</div>
 
 <style>
+  #chat-box {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
   #chat-box div {
-    color: #000; /* Ensure text is visible */
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 85%;
+  }
+  .user-message {
+    margin-left: auto !important;
+    background: #e3f2fd;
+    color: #000;
+  }
+  .bot-message {
+    margin-right: auto !important;
+    background: #f5f5f5;
+    color: #000;
+  }
+  .thinking {
+    font-style: italic;
+    opacity: 0.7;
+  }
+  #user-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  #user-input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 2px rgba(0,102,204,0.2);
   }
 </style>
 
 <script>
   const chatBox = document.getElementById('chat-box');
 
-  function appendMessage(sender, text) {
+  function appendMessage(sender, text, isThinking = false) {
     const msg = document.createElement('div');
-    msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
+    const icon = sender === 'You' ? '❓' : '😊';
+    msg.className = sender === 'You' ? 'user-message' : 'bot-message';
+    if (isThinking) msg.className += ' thinking';
+    msg.innerHTML = `${icon} <strong>${sender === 'You' ? 'You' : 'DaveBot'}:</strong> ${text}`;
     chatBox.appendChild(msg);
     chatBox.scrollTop = chatBox.scrollHeight;
   }
@@ -31,7 +66,7 @@ title: ChatBot Demo
 
     appendMessage('You', userText);
     input.value = '';
-    appendMessage('Bot', 'Thinking...');
+    appendMessage('Bot', 'Thinking...', true);
 
     const response = await fetch('/.netlify/functions/chatbot', {
       method: 'POST',
@@ -42,4 +77,11 @@ title: ChatBot Demo
     chatBox.lastChild.remove(); // remove "Thinking..."
     appendMessage('Bot', data.reply);
   }
+
+  // Allow sending message with Enter key
+  document.getElementById('user-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  });
 </script>
