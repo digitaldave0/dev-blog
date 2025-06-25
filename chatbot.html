@@ -1,0 +1,45 @@
+---
+layout: default
+title: ChatBot Demo
+---
+
+<h2>💬 ChatBot Demo</h2>
+<div id="chat-box" style="border:1px solid #ccc; padding:10px; height:300px; overflow-y:auto; background:#f9f9f9;"></div>
+<input id="user-input" type="text" placeholder="Type your message..." style="width:80%;">
+<button onclick="sendMessage()">Send</button>
+
+<style>
+  #chat-box div {
+    color: #000; /* Ensure text is visible */
+  }
+</style>
+
+<script>
+  const chatBox = document.getElementById('chat-box');
+
+  function appendMessage(sender, text) {
+    const msg = document.createElement('div');
+    msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
+    chatBox.appendChild(msg);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  async function sendMessage() {
+    const input = document.getElementById('user-input');
+    const userText = input.value.trim();
+    if (!userText) return;
+
+    appendMessage('You', userText);
+    input.value = '';
+    appendMessage('Bot', 'Thinking...');
+
+    const response = await fetch('/.netlify/functions/chatbot', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: userText })
+    });
+    const data = await response.json();
+    chatBox.lastChild.remove(); // remove "Thinking..."
+    appendMessage('Bot', data.reply);
+  }
+</script>
