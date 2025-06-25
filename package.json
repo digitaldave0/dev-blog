@@ -2,7 +2,7 @@
   "name": "dev-blog",
   "version": "1.0.0",
   "private": true,
-  "devDependencies": {
-    "@netlify/plugin-basic-auth": "^1.0.3"
+  "dependencies": {
+    "node-fetch": "^2.6.1"
   }
 }
