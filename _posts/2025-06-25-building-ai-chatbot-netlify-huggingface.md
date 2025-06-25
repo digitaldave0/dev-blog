@@ -2,6 +2,7 @@
 layout: post
 title: Building an AI Chatbot with Netlify Functions and Hugging Face
 categories: [AI, Web Development, Tutorial]
+excerpt: "Build your own chatbox on a free tier"
 ---
 
 # Building a Free-Tier AI Chatbot with Netlify and Hugging Face
