@@ -4,7 +4,7 @@ exports.handler = async (event) => {
   const { prompt } = JSON.parse(event.body || '{}');
 
   const HF_API_KEY = process.env.HF_API_KEY;
-  const model = "TinyLlama/TinyLlama-1.1B-Chat-v1.0";
+  const model = "tiiuae/falcon-7b-instruct";
 
   // Classic prompt for instruct/chat models
   const systemPrompt = `You are a helpful chatbot.\n\nUser: ${prompt}\nBot:`;
@@ -26,19 +26,22 @@ exports.handler = async (event) => {
       }
     );
     clearTimeout(timeout);
-    const data = await response.json();
-    console.log("Raw Hugging Face response:", data);
-
-    if (Array.isArray(data) && data[0]?.generated_text) {
-      reply = data[0].generated_text;
-    } else if (data.generated_text) {
-      reply = data.generated_text;
-    } else if (data.error) {
-      reply = `⚠️ API Error: ${data.error}`;
-    }
-    // Try to extract after 'Bot:' if present
-    if (reply && reply.includes('Bot:')) {
-      reply = reply.split('Bot:').pop().trim();
+    if (response.status === 404) {
+      reply = '⚠️ Model not found or unavailable on free tier.';
+    } else {
+      const data = await response.json();
+      console.log("Raw Hugging Face response:", data);
+      if (Array.isArray(data) && data[0]?.generated_text) {
+        reply = data[0].generated_text;
+      } else if (data.generated_text) {
+        reply = data.generated_text;
+      } else if (data.error) {
+        reply = `⚠️ API Error: ${data.error}`;
+      }
+      // Try to extract after 'Bot:' if present
+      if (reply && reply.includes('Bot:')) {
+        reply = reply.split('Bot:').pop().trim();
+      }
     }
   } catch (err) {
     if (err.name === 'AbortError') {
