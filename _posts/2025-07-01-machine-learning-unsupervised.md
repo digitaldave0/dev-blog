@@ -3,6 +3,7 @@ layout: post
 title: "🧩 Machine Learning Basics: Understanding Unsupervised Learning (Part 4)"
 date: 2025-07-01
 categories: [AI, Machine Learning, Tutorial]
+tags: [ml-basics, unsupervised-learning, clustering, machine-learning-series, data-patterns]
 description: "Discover how unsupervised learning finds patterns in data automatically."
 excerpt: "Learn how unsupervised learning algorithms discover hidden patterns and group similar items together, with real-world examples and applications."
 ---

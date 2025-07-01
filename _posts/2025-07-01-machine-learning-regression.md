@@ -3,6 +3,7 @@ layout: post
 title: "📈 Machine Learning Basics: Understanding Regression (Part 2)"
 date: 2025-07-01
 categories: [AI, Machine Learning, Tutorial]
+tags: [ml-basics, regression, supervised-learning, machine-learning-series, predictive-modeling]
 description: "Learn about regression in machine learning with simple, real-world examples."
 excerpt: "Understand how regression works in machine learning through practical examples, from predicting house prices to estimating sales."
 ---

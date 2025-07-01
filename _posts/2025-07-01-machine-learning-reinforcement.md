@@ -3,6 +3,7 @@ layout: post
 title: "🎮 Machine Learning Basics: Understanding Reinforcement Learning (Part 5)"
 date: 2025-07-01
 categories: [AI, Machine Learning, Tutorial]
+tags: [ml-basics, reinforcement-learning, machine-learning-series, ai-gaming, robotics]
 description: "Learn how reinforcement learning works through simple examples and real-world applications."
 excerpt: "Explore how machines learn through trial and error, just like humans do, with practical examples from gaming to robotics."
 ---

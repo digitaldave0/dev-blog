@@ -3,6 +3,7 @@ layout: post
 title: "🎯 Machine Learning Basics: Understanding Classification (Part 3)"
 date: 2025-07-01
 categories: [AI, Machine Learning, Tutorial]
+tags: [ml-basics, classification, supervised-learning, machine-learning-series, pattern-recognition]
 description: "Learn about classification in machine learning with everyday examples."
 excerpt: "Discover how classification in machine learning works through simple examples, from email spam detection to image recognition."
 ---

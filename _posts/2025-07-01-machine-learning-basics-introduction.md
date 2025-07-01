@@ -3,6 +3,7 @@ layout: post
 title: "🤖 Machine Learning Basics: A Beginner's Guide (Part 1 - Introduction)"
 date: 2025-07-01
 categories: [AI, Machine Learning, Tutorial]
+tags: [ml-basics, introduction, getting-started, machine-learning-series]
 description: "Understanding the fundamentals of machine learning in simple terms."
 excerpt: "A beginner-friendly introduction to machine learning concepts, explained with real-world examples and minimal technical jargon."
 ---
