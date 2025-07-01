@@ -220,9 +220,9 @@ def plot_learning_curves(model, X_train, X_val, y_train, y_val):
 ## Next Steps
 
 Now that you understand data preparation and model fitting, you might want to explore:
-- [Model Evaluation: Beyond Accuracy](/ai/machine%20learning/tutorial/2025/07/02/machine-learning-model-evaluation.html)
-- [Cross-Validation and Overfitting](/ai/machine%20learning/tutorial/2025/07/02/machine-learning-cross-validation.html)
-- [Feature Engineering: The Art of Creating Better Data](/ai/machine%20learning/tutorial/2025/07/02/machine-learning-feature-engineering.html)
+- [Model Evaluation: Beyond Accuracy](/2025/07/02/machine-learning-model-evaluation/)
+- [Cross-Validation and Overfitting](/2025/07/02/machine-learning-cross-validation/)
+- [Feature Engineering: The Art of Creating Better Data](/2025/07/02/machine-learning-feature-engineering/)
 
 ## Key Takeaways
 
