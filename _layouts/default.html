@@ -66,8 +66,31 @@
           font-size: 0.8rem;
         }
       }
+      
+      .search-button {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-left: 15px;
+        background: rgba(0, 191, 255, 0.2);
+        border: 1px solid #00bfff;
+        border-radius: 4px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .search-button:hover {
+        background: rgba(0, 191, 255, 0.4);
+        transform: translateY(-1px);
+      }
+      
+      .search-icon {
+        margin-right: 5px;
+      }
     </style>
 
+    <!-- Add Font Awesome for the search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
@@ -87,6 +110,7 @@
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
+            <a href="{{ site.baseurl }}/search" class="search-button"><i class="fas fa-search search-icon"></i> Search</a>
           </nav>
         </header>
       </div>
