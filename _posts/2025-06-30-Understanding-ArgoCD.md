@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "🚀 Understanding ArgoCD: Installation, Usage, and Troubleshooting"
+date: 2025-07-01
 description: "Learn what ArgoCD is, how to install it, use it effectively, troubleshoot issues, and leverage its CLI commands."
 excerpt: "A comprehensive guide to understanding, installing, and using ArgoCD for GitOps workflows, including troubleshooting tips and CLI commands."
 ---
