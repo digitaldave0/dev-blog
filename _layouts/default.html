@@ -12,6 +12,29 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     
+    <!-- Chatbot Button Styles -->
+    <style>
+      .chatbot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary-color, #00bfff);
+        color: white;
+        padding: 15px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        font-weight: bold;
+      }
+      .chatbot-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 191, 255, 0.4);
+        background: var(--secondary-color, #0066ff);
+      }
+    </style>
+    
     <style>
       .title-container {
         width: 100%;
@@ -105,5 +128,6 @@
     </div>
 
     {% include analytics.html %}
+    <a href="{{ site.baseurl }}/chatbot" class="chatbot-button">💬 Chat with me!</a>
   </body>
 </html>
