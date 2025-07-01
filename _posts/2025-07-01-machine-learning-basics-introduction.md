@@ -74,4 +74,8 @@ Machine learning is everywhere in our daily lives:
 19. [Constitutional AI: Teaching AI Right from Wrong](/ai/machine%20learning/expert%20series/2025/07/04/expert-constitutional-ai.html)
 20. [Few-Shot and Zero-Shot Learning](/ai/machine%20learning/expert%20series/2025/07/04/expert-few-shot-learning.html)
 
+### Future and Ethics Series
+21. [The Path to AGI and ASI: Understanding Superintelligence](/ai/future/ethics/2025/07/05/future-superintelligence.html)
+22. [AI Safety: Navigating the Risks of Advanced AI](/ai/future/ethics/2025/07/05/ai-safety-risks.html)
+
 Stay tuned!
