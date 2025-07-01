@@ -301,21 +301,56 @@ footer {
 
 // Code blocks
 pre, code {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #e0e0e0;
-  border-radius: 4px;
-  font-family: $code-font;
-  font-size: 0.9em;
+  font-family: 'JetBrains Mono', monospace;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 6px;
 }
 
 pre {
-  padding: 1rem;
+  padding: 15px;
   overflow-x: auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 15px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  border: 1px solid #333;
 }
 
 code {
-  padding: 0.2em 0.4em;
+  padding: 2px 6px;
+  font-size: 0.9em;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+  border: none;
+}
+
+// Line comments in code blocks
+code .comment, pre .comment {
+  color: #6a9955;
+}
+
+// Strings in code blocks
+code .string, pre .string {
+  color: #ce9178;
+}
+
+// Keywords in code blocks
+code .keyword, pre .keyword {
+  color: #569cd6;
+}
+
+// Variables in code blocks
+code .variable, pre .variable {
+  color: #9cdcfe;
+}
+
+// Functions in code blocks
+code .function, pre .function {
+  color: #dcdcaa;
 }
 
 // Blockquotes
