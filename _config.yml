@@ -19,4 +19,4 @@ future: true
 # URL Configuration
 baseurl: ""  # the subpath of your site, e.g. /blog
 url: ""      # the base hostname & protocol
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /posts/:title/
