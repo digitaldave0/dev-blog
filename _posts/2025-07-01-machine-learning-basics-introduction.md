@@ -46,11 +46,32 @@ Machine learning is everywhere in our daily lives:
 
 ## What's Coming Next?
 
-In this series, we'll explore each type of machine learning in more detail:
+### Basics Series (Start Here)
+1. [Part 1: Introduction (You Are Here)](/2025-07-01-machine-learning-basics-introduction)
+2. [Part 2: Supervised Learning - Regression](/2025-07-01-machine-learning-regression)
+3. [Part 3: Supervised Learning - Classification](/2025-07-01-machine-learning-classification)
+4. [Part 4: Unsupervised Learning](/2025-07-01-machine-learning-unsupervised)
+5. [Part 5: Reinforcement Learning](/2025-07-01-machine-learning-reinforcement)
 
-1. [Part 2: Supervised Learning - Regression](/2025-07-01-machine-learning-regression)
-2. [Part 3: Supervised Learning - Classification](/2025-07-01-machine-learning-classification)
-3. [Part 4: Unsupervised Learning](/2025-07-01-machine-learning-unsupervised)
-4. [Part 5: Reinforcement Learning](/2025-07-01-machine-learning-reinforcement)
+### Intermediate Series (Coming Soon)
+6. [Feature Engineering: The Art of Creating Better Data](/2025-07-02-machine-learning-feature-engineering)
+7. [Model Evaluation: Beyond Accuracy](/2025-07-02-machine-learning-model-evaluation)
+8. [Cross-Validation and Overfitting](/2025-07-02-machine-learning-cross-validation)
+9. [Ensemble Methods: Combining Models](/2025-07-02-machine-learning-ensemble-methods)
+10. [Hyperparameter Tuning](/2025-07-02-machine-learning-hyperparameter-tuning)
+
+### Deep Learning Series (Advanced)
+11. [Introduction to Neural Networks](/2025-07-03-deep-learning-neural-networks)
+12. [Convolutional Neural Networks (CNNs)](/2025-07-03-deep-learning-cnn)
+13. [Recurrent Neural Networks (RNNs)](/2025-07-03-deep-learning-rnn)
+14. [Transformers and Attention](/2025-07-03-deep-learning-transformers)
+15. [Generative AI and GANs](/2025-07-03-deep-learning-generative-ai)
+
+### Expert Series (Cutting Edge)
+16. [Chain of Thought: Teaching AI to Reason](/2025-07-04-expert-chain-of-thought)
+17. [Mixture of Experts: Many Brains Are Better Than One](/2025-07-04-expert-mixture-of-experts)
+18. [Retrieval-Augmented Generation (RAG)](/2025-07-04-expert-retrieval-augmented-generation)
+19. [Constitutional AI: Teaching AI Right from Wrong](/2025-07-04-expert-constitutional-ai)
+20. [Few-Shot and Zero-Shot Learning](/2025-07-04-expert-few-shot-learning)
 
 Stay tuned!
