@@ -3,6 +3,9 @@ layout: post
 title: "Advanced Terraform Tooling: Terragrunt, Testing, and Best Practices"
 description: "Master advanced Terraform tooling with Terragrunt, pre-commit hooks, automated testing, and enterprise features"
 tags: [terraform, terragrunt, devops, testing, automation, enterprise]
+icon: 🛠️
+excerpt: >
+  Level up your Terraform workflow with advanced tooling! Learn how to use Terragrunt for DRY configurations, implement pre-commit hooks for code quality, set up automated testing, and explore enterprise-grade features. Essential knowledge for maintaining large-scale Terraform deployments.
 ---
 
 # Advanced Terraform Tooling and Best Practices

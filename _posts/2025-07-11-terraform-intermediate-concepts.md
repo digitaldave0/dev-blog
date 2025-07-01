@@ -3,6 +3,9 @@ layout: post
 title: "Terraform Intermediate: Variables, Outputs, and Data Sources"
 description: "Master Terraform variables, outputs, data sources, and learn how to structure your configurations effectively"
 tags: [terraform, iac, devops, cloud, intermediate]
+icon: 🔄
+excerpt: >
+  Take your Terraform skills to the next level! Learn how to write flexible and reusable configurations using variables, outputs, and data sources. Discover best practices for structuring your Terraform projects and managing different environments effectively.
 ---
 
 # Terraform Intermediate Concepts

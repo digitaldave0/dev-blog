@@ -3,6 +3,9 @@ layout: post
 title: "Terraform Advanced: Modules, Workspaces, and State Management"
 description: "Master advanced Terraform concepts including modules, workspaces, remote state, and best practices for large-scale infrastructure"
 tags: [terraform, iac, devops, cloud, advanced]
+icon: 🚀
+excerpt: >
+  Scale your infrastructure with advanced Terraform concepts! Dive deep into creating reusable modules, managing multiple environments with workspaces, and implementing robust state management strategies. Essential knowledge for managing enterprise-level infrastructure deployments.
 ---
 
 # Advanced Terraform: Scaling Your Infrastructure

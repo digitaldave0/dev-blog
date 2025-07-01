@@ -3,6 +3,9 @@ layout: post
 title: "OpenTofu: The Open Source Alternative to Terraform"
 description: "Learn about OpenTofu, how to migrate from Terraform, and understand the key differences between these Infrastructure as Code tools"
 tags: [opentofu, terraform, iac, devops, cloud, migration]
+icon: 🌱
+excerpt: >
+  Explore OpenTofu, the community-driven fork of Terraform! Learn everything about migrating from Terraform, key differences between the tools, and how to maintain compatibility while ensuring your infrastructure remains truly open source.
 ---
 
 # OpenTofu: The Open Source Alternative to Terraform

@@ -3,6 +3,9 @@ layout: post
 title: "Terraform Basics: Getting Started with Infrastructure as Code"
 description: "Learn the fundamentals of Terraform, including installation, basic concepts, and your first configuration"
 tags: [terraform, iac, devops, cloud]
+icon: 🏗️
+excerpt: >
+  Start your Infrastructure as Code journey with Terraform! This beginner-friendly guide covers installation, basic concepts like providers and resources, and walks you through creating your first Terraform configuration. Perfect for DevOps engineers and cloud practitioners looking to automate their infrastructure deployment.
 ---
 
 # Getting Started with Terraform
