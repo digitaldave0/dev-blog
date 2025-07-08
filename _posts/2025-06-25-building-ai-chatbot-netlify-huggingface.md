@@ -3,6 +3,7 @@ layout: post
 title: "🤖 Building an AI Chatbot with Netlify Functions and Together AI"
 categories: [AI, Web Development, Tutorial]
 excerpt: "Build your own AI chatbot on free-tier services: Learn how to create a chatbot using Netlify Functions and Together AI's powerful models in just 4 hours, with minimal costs!"
+description: "A comprehensive guide to building a production-ready AI chatbot using Together AI's DeepSeek-V3 model, Netlify Functions, and modern web technologies. Features cyberpunk UI, real-time responses, and robust error handling. Try the live demo and learn how to create your own AI assistant with minimal setup and costs."
 ---
 
 # Building an AI Chatbot with Netlify and Together AI
