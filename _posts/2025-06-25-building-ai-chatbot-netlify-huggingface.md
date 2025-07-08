@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "🤖 Building an AI Chatbot with Netlify Functions and Hugging Face"
+title: "🤖 Building an AI Chatbot with Netlify Functions and Together AI"
 categories: [AI, Web Development, Tutorial]
-excerpt: "Build your own AI chatbot on free-tier services: Learn how to create a chatbot using Netlify Functions and Hugging Face's Mixtral model in just 4 hours, with zero hosting costs!"
+excerpt: "Build your own AI chatbot on free-tier services: Learn how to create a chatbot using Netlify Functions and Together AI's powerful models in just 4 hours, with minimal costs!"
 ---
 
-# Building a Free-Tier AI Chatbot with Netlify and Hugging Face
+# Building an AI Chatbot with Netlify and Together AI
 
-Over the past week, I spent about 4 hours building a proof-of-concept AI chatbot that demonstrates how to leverage free-tier services to create a functional AI assistant. In this post, I'll share my experience, explain the technical decisions, and outline the security considerations.
+Over the past week, I spent about 4 hours building a proof-of-concept AI chatbot that demonstrates how to leverage modern AI services to create a functional AI assistant. In this post, I'll share my experience, explain the technical decisions, and outline the security considerations.
 
 ## Tech Stack Overview
 
 - **Frontend**: Static HTML/JS/CSS with a cyberpunk theme
 - **Backend**: Netlify Serverless Functions (Node.js)
-- **AI Model**: Hugging Face's Mixtral-8x7B-Instruct (via Inference API)
+- **AI Model**: Together AI's DeepSeek-V3 (via REST API)
 - **Hosting**: Netlify (frontend + functions) + GitHub Pages (main blog)
 
 ## Why These Tools?
@@ -24,11 +24,11 @@ Over the past week, I spent about 4 hours building a proof-of-concept AI chatbot
    - Easy deployment and version control integration
    - Zero server maintenance
 
-2. **Hugging Face Inference API**:
-   - Free access to state-of-the-art models
-   - Mixtral-8x7B-Instruct offers excellent performance
+2. **Together AI**:
+   - Access to cutting-edge models like DeepSeek-V3
+   - Reliable API with high availability
    - Simple REST API integration
-   - Reasonable rate limits for demo purposes
+   - Fair pricing and good performance
 
 3. **Static Frontend**:
    - Fast loading and minimal hosting costs
@@ -40,14 +40,14 @@ Over the past week, I spent about 4 hours building a proof-of-concept AI chatbot
 Security was a top priority in this project. Here's how I handled it:
 
 1. **API Key Protection**:
-   - Hugging Face API key stored as Netlify environment variable
+   - Together AI API key stored as Netlify environment variable
    - Never exposed to client-side code
    - All API calls handled server-side in Netlify Functions
 
 2. **Rate Limiting**:
    - Implemented basic session-based usage tracking
-   - Token counting to stay within free tier limits
-   - Error handling for API limits and failures
+   - Token counting for usage monitoring
+   - Robust error handling and fallback logic
 
 ## Build Process
 
@@ -62,7 +62,7 @@ Security was a top priority in this project. Here's how I handled it:
    └── netlify.toml
    ```
 
-2. Created serverless function for Hugging Face API integration
+2. Created serverless function for Together AI integration
 3. Built cyberpunk-themed UI with usage stats
 4. Added technical documentation section
 5. Deployed and tested on Netlify
@@ -87,9 +87,9 @@ I'm planning several enhancements:
    - Implement client-side caching
    - Add response compression
 
-## Try It Yourself!
+## Implementation Details
 
-You can try the live demo [here](https://685c15ab20f6a100080ad1af--funny-bienenstitch-0c3a88.netlify.app/) or check out the technical documentation section on the demo page for implementation details.
+Check out the technical documentation in the project repository for detailed implementation notes and code examples. The project demonstrates a production-ready setup with error handling, fallback logic, and monitoring.
 
 ## Time Investment
 
@@ -101,13 +101,13 @@ The entire project took approximately 4 hours:
 
 ## Cost Analysis
 
-Everything in this implementation is using free tiers:
+The implementation uses a mix of free and paid services:
 - Netlify: Free tier (includes 125k function invocations/month)
-- Hugging Face: Free tier API access
+- Together AI: Pay-as-you-go pricing with competitive rates
 - GitHub Pages: Free hosting for the blog
 
 ## Conclusion
 
-This project demonstrates how modern cloud services and AI APIs can be combined to create sophisticated applications with minimal cost. The key is choosing the right tools and implementing proper security measures from the start.
+This project demonstrates how modern cloud services and AI APIs can be combined to create sophisticated applications with reliable performance. The key is choosing the right tools and implementing proper security measures from the start.
 
 Feel free to reach out if you have questions about implementing your own version!
