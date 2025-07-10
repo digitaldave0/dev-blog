@@ -266,16 +266,18 @@ steps:
   - uses: actions/checkout@v4
   - name: Setup tmate session
     uses: mxschmitt/action-tmate@v3
-    if: ${{ failure() }}
+    if: {% raw %}${{ failure() }}{% endraw %}
 ```
 
 ## Real-World Considerations
 
 1. **Environment Variables**
 ```yaml
+{% raw %}
 env:
   NODE_ENV: production
   APP_VERSION: ${{ github.sha }}
+{% endraw %}
 ```
 
 2. **Caching Dependencies**

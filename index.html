@@ -1,15 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <script src="/assets/js/auth.js"></script>
-    <script>
-        // Redirect to login if not authenticated
-        if (!localStorage.getItem('blogAuth')) {
-            window.location.href = '/login.html';
-        }
-    </script>
-</head>
-<body>
-</body>
-</html>
+---
+layout: default
+---
+
+<div id="home">
+  <div class="posts">
+    {% for post in site.posts %}
+      <article class="post">
+        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+
+        <div class="meta">
+          <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+          {% if post.categories.size > 0 %}
+            <span class="categories">
+              in 
+              {% for category in post.categories %}
+                <span class="category">{{ category }}</span>
+                {% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+
+        <div class="excerpt">
+          {{ post.excerpt }}
+        </div>
+
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.post {
+    margin-bottom: 4em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+.post h2 {
+    margin-bottom: 0.5em;
+}
+
+.post h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.post h2 a:hover {
+    color: #0366d6;
+}
+
+.meta {
+    color: #666;
+    margin-bottom: 1.5em;
+    font-size: 0.9em;
+}
+
+.category {
+    display: inline-block;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background: #0366d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.read-more:hover {
+    background: #0256b4;
+}
+
+.excerpt {
+    color: #333;
+    line-height: 1.6;
+}
+</style>

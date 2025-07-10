@@ -90,22 +90,22 @@ Templates are Kubernetes manifests with Go templating:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-deployment
+  name: {% raw %}{{ .Release.Name }}{% endraw %}-deployment
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {% raw %}{{ .Values.replicaCount }}{% endraw %}
   selector:
     matchLabels:
-      app: {{ .Release.Name }}
+      app: {% raw %}{{ .Release.Name }}{% endraw %}
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}
+        app: {% raw %}{{ .Release.Name }}{% endraw %}
     spec:
       containers:
-      - name: {{ .Chart.Name }}
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+      - name: {% raw %}{{ .Chart.Name }}{% endraw %}
+        image: "{% raw %}{{ .Values.image.repository }}:{{ .Values.image.tag }}{% endraw %}"
         ports:
-        - containerPort: {{ .Values.service.port }}
+        - containerPort: {% raw %}{{ .Values.service.port }}{% endraw %}
 ```
 
 ## Working with Helm Charts
