@@ -8,6 +8,22 @@ description: "Understanding the fundamentals of machine learning in simple terms
 excerpt: "A beginner-friendly introduction to machine learning concepts, explained with real-world examples and minimal technical jargon."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Machine Learning Basics: A Beginner's Guide
 
 Have you ever wondered how Netflix knows what shows you might like? Or how your email knows which messages are spam? That's machine learning in action! Let's break it down in simple terms.
