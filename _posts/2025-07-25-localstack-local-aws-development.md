@@ -8,6 +8,22 @@ excerpt: >
   Master local AWS development with LocalStack! Learn how to install and configure LocalStack, create AWS resources locally, understand pricing tiers, and integrate with CI/CD pipelines. Includes practical examples and best practices.
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # LocalStack: Your Local AWS Cloud Environment
 
 LocalStack provides a fully functional local AWS cloud stack for development and testing. This guide will show you how to get started, create resources, and integrate LocalStack into your development workflow.
