@@ -8,6 +8,22 @@ description: "Discover how unsupervised learning finds patterns in data automati
 excerpt: "Learn how unsupervised learning algorithms discover hidden patterns and group similar items together, with real-world examples and applications."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Understanding Unsupervised Learning
 
 Imagine going through your closet and organizing clothes without any predefined categories. You might naturally group similar items together based on color, style, or season. That's exactly what unsupervised learning does with data!
