@@ -11,7 +11,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    
+    <script src="{{ site.baseurl }}/assets/js/auth.js"></script>
+
     <style>
       .title-container {
         width: 100%;
@@ -111,7 +112,15 @@
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
             <a href="{{ site.baseurl }}/search" class="search-button"><i class="fas fa-search search-icon"></i> Search</a>
+            <a href="#" onclick="logout()" style="float: right;">Logout</a>
           </nav>
+
+          <script>
+            function logout() {
+              localStorage.removeItem('blogAuth');
+              window.location.href = '/login.html';
+            }
+          </script>
         </header>
       </div>
     </div>
