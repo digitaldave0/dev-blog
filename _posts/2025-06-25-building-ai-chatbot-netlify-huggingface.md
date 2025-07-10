@@ -6,6 +6,22 @@ excerpt: "Build your own AI chatbot on free-tier services: Learn how to create a
 description: "A comprehensive guide to building a production-ready AI chatbot using Together AI's DeepSeek-V3 model, Netlify Functions, and modern web technologies. Features cyberpunk UI, real-time responses, and robust error handling. Try the live demo and learn how to create your own AI assistant with minimal setup and costs."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Building an AI Chatbot with Netlify and Together AI
 
 Over the past week, I spent about 4 hours building a proof-of-concept AI chatbot that demonstrates how to leverage modern AI services to create a functional AI assistant. In this post, I'll share my experience, explain the technical decisions, and outline the security considerations.

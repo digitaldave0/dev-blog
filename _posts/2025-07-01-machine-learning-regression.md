@@ -8,6 +8,22 @@ description: "Learn about regression in machine learning with simple, real-world
 excerpt: "Understand how regression works in machine learning through practical examples, from predicting house prices to estimating sales."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Understanding Regression in Machine Learning
 
 Remember trying to guess how much a house costs based on its size? That's essentially what regression does in machine learning - it helps predict numerical values based on data.
