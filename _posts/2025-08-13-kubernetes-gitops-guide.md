@@ -6,6 +6,22 @@ excerpt: "Implement GitOps practices in your Kubernetes clusters using ArgoCD an
 description: "A comprehensive guide to implementing GitOps practices in Kubernetes using ArgoCD and Flux CD. Learn about continuous delivery patterns, infrastructure as code, and automated deployment strategies. Perfect for teams looking to streamline their Kubernetes deployment workflows."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Kubernetes GitOps and CI/CD Implementation
 
 Learn how to implement GitOps practices and establish robust CI/CD pipelines for your Kubernetes clusters using modern tools and techniques.

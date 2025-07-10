@@ -6,6 +6,22 @@ excerpt: "Master production-grade Kubernetes deployments! Learn about StatefulSe
 description: "An advanced guide to production-ready Kubernetes deployments. Covers StatefulSets, persistent storage solutions, service mesh architecture with Istio, monitoring with Prometheus and Grafana, and best practices for high-availability deployments. Essential knowledge for DevOps engineers and platform architects."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Kubernetes Advanced: Production-Ready Deployments
 
 Welcome to the final part of our Kubernetes tutorial series! In this advanced guide, we'll explore production-grade features and best practices for enterprise deployments.

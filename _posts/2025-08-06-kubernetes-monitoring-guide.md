@@ -6,6 +6,22 @@ excerpt: "Implement comprehensive monitoring and observability in your Kubernete
 description: "Master Kubernetes monitoring and observability with this in-depth guide. Learn how to implement Prometheus and Grafana, set up custom metrics, create powerful dashboards, and establish effective alerting strategies. Essential knowledge for maintaining production-grade Kubernetes clusters."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Kubernetes Monitoring and Observability
 
 Learn how to implement comprehensive monitoring and observability in your Kubernetes clusters to ensure optimal performance and quick troubleshooting.
