@@ -5,6 +5,22 @@ categories: [DevOps, Web Development, Tutorial]
 excerpt: "Discover how to deploy Python serverless functions on Netlify's generous free tier instead of paying for AWS Lambda or Azure Functions. Perfect for hobby projects and MVPs!"
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Serverless on a Budget: Why I Chose Netlify over AWS and Azure
 
 As a developer working on side projects, I was looking for a cost-effective way to deploy serverless functions without worrying about unexpected cloud bills. After experimenting with AWS Lambda and Azure Functions, I discovered Netlify's serverless platform. Here's why it became my go-to solution for hobby projects.
