@@ -8,22 +8,6 @@ excerpt: >
   Take your Terraform skills to the next level! Learn how to write flexible and reusable configurations using variables, outputs, and data sources. Discover best practices for structuring your Terraform projects and managing different environments effectively.
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
-
 # Terraform Intermediate Concepts
 
 After understanding the basics, it's time to make your Terraform configurations more flexible and maintainable. This post covers essential intermediate concepts that will help you write better infrastructure code.

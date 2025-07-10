@@ -5,22 +5,6 @@ description: "Prompt engineering is the art of crafting clear, accurate, useful 
 excerpt: "Learn how to structure your prompts for better responses from AI. This guide covers techniques, examples, and common pitfalls so you can master the art of talking to machines."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
-
 Have you ever heard the saying *"garbage in, garbage out"*? It applies perfectly here. If you give vague, poorly structured prompts, you'll get equally vague or irrelevant results. Precise inputs lead to meaningful outputs — it’s that simple.
 
 Prompt engineering is the process of designing and structuring prompts (instructions) to guide a language model like ChatGPT to generate the desired output. Whether you're generating code, content, or business insights, a well-crafted prompt is critical.
