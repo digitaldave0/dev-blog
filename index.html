@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="/assets/js/auth.js"></script>
+    <script>
+        // Redirect to login if not authenticated
+        if (!localStorage.getItem('blogAuth')) {
+            window.location.href = '/login.html';
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
