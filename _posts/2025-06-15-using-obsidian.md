@@ -4,6 +4,22 @@ title: "🧠 How I Use Obsidian as a Digital Scrapbook"
 description: "Exploring how I use Obsidian to collect ideas, connect thoughts, and build my personal knowledge base as a DevOps professional."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 I've used a lot of note-taking apps over the years, but none has felt quite as natural — or as powerful — as **Obsidian**.
 
 I treat it less like a notebook and more like a **digital scrapbook**: a space where I can freely capture, connect, and evolve ideas across time.
