@@ -8,6 +8,22 @@ description: "Understanding how Mixture of Experts combines multiple AI models f
 excerpt: "Learn how Mixture of Experts (MoE) works like a team of specialists, each handling what they do best, to solve complex problems."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Mixture of Experts: Many Brains Are Better Than One
 
 Imagine you're building a house. You don't want one person doing everything - you want specialists: an electrician for wiring, a plumber for pipes, and so on. That's exactly how Mixture of Experts (MoE) works in AI! Let's explore this fascinating approach.
