@@ -7,6 +7,22 @@ description: "Learn how to migrate a Jekyll blog from GitHub Pages to Netlify, i
 excerpt: "A complete guide to moving your Jekyll blog from GitHub Pages to Netlify, with tips for DNS configuration, deployment settings, and maintaining your blog's functionality."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Migrating from GitHub Pages to Netlify: A Step-by-Step Guide
 
 Moving a Jekyll blog from GitHub Pages to Netlify is surprisingly straightforward. Here's how to do it while maintaining all functionality and improving your deployment options.

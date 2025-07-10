@@ -8,6 +8,22 @@ description: "A comprehensive guide to evaluating machine learning models beyond
 excerpt: "Learn why accuracy alone isn't enough and discover the key metrics for properly evaluating machine learning models."
 ---
 
+<style>
+pre, code {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+pre {
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #444 !important;
+}
+code {
+    padding: 2px 5px !important;
+    border-radius: 3px !important;
+}
+</style>
+
 # Model Evaluation: Beyond Accuracy
 
 When building machine learning models, many beginners focus solely on accuracy. But is a model that's 99% accurate always good? Let's dive into why we need to look beyond simple accuracy and explore the metrics that really matter.
