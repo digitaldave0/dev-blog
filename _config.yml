@@ -13,6 +13,7 @@ include:
   - _headers
   - _redirects
   - .htpasswd
+  - assets
 show_downloads: false
 future: true
 
