@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Windows Developer Machine Setup Guide: Complete PowerShell Environment for DevOps & Cloud Development"
+title: "Windows Developer Machine Setup Guide: Complete PowerShell Environment"
 description: "Comprehensive guide to setting up a Windows development machine with PowerShell, Git, Terraform, AWS CLI, VS Code, and package management using Chocolatey, winget, and PowerShell modules"
 tags:
   [windows, powershell, devops, setup, git, terraform, aws, vscode, development]

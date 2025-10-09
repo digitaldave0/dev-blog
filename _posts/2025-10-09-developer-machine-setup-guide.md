@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Developer Machine Setup Guide: Complete Environment for DevOps & Cloud Development"
+title: "Developer Machine Setup Guide: Complete Environment"
 description: "Comprehensive guide to setting up a new development machine with Git SSH, Bash aliases, Terraform, AWS CLI, VS Code configuration, and package management across macOS, Windows WSL, and Ubuntu LTS"
 tags: [devops, setup, git, bash, terraform, aws, cli, vscode, development]
 icon: 💻
