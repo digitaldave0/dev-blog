@@ -1346,6 +1346,322 @@ Remember that security is an **ongoing process**, not a one-time setup. Regularl
 
 Your Ubuntu server is now significantly more secure and ready for production use! 🛡️✨
 
+## Ubuntu LTS Security Hardening Master Script
+
+**Ready to automate everything?** Copy and run this comprehensive script to implement all security measures with a single command. Perfect for consistent deployments and reducing manual errors.
+
+```bash
+#!/bin/bash
+# Ubuntu LTS Security Hardening Master Script
+# Run as root or with sudo
+# Version: 1.0
+# Author: Ubuntu Security Hardening Guide
+
+set -e  # Exit on any error
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Configuration variables - MODIFY THESE FOR YOUR ENVIRONMENT
+NEW_USER="yourusername"  # Replace with your desired username
+SSH_PORT="22"           # Change if you want non-standard SSH port
+ADMIN_EMAIL="admin@yourdomain.com"  # For security notifications
+TIMEZONE="America/New_York"  # Set your timezone
+
+# Logging
+LOG_FILE="/var/log/ubuntu-hardening-$(date +%Y%m%d-%H%M%S).log"
+exec > >(tee -a "$LOG_FILE") 2>&1
+
+echo -e "${BLUE}🔒 Ubuntu LTS Security Hardening Script${NC}"
+echo -e "${BLUE}=======================================${NC}"
+echo -e "${YELLOW}Log file: $LOG_FILE${NC}"
+echo -e "${YELLOW}Started at: $(date)${NC}"
+echo ""
+
+# Function to print status messages
+print_status() {
+    echo -e "${GREEN}✅ $1${NC}"
+}
+
+print_warning() {
+    echo -e "${YELLOW}⚠️  $1${NC}"
+}
+
+print_error() {
+    echo -e "${RED}❌ $1${NC}"
+}
+
+# Check if running as root
+if [[ $EUID -ne 0 ]]; then
+   print_error "This script must be run as root or with sudo"
+   exit 1
+fi
+
+echo -e "${BLUE}Step 1: System Updates${NC}"
+echo "========================"
+
+# Update system
+print_status "Updating package lists..."
+apt update
+
+print_status "Upgrading packages..."
+apt upgrade -y
+
+print_status "Installing security tools..."
+apt install -y curl wget ufw fail2ban rkhunter chkrootkit auditd unattended-upgrades apt-transport-https ca-certificates gnupg lsb-release
+
+print_status "Configuring automatic security updates..."
+cat > /etc/apt/apt.conf.d/50unattended-upgrades << EOF
+Unattended-Upgrade::Allowed-Origins {
+    "\${distro_id}:\${distro_codename}";
+    "\${distro_id}:\${distro_codename}-security";
+    "\${distro_id}:\${distro_codename}-updates";
+};
+Unattended-Upgrade::Mail "$ADMIN_EMAIL";
+Unattended-Upgrade::Remove-Unused-Dependencies "true";
+Unattended-Upgrade::Automatic-Reboot "true";
+Unattended-Upgrade::Automatic-Reboot-Time "02:00";
+EOF
+
+print_status "Enabling unattended upgrades..."
+dpkg-reconfigure --frontend=noninteractive unattended-upgrades
+
+echo ""
+echo -e "${BLUE}Step 2: User Management${NC}"
+echo "======================="
+
+# Create new user if it doesn't exist
+if id "$NEW_USER" &>/dev/null; then
+    print_warning "User $NEW_USER already exists"
+else
+    print_status "Creating new user: $NEW_USER"
+    useradd -m -s /bin/bash "$NEW_USER"
+    usermod -aG sudo "$NEW_USER"
+    print_status "User created. Set password with: sudo passwd $NEW_USER"
+fi
+
+echo ""
+echo -e "${BLUE}Step 3: SSH Hardening${NC}"
+echo "===================="
+
+print_status "Backing up SSH configuration..."
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup.$(date +%Y%m%d_%H%M%S)
+
+print_status "Configuring SSH security..."
+cat >> /etc/ssh/sshd_config << EOF
+
+# Security hardening - Added by hardening script
+PasswordAuthentication no
+PermitRootLogin no
+Protocol 2
+MaxAuthTries 3
+ClientAliveInterval 300
+ClientAliveCountMax 2
+X11Forwarding no
+AllowTcpForwarding no
+PermitEmptyPasswords no
+UseDNS no
+EOF
+
+print_status "Restarting SSH service..."
+systemctl restart ssh
+
+echo ""
+echo -e "${BLUE}Step 4: Firewall Configuration${NC}"
+echo "============================"
+
+print_status "Configuring UFW firewall..."
+ufw --force reset
+
+print_status "Setting default policies..."
+ufw default deny incoming
+ufw default allow outgoing
+
+print_status "Allowing SSH..."
+ufw allow "$SSH_PORT"/tcp
+
+print_status "Enabling firewall..."
+ufw --force enable
+
+echo ""
+echo -e "${BLUE}Step 5: Fail2Ban Setup${NC}"
+echo "===================="
+
+print_status "Configuring Fail2Ban..."
+cat > /etc/fail2ban/jail.local << EOF
+[sshd]
+enabled = true
+port = $SSH_PORT
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+bantime = 3600
+findtime = 600
+
+[nginx-http-auth]
+enabled = true
+port = http,https
+filter = nginx-http-auth
+logpath = /var/log/nginx/error.log
+maxretry = 3
+bantime = 3600
+
+[nginx-noscript]
+enabled = true
+port = http,https
+filter = nginx-noscript
+logpath = /var/log/nginx/access.log
+maxretry = 6
+bantime = 3600
+EOF
+
+print_status "Enabling and starting Fail2Ban..."
+systemctl enable fail2ban
+systemctl restart fail2ban
+
+echo ""
+echo -e "${BLUE}Step 6: System Hardening${NC}"
+echo "======================="
+
+print_status "Configuring kernel security parameters..."
+cat >> /etc/sysctl.conf << EOF
+
+# Security hardening - Added by hardening script
+net.ipv4.tcp_syncookies = 1
+net.ipv4.ip_forward = 0
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.all.log_martians = 1
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+fs.suid_dumpable = 0
+kernel.dmesg_restrict = 1
+vm.mmap_min_addr = 65536
+EOF
+
+print_status "Applying kernel parameters..."
+sysctl -p
+
+print_status "Securing file permissions..."
+chmod 600 /etc/shadow /etc/gshadow
+chmod 644 /etc/passwd /etc/group
+
+echo ""
+echo -e "${BLUE}Step 7: Security Monitoring${NC}"
+echo "========================="
+
+print_status "Enabling auditd..."
+systemctl enable auditd
+systemctl start auditd
+
+print_status "Installing logwatch..."
+apt install -y logwatch
+
+print_status "Configuring logwatch..."
+cat > /etc/cron.daily/logwatch << EOF
+#!/bin/bash
+/usr/sbin/logwatch --output mail --mailto $ADMIN_EMAIL --detail high
+EOF
+chmod +x /etc/cron.daily/logwatch
+
+echo ""
+echo -e "${BLUE}Step 8: Backup Configuration${NC}"
+echo "==========================="
+
+print_status "Installing backup tools..."
+apt install -y rsync duplicity
+
+print_status "Creating backup script..."
+cat > /usr/local/bin/ubuntu-backup.sh << 'EOF'
+#!/bin/bash
+# Ubuntu automated backup script
+
+BACKUP_DIR="/var/backups"
+SOURCE_DIR="/home"
+DATE=$(date +%Y%m%d_%H%M%S)
+
+# Create backup directory if it doesn't exist
+mkdir -p "$BACKUP_DIR"
+
+# Local backup
+rsync -avz --delete "$SOURCE_DIR" "$BACKUP_DIR/daily_$DATE"
+
+# Clean old backups (keep last 7)
+find "$BACKUP_DIR" -name "daily_*" -type d -mtime +7 -exec rm -rf {} +
+
+echo "Backup completed: $BACKUP_DIR/daily_$DATE"
+EOF
+
+chmod +x /usr/local/bin/ubuntu-backup.sh
+
+print_status "Scheduling daily backups..."
+echo "0 2 * * * /usr/local/bin/ubuntu-backup.sh" > /etc/cron.d/ubuntu-backup
+
+echo ""
+echo -e "${BLUE}Step 9: Security Validation${NC}"
+echo "==========================="
+
+print_status "Creating security validation script..."
+cat > /usr/local/bin/ubuntu-security-check.sh << 'EOF'
+#!/bin/bash
+# Ubuntu Security Validation Script
+
+echo "🔒 Ubuntu Security Check"
+echo "========================"
+
+# SSH Security
+echo "SSH Security:"
+if grep -q "PasswordAuthentication no" /etc/ssh/sshd_config; then
+    echo "✅ Password authentication disabled"
+else
+    echo "❌ Password authentication enabled"
+fi
+
+if grep -q "PermitRootLogin no" /etc/ssh/sshd_config; then
+    echo "✅ Root login disabled"
+else
+    echo "❌ Root login enabled"
+fi
+
+# Firewall
+echo -e "\nFirewall Status:"
+ufw status | grep -E "(Status|active)"
+
+# Fail2Ban
+echo -e "\nFail2Ban Status:"
+systemctl is-active fail2ban
+
+# Updates
+echo -e "\nSystem Updates:"
+apt list --upgradable 2>/dev/null | grep -c "upgradable" | xargs echo "packages can be upgraded"
+
+echo -e "\nSecurity check complete!"
+EOF
+
+chmod +x /usr/local/bin/ubuntu-security-check.sh
+
+print_status "Running initial security check..."
+/usr/local/bin/ubuntu-security-check.sh
+
+echo ""
+echo -e "${GREEN}🎉 Ubuntu Security Hardening Complete!${NC}"
+echo ""
+echo -e "${YELLOW}Next Steps:${NC}"
+echo "1. Set password for new user: sudo passwd $NEW_USER"
+echo "2. Copy SSH keys to server for the new user"
+echo "3. Test SSH connection with new user"
+echo "4. Run security check: /usr/local/bin/ubuntu-security-check.sh"
+echo "5. Review logs: tail -f $LOG_FILE"
+echo ""
+echo -e "${BLUE}Log saved to: $LOG_FILE${NC}"
+echo -e "${BLUE}Completed at: $(date)${NC}"
+```
+
 ### Security Resources
 
 - **Ubuntu Security Notices:** https://ubuntu.com/security/notices
