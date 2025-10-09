@@ -9,8 +9,6 @@ excerpt: >
   Master your Windows development environment! This comprehensive guide covers setting up PowerShell with profiles and modules, Git with SSH, Terraform and AWS CLI, VS Code configuration, and Windows package management with Chocolatey and winget. Perfect for Windows-native DevOps workflows.
 ---
 
-# Windows Developer Machine Setup Guide: Complete PowerShell Environment
-
 Setting up a Windows development machine for DevOps and cloud development requires a different approach than traditional Unix-like systems. This guide focuses on leveraging Windows-native tools and PowerShell to create a powerful, efficient development environment that stays within the Windows ecosystem.
 
 Whether you're working with Azure, AWS, or multi-cloud environments, this Windows-centric setup will give you all the tools you need for modern infrastructure as code and cloud development.

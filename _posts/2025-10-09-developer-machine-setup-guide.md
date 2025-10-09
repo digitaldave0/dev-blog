@@ -8,8 +8,6 @@ excerpt: >
   Transform your new machine into a powerful development environment! This comprehensive guide covers setting up Git with SSH keys, configuring Bash with aliases and completion, installing Terraform and AWS CLI, configuring VS Code with essential extensions and workspace settings, and keeping everything up to date. Complete instructions for macOS, Windows WSL, and Ubuntu LTS.
 ---
 
-# Developer Machine Setup Guide: Complete DevOps Environment
-
 Setting up a new development machine can be overwhelming, but having the right tools configured properly makes all the difference in productivity. This guide will walk you through setting up a complete development environment optimized for DevOps, cloud development, and infrastructure automation.
 
 Whether you're on macOS, Windows with WSL, or Ubuntu LTS, this guide covers everything you need to get started with Git, Bash, Terraform, and AWS CLI.
