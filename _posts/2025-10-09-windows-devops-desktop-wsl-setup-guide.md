@@ -1,20 +1,7 @@
 ---
 layout: post
 title: "Windows DevOps Desktop Setup: WSL Development Environment Guide"
-description: "Complete guide to setting up a Windows desktop with WSL for DevOps development. Configure Windows Subsystem for Linux, development tools, Docker integration, security hardening, and DevOps workflows. Perfect for developers who need Linux tools on Windows."
-tags:
-  [
-    windows,
-    wsl,
-    devops,
-    development,
-    docker,
-    vscode,
-    git,
-    linux,
-    security,
-    development-environment,
-  ]
+tags: windows, wsl, devops, development, docker, vscode, git, linux, security, development-environment
 icon: 🪟
 excerpt: >
   Transform your Windows desktop into a powerful DevOps development environment! This comprehensive guide covers Windows Subsystem for Linux (WSL) setup, Docker integration, development tools configuration, security hardening, and DevOps workflows. Get the best of both Windows and Linux worlds for modern development.
