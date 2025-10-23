@@ -3,11 +3,9 @@ title: "Building a Local RAG System with Ollama: PDF Indexing, Training, and GUI
 date: 2025-10-24
 categories: [AI, Machine Learning, Python, RAG, Ollama]
 tags: [ollama, rag, pdf-indexing, python, gui, langchain, streamlit]
+excerpt: >
+  Retrieval-Augmented Generation (RAG) is a powerful technique that combines the strengths of large language models with external knowledge sources. In this post, we'll build a complete local RAG system using Ollama, Python, and a few PDFs. You'll learn how to index documents, enhance a model with your data, and create a simple GUI for interactive searching.
 ---
-
-# Building a Local RAG System with Ollama: PDF Indexing, Training, and GUI Search
-
-Retrieval-Augmented Generation (RAG) is a powerful technique that combines the strengths of large language models with external knowledge sources. In this post, we'll build a complete local RAG system using Ollama, Python, and a few PDFs. You'll learn how to index documents, enhance a model with your data, and create a simple GUI for interactive searching.
 
 ## What We'll Build
 
