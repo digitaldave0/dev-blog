@@ -20,8 +20,8 @@ show_downloads: false
 future: true
 
 # URL Configuration
-baseurl: ""  # the subpath of your site, e.g. /blog
-url: ""      # the base hostname & protocol
+baseurl: "/dev-blog"  # the subpath of your site, e.g. /blog
+url: "https://davidhibbitts.github.io"      # the base hostname & protocol
 permalink: /posts/:title/
 
 # Chirpy specific settings
