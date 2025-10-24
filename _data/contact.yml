@@ -1,0 +1,9 @@
+- type: github
+  icon: "fab fa-github"
+  url: "https://github.com/digitaldave0"  # Update with your GitHub URL
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://linkedin.com/in/davidhibbitts"  # Update with your LinkedIn URL
+- type: rss
+  icon: "fas fa-rss"
+  url: "/feed.xml"

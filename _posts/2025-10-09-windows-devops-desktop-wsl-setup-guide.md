@@ -738,6 +738,7 @@ chmod +x ~/recover-wsl.sh
 Dev containers are Docker containers specifically configured for development environments. They provide consistent, isolated development environments that work across different machines and team members.
 
 **Why dev containers for DevOps?**
+
 - **Environment consistency** across development, testing, and production
 - **Dependency isolation** prevents conflicts between projects
 - **Team collaboration** ensures everyone uses identical environments
@@ -753,47 +754,47 @@ VS Code's dev container extension provides seamless integration with your develo
 ```json
 // .devcontainer/devcontainer.json
 {
-    "name": "Python DevOps Environment",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "devcontainer",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-    "shutdownAction": "stopCompose",
+  "name": "Python DevOps Environment",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "shutdownAction": "stopCompose",
 
-    // Configure tool-specific properties
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-python.python",
-                "ms-python.black-formatter",
-                "ms-python.flake8",
-                "ms-toolsai.jupyter",
-                "redhat.vscode-yaml",
-                "hashicorp.terraform",
-                "ms-azuretools.vscode-docker",
-                "ms-vscode.vscode-json",
-                "GitHub.copilot"
-            ],
-            "settings": {
-                "python.defaultInterpreterPath": "/usr/local/bin/python",
-                "python.linting.enabled": true,
-                "python.linting.flake8Enabled": true,
-                "python.formatting.provider": "black",
-                "editor.formatOnSave": true,
-                "editor.codeActionsOnSave": {
-                    "source.organizeImports": true
-                }
-            }
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-toolsai.jupyter",
+        "redhat.vscode-yaml",
+        "hashicorp.terraform",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.vscode-json",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
         }
-    },
+      }
+    }
+  },
 
-    // Use 'forwardPorts' to make a list of ports inside the container available locally
-    "forwardPorts": [3000, 8000, 8080],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally
+  "forwardPorts": [3000, 8000, 8080],
 
-    // Use 'postCreateCommand' to run commands after the container is created
-    "postCreateCommand": "pip install -r requirements.txt",
+  // Use 'postCreateCommand' to run commands after the container is created
+  "postCreateCommand": "pip install -r requirements.txt",
 
-    // Comment out to connect as root instead
-    "remoteUser": "vscode"
+  // Comment out to connect as root instead
+  "remoteUser": "vscode"
 }
 ```
 
@@ -804,7 +805,7 @@ This example creates a comprehensive Python environment for DevOps work, includi
 
 ```yaml
 # .devcontainer/docker-compose.yml
-version: '3.8'
+version: "3.8"
 
 services:
   devcontainer:
@@ -962,11 +963,13 @@ pre-commit>=3.4.0
 **How to open a project in a dev container:**
 
 1. **Open in VS Code:**
+
    ```bash
    code .
    ```
 
 2. **Reopen in Container:**
+
    - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
    - Type "Dev Containers: Reopen in Container"
    - Select your dev container configuration
@@ -987,35 +990,35 @@ Different development phases may require different tools. Multi-stage containers
 ```json
 // .devcontainer/devcontainer.json (multi-stage example)
 {
-    "name": "Multi-Stage Python DevOps",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "devcontainer",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-    
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-python.python",
-                "hashicorp.terraform",
-                "ms-azuretools.vscode-docker"
-            ]
-        }
-    },
+  "name": "Multi-Stage Python DevOps",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
-    // Define different container configurations
-    "overrideCommand": false,
-    "postCreateCommand": "echo 'Dev container ready!'",
-    
-    // Feature flags for different development stages
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {
-            "moby": true,
-            "dockerDashComposeVersion": "v2"
-        },
-        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
-            "version": "latest"
-        }
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "hashicorp.terraform",
+        "ms-azuretools.vscode-docker"
+      ]
     }
+  },
+
+  // Define different container configurations
+  "overrideCommand": false,
+  "postCreateCommand": "echo 'Dev container ready!'",
+
+  // Feature flags for different development stages
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": true,
+      "dockerDashComposeVersion": "v2"
+    },
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "version": "latest"
+    }
+  }
 }
 ```
 
@@ -1059,7 +1062,7 @@ Developing CI/CD pipelines requires testing against the same environment used in
 
 ```yaml
 # .devcontainer/docker-compose.cicd.yml
-version: '3.8'
+version: "3.8"
 
 services:
   devcontainer:
@@ -1153,39 +1156,39 @@ Dev containers should feel as responsive as local development while providing en
 ```json
 // Optimized devcontainer.json
 {
-    "name": "Optimized Python DevOps",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": ".",
-        // Use build args for customization
-        "args": {
-            "PYTHON_VERSION": "3.11",
-            "NODE_VERSION": "18"
-        }
-    },
-    
-    // Optimize volume mounting
-    "mounts": [
-        // Use delegated consistency for better performance on macOS/Windows
-        "source=${localWorkspaceFolder},target=/workspaces,type=bind,consistency=delegated",
-        // Cache pip packages
-        "source=pip-cache,target=/home/vscode/.cache/pip,type=volume"
-    ],
-    
-    // Use remote user for security
-    "remoteUser": "vscode",
-    
-    // Optimize container startup
-    "postCreateCommand": "pip install -r requirements.txt --user",
-    
-    // Configure ports for development
-    "forwardPorts": [3000, 8000, 8080],
-    
-    // Set container-specific environment
-    "containerEnv": {
-        "PYTHONPATH": "/workspaces/src",
-        "DOCKER_BUILDKIT": "1"
+  "name": "Optimized Python DevOps",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".",
+    // Use build args for customization
+    "args": {
+      "PYTHON_VERSION": "3.11",
+      "NODE_VERSION": "18"
     }
+  },
+
+  // Optimize volume mounting
+  "mounts": [
+    // Use delegated consistency for better performance on macOS/Windows
+    "source=${localWorkspaceFolder},target=/workspaces,type=bind,consistency=delegated",
+    // Cache pip packages
+    "source=pip-cache,target=/home/vscode/.cache/pip,type=volume"
+  ],
+
+  // Use remote user for security
+  "remoteUser": "vscode",
+
+  // Optimize container startup
+  "postCreateCommand": "pip install -r requirements.txt --user",
+
+  // Configure ports for development
+  "forwardPorts": [3000, 8000, 8080],
+
+  // Set container-specific environment
+  "containerEnv": {
+    "PYTHONPATH": "/workspaces/src",
+    "DOCKER_BUILDKIT": "1"
+  }
 }
 ```
 
@@ -1197,47 +1200,47 @@ Dev containers enable consistent team environments and simplify onboarding.
 ```json
 // Team devcontainer.json with shared configurations
 {
-    "name": "Team Python DevOps Environment",
-    
-    // Use team's base image
-    "image": "myregistry.azurecr.io/devcontainers/python-devops:latest",
-    
-    // Team-wide extensions
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                // Team standards
-                "ms-python.python",
-                "ms-python.black-formatter",
-                "GitHub.copilot",
-                // Project specific
-                "hashicorp.terraform",
-                "ms-azuretools.vscode-docker"
-            ],
-            "settings": {
-                // Team coding standards
-                "python.formatting.provider": "black",
-                "python.linting.flake8Enabled": true,
-                "editor.formatOnSave": true,
-                "editor.codeActionsOnSave": {
-                    "source.organizeImports": true
-                },
-                // Team-specific settings
-                "terraform.languageServer.enable": true,
-                "azure.terraform.enable": true
-            }
-        }
-    },
-    
-    // Team secrets management
-    "secrets": {
-        "AZURE_CLIENT_ID": {
-            "description": "Azure service principal client ID"
+  "name": "Team Python DevOps Environment",
+
+  // Use team's base image
+  "image": "myregistry.azurecr.io/devcontainers/python-devops:latest",
+
+  // Team-wide extensions
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Team standards
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "GitHub.copilot",
+        // Project specific
+        "hashicorp.terraform",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        // Team coding standards
+        "python.formatting.provider": "black",
+        "python.linting.flake8Enabled": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
         },
-        "AZURE_TENANT_ID": {
-            "description": "Azure tenant ID"
-        }
+        // Team-specific settings
+        "terraform.languageServer.enable": true,
+        "azure.terraform.enable": true
+      }
     }
+  },
+
+  // Team secrets management
+  "secrets": {
+    "AZURE_CLIENT_ID": {
+      "description": "Azure service principal client ID"
+    },
+    "AZURE_TENANT_ID": {
+      "description": "Azure tenant ID"
+    }
+  }
 }
 ```
 
@@ -1254,38 +1257,38 @@ name: Dev Container CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Setup Dev Container
-      uses: devcontainers/ci@v0.3
-      with:
-        configFile: .devcontainer/devcontainer.json
-        
-    - name: Run tests
-      run: |
-        pip install -r requirements.txt
-        pytest
-        
-    - name: Run linting
-      run: |
-        black --check .
-        flake8 .
-        
-    - name: Security scan
-      run: |
-        # Run security tools
-        bandit -r .
-        safety check
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Dev Container
+        uses: devcontainers/ci@v0.3
+        with:
+          configFile: .devcontainer/devcontainer.json
+
+      - name: Run tests
+        run: |
+          pip install -r requirements.txt
+          pytest
+
+      - name: Run linting
+        run: |
+          black --check .
+          flake8 .
+
+      - name: Security scan
+        run: |
+          # Run security tools
+          bandit -r .
+          safety check
 ```
 
 #### Dev Container Registry Management

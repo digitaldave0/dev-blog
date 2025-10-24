@@ -1,0 +1,25 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Disable hover color changes on post links */
+.post-title a:hover,
+.post-preview a:hover,
+.post-tag:hover {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Make trending tags not clickable since tag pages are not generated */
+.post-tag {
+  pointer-events: none;
+  cursor: default;
+}
