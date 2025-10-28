@@ -22,6 +22,23 @@ pre {
   line-height: 1.45 !important;
 }
 
+.highlight {
+  background-color: #f6f8fa !important;
+  border: 1px solid #d1d9e0 !important;
+  border-radius: 6px !important;
+  padding: 1rem !important;
+  overflow-x: auto !important;
+}
+
+.highlight pre {
+  background-color: transparent !important;
+  color: #24292f !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 0.85rem !important;
+  line-height: 1.45 !important;
+}
+
 code {
   background-color: rgba(0, 0, 0, 0.05) !important;
   color: #d73a49 !important;
@@ -41,6 +58,16 @@ pre code {
 html[data-theme="dark"] pre {
   background-color: #0d1117 !important;
   border-color: #30363d !important;
+  color: #c9d1d9 !important;
+}
+
+html[data-theme="dark"] .highlight {
+  background-color: #0d1117 !important;
+  border-color: #30363d !important;
+}
+
+html[data-theme="dark"] .highlight pre {
+  background-color: transparent !important;
   color: #c9d1d9 !important;
 }
 
