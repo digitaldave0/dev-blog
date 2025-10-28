@@ -20,8 +20,8 @@ show_downloads: false
 future: true
 
 # URL Configuration
-baseurl: "/dev-blog"  # the subpath of your site, e.g. /blog
-url: "https://davidhibbitts.github.io"      # the base hostname & protocol
+baseurl: ""  # Empty since your site is at the root domain
+url: "https://blog.digitaldevops.xyz"      # Your actual live URL
 permalink: /posts/:title/
 
 # Chirpy specific settings
