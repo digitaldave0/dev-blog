@@ -3,6 +3,7 @@ title: "Building an AI-Powered Frogger Game: Training and Challenges"
 date: 2025-10-23
 categories: [AI, Machine Learning, Python, Games]
 tags: [reinforcement learning, deep q-learning, pygame, frogger]
+layout: post
 ---
 
 
