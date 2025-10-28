@@ -66,10 +66,54 @@ html[data-theme="dark"] .highlight {
   border-color: #30363d !important;
 }
 
-html[data-theme="dark"] .highlight pre {
-  background-color: transparent !important;
-  color: #c9d1d9 !important;
-}
+html[data-theme="dark"] .highlight .k { color: #79c0ff; } /* keyword */
+html[data-theme="dark"] .highlight .s { color: #a5c9ea; } /* string */
+html[data-theme="dark"] .highlight .c { color: #8b949e; } /* comment */
+html[data-theme="dark"] .highlight .n { color: #c9d1d9; } /* name */
+html[data-theme="dark"] .highlight .o { color: #ffab70; } /* operator */
+html[data-theme="dark"] .highlight .p { color: #c9d1d9; } /* punctuation */
+html[data-theme="dark"] .highlight .cm { color: #8b949e; } /* comment multiline */
+html[data-theme="dark"] .highlight .cp { color: #8b949e; } /* comment preprocessor */
+html[data-theme="dark"] .highlight .c1 { color: #8b949e; } /* comment single */
+html[data-theme="dark"] .highlight .cs { color: #8b949e; } /* comment special */
+html[data-theme="dark"] .highlight .kd { color: #ff7b72; } /* keyword declaration */
+html[data-theme="dark"] .highlight .kn { color: #ff7b72; } /* keyword namespace */
+html[data-theme="dark"] .highlight .kp { color: #79c0ff; } /* keyword pseudo */
+html[data-theme="dark"] .highlight .kr { color: #79c0ff; } /* keyword reserved */
+html[data-theme="dark"] .highlight .kt { color: #79c0ff; } /* keyword type */
+html[data-theme="dark"] .highlight .na { color: #79c0ff; } /* name attribute */
+html[data-theme="dark"] .highlight .nb { color: #ffa657; } /* name builtin */
+html[data-theme="dark"] .highlight .nc { color: #f2cc60; } /* name class */
+html[data-theme="dark"] .highlight .no { color: #79c0ff; } /* name constant */
+html[data-theme="dark"] .highlight .nd { color: #ffa657; } /* name decorator */
+html[data-theme="dark"] .highlight .ni { color: #c9d1d9; } /* name entity */
+html[data-theme="dark"] .highlight .ne { color: #f2cc60; } /* name exception */
+html[data-theme="dark"] .highlight .nf { color: #d2a8ff; } /* name function */
+html[data-theme="dark"] .highlight .nl { color: #79c0ff; } /* name label */
+html[data-theme="dark"] .highlight .nn { color: #f2cc60; } /* name namespace */
+html[data-theme="dark"] .highlight .nx { color: #c9d1d9; } /* name other */
+html[data-theme="dark"] .highlight .py { color: #c9d1d9; } /* name property */
+html[data-theme="dark"] .highlight .nt { color: #7ee787; } /* name tag */
+html[data-theme="dark"] .highlight .nv { color: #79c0ff; } /* name variable */
+html[data-theme="dark"] .highlight .ow { color: #ffab70; } /* operator word */
+html[data-theme="dark"] .highlight .w { color: #c9d1d9; } /* text whitespace */
+html[data-theme="dark"] .highlight .mf { color: #79c0ff; } /* literal number float */
+html[data-theme="dark"] .highlight .mh { color: #79c0ff; } /* literal number hex */
+html[data-theme="dark"] .highlight .mi { color: #79c0ff; } /* literal number integer */
+html[data-theme="dark"] .highlight .mo { color: #79c0ff; } /* literal number oct */
+html[data-theme="dark"] .highlight .sb { color: #a5c9ea; } /* literal string backtick */
+html[data-theme="dark"] .highlight .sc { color: #a5c9ea; } /* literal string char */
+html[data-theme="dark"] .highlight .sd { color: #a5c9ea; } /* literal string doc */
+html[data-theme="dark"] .highlight .se { color: #a5c9ea; } /* literal string escape */
+html[data-theme="dark"] .highlight .sh { color: #a5c9ea; } /* literal string heredoc */
+html[data-theme="dark"] .highlight .si { color: #a5c9ea; } /* literal string interpol */
+html[data-theme="dark"] .highlight .sx { color: #a5c9ea; } /* literal string other */
+html[data-theme="dark"] .highlight .sr { color: #a5c9ea; } /* literal string regex */
+html[data-theme="dark"] .highlight .ss { color: #a5c9ea; } /* literal string symbol */
+html[data-theme="dark"] .highlight .vc { color: #79c0ff; } /* name variable class */
+html[data-theme="dark"] .highlight .vg { color: #79c0ff; } /* name variable global */
+html[data-theme="dark"] .highlight .vi { color: #79c0ff; } /* name variable instance */
+html[data-theme="dark"] .highlight .il { color: #79c0ff; } /* literal number integer long */
 
 html[data-theme="dark"] code {
   background-color: rgba(255, 255, 255, 0.1) !important;
