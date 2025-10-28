@@ -20,8 +20,8 @@ show_downloads: false
 future: true
 
 # URL Configuration
-baseurl: "/dev-blog"  # the subpath of your site, e.g. /blog
-url: "https://digitaldave0.github.io"      # the base hostname & protocol
+baseurl: ""  # No subpath needed with custom domain
+url: "https://blog.digitaldevops.xyz"  # Use custom domain
 permalink: /posts/:title/
 
 # Chirpy specific settings
