@@ -10,16 +10,47 @@
 
 /* append your custom style below */
 
-/* Disable hover color changes on post links */
-.post-title a:hover,
-.post-preview a:hover,
-.post-tag:hover {
+/* Disable hover color changes on post title links but keep them clickable */
+.post-title a {
+  color: inherit;
+}
+
+.post-title a:hover {
   color: inherit !important;
-  text-decoration: none !important;
+  text-decoration: underline;
 }
 
 /* Make trending tags not clickable since tag pages are not generated */
-.post-tag {
+.trending-tags .post-tag {
   pointer-events: none;
   cursor: default;
+}
+
+/* Make avatar and sidebar clickable */
+.sidebar-top {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-top:hover {
+  transform: scale(1.02);
+}
+
+.sidebar-top a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure post previews are clickable */
+.post-preview {
+  cursor: pointer;
+}
+
+.post-preview a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-preview:hover .post-title a {
+  text-decoration: underline;
 }
