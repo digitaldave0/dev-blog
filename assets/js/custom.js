@@ -19,27 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
     siteTitle.style.cursor = 'pointer';
   }
 
-  // Make entire post preview clickable
-  const postPreviews = document.querySelectorAll('.post-preview');
-  postPreviews.forEach(preview => {
-    const link = preview.querySelector('a[href*="/posts/"]');
-    if (link && link.getAttribute('href')) {
-      preview.style.cursor = 'pointer';
-      preview.addEventListener('click', function(e) {
-        // Don't navigate if clicking on a link, tag, or other interactive element
-        if (e.target.tagName === 'A' || e.target.classList.contains('post-tag') || e.target.closest('.post-tag') || e.target.closest('a')) {
-          return;
-        }
-        const href = link.getAttribute('href');
-        let absoluteUrl = href;
-        if (!href.startsWith('http')) {
-          absoluteUrl = baseUrl.replace(/\/$/, '') + (href.startsWith('/') ? href : '/' + href);
-        }
-        window.location.href = absoluteUrl;
-      });
-    }
-  });
-
   // Ensure all post title links work
   const postTitles = document.querySelectorAll('.post-title a, .read-more');
   postTitles.forEach(link => {
