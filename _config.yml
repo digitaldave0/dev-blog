@@ -26,7 +26,7 @@ permalink: /posts/:title/
 
 # Chirpy specific settings
 avatar: /assets/img/blog_image.png  # Your blog avatar image
-timezone: America/New_York  # Adjust to your timezone
+timezone: Europe/London  # Adjust to your timezone
 lang: en
 
 # Pagination
