@@ -8,21 +8,6 @@ description: "Understanding the crucial steps of data preparation and how to ach
 excerpt: "Learn about data cleaning, deduplication, and how to split your data properly to build effective machine learning models."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Data Science Fundamentals: Getting Your Data Right
 

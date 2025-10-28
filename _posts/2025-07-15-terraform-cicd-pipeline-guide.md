@@ -8,21 +8,6 @@ excerpt: >
   Discover how to build robust CI/CD pipelines for your Terraform code! This comprehensive guide covers pipeline design principles, security considerations, and best practices for automating infrastructure deployments safely and efficiently.
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Infrastructure as Code Pipelines: A Comprehensive Guide
 

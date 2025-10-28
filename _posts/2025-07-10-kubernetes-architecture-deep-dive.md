@@ -6,21 +6,6 @@ excerpt: "Explore the intricate architecture of Kubernetes, from control plane c
 description: "A comprehensive deep dive into Kubernetes architecture, explaining master and worker node components, their interactions, and the core principles behind Kubernetes design. Perfect for DevOps engineers and architects wanting to understand Kubernetes internals."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Understanding Kubernetes Architecture
 

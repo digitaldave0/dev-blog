@@ -8,21 +8,6 @@ excerpt: >
   Scale your infrastructure with advanced Terraform concepts! Dive deep into creating reusable modules, managing multiple environments with workspaces, and implementing robust state management strategies. Essential knowledge for managing enterprise-level infrastructure deployments.
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Advanced Terraform: Scaling Your Infrastructure
 

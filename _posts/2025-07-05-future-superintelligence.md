@@ -8,21 +8,6 @@ description: "Exploring the journey from current AI to Artificial General Intell
 excerpt: "A thoughtful exploration of what AGI and ASI might mean for humanity, examining both the potential benefits and risks of superintelligent AI systems."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # The Path to AGI and ASI: Understanding Superintelligence
 

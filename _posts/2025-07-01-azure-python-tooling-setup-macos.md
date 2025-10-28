@@ -6,21 +6,6 @@ description: "A comprehensive guide to setting up Azure development tools with P
 excerpt: "Learn how to set up a complete Azure development environment on macOS using Python, including authentication methods, CLI tools, and best practices for development."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Setting Up Azure Development Tools with Python on macOS
 

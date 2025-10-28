@@ -6,21 +6,6 @@ description: "Learn how to run Jenkins in Docker with a complete setup guide inc
 excerpt: "A comprehensive guide to running Jenkins in Docker, with a focus on easy setup, security, and maintainability. Includes a custom installation script and best practices for DevOps teams."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Running Jenkins in Docker: A Complete Setup Guide
 

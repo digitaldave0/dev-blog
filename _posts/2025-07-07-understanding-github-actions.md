@@ -13,21 +13,6 @@ description: "A comprehensive guide to GitHub Actions, covering everything from 
 excerpt: "Discover how to leverage GitHub Actions for your CI/CD needs. This guide covers setup, pricing tiers, best practices, and advanced features to help you automate your development workflow effectively."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Understanding GitHub Actions: A Complete Guide
 

@@ -6,21 +6,6 @@ excerpt: "Take your Ansible skills to the next level with roles, variables, and 
 description: "A detailed guide to intermediate Ansible concepts including roles, variables, templates, and handlers. Features a practical example of deploying a load-balanced web application with customizable configurations."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Intermediate Ansible: Beyond the Basics
 

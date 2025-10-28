@@ -6,41 +6,6 @@ excerpt: "Master Azure CLI with this comprehensive command reference. Includes p
 description: "Complete Azure CLI command reference with real-world examples and use cases. Covers resource management, compute, containers, networking, storage, and security. Essential guide for DevOps professionals working with Azure cloud infrastructure."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-th {
-    background-color: #2d2d2d;
-    color: white;
-}
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-tr:hover {
-    background-color: #f5f5f5;
-}
-</style>
 
 # Azure CLI Commands Cheatsheet for DevOps Engineers
 

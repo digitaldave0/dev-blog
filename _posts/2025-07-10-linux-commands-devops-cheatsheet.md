@@ -6,41 +6,6 @@ excerpt: "Master the most important Linux commands for DevOps and system adminis
 description: "Complete Linux command reference for DevOps engineers and system administrators. Includes 100+ essential commands with practical examples, common use cases, and best practices for daily operations."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-th {
-    background-color: #2d2d2d;
-    color: white;
-}
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-tr:hover {
-    background-color: #f5f5f5;
-}
-</style>
 
 # Linux Commands Cheatsheet for DevOps Engineers
 
