@@ -1,6 +1,6 @@
 // Make avatar and home clickable to navigate
 document.addEventListener('DOMContentLoaded', function() {
-  const baseUrl = '/dev-blog/';
+  const baseUrl = 'https://digitaldave0.github.io/dev-blog/';
   
   // Avatar click to go home
   const avatar = document.querySelector('.sidebar-top img, .sidebar-avatar, img[src*="blog_image"]');
@@ -25,12 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const href = link.getAttribute('href') || '';
     const text = link.textContent.toLowerCase();
     
-    // Make "Home" links navigate properly
-    if (text.includes('home') || href === '/' || href === baseUrl) {
+    // Make "Home" links navigate to the full URL
+    if (text.includes('home') || href === '/' || href === '/dev-blog/' || href.endsWith('/dev-blog')) {
       link.addEventListener('click', function(e) {
         e.preventDefault();
         window.location.href = baseUrl;
       });
+      link.setAttribute('href', baseUrl);
     }
   });
 
@@ -42,7 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
       link.style.cursor = 'pointer';
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        window.location.href = href;
+        // Convert relative URLs to absolute
+        let absoluteUrl = href;
+        if (!href.startsWith('http')) {
+          absoluteUrl = baseUrl.replace(/\/$/, '') + (href.startsWith('/') ? href : '/' + href);
+        }
+        window.location.href = absoluteUrl;
       });
     }
   });
