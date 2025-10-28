@@ -1,6 +1,6 @@
 name: "Build and Deploy"
 
-'on':
+"on":
   push:
     branches:
       - master
@@ -36,9 +36,9 @@ jobs:
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1.201.0
         with:
-          ruby-version: 3.3
+          ruby-version: '3.3'
           bundler-cache: true
 
       - name: Build site
