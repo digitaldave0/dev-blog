@@ -1,6 +1,6 @@
 // Make avatar and home clickable to navigate
 document.addEventListener('DOMContentLoaded', function() {
-  const baseUrl = 'https://digitaldave0.github.io/dev-blog/';
+  const baseUrl = 'https://blog.digitaldevops.xyz/';
   
   // Avatar click to go home
   const avatar = document.querySelector('.sidebar-top img, .sidebar-avatar, img[src*="blog_image"]');
