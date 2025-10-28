@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (link && link.getAttribute('href')) {
       preview.style.cursor = 'pointer';
       preview.addEventListener('click', function(e) {
-        // Don't navigate if clicking on a tag or other interactive element
-        if (e.target.classList.contains('post-tag') || e.target.closest('.post-tag')) {
+        // Don't navigate if clicking on a link, tag, or other interactive element
+        if (e.target.tagName === 'A' || e.target.classList.contains('post-tag') || e.target.closest('.post-tag') || e.target.closest('a')) {
           return;
         }
         const href = link.getAttribute('href');
