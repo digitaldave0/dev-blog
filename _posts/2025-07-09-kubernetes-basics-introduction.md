@@ -6,21 +6,6 @@ excerpt: "Start your Kubernetes journey with Kind (Kubernetes in Docker). Learn 
 description: "A beginner-friendly introduction to Kubernetes using Kind. This comprehensive guide covers cluster setup, basic concepts like Pods and Deployments, and hands-on examples. Perfect for developers looking to start their container orchestration journey with a local development environment."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Introduction to Kubernetes with Kind
 

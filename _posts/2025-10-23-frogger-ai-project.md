@@ -6,7 +6,6 @@ tags: [reinforcement learning, deep q-learning, pygame, frogger]
 layout: post
 ---
 
-
 Have you ever played the classic arcade game Frogger? You know, the one where you guide a little frog across busy roads and rivers to reach the other side? Well, I recently built a version of this game using Python and Pygame, and then took it a step further by adding artificial intelligence (AI) to train an agent to play it automatically. In this post, I'll explain what this project is, how to use it, and why a missing feature makes it a bit tricky to work with locally.
 
 ## What Is This Project?

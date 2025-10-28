@@ -6,21 +6,6 @@ excerpt: "Master Kubernetes security! Learn about Pod Security Policies, RBAC, N
 description: "A comprehensive guide to Kubernetes security implementations. Learn how to secure your clusters using RBAC, Pod Security Policies, Network Policies, and SecurityContext. Includes real-world examples, security scanning tools, and best practices for enterprise environments."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Kubernetes Security: Protecting Your Cluster and Applications
 

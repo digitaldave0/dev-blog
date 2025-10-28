@@ -5,21 +5,6 @@ description: "Learn how to implement a classic 8-bit style scrolling header anim
 excerpt: "A step-by-step guide on creating a retro gaming-inspired scrolling header animation for your Jekyll blog using pure CSS and the Press Start 2P font."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 Have you ever wanted to add that classic arcade game feel to your website? Today, I'll show you how I implemented the retro-style scrolling header on this blog using pure CSS animations.
 

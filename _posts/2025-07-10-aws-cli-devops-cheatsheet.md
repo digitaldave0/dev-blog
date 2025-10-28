@@ -6,41 +6,6 @@ excerpt: "A comprehensive collection of essential AWS CLI commands for DevOps en
 description: "Master the AWS CLI with this detailed cheatsheet covering 100 essential commands across different AWS services. Perfect for DevOps engineers working with AWS infrastructure, featuring real-world examples and common use cases."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-th {
-    background-color: #2d2d2d;
-    color: white;
-}
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-tr:hover {
-    background-color: #f5f5f5;
-}
-</style>
 
 # AWS CLI Commands Cheatsheet for DevOps Engineers
 

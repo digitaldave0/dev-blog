@@ -8,21 +8,6 @@ description: "Learn how to create and select better features for your machine le
 excerpt: "Discover how to transform raw data into meaningful features that improve your model's performance, with practical examples and best practices."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Feature Engineering: The Art of Creating Better Data
 

@@ -6,21 +6,6 @@ excerpt: "Master advanced Ansible features with custom modules, dynamic inventor
 description: "An in-depth guide to advanced Ansible concepts including custom module development, dynamic inventory scripts, and complex orchestration patterns. Features a practical example of deploying a microservices architecture with advanced monitoring."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Advanced Ansible: Enterprise-Level Automation
 

@@ -6,21 +6,6 @@ excerpt: "Level up your Kubernetes skills! Learn about ConfigMaps, Secrets, reso
 description: "A deep dive into Kubernetes configuration and management practices. Learn how to handle application configurations, manage sensitive data with Secrets, implement resource quotas, and master different deployment strategies. Includes real-world scenarios and best practices for production environments."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Kubernetes Intermediate: Configuration and Resource Management
 

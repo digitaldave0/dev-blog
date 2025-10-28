@@ -8,21 +8,6 @@ description: "Understanding how Chain of Thought helps AI models think like huma
 excerpt: "Discover how Chain of Thought prompting helps AI break down complex problems into simple steps, just like humans do."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Chain of Thought: Teaching AI to Think Step by Step
 

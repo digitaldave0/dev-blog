@@ -8,21 +8,6 @@ description: "Learn how reinforcement learning works through simple examples and
 excerpt: "Explore how machines learn through trial and error, just like humans do, with practical examples from gaming to robotics."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Understanding Reinforcement Learning
 

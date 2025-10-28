@@ -14,21 +14,6 @@ description: "A hands-on guide to building a complete CI/CD pipeline with GitHub
 excerpt: "Learn how to build a real-world CI/CD pipeline using GitHub Actions. This practical guide covers building, testing, deployment, manual approvals, and securing your workflow with GitHub Secrets."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # GitHub Actions in Practice: Building a Complete CI/CD Pipeline
 

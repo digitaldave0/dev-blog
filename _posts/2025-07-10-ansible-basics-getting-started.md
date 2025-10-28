@@ -6,21 +6,6 @@ excerpt: "Learn the fundamentals of Ansible automation with a practical example 
 description: "A comprehensive guide to getting started with Ansible automation, including installation, inventory management, and your first playbook. Features a practical example of configuring a basic web server."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Getting Started with Ansible Automation
 

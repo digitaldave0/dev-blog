@@ -8,21 +8,6 @@ description: "Understanding the potential risks of advanced AI systems and how t
 excerpt: "A comprehensive look at AI safety concerns, from current challenges to future risks, with practical approaches to building safer AI systems."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # AI Safety: Navigating the Risks of Advanced AI
 

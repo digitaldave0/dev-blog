@@ -4,22 +4,6 @@ title: "🧠 How I Use Obsidian as a Digital Scrapbook"
 description: "Exploring how I use Obsidian to collect ideas, connect thoughts, and build my personal knowledge base as a DevOps professional."
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
-
 I've used a lot of note-taking apps over the years, but none has felt quite as natural — or as powerful — as **Obsidian**.
 
 I treat it less like a notebook and more like a **digital scrapbook**: a space where I can freely capture, connect, and evolve ideas across time.
@@ -54,6 +38,7 @@ Here’s why it clicked for me:
 ### 2. 🧵 Connect the Dots
 
 Instead of rigid folders, I use **tags and links** to surface patterns across projects:
+
 - `#aws`, `#terraform`, `#security`, `#ai`, `#noteworthy`
 - Related notes link together like a web of thought
 
@@ -62,6 +47,7 @@ Instead of rigid folders, I use **tags and links** to surface patterns across pr
 ### 3. 📆 Journal + Daily Notes
 
 I use the **Daily Notes** plugin to:
+
 - Track progress across days
 - Quickly review yesterday’s priorities
 - Drop “half-thoughts” and revisit them later
@@ -78,9 +64,10 @@ Some notes are polished; others are raw sketches of ideas or pasted screenshots.
 
 ## 🧠 Why It Works for Me
 
-> Obsidian respects how humans *think*, not just how we organize files.
+> Obsidian respects how humans _think_, not just how we organize files.
 
 It gives me:
+
 - A single searchable brain dump
 - The ability to grow ideas organically
 - A calm, local-first environment that’s fast and distraction-free

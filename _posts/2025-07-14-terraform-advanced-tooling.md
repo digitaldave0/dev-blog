@@ -8,21 +8,6 @@ excerpt: >
   Level up your Terraform workflow with advanced tooling! Learn how to use Terragrunt for DRY configurations, implement pre-commit hooks for code quality, set up automated testing, and explore enterprise-grade features. Essential knowledge for maintaining large-scale Terraform deployments.
 ---
 
-<style>
-pre, code {
-    background-color: #2d2d2d !important;
-    color: #ffffff !important;
-}
-pre {
-    padding: 15px !important;
-    border-radius: 5px !important;
-    border: 1px solid #444 !important;
-}
-code {
-    padding: 2px 5px !important;
-    border-radius: 3px !important;
-}
-</style>
 
 # Advanced Terraform Tooling and Best Practices
 
