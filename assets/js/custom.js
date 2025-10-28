@@ -19,6 +19,39 @@ document.addEventListener('DOMContentLoaded', function() {
     siteTitle.style.cursor = 'pointer';
   }
 
+  // Make entire post preview clickable
+  const postPreviews = document.querySelectorAll('.post-preview');
+  postPreviews.forEach(preview => {
+    const link = preview.querySelector('a[href*="/posts/"]');
+    if (link && link.getAttribute('href')) {
+      preview.style.cursor = 'pointer';
+      preview.addEventListener('click', function(e) {
+        // Don't navigate if clicking on a tag or other interactive element
+        if (e.target.classList.contains('post-tag') || e.target.closest('.post-tag')) {
+          return;
+        }
+        const href = link.getAttribute('href');
+        let absoluteUrl = href;
+        if (!href.startsWith('http')) {
+          absoluteUrl = baseUrl.replace(/\/$/, '') + (href.startsWith('/') ? href : '/' + href);
+        }
+        window.location.href = absoluteUrl;
+      });
+    }
+  });
+
+  // Ensure all post title links work
+  const postTitles = document.querySelectorAll('.post-title a, .read-more');
+  postTitles.forEach(link => {
+    if (link.tagName === 'A') {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#')) {
+        link.style.cursor = 'pointer';
+        link.style.pointerEvents = 'auto';
+      }
+    }
+  });
+
   // Find and enhance home navigation links
   const navLinks = document.querySelectorAll('a');
   navLinks.forEach(link => {
@@ -35,21 +68,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Ensure post links are clickable
-  const postLinks = document.querySelectorAll('.post-title a, .post-preview a');
-  postLinks.forEach(link => {
+  // Ensure tag and search links work properly
+  const tagLinks = document.querySelectorAll('a[href*="/tags/"], a[href*="/categories/"], a[href*="?search="]');
+  tagLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href && !href.startsWith('#')) {
-      link.style.cursor = 'pointer';
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        // Convert relative URLs to absolute
-        let absoluteUrl = href;
-        if (!href.startsWith('http')) {
-          absoluteUrl = baseUrl.replace(/\/$/, '') + (href.startsWith('/') ? href : '/' + href);
-        }
-        window.location.href = absoluteUrl;
-      });
+    if (href && !href.startsWith('http')) {
+      // Convert relative URLs to absolute
+      let absoluteUrl = href;
+      if (!href.startsWith('http')) {
+        absoluteUrl = baseUrl.replace(/\/$/, '') + (href.startsWith('/') ? href : '/' + href);
+      }
+      link.setAttribute('href', absoluteUrl);
     }
   });
 });
