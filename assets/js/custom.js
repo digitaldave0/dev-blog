@@ -82,34 +82,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Premier League Table Widget
 document.addEventListener('DOMContentLoaded', function() {
-  const premierLeagueWidget = document.getElementById('premier-league-widget');
-
-  if (premierLeagueWidget) {
-    loadPremierLeagueWidget();
-  }
+  console.log('DOMContentLoaded fired for Premier League widget');
+  
+  // Use a small delay to ensure DOM is fully ready
+  setTimeout(function() {
+    const premierLeagueWidget = document.getElementById('premier-league-widget');
+    console.log('Premier League widget element:', premierLeagueWidget);
+    
+    if (premierLeagueWidget) {
+      loadPremierLeagueWidget();
+    } else {
+      console.error('Premier League widget element not found');
+    }
+  }, 100);
 });
 
 function loadPremierLeagueWidget() {
   const widget = document.getElementById('premier-league-widget');
+  console.log('loadPremierLeagueWidget called, widget:', widget);
+
+  if (!widget) {
+    console.error('Widget container not found');
+    return;
+  }
 
   try {
     // Using Football Data API (free tier)
     const API_KEY = 'YOUR_API_KEY_HERE';
-    const response = fetch('https://api.football-data.org/v4/competitions/PL/standings', {
+    console.log('Attempting to fetch Premier League data from API');
+    
+    fetch('https://api.football-data.org/v4/competitions/PL/standings', {
       headers: {
         'X-Auth-Token': API_KEY
       }
-    });
-
-    if (!response.ok) {
-      throw new Error('API request failed');
-    }
-
-    response.json().then(data => {
-      displayPremierLeagueWidget(data.standings[0].table.slice(0, 6));
+    })
+    .then(response => {
+      console.log('API response received:', response);
+      if (!response.ok) {
+        throw new Error('API request failed with status: ' + response.status);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('API data received:', data);
+      if (data.standings && data.standings[0] && data.standings[0].table) {
+        displayPremierLeagueWidget(data.standings[0].table.slice(0, 6));
+      } else {
+        console.warn('Data structure not as expected, using fallback');
+        displayFallbackWidget();
+      }
+    })
+    .catch(error => {
+      console.error('Error loading Premier League widget:', error);
+      displayFallbackWidget();
     });
   } catch (error) {
-    console.error('Error loading Premier League widget:', error);
+    console.error('Error in loadPremierLeagueWidget:', error);
     displayFallbackWidget();
   }
 }
