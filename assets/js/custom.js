@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (premierLeagueTable) {
       loadPremierLeagueTable();
-      // Update every 10 minutes
-      setInterval(loadPremierLeagueTable, 600000);
+      // Update every day
+      setInterval(loadPremierLeagueTable, 86400000);
     } else {
       console.error('Premier League table element not found');
     }
@@ -100,10 +100,15 @@ function loadPremierLeagueTable() {
   }
 
   try {
-    // Using Football Data API v2 (free tier, no key required)
+    // Using Football Data API v4 with authentication token
+    const API_KEY = '1d209d77756240598a84e9874c24acc4';
     console.log('Attempting to fetch Premier League data from API');
     
-    fetch('https://api.football-data.org/v2/competitions/2021/standings')
+    fetch('https://api.football-data.org/v4/competitions/PL/standings', {
+      headers: {
+        'X-Auth-Token': API_KEY
+      }
+    })
     .then(response => {
       console.log('API response received:', response);
       if (!response.ok) {
@@ -164,12 +169,12 @@ function displayFallbackTable() {
   const container = document.getElementById('premier-league-table');
 
   const fallbackData = [
-    { pos: 1, team: 'Liverpool', pts: 28 },
-    { pos: 2, team: 'Arsenal', pts: 26 },
-    { pos: 3, team: 'Chelsea', pts: 24 },
-    { pos: 4, team: 'Man City', pts: 23 },
-    { pos: 5, team: 'Newcastle', pts: 21 },
-    { pos: 6, team: 'Aston Villa', pts: 20 }
+    { pos: 1, team: 'Arsenal', pts: 22 },
+    { pos: 2, team: 'Bournemouth', pts: 18 },
+    { pos: 3, team: 'Tottenham', pts: 17 },
+    { pos: 4, team: 'Sunderland', pts: 17 },
+    { pos: 5, team: 'Man City', pts: 16 },
+    { pos: 6, team: 'Man Utd', pts: 15 }
   ];
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
