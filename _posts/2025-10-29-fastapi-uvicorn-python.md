@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "⚡ FastAPI with Uvicorn: Building High-Performance Python APIs"
-date: 2025-10-29 14:00:00 +0000
+date: 2025-10-29 08:00:00 +0000
 categories: [Python, API, FastAPI, Web Development, Tutorial]
 tags: [FastAPI, Uvicorn, ASGI, Python, REST API, async, performance]
 description: "Complete guide to building fast, modern APIs with FastAPI and Uvicorn. Learn how to create production-ready Python web services with automatic documentation and async support."
