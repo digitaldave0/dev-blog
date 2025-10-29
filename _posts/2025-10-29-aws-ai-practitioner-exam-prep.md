@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "AWS AI Practitioner Exam Preparation: Complete Study Guide"
-date: 2025-10-29
+date: 2025-10-29 22:00:00 +0000
 categories: [aws, certification, ai, machine-learning, exams]
 tags:
   [

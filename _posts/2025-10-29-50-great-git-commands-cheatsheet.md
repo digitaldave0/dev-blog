@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: default
 title: "50 Great Git Commands: Complete Cheatsheet with Examples"
-date: 2025-10-29
+date: 2025-10-29 23:00:00 +0000
 categories: [git, development, cheatsheet, commands, version-control]
 tags:
   [
