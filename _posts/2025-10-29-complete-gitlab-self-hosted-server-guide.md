@@ -2,7 +2,22 @@
 layout: post
 title: "Complete Guide: Setting Up Self-Hosted GitLab Server with CI/CD and Advanced Features"
 description: "Comprehensive tutorial for setting up your own GitLab server, mastering CI/CD pipelines, and exploring advanced GitLab features from basics to enterprise-level usage."
-tags: [gitlab, cicd, docker, devops, self-hosted, git, automation, tutorial, kubernetes, security, gitlab-runner, pipelines, docker-compose]
+tags:
+  [
+    gitlab,
+    cicd,
+    docker,
+    devops,
+    self-hosted,
+    git,
+    automation,
+    tutorial,
+    kubernetes,
+    security,
+    gitlab-runner,
+    pipelines,
+    docker-compose,
+  ]
 icon: 🦊
 excerpt: >
   Master GitLab from the ground up with this comprehensive guide. Learn to set up your own self-hosted GitLab server, implement powerful CI/CD pipelines, and explore advanced features like Kubernetes integration, security scanning, and enterprise workflows.
@@ -43,14 +58,14 @@ df -h
 Create a `docker-compose.yml` file for GitLab:
 
 ```yaml
-version: '3.8'
+version: "3.8"
 
 services:
   gitlab:
     image: gitlab/gitlab-ee:latest
     container_name: gitlab-server
     restart: unless-stopped
-    hostname: 'gitlab.example.com'
+    hostname: "gitlab.example.com"
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://gitlab.example.com'
@@ -186,12 +201,14 @@ git push origin main
 
 ```markdown
 <!-- Create an issue in GitLab -->
+
 ## Issue: Implement User Authentication
 
 **Description:**
 Implement user login/logout functionality
 
 **Acceptance Criteria:**
+
 - [ ] User can register with email/password
 - [ ] User can login/logout
 - [ ] Password hashing implemented
@@ -300,10 +317,10 @@ deploy_production:
 
 ```yaml
 stages:
-  - build      # Compile/build artifacts
-  - test       # Run automated tests
-  - deploy     # Deploy to environments
-  - cleanup    # Clean up resources
+  - build # Compile/build artifacts
+  - test # Run automated tests
+  - deploy # Deploy to environments
+  - cleanup # Clean up resources
 
 job_name:
   stage: build
