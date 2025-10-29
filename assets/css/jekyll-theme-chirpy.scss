@@ -196,6 +196,10 @@ html[data-theme="dark"] code {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .sidebar-section h3 {
@@ -210,6 +214,8 @@ html[data-theme="dark"] code {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  user-select: none;
+  pointer-events: none;
 }
 
 .tag-link {
@@ -223,6 +229,11 @@ html[data-theme="dark"] code {
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  user-select: none;
 }
 
 .tag-link:hover {
