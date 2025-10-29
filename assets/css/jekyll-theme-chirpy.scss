@@ -291,3 +291,110 @@ html[data-theme="dark"] code {
     gap: 0.75rem;
   }
 }
+
+/* Premier League Table Styles */
+.league-table {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 30px 1fr 35px 60px;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #00bfff;
+  font-weight: bold;
+  color: #00bfff;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 30px 1fr 35px 60px;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.pos {
+  font-weight: bold;
+  color: #00bfff;
+  text-align: center;
+}
+
+.team {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pts {
+  font-weight: bold;
+  text-align: center;
+  color: #ffd700;
+}
+
+.form {
+  font-family: monospace;
+  font-size: 0.75rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.table-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.table-footer small {
+  color: #888;
+  font-size: 0.75rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.table-link {
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.table-link:hover {
+  color: #0099cc;
+  text-decoration: underline;
+}
+
+/* Dark mode adjustments for Premier League table */
+html[data-theme="dark"] .table-header {
+  border-bottom-color: #00bfff;
+}
+
+html[data-theme="dark"] .table-row {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .table-row:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme="dark"] .table-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}

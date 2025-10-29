@@ -6,7 +6,6 @@ excerpt: "Learn how to use Helm to manage Kubernetes applications. From basic co
 description: "A comprehensive guide to Helm, the package manager for Kubernetes. Learn about Helm charts, templates, values, and best practices for managing complex Kubernetes applications. Perfect for developers and DevOps engineers working with Kubernetes."
 ---
 
-
 # Introduction to Helm
 
 Helm is the package manager for Kubernetes, helping you manage Kubernetes applications through Helm Charts. These charts provide templating, versioning, and dependency management for your Kubernetes manifests.
@@ -38,7 +37,9 @@ helm version
 ## Core Concepts
 
 ### Charts
+
 A Helm chart is a package of pre-configured Kubernetes resources:
+
 - Templates for K8s manifests
 - Values for customization
 - Chart metadata and dependencies
@@ -54,6 +55,7 @@ appVersion: "1.0.0"
 ```
 
 ### Values
+
 Values provide configuration that is injected into templates:
 
 ```yaml
@@ -68,6 +70,7 @@ service:
 ```
 
 ### Templates
+
 Templates are Kubernetes manifests with Go templating:
 
 ```yaml
@@ -140,6 +143,7 @@ helm install my-release bitnami/wordpress -f values.yaml
 ## Creating Your Own Chart
 
 ### Chart Structure
+
 ```bash
 mychart/
   Chart.yaml          # Chart metadata
@@ -170,7 +174,7 @@ helm package mychart
 ```yaml
 # Example of template functions
 metadata:
-  name: {{ include "mychart.fullname" . }}
+  name: {% raw %}{{ include "mychart.fullname" . }}{% endraw %}
   labels:
     {{- include "mychart.labels" . | nindent 4 }}
 
@@ -186,7 +190,7 @@ kind: Ingress
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .name }}
+  name: {% raw %}{{ .name }}{% endraw %}
 data:
   {{- range $key, $value := .data }}
   {{ $key }}: {{ $value }}
@@ -197,6 +201,7 @@ data:
 ## Advanced Helm Features
 
 ### Dependencies
+
 Define dependencies in `Chart.yaml`:
 
 ```yaml
@@ -212,6 +217,7 @@ dependencies:
 ```
 
 ### Subcharts
+
 Create reusable components:
 
 ```yaml
@@ -222,6 +228,7 @@ service:
 ```
 
 ### Hooks
+
 Implement lifecycle hooks:
 
 ```yaml
@@ -229,7 +236,7 @@ Implement lifecycle hooks:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ .Release.Name }}-pre-install
+  name: {% raw %}{{ .Release.Name }}{% endraw %}-pre-install
   annotations:
     "helm.sh/hook": pre-install
     "helm.sh/hook-weight": "-5"
@@ -247,6 +254,7 @@ spec:
 ## Best Practices
 
 ### 1. Chart Organization
+
 - Use consistent naming
 - Group related resources
 - Implement proper labels
@@ -255,12 +263,13 @@ spec:
 # _helpers.tpl
 {{- define "mychart.labels" -}}
 app.kubernetes.io/name: {{ include "mychart.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/instance: {% raw %}{{ .Release.Name }}{% endraw %}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 ```
 
 ### 2. Values Management
+
 - Provide good defaults
 - Document all values
 - Use hierarchical structure
@@ -281,6 +290,7 @@ application:
 ```
 
 ### 3. Security
+
 - Use RBAC
 - Implement network policies
 - Secure sensitive data
@@ -290,7 +300,7 @@ application:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: {{ include "mychart.fullname" . }}
+  name: {% raw %}{{ include "mychart.fullname" . }}{% endraw %}
 type: Opaque
 data:
   {{- range $key, $value := .Values.secrets }}
@@ -323,10 +333,12 @@ helm history my-release
 ## Video Resources
 
 ### Getting Started
+
 - [Helm 3 Deep Dive](https://www.youtube.com/watch?v=9cwjtN3gkD4) by CNCF
 - [Helm Tutorial for Beginners](https://www.youtube.com/watch?v=DQk8HOVlumI) by TechWorld with Nana
 
 ### Advanced Topics
+
 - [Helm Chart Development](https://www.youtube.com/watch?v=jUYNS90nq8U) by IBM Technology
 - [Helm Best Practices](https://www.youtube.com/watch?v=8h4FoWK7tIA) by CNCF
 

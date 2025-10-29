@@ -511,5 +511,4 @@ Remember, this foundational certification demonstrates your understanding of AI 
 
 ---
 
-This guide is based on the official AWS AI Practitioner exam guide and current AWS documentation. Exam content and weighting may be subject to change - always refer to the official exam guide for the most current information.</content>
-<parameter name="filePath">/Users/davidhibbitts/Projects/dev-blog/\_posts/2025-10-29-aws-ai-practitioner-exam-prep.md
+This guide is based on the official AWS AI Practitioner exam guide and current AWS documentation. Exam content and weighting may be subject to change - always refer to the official exam guide for the most current information.
