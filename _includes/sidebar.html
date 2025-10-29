@@ -7,7 +7,7 @@
   <header class="profile-wrapper initially-hide">
     <a href="{{ '/' | relative_url }}" id="avatar" class="profile-wrapper">
       {% if site.avatar != empty and site.avatar %}
-        <img src="{{ site.avatar | relative_url }}" alt="avatar" loading="lazy">
+        <img src="{{ site.avatar | relative_url }}" alt="avatar" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
       {% endif %}
     </a>
     <h1 class="site-title">
