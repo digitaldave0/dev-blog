@@ -171,6 +171,15 @@ html[data-theme="dark"] code {
   transition: none; /* Remove any transition that might cause gray background */
   user-select: none; /* Prevent text selection highlighting */
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  -webkit-touch-callout: none; /* Disable iOS callout */
+}
+
+/* Prevent highlighting on click - target article specifically */
+article.post-preview {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .post-preview:hover,
@@ -216,6 +225,13 @@ html[data-theme="dark"] code {
 .main-content {
   flex: 1;
   min-width: 0;
+}
+
+#post-list {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .sidebar {
