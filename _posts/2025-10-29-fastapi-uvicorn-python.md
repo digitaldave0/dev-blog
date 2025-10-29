@@ -15,6 +15,7 @@ FastAPI is a modern, fast web framework for building APIs with Python. Combined 
 ## What is FastAPI?
 
 FastAPI is a web framework for building APIs with Python that:
+
 - **Is fast** - Performance comparable to Node.js and Go
 - **Requires minimal code** - Reduces bugs and development time
 - **Is standards-based** - Built on OpenAPI and JSON Schema
@@ -24,6 +25,7 @@ FastAPI is a web framework for building APIs with Python that:
 ## What is Uvicorn?
 
 Uvicorn is an ASGI web server implementation for Python that:
+
 - **Handles concurrent requests** - Efficiently manages multiple connections
 - **Supports async frameworks** - Works seamlessly with async Python code
 - **Is lightweight** - Minimal overhead for production deployments
@@ -83,6 +85,7 @@ Visit http://localhost:8000 in your browser. Your API is live!
 ### Automatic Documentation
 
 FastAPI automatically generates interactive documentation:
+
 - **Swagger UI**: http://localhost:8000/docs
 - **ReDoc**: http://localhost:8000/redoc
 
@@ -131,6 +134,7 @@ async def create_item(item: Item):
 ```
 
 Request:
+
 ```json
 POST /items/
 {
@@ -209,6 +213,7 @@ async def async_operation():
 ```
 
 Benefits:
+
 - Handle thousands of concurrent requests
 - Efficient resource utilization
 - Non-blocking I/O operations
@@ -226,7 +231,7 @@ class User(BaseModel):
     name: str = Field(..., min_length=1, max_length=100)
     email: str
     age: Optional[int] = Field(None, ge=0, le=150)
-    
+
     class Config:
         # Example data in documentation
         schema_extra = {
@@ -240,6 +245,7 @@ class User(BaseModel):
 ```
 
 Validation features:
+
 - Type checking
 - String length constraints
 - Number ranges
@@ -265,6 +271,7 @@ async def read_item(item_id: int):
 ```
 
 Common status codes:
+
 - `200` - OK
 - `201` - Created
 - `400` - Bad Request
@@ -394,6 +401,7 @@ gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
 ```
 
 Production settings:
+
 - `--host 0.0.0.0` - Listen on all network interfaces
 - `--port 8000` - Run on port 8000
 - `--workers 4` - Run multiple worker processes
@@ -523,6 +531,7 @@ pip install python-multipart
 ### API Documentation
 
 FastAPI automatically generates docs, but you can customize:
+
 - Swagger UI at `/docs`
 - ReDoc at `/redoc`
 - OpenAPI JSON at `/openapi.json`
