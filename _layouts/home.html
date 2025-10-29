@@ -25,51 +25,32 @@ layout: default
 
   <aside class="sidebar">
     <div class="sidebar-section">
-      <h3>🔥 Trending Tags</h3>
+      <h3>🔥 Popular Tags</h3>
       <div class="trending-tags">
-        {% assign trending_tags = "" | split: "" %}
-        {% for post in site.posts limit:20 %}
+        {% assign all_tags = "" | split: "," %}
+        {% for post in site.posts limit:15 %}
           {% for tag in post.tags %}
-            {% assign trending_tags = trending_tags | push: tag %}
+            {% assign all_tags = all_tags | push: tag %}
           {% endfor %}
         {% endfor %}
 
-        {% assign tag_counts = "" | split: "" %}
-        {% for tag in trending_tags %}
-          {% assign count = 0 %}
-          {% for check_tag in trending_tags %}
-            {% if check_tag == tag %}
-              {% assign count = count | plus: 1 %}
+        {% assign unique_tags = "" | split: "," %}
+        {% for tag in all_tags %}
+          {% assign is_unique = true %}
+          {% for existing in unique_tags %}
+            {% if existing == tag %}
+              {% assign is_unique = false %}
             {% endif %}
           {% endfor %}
-          {% assign tag_counts = tag_counts | push: tag | push: count %}
-        {% endfor %}
-
-        {% assign sorted_tags = "" | split: "" %}
-        {% for i in (0..tag_counts.size) step: 2 %}
-          {% if tag_counts[i] %}
-            {% assign current_tag = tag_counts[i] %}
-            {% assign current_count = tag_counts[i | plus: 1] %}
-            {% assign inserted = false %}
-            {% for j in (0..sorted_tags.size) step: 2 %}
-              {% if sorted_tags[j] and sorted_tags[j | plus: 1] < current_count %}
-                {% assign sorted_tags = sorted_tags | slice: 0, j | concat: (current_tag | split: "") | concat: (current_count | split: "") | concat: (sorted_tags | slice: j) %}
-                {% assign inserted = true %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
-            {% if inserted == false %}
-              {% assign sorted_tags = sorted_tags | push: current_tag | push: current_count %}
-            {% endif %}
+          {% if is_unique %}
+            {% assign unique_tags = unique_tags | push: tag %}
           {% endif %}
         {% endfor %}
 
-        {% for i in (0..9) step: 2 %}
-          {% if sorted_tags[i] %}
-            <a href="/tags/{{ sorted_tags[i] | slugify }}/" class="tag-link tag-{{ sorted_tags[i | plus: 1] }}">
-              {{ sorted_tags[i] }} ({{ sorted_tags[i | plus: 1] }})
-            </a>
-          {% endif %}
+        {% for tag in unique_tags limit:10 %}
+          <a href="/tags/{{ tag | slugify }}/" class="tag-link">
+            {{ tag }}
+          </a>
         {% endfor %}
       </div>
     </div>
