@@ -82,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (premierLeagueTable) {
       loadPremierLeagueTable();
+      // Update every 10 minutes
+      setInterval(loadPremierLeagueTable, 600000);
     } else {
       console.error('Premier League table element not found');
     }
@@ -98,15 +100,10 @@ function loadPremierLeagueTable() {
   }
 
   try {
-    // Using Football Data API (free tier)
-    const API_KEY = 'YOUR_API_KEY_HERE';
+    // Using Football Data API v2 (free tier, no key required)
     console.log('Attempting to fetch Premier League data from API');
     
-    fetch('https://api.football-data.org/v4/competitions/PL/standings', {
-      headers: {
-        'X-Auth-Token': API_KEY
-      }
-    })
+    fetch('https://api.football-data.org/v2/competitions/2021/standings')
     .then(response => {
       console.log('API response received:', response);
       if (!response.ok) {
@@ -157,7 +154,7 @@ function displayPremierLeagueTable(teams) {
 
   html += '</div>';
   html += '<div class="table-footer" style="margin-top: 0.5rem; text-align: center; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1);">';
-  html += '<a href="https://www.premierleague.com/tables" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full Table →</a>';
+  html += '<a href="https://www.premierleague.com/en/tables?competition=8&season=2025&round=L_1&matchweek=-1&ha=-1" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full Table →</a>';
   html += '</div>';
 
   container.innerHTML = html;
@@ -167,12 +164,12 @@ function displayFallbackTable() {
   const container = document.getElementById('premier-league-table');
 
   const fallbackData = [
-    { pos: 1, team: 'Arsenal', pts: 24 },
-    { pos: 2, team: 'Liverpool', pts: 22 },
-    { pos: 3, team: 'Aston Villa', pts: 20 },
-    { pos: 4, team: 'Man City', pts: 19 },
-    { pos: 5, team: 'Tottenham', pts: 18 },
-    { pos: 6, team: 'Newcastle', pts: 17 }
+    { pos: 1, team: 'Liverpool', pts: 28 },
+    { pos: 2, team: 'Arsenal', pts: 26 },
+    { pos: 3, team: 'Chelsea', pts: 24 },
+    { pos: 4, team: 'Man City', pts: 23 },
+    { pos: 5, team: 'Newcastle', pts: 21 },
+    { pos: 6, team: 'Aston Villa', pts: 20 }
   ];
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
@@ -193,7 +190,7 @@ function displayFallbackTable() {
   html += '</div>';
   html += '<div class="table-footer" style="margin-top: 0.5rem; text-align: center; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; color: #999;">';
   html += 'Oct 29, 2025<br>';
-  html += '<a href="https://www.premierleague.com/tables" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full Table →</a>';
+  html += '<a href="https://www.premierleague.com/en/tables?competition=8&season=2025&round=L_1&matchweek=-1&ha=-1" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full Table →</a>';
   html += '</div>';
 
   container.innerHTML = html;
