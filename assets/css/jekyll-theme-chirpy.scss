@@ -172,6 +172,11 @@ html[data-theme="dark"] code {
   user-select: none; /* Prevent text selection highlighting */
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
   -webkit-touch-callout: none; /* Disable iOS callout */
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Prevent highlighting on click - target article specifically */
@@ -184,9 +189,12 @@ article.post-preview {
 
 .post-preview:hover,
 .post-preview:active,
-.post-preview:focus {
+.post-preview:focus,
+.post-preview:focus-within {
   background-color: transparent !important; /* Prevent gray background on any interaction */
   outline: none !important; /* Remove focus outline */
+  transform: none !important; /* Prevent any scaling or transformation */
+  box-shadow: none !important; /* Remove any shadow effects */
 }
 
 /* Prevent any child elements from getting gray backgrounds */
