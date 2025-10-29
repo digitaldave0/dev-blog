@@ -3,7 +3,7 @@ layout: post
 title: "GitHub Actions in Practice: A Complete CI/CD Pipeline Demo"
 date: 2025-07-07
 categories: devops ci-cd
-tags: 
+tags:
   - github-actions
   - ci-cd
   - deployment
@@ -13,7 +13,6 @@ tags:
 description: "A hands-on guide to building a complete CI/CD pipeline with GitHub Actions, including manual approvals, secrets management, and deployment strategies."
 excerpt: "Learn how to build a real-world CI/CD pipeline using GitHub Actions. This practical guide covers building, testing, deployment, manual approvals, and securing your workflow with GitHub Secrets."
 ---
-
 
 # GitHub Actions in Practice: Building a Complete CI/CD Pipeline
 
@@ -40,11 +39,11 @@ my-node-app/
 
 ```javascript
 // src/app.js
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
-  res.json({ message: 'Hello from my Node.js app!' });
+app.get("/", (req, res) => {
+  res.json({ message: "Hello from my Node.js app!" });
 });
 
 module.exports = app;
@@ -52,14 +51,14 @@ module.exports = app;
 
 ```javascript
 // tests/app.test.js
-const request = require('supertest');
-const app = require('../src/app');
+const request = require("supertest");
+const app = require("../src/app");
 
-describe('GET /', () => {
-  it('responds with hello message', async () => {
-    const response = await request(app).get('/');
+describe("GET /", () => {
+  it("responds with hello message", async () => {
+    const response = await request(app).get("/");
     expect(response.status).toBe(200);
-    expect(response.body.message).toBe('Hello from my Node.js app!');
+    expect(response.body.message).toBe("Hello from my Node.js app!");
   });
 });
 ```
@@ -73,37 +72,37 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   # Enable manual trigger
   workflow_dispatch:
 
 env:
-  NODE_VERSION: '18.x'
-  
+  NODE_VERSION: "18.x"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-      
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run tests
         run: npm test
-        
+
       - name: Build Docker image
         run: |
           docker build -t my-node-app:${{ github.sha }} .
-          
+
       # Save the build artifacts
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
@@ -122,14 +121,14 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: app-build
-          
+
       - name: Deploy to staging
         env:
           STAGING_SECRET: ${{ secrets.STAGING_DEPLOY_KEY }}
         run: |
           echo "Deploying to staging..."
           # Your deployment commands here
-          
+
   manual-approval:
     needs: deploy-staging
     runs-on: ubuntu-latest
@@ -150,7 +149,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: app-build
-          
+
       - name: Deploy to production
         env:
           PROD_SECRET: ${{ secrets.PROD_DEPLOY_KEY }}
@@ -198,6 +197,7 @@ steps:
 ### Best Practices for Secrets
 
 1. **Never Log Secrets**
+
 ```yaml
 # DON'T DO THIS
 - name: Debug
@@ -207,10 +207,11 @@ steps:
 - name: Use secret safely
   env:
     SECRET: ${{ secrets.MY_SECRET }}
-  run: ./deploy.sh  # Use secret internally
+  run: ./deploy.sh # Use secret internally
 ```
 
 2. **Scope Secrets Properly**
+
 ```yaml
 # Scope secrets to specific environments
 environment:
@@ -257,6 +258,7 @@ steps:
 ## Real-World Considerations
 
 1. **Environment Variables**
+
 ```yaml
 {% raw %}
 env:
@@ -266,6 +268,8 @@ env:
 ```
 
 2. **Caching Dependencies**
+   {% raw %}
+
 ```yaml
 - uses: actions/cache@v3
   with:
@@ -273,7 +277,10 @@ env:
     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 ```
 
+{% endraw %}
+
 3. **Notifications**
+
 ```yaml
 - name: Notify Slack
   if: always()
@@ -288,11 +295,13 @@ env:
 ## Common Issues and Solutions
 
 1. **Build Failures**
+
    - Check Node version matches
    - Verify dependencies are locked
    - Ensure tests are deterministic
 
 2. **Deployment Issues**
+
    - Verify environment secrets
    - Check deployment service status
    - Review access permissions
@@ -304,6 +313,7 @@ env:
 ## Conclusion
 
 This practical implementation demonstrates a production-ready CI/CD pipeline with GitHub Actions. The workflow includes all essential elements:
+
 - Automated testing
 - Multi-environment deployment
 - Manual approval gates

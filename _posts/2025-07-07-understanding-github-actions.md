@@ -3,7 +3,7 @@ layout: post
 title: "Understanding GitHub Actions: From Setup to Pricing Tiers"
 date: 2025-07-07
 categories: devops ci-cd
-tags: 
+tags:
   - github-actions
   - ci-cd
   - automation
@@ -12,7 +12,6 @@ tags:
 description: "A comprehensive guide to GitHub Actions, covering everything from basic setup to pricing tiers, best practices, and security considerations for effective CI/CD workflows."
 excerpt: "Discover how to leverage GitHub Actions for your CI/CD needs. This guide covers setup, pricing tiers, best practices, and advanced features to help you automate your development workflow effectively."
 ---
-
 
 # Understanding GitHub Actions: A Complete Guide
 
@@ -34,30 +33,32 @@ GitHub Actions is a workflow automation tool that helps you build, test, and dep
 Getting started with GitHub Actions is straightforward:
 
 1. Create a `.github/workflows` directory in your repository:
+
 ```bash
 mkdir -p .github/workflows
 ```
 
 2. Create a workflow file (e.g., `ci.yml`):
+
 ```yaml
 name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up environment
-      run: echo "Setting up environment"
-    - name: Run tests
-      run: echo "Running tests"
+      - uses: actions/checkout@v4
+      - name: Set up environment
+        run: echo "Setting up environment"
+      - name: Run tests
+        run: echo "Running tests"
 ```
 
 This basic workflow will run on pushes and pull requests to the main branch.
@@ -65,21 +66,25 @@ This basic workflow will run on pushes and pull requests to the main branch.
 ## Key Concepts
 
 ### 1. Workflows
+
 - YAML files in `.github/workflows`
 - Define when and how your automation runs
 - Can have multiple workflows per repository
 
 ### 2. Events
+
 - Triggers that start your workflow
 - Examples: push, pull_request, schedule
 - Can combine multiple events
 
 ### 3. Jobs
+
 - Sets of steps that execute on the same runner
 - Can run in parallel or sequentially
 - Each job runs in a fresh virtual environment
 
 ### 4. Steps
+
 - Individual tasks within a job
 - Can run commands or use actions
 - Share data between steps using artifacts
@@ -87,18 +92,21 @@ This basic workflow will run on pushes and pull requests to the main branch.
 ## Pricing Tiers (as of July 2025)
 
 ### Free Tier (GitHub Free)
+
 - 2,000 minutes/month for public repositories
 - 500 minutes/month for private repositories
 - Linux runners only
 - Perfect for small projects and open source
 
 ### Team Tier (GitHub Team)
+
 - 3,000 minutes/month for private repositories
 - Access to Linux, Windows, and macOS runners
 - Advanced security features
 - Suitable for small teams
 
 ### Enterprise Tier (GitHub Enterprise)
+
 - 50,000 minutes/month
 - Priority support
 - Advanced security and compliance features
@@ -106,6 +114,7 @@ This basic workflow will run on pushes and pull requests to the main branch.
 - Enterprise-grade permissions
 
 ### Additional Minutes
+
 - Can purchase additional minutes if needed
 - Pricing varies by runner type:
   - Linux: $0.008 per minute
@@ -115,15 +124,21 @@ This basic workflow will run on pushes and pull requests to the main branch.
 ## Best Practices
 
 1. **Cache Dependencies**
+   {% raw %}
+
 ```yaml
 steps:
-- uses: actions/cache@v3
-  with:
-    path: ~/.npm
-    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+  - uses: actions/cache@v3
+    with:
+      path: ~/.npm
+      key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 ```
 
+{% endraw %}
+
 2. **Use Matrix Builds**
+   {% raw %}
+
 ```yaml
 jobs:
   test:
@@ -136,26 +151,36 @@ jobs:
           node-version: ${{ matrix.node-version }}
 ```
 
+{% endraw %}
+
 3. **Reuse Workflows**
+   {% raw %}
+
 ```yaml
 jobs:
   reusable_workflow_job:
     uses: octo-org/example-repo/.github/workflows/workflow_file.yml@main
 ```
 
+{% endraw %}
+
 ## Cost Optimization Tips
 
 1. **Minimize Build Time**
+
    - Use build caching
    - Only run workflows when necessary
    - Optimize Docker images
 
 2. **Self-hosted Runners**
+
    - Consider for high-volume projects
    - Can be more cost-effective
    - Requires maintenance overhead
 
 3. **Conditional Jobs**
+   {% raw %}
+
 ```yaml
 jobs:
   build:
@@ -163,19 +188,26 @@ jobs:
     runs-on: ubuntu-latest
 ```
 
+{% endraw %}
+
 ## Security Considerations
 
 1. **Secrets Management**
+
    - Store sensitive data in GitHub Secrets
    - Never print secrets in logs
    - Rotate secrets regularly
 
 2. **Permissions**
+   {% raw %}
+
 ```yaml
 permissions:
   contents: read
   issues: write
 ```
+
+{% endraw %}
 
 3. **Third-party Actions**
    - Use verified actions when possible
