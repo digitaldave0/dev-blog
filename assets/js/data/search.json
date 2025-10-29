@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "50 Great Git Commands: Complete Cheatsheet with Examples",
+      "category" : "",
+      "tags"     : "git, git-commands, cheatsheet, version-control, development-tools, command-line, tutorial",
+      "url"      : "/posts/50-great-git-commands-cheatsheet/",
+      "date"     : "October 29, 2025",
+      "description" : "Comprehensive cheatsheet of 50 essential Git commands with examples. From basic operations to advanced techniques, this guide covers everything you need to master Git version control."
+    } ,
+  
+    {
       "title"    : "AWS AI Practitioner Exam Preparation: Complete Study Guide",
       "category" : "",
       "tags"     : "aws-ai-practitioner, certification, ai-ml, generative-ai, exam-prep, aws-services",
