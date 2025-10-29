@@ -123,11 +123,25 @@ html[data-theme="dark"] code {
 /* Disable hover color changes on post title links but keep them clickable */
 .post-title a {
   color: inherit;
+  text-decoration: none;
 }
 
 .post-title a:hover {
-  color: inherit !important;
+  color: inherit;
   text-decoration: underline;
+}
+
+/* Disable gray selection/highlight on click */
+.post-preview::selection,
+.post-preview *::selection {
+  background: transparent;
+  color: inherit;
+}
+
+.post-preview::-moz-selection,
+.post-preview *::-moz-selection {
+  background: transparent;
+  color: inherit;
 }
 
 /* Make trending tags not clickable since tag pages are not generated */
@@ -155,10 +169,14 @@ html[data-theme="dark"] code {
 .post-preview {
   cursor: pointer;
   transition: none; /* Remove any transition that might cause gray background */
+  user-select: none; /* Prevent text selection highlighting */
 }
 
-.post-preview:hover {
-  background-color: transparent !important; /* Prevent gray background on hover */
+.post-preview:hover,
+.post-preview:active,
+.post-preview:focus {
+  background-color: transparent !important; /* Prevent gray background on any interaction */
+  outline: none !important; /* Remove focus outline */
 }
 
 .post-preview a {
