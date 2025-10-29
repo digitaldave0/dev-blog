@@ -6,7 +6,6 @@ excerpt: "Master advanced Ansible features with custom modules, dynamic inventor
 description: "An in-depth guide to advanced Ansible concepts including custom module development, dynamic inventory scripts, and complex orchestration patterns. Features a practical example of deploying a microservices architecture with advanced monitoring."
 ---
 
-
 # Advanced Ansible: Enterprise-Level Automation
 
 In this advanced tutorial, we'll explore sophisticated Ansible features by implementing a complex microservices deployment with custom modules and dynamic inventory management.
@@ -30,6 +29,7 @@ In this advanced tutorial, we'll explore sophisticated Ansible features by imple
 ## Working Example: Microservices Deployment
 
 We'll create a sophisticated deployment that:
+
 - Uses custom modules for specialized tasks
 - Implements dynamic inventory for cloud resources
 - Orchestrates multiple interdependent services
@@ -110,7 +110,7 @@ class AWSInventory:
 
         # Get all EC2 instances
         instances = self.ec2.describe_instances()
-        
+
         for reservation in instances['Reservations']:
             for instance in reservation['Instances']:
                 # Skip terminated instances
@@ -120,10 +120,10 @@ class AWSInventory:
                 # Get instance details
                 instance_id = instance['InstanceId']
                 private_ip = instance.get('PrivateIpAddress', '')
-                
+
                 # Get tags
                 tags = {t['Key']: t['Value'] for t in instance.get('Tags', [])}
-                
+
                 # Group by environment
                 env = tags.get('Environment', 'development')
                 if env not in self.inventory:
@@ -169,7 +169,7 @@ Create a sophisticated deployment playbook:
         name: network_setup
       vars:
         vpc_cidr: "10.0.0.0/16"
-        environment: "{{ env | default('staging') }}"
+        environment: "{{ env | default: 'staging' }}"
 
 - name: Deploy Database Tier
   hosts: tag_Role_database
@@ -183,7 +183,7 @@ Create a sophisticated deployment playbook:
       vars:
         db_backup_enabled: true
         db_backup_retention: 7
-      tags: ['database']
+      tags: ["database"]
 
 - name: Deploy Application Services
   hosts: tag_Role_application
@@ -193,7 +193,7 @@ Create a sophisticated deployment playbook:
     - name: Check system resources
       include_role:
         name: system_check
-      tags: ['precheck']
+      tags: ["precheck"]
 
     - name: Deploy microservices
       include_role:
@@ -204,7 +204,7 @@ Create a sophisticated deployment playbook:
         - auth_service
         - user_service
         - order_service
-      tags: ['deploy']
+      tags: ["deploy"]
 
     - name: Health check
       health_check:
@@ -214,7 +214,7 @@ Create a sophisticated deployment playbook:
       until: health_result is success
       retries: 5
       delay: 10
-      tags: ['healthcheck']
+      tags: ["healthcheck"]
 
 - name: Configure Load Balancers
   hosts: tag_Role_loadbalancer
@@ -247,7 +247,7 @@ class FilterModule:
     def parse_health_check(self, health_result):
         if not health_result:
             return False
-        
+
         return {
             'is_healthy': health_result.get('status', 0) in range(200, 300),
             'response_time': health_result.get('response_time', 0),
@@ -318,12 +318,14 @@ class CallbackModule(CallbackBase):
 ## Advanced Features Demonstrated
 
 1. **Custom Module Features**:
+
    - Parameter validation
    - Error handling
    - Return value structure
    - Idempotency checks
 
 2. **Dynamic Inventory Capabilities**:
+
    - Cloud resource discovery
    - Custom grouping logic
    - Host variable management
@@ -338,12 +340,14 @@ class CallbackModule(CallbackBase):
 ## Best Practices
 
 1. **Module Development**:
+
    - Follow Ansible module guidelines
    - Include comprehensive documentation
    - Implement proper error handling
    - Add unit tests
 
 2. **Inventory Management**:
+
    - Cache results for performance
    - Handle API rate limits
    - Implement error recovery
@@ -358,16 +362,19 @@ class CallbackModule(CallbackBase):
 ## Debugging and Troubleshooting
 
 1. Debug custom modules:
+
 ```bash
 ANSIBLE_DEBUG=1 ansible-playbook site.yml
 ```
 
 2. Test dynamic inventory:
+
 ```bash
 ./aws_dynamic_inventory.py --list
 ```
 
 3. Validate complex playbooks:
+
 ```bash
 ansible-playbook site.yml --check --diff
 ```
@@ -377,6 +384,7 @@ ansible-playbook site.yml --check --diff
 You've now explored advanced Ansible features and learned how to implement complex automation solutions. This knowledge will help you build sophisticated, enterprise-level automation systems.
 
 Remember to:
+
 - Test thoroughly in staging
 - Document custom components
 - Monitor deployment metrics
