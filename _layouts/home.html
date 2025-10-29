@@ -34,30 +34,24 @@ layout: default
     <div class="sidebar-section">
       <h3>🔥 Popular Tags</h3>
       <div class="trending-tags">
-        {% assign all_tags = "" | split: "," %}
-        {% for post in site.posts limit:15 %}
+        {% assign tag_count = "" %}
+        {% for post in site.posts %}
           {% for tag in post.tags %}
-            {% assign all_tags = all_tags | push: tag %}
-          {% endfor %}
-        {% endfor %}
-
-        {% assign unique_tags = "" | split: "," %}
-        {% for tag in all_tags %}
-          {% assign is_unique = true %}
-          {% for existing in unique_tags %}
-            {% if existing == tag %}
-              {% assign is_unique = false %}
+            {% if tag_count contains tag %}
+              <!-- tag already counted -->
+            {% else %}
+              {% assign tag_count = tag_count | append: tag | append: "," %}
             {% endif %}
           {% endfor %}
-          {% if is_unique %}
-            {% assign unique_tags = unique_tags | push: tag %}
-          {% endif %}
         {% endfor %}
-
-        {% for tag in unique_tags limit:10 %}
-          <a href="/tags/{{ tag | slugify }}/" class="tag-link">
-            {{ tag }}
-          </a>
+        
+        {% assign tags_array = tag_count | split: "," | sort %}
+        {% for tag in tags_array limit:10 %}
+          {% if tag != empty %}
+            <a href="/tags/{{ tag | slugify }}/" class="tag-link">
+              {{ tag }}
+            </a>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
