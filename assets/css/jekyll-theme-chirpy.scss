@@ -168,9 +168,10 @@ html[data-theme="dark"] code {
 /* Sidebar and Trending Tags Styles */
 .content-wrapper {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: flex-start;
 }
 
 .main-content {
@@ -179,8 +180,9 @@ html[data-theme="dark"] code {
 }
 
 .sidebar {
-  width: 300px;
+  width: 280px;
   flex-shrink: 0;
+  margin-top: 2rem;
 }
 
 .sidebar-section {
@@ -270,14 +272,17 @@ html[data-theme="dark"] code {
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .sidebar {
     width: 100%;
     order: -1;
+    margin-top: 1rem;
   }
 
   .trending-tags {
     justify-content: center;
+    gap: 0.75rem;
   }
 }
