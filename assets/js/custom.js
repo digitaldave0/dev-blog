@@ -19,14 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
     siteTitle.style.cursor = 'pointer';
   }
 
-  // Make entire post preview clickable
+  // Make entire post preview clickable - but don't interfere with links
   const postPreviews = document.querySelectorAll('.post-preview');
   postPreviews.forEach(preview => {
     const link = preview.querySelector('a[href*="/posts/"]');
     if (link && link.getAttribute('href')) {
       preview.style.cursor = 'pointer';
       preview.addEventListener('click', function(e) {
-        if (e.target.tagName === 'A' || e.target.classList.contains('post-tag') || e.target.closest('.post-tag') || e.target.closest('a')) {
+        // Don't override any link clicks - just let default behavior happen
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
           return;
         }
         const href = link.getAttribute('href');
@@ -66,18 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Ensure tag and search links work properly
-  const tagLinks = document.querySelectorAll('a[href*="/tags/"], a[href*="/categories/"], a[href*="?search="]');
-  tagLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && !href.startsWith('http')) {
-      let absoluteUrl = href;
-      if (!href.startsWith('http')) {
-        absoluteUrl = baseUrl.replace(/\/$/, '') + (href.startsWith('/') ? href : '/' + href);
-      }
-      link.setAttribute('href', absoluteUrl);
-    }
-  });
+  // Tag and search links should work with default behavior
+  // No need to manipulate href - Jekyll handles these correctly
 });
 
 // Premier League Table Widget
