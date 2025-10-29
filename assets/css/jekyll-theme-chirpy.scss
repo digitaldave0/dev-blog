@@ -154,6 +154,11 @@ html[data-theme="dark"] code {
 /* Ensure post previews are clickable */
 .post-preview {
   cursor: pointer;
+  transition: none; /* Remove any transition that might cause gray background */
+}
+
+.post-preview:hover {
+  background-color: transparent !important; /* Prevent gray background on hover */
 }
 
 .post-preview a {
