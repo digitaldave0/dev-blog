@@ -167,7 +167,7 @@ html[data-theme="dark"] code {
 
 /* Ensure post previews are clickable */
 .post-preview {
-  cursor: pointer;
+  cursor: default; /* Use default cursor instead of pointer */
   transition: none; /* Remove any transition that might cause gray background */
   user-select: none; /* Prevent text selection highlighting */
   -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
@@ -177,6 +177,20 @@ html[data-theme="dark"] code {
   border-radius: 8px;
   max-width: 100%;
   box-sizing: border-box;
+  pointer-events: auto; /* Ensure clicks still work */
+}
+
+/* Completely disable text selection styling */
+.post-preview::selection,
+.post-preview *::selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+.post-preview::-moz-selection,
+.post-preview *::-moz-selection {
+  background: transparent !important;
+  color: inherit !important;
 }
 
 /* Prevent highlighting on click - target article specifically */
@@ -215,6 +229,13 @@ article.post-preview {
 .post-preview a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Remove any background on links when clicked */
+.post-preview a:active,
+.post-preview a:focus {
+  background-color: transparent !important;
+  outline: none !important;
 }
 
 .post-preview:hover .post-title a {
