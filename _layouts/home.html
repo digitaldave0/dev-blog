@@ -5,7 +5,7 @@ layout: default
 <div class="content-wrapper">
   <div class="main-content">
     <div id="post-list" class="flex-grow-1 px-xl-1">
-      {% for post in paginator.posts %}
+      {% for post in site.posts %}
         <article class="post-preview">
           <header>
             <h2 class="post-title">
@@ -22,33 +22,6 @@ layout: default
       {% endfor %}
     </div>
   </div>
-
-  <!-- Pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link">&laquo; Previous</a>
-    {% else %}
-      <span class="pagination-link disabled">&laquo; Previous</span>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="pagination-link current">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | relative_url }}" class="pagination-link">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}" class="pagination-link">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link">Next &raquo;</a>
-    {% else %}
-      <span class="pagination-link disabled">Next &raquo;</span>
-    {% endif %}
-  </div>
-  {% endif %}
 
   <aside class="sidebar">
     <div class="sidebar-section">
