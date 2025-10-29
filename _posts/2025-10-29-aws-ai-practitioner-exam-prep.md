@@ -13,6 +13,7 @@ tags:
     aws-services,
   ]
 description: "Comprehensive guide to preparing for the AWS AI Practitioner certification exam. Covers exam domains, key concepts, AWS AI services, and practical study strategies with real-world examples."
+excerpt: "Prepare for the AWS AI Practitioner certification with this comprehensive study guide. Learn about AI/ML fundamentals, AWS AI services, generative AI, and responsible AI practices with detailed explanations and practical examples."
 ---
 
 # AWS AI Practitioner Exam Preparation: Complete Study Guide

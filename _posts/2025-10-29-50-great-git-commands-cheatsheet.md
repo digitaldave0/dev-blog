@@ -14,6 +14,7 @@ tags:
     tutorial,
   ]
 description: "Comprehensive cheatsheet of 50 essential Git commands with examples. From basic operations to advanced techniques, this guide covers everything you need to master Git version control."
+excerpt: "Master Git with this comprehensive cheatsheet featuring 50 essential commands. From basic operations like git init and git commit to advanced techniques like rebasing and bisecting, each command includes practical examples and explanations."
 ---
 
 # 50 Great Git Commands: Complete Cheatsheet with Examples
