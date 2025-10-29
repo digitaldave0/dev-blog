@@ -178,6 +178,8 @@ html[data-theme="dark"] code {
   max-width: 100%;
   box-sizing: border-box;
   pointer-events: auto; /* Ensure clicks still work */
+  background: transparent !important; /* Force transparent background */
+  background-color: transparent !important; /* Force transparent background color */
 }
 
 /* Completely disable text selection styling */
@@ -206,9 +208,19 @@ article.post-preview {
 .post-preview:focus,
 .post-preview:focus-within {
   background-color: transparent !important; /* Prevent gray background on any interaction */
+  background: transparent !important; /* Force transparent background */
   outline: none !important; /* Remove focus outline */
   transform: none !important; /* Prevent any scaling or transformation */
   box-shadow: none !important; /* Remove any shadow effects */
+}
+
+/* Also target the article element directly */
+article.post-preview,
+article.post-preview:hover,
+article.post-preview:active,
+article.post-preview:focus {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Prevent any child elements from getting gray backgrounds */
@@ -487,4 +499,35 @@ html[data-theme="dark"] .table-row:hover {
 
 html[data-theme="dark"] .table-footer {
   border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* CRITICAL FIX: Nuclear option to prevent ANY gray backgrounds on posts */
+div#post-list article.post-preview,
+div#post-list article.post-preview *,
+div#post-list .post-preview,
+div#post-list .post-preview * {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+div#post-list article.post-preview:hover,
+div#post-list article.post-preview:active,
+div#post-list article.post-preview:focus,
+div#post-list article.post-preview:visited,
+div#post-list .post-preview:hover,
+div#post-list .post-preview:active,
+div#post-list .post-preview:focus,
+div#post-list .post-preview:visited {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Prevent link backgrounds */
+div#post-list a,
+div#post-list a:hover,
+div#post-list a:active,
+div#post-list a:focus,
+div#post-list a:visited {
+  background: transparent !important;
+  background-color: transparent !important;
 }
