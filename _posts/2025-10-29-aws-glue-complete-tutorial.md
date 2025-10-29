@@ -2,7 +2,19 @@
 layout: post
 title: "AWS Glue Complete Tutorial: Serverless ETL Made Easy"
 description: "Master AWS Glue from basics to advanced. Learn to build serverless ETL pipelines, use Glue Studio, crawlers, and catalog for data integration at any scale."
-tags: [aws-glue, etl, data-engineering, serverless, data-catalog, aws, tutorial, data-pipeline, apache-spark, data-lake]
+tags:
+  [
+    aws-glue,
+    etl,
+    data-engineering,
+    serverless,
+    data-catalog,
+    aws,
+    tutorial,
+    data-pipeline,
+    apache-spark,
+    data-lake,
+  ]
 icon: 🔧
 excerpt: >
   Complete AWS Glue tutorial covering everything from basic concepts to advanced ETL pipelines. Learn Glue Studio, crawlers, Data Catalog, job authoring, and real-world implementation patterns.
@@ -35,6 +47,7 @@ AWS Glue is a serverless data integration service that makes it easy to discover
 ## AWS Glue Architecture Components
 
 ### 1. Data Catalog
+
 The central metadata repository that stores information about your data sources, transformations, and targets.
 
 ```python
@@ -51,15 +64,19 @@ for db in databases['DatabaseList']:
 ```
 
 ### 2. Crawlers
+
 Automated tools that scan your data sources and populate the Data Catalog with metadata.
 
 ### 3. ETL Jobs
+
 The actual data processing jobs that extract, transform, and load data.
 
 ### 4. Triggers
+
 Schedule or event-based mechanisms to start ETL jobs and crawlers.
 
 ### 5. Connections
+
 Secure connection information for accessing data sources.
 
 ## Getting Started with AWS Glue
@@ -67,6 +84,7 @@ Secure connection information for accessing data sources.
 ### Prerequisites
 
 Before you start, ensure you have:
+
 - An AWS account
 - Appropriate IAM permissions
 - Data sources (S3, RDS, etc.) with sample data
@@ -75,34 +93,34 @@ Before you start, ensure you have:
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "glue:*",
-                "s3:GetObject",
-                "s3:PutObject",
-                "s3:DeleteObject",
-                "s3:ListBucket",
-                "iam:GetRole",
-                "iam:PassRole",
-                "ec2:DescribeVpcEndpoints",
-                "ec2:DescribeRouteTables",
-                "ec2:CreateNetworkInterface",
-                "ec2:DeleteNetworkInterface",
-                "ec2:DescribeNetworkInterfaces",
-                "ec2:DescribeSecurityGroups",
-                "ec2:DescribeSubnets",
-                "ec2:DescribeVpcAttribute",
-                "logs:CreateLogGroup",
-                "logs:CreateLogStream",
-                "logs:PutLogEvents",
-                "logs:DescribeLogStreams"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "glue:*",
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "s3:ListBucket",
+        "iam:GetRole",
+        "iam:PassRole",
+        "ec2:DescribeVpcEndpoints",
+        "ec2:DescribeRouteTables",
+        "ec2:CreateNetworkInterface",
+        "ec2:DeleteNetworkInterface",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeVpcAttribute",
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
@@ -113,15 +131,18 @@ Glue Studio provides a visual interface for creating ETL jobs without writing co
 ### Creating Your First Visual ETL Job
 
 1. **Access Glue Studio**
+
    - Go to AWS Console → Glue → Glue Studio
    - Click "Create job" → "Visual ETL"
 
 2. **Add Data Sources**
+
    - Drag "S3" source node to canvas
    - Configure S3 bucket and file format
    - For CSV files: specify delimiter, header options
 
 3. **Add Transformations**
+
    - Use built-in transforms like:
      - **ApplyMapping**: Change column names/types
      - **Filter**: Remove unwanted rows
@@ -520,12 +541,12 @@ datasource = glueContext.create_dynamic_frame.from_catalog(
 
 ### Choosing the Right Worker Type
 
-| Worker Type | vCPU | Memory | Use Case |
-|-------------|------|--------|----------|
-| G.1X | 1 | 16 GB | Light transformations, small datasets |
-| G.2X | 2 | 32 GB | Medium workloads, standard ETL |
-| G.4X | 4 | 64 GB | Large datasets, complex transformations |
-| G.8X | 8 | 128 GB | Very large datasets, memory-intensive jobs |
+| Worker Type | vCPU | Memory | Use Case                                   |
+| ----------- | ---- | ------ | ------------------------------------------ |
+| G.1X        | 1    | 16 GB  | Light transformations, small datasets      |
+| G.2X        | 2    | 32 GB  | Medium workloads, standard ETL             |
+| G.4X        | 4    | 64 GB  | Large datasets, complex transformations    |
+| G.8X        | 8    | 128 GB | Very large datasets, memory-intensive jobs |
 
 ### Partitioning Strategies
 
