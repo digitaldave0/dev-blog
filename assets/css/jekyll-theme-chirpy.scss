@@ -170,6 +170,7 @@ html[data-theme="dark"] code {
   cursor: pointer;
   transition: none; /* Remove any transition that might cause gray background */
   user-select: none; /* Prevent text selection highlighting */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
 .post-preview:hover,
@@ -177,6 +178,21 @@ html[data-theme="dark"] code {
 .post-preview:focus {
   background-color: transparent !important; /* Prevent gray background on any interaction */
   outline: none !important; /* Remove focus outline */
+}
+
+/* Prevent any child elements from getting gray backgrounds */
+.post-preview *,
+.post-preview article,
+.post-preview header,
+.post-preview footer,
+.post-preview div {
+  background-color: transparent !important;
+}
+
+.post-preview *:hover,
+.post-preview *:active,
+.post-preview *:focus {
+  background-color: transparent !important;
 }
 
 .post-preview a {
