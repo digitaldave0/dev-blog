@@ -25,16 +25,7 @@
         </a>
       </li>
 
-      <!-- Premier League Table Widget -->
-      <li class="nav-item" style="padding: 1rem 0;">
-        <div id="premier-league-sidebar" style="padding: 0 1rem;">
-          <div id="premier-league-widget" style="font-size: 0.9rem;">
-            <div class="table-loading" style="text-align: center; padding: 1rem; color: #999;">Loading...</div>
-          </div>
-        </div>
-      </li>
-
-      <!-- Other navigation items (categories, archives, etc.) would go here -->
+      <!-- Other navigation items (categories, archives, etc.) -->
       {% if site.data.tabs %}
         {% for tab in site.data.tabs %}
           <li class="nav-item">
@@ -70,12 +61,8 @@
       </div>
     {% endif %}
 
-    {% if site.waline and site.waline.serverURL %}
-      <button id="mode-toggle" class="mode-toggle" aria-label="Toggle Dark Mode">
-        <i class="fas fa-adjust"></i>
-      </button>
-    {% endif %}
+    <button id="mode-toggle" class="mode-toggle" aria-label="Toggle Dark Mode">
+      <i class="fas fa-adjust"></i>
+    </button>
   </div>
 </aside>
-
-<script src="{{ '/assets/js/custom.js' | relative_url }}"></script>

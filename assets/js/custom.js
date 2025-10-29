@@ -86,23 +86,23 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Use a small delay to ensure DOM is fully ready
   setTimeout(function() {
-    const premierLeagueWidget = document.getElementById('premier-league-widget');
-    console.log('Premier League widget element:', premierLeagueWidget);
+    const premierLeagueTable = document.getElementById('premier-league-table');
+    console.log('Premier League table element:', premierLeagueTable);
     
-    if (premierLeagueWidget) {
-      loadPremierLeagueWidget();
+    if (premierLeagueTable) {
+      loadPremierLeagueTable();
     } else {
-      console.error('Premier League widget element not found');
+      console.error('Premier League table element not found');
     }
   }, 100);
 });
 
-function loadPremierLeagueWidget() {
-  const widget = document.getElementById('premier-league-widget');
-  console.log('loadPremierLeagueWidget called, widget:', widget);
+function loadPremierLeagueTable() {
+  const container = document.getElementById('premier-league-table');
+  console.log('loadPremierLeagueTable called, container:', container);
 
-  if (!widget) {
-    console.error('Widget container not found');
+  if (!container) {
+    console.error('Table container not found');
     return;
   }
 
@@ -126,28 +126,27 @@ function loadPremierLeagueWidget() {
     .then(data => {
       console.log('API data received:', data);
       if (data.standings && data.standings[0] && data.standings[0].table) {
-        displayPremierLeagueWidget(data.standings[0].table.slice(0, 6));
+        displayPremierLeagueTable(data.standings[0].table.slice(0, 6));
       } else {
         console.warn('Data structure not as expected, using fallback');
-        displayFallbackWidget();
+        displayFallbackTable();
       }
     })
     .catch(error => {
-      console.error('Error loading Premier League widget:', error);
-      displayFallbackWidget();
+      console.error('Error loading Premier League table:', error);
+      displayFallbackTable();
     });
   } catch (error) {
-    console.error('Error in loadPremierLeagueWidget:', error);
-    displayFallbackWidget();
+    console.error('Error in loadPremierLeagueTable:', error);
+    displayFallbackTable();
   }
 }
 
-function displayPremierLeagueWidget(teams) {
-  const widget = document.getElementById('premier-league-widget');
+function displayPremierLeagueTable(teams) {
+  const container = document.getElementById('premier-league-table');
 
-  let html = '<h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: #00bfff;">⚽ Top 6</h4>';
-  html += '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 25px 1fr 30px;">';
+  let html = '<div class="league-table" style="font-size: 0.75rem;">';
+  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
   html += '<span class="pos">#</span>';
   html += '<span class="team">Team</span>';
   html += '<span class="pts">Pts</span>';
@@ -158,7 +157,7 @@ function displayPremierLeagueWidget(teams) {
     const teamName = team.team.name.replace('FC', '').replace('United', 'Utd').trim();
     const points = team.points;
 
-    html += '<div class="table-row" style="grid-template-columns: 25px 1fr 30px;">';
+    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${position}</span>`;
     html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${teamName}</span>`;
     html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${points}</span>`;
@@ -167,14 +166,14 @@ function displayPremierLeagueWidget(teams) {
 
   html += '</div>';
   html += '<div class="table-footer" style="margin-top: 0.5rem; text-align: center; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1);">';
-  html += '<a href="https://www.premierleague.com/tables" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full →</a>';
+  html += '<a href="https://www.premierleague.com/tables" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full Table →</a>';
   html += '</div>';
 
-  widget.innerHTML = html;
+  container.innerHTML = html;
 }
 
-function displayFallbackWidget() {
-  const widget = document.getElementById('premier-league-widget');
+function displayFallbackTable() {
+  const container = document.getElementById('premier-league-table');
 
   const fallbackData = [
     { pos: 1, team: 'Arsenal', pts: 24 },
@@ -185,16 +184,15 @@ function displayFallbackWidget() {
     { pos: 6, team: 'Newcastle', pts: 17 }
   ];
 
-  let html = '<h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: #00bfff;">⚽ Top 6</h4>';
-  html += '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 25px 1fr 30px;">';
+  let html = '<div class="league-table" style="font-size: 0.75rem;">';
+  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
   html += '<span class="pos">#</span>';
   html += '<span class="team">Team</span>';
   html += '<span class="pts">Pts</span>';
   html += '</div>';
 
   fallbackData.forEach(team => {
-    html += '<div class="table-row" style="grid-template-columns: 25px 1fr 30px;">';
+    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${team.pos}</span>`;
     html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${team.team}</span>`;
     html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${team.pts}</span>`;
@@ -204,8 +202,8 @@ function displayFallbackWidget() {
   html += '</div>';
   html += '<div class="table-footer" style="margin-top: 0.5rem; text-align: center; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; color: #999;">';
   html += 'Oct 29, 2025<br>';
-  html += '<a href="https://www.premierleague.com/tables" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full →</a>';
+  html += '<a href="https://www.premierleague.com/tables" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full Table →</a>';
   html += '</div>';
 
-  widget.innerHTML = html;
+  container.innerHTML = html;
 }
