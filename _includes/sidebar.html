@@ -25,6 +25,24 @@
         </a>
       </li>
 
+      <!-- Clock, Date, and Location Widget -->
+      <li class="nav-item">
+        <div class="datetime-widget">
+          <div class="datetime-clock">
+            <i class="fas fa-clock"></i>
+            <span id="current-time">--:--:--</span>
+          </div>
+          <div class="datetime-date">
+            <i class="fas fa-calendar"></i>
+            <span id="current-date">Loading...</span>
+          </div>
+          <div class="datetime-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span id="current-location">Detecting...</span>
+          </div>
+        </div>
+      </li>
+
       <!-- Other navigation items (categories, archives, etc.) -->
       {% if site.data.tabs %}
         {% for tab in site.data.tabs %}
