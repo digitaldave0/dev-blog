@@ -469,16 +469,127 @@ function initializeTagInteractions() {
 document.addEventListener('DOMContentLoaded', function() {
   // Update time immediately
   updateDateTime();
-  
+
   // Update time every second
   setInterval(updateDateTime, 1000);
-  
+
   // Get location and networking details (only once on page load)
   getUserLocation();
-  
+
   // Load inspirational quote
   loadInspirationalQuote();
-  
+
   // Initialize tag interactions
   initializeTagInteractions();
+
+  // Initialize clipboard copy functionality for code blocks
+  initializeCodeCopy();
 });
+
+// Clipboard copy functionality for code blocks
+function initializeCodeCopy() {
+  // Find all code blocks (both inline and block)
+  const codeBlocks = document.querySelectorAll('pre code, pre');
+
+  codeBlocks.forEach((block, index) => {
+    // Skip if already has copy button
+    if (block.querySelector('.code-copy-btn')) return;
+
+    // Create copy button
+    const copyButton = document.createElement('button');
+    copyButton.className = 'code-copy-btn';
+    copyButton.innerHTML = '<i class="fas fa-copy"></i>';
+    copyButton.title = 'Copy to clipboard';
+    copyButton.setAttribute('aria-label', 'Copy code to clipboard');
+
+    // Add click handler
+    copyButton.addEventListener('click', async function() {
+      try {
+        // Get text content - prefer code element if it exists
+        const codeElement = block.querySelector('code');
+        const textToCopy = codeElement ? codeElement.textContent : block.textContent;
+
+        // Use modern clipboard API if available
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(textToCopy);
+        } else {
+          // Fallback for older browsers
+          const textArea = document.createElement('textarea');
+          textArea.value = textToCopy;
+          textArea.style.position = 'fixed';
+          textArea.style.left = '-999999px';
+          textArea.style.top = '-999999px';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+
+          try {
+            document.execCommand('copy');
+          } catch (err) {
+            console.error('Fallback copy failed:', err);
+            showCopyFeedback(copyButton, 'Failed to copy', false);
+            return;
+          } finally {
+            document.body.removeChild(textArea);
+          }
+        }
+
+        // Show success feedback
+        showCopyFeedback(copyButton, 'Copied!', true);
+
+      } catch (err) {
+        console.error('Copy failed:', err);
+        showCopyFeedback(copyButton, 'Failed to copy', false);
+      }
+    });
+
+    // Create wrapper div for positioning
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-block-wrapper';
+    wrapper.style.position = 'relative';
+
+    // Wrap the code block
+    block.parentNode.insertBefore(wrapper, block);
+    wrapper.appendChild(block);
+    wrapper.appendChild(copyButton);
+  });
+}
+
+// Show copy feedback
+function showCopyFeedback(button, message, success) {
+  // Remove existing feedback
+  const existingFeedback = button.querySelector('.copy-feedback');
+  if (existingFeedback) {
+    existingFeedback.remove();
+  }
+
+  // Create feedback element
+  const feedback = document.createElement('span');
+  feedback.className = 'copy-feedback';
+  feedback.textContent = message;
+  feedback.style.cssText = `
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: ${success ? '#28a745' : '#dc3545'};
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeInOut 2s ease-in-out;
+  `;
+
+  button.appendChild(feedback);
+
+  // Remove feedback after animation
+  setTimeout(() => {
+    if (feedback.parentNode) {
+      feedback.parentNode.removeChild(feedback);
+    }
+  }, 2000);
+}
