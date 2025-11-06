@@ -34,22 +34,37 @@ layout: default
     <div class="sidebar-section">
       <h3>🔥 Popular Tags</h3>
       <div class="trending-tags">
-        {% assign tag_count = "" %}
+        {% assign tag_data = "" %}
         {% for post in site.posts %}
           {% for tag in post.tags %}
-            {% if tag_count contains tag %}
-              <!-- tag already counted -->
-            {% else %}
-              {% assign tag_count = tag_count | append: tag | append: "," %}
+            {% assign tag_found = false %}
+            {% for existing_tag in tag_data %}
+              {% if existing_tag[0] == tag %}
+                {% assign tag_found = true %}
+                {% assign count = existing_tag[1] | plus: 1 %}
+                {% assign tag_data = tag_data | remove: existing_tag %}
+                {% assign new_entry = tag | append: "," | append: count %}
+                {% assign tag_data = tag_data | append: new_entry | append: ";" %}
+              {% endif %}
+            {% endfor %}
+            {% if tag_found == false %}
+              {% assign new_entry = tag | append: ",1" %}
+              {% assign tag_data = tag_data | append: new_entry | append: ";" %}
             {% endif %}
           {% endfor %}
         {% endfor %}
         
-        {% assign tags_array = tag_count | split: "," | sort %}
-        {% for tag in tags_array limit:10 %}
-          {% if tag != empty %}
-            <a href="/tags/{{ tag | slugify }}/" class="tag-link">
-              {{ tag }}
+        {% assign sorted_tags = tag_data | split: ";" | sort: natural %}
+        {% assign sorted_tags = sorted_tags | reverse %}
+        
+        {% for tag_entry in sorted_tags limit:12 %}
+          {% if tag_entry != empty %}
+            {% assign tag_parts = tag_entry | split: "," %}
+            {% assign tag_name = tag_parts[0] %}
+            {% assign tag_count = tag_parts[1] %}
+            <a href="/tags/{{ tag_name | slugify }}/" class="tag-link tag-weight-{{ tag_count }}" data-count="{{ tag_count }}">
+              {{ tag_name }}
+              <span class="tag-count">{{ tag_count }}</span>
             </a>
           {% endif %}
         {% endfor %}
