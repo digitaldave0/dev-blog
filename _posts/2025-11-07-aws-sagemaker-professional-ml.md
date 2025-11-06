@@ -26,6 +26,31 @@ Building on our [beginner's SageMaker house price predictor]({% post_url 2025-11
 
 **Ready for computer vision?** Check out our [comprehensive image recognition guide]({% post_url 2025-11-08-aws-sagemaker-image-recognition %}) covering traditional ML, deep learning CNNs, and AWS Rekognition!
 
+## 🎯 MLS-C01 Exam Alignment: Professional ML Engineering
+
+**This advanced guide covers core competencies tested in the AWS Certified Machine Learning - Specialty (MLS-C01) exam:**
+
+### **Domain 2: Exploratory Data Analysis (24%) - Professional Data Science**
+
+- **Sanitize and prepare data**: Advanced preprocessing, feature engineering, handling missing data
+- **Perform feature engineering**: Creating derived features, feature selection, dimensionality reduction
+- **Analyze and visualize data**: Statistical analysis, correlation analysis, outlier detection
+
+### **Domain 3: Modeling (36%) - Advanced ML Techniques**
+
+- **Frame ML problems**: Business problem translation, objective function definition
+- **Model selection**: Algorithm comparison, cross-validation, performance metrics
+- **Hyperparameter optimization**: Grid search, random search, Bayesian optimization
+- **Model evaluation**: Confusion matrices, ROC curves, precision-recall analysis
+
+### **Domain 4: ML Implementation and Operations (20%) - Production ML**
+
+- **Performance & scalability**: Model optimization, distributed training, inference optimization
+- **Operationalization**: Model deployment, monitoring, A/B testing frameworks
+- **Security**: AWS security best practices, data encryption, access control
+
+**Exam Tip**: The MLS-C01 exam heavily tests your ability to apply professional ML practices. This post covers the "Evaluate machine learning models" and "Perform hyperparameter optimization" objectives that are frequently tested.
+
 ## 🎯 What's Different This Time?
 
 **Beginner Version**: Synthetic data, basic linear regression, simple evaluation
@@ -36,6 +61,7 @@ Building on our [beginner's SageMaker house price predictor]({% post_url 2025-11
 Instead of creating fake data, we'll use the **California Housing dataset** - a real dataset that's included with scikit-learn. This dataset contains information about houses in California districts from the 1990 census.
 
 **Dataset Features:**
+
 - **MedInc**: Median income in block group
 - **HouseAge**: Median house age in block group
 - **AveRooms**: Average number of rooms per household
@@ -46,6 +72,7 @@ Instead of creating fake data, we'll use the **California Housing dataset** - a 
 - **Longitude**: Block group longitude
 
 **Target Variable:**
+
 - **MedHouseVal**: Median house value for California districts (in $100,000s)
 
 ## 🏗️ Professional ML Workflow
@@ -500,12 +527,14 @@ print("This means the predicted house price is ${predicted_price * 100000:,.0f}"
 Now that you have professional ML skills, here are the next steps:
 
 ### **Level 5: Specialized ML Domains**
+
 - **[Computer Vision Mastery]({% post_url 2025-11-08-aws-sagemaker-image-recognition %})**: Traditional ML, CNNs, and AWS Rekognition
 - **Natural Language Processing**: Text classification, sentiment analysis, transformers
 - **Time Series Forecasting**: ARIMA, Prophet, LSTM networks
 - **Recommendation Systems**: Collaborative filtering, content-based methods
 
 ### **Level 6: Production ML Engineering**
+
 - **Model versioning** with DVC or similar tools
 - **CI/CD pipelines** for ML models
 - **Model monitoring** and drift detection
@@ -513,6 +542,7 @@ Now that you have professional ML skills, here are the next steps:
 - **Model serving** with FastAPI or similar
 
 ### **Level 7: MLOps and Scale**
+
 - **Kubernetes** for ML workloads
 - **Distributed training** with multiple GPUs
 - **Feature stores** for feature management
@@ -520,6 +550,7 @@ Now that you have professional ML skills, here are the next steps:
 - **AutoML** and hyperparameter optimization at scale
 
 ### **Level 7: Advanced ML Research**
+
 - **Deep learning** with TensorFlow/PyTorch
 - **Computer vision** and NLP applications
 - **Reinforcement learning** projects
@@ -559,4 +590,4 @@ Ready to take your ML skills to the next level? The journey from beginner to pro
 
 ---
 
-*This post builds on our [SageMaker beginner's guide]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}). Ready for computer vision? Check out our [image recognition deep dive]({% post_url 2025-11-08-aws-sagemaker-image-recognition %})! Next up: Deploying ML models to production with AWS services!* 🚀
+_This post builds on our [SageMaker beginner's guide]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}). Ready for computer vision? Check out our [image recognition deep dive]({% post_url 2025-11-08-aws-sagemaker-image-recognition %})! Next up: Deploying ML models to production with AWS services!_ 🚀
