@@ -5,6 +5,7 @@ date: 2025-11-05 11:00:00 +0000
 categories: [aws, certification, ai, machine-learning, services]
 tags:
   [
+    aws,
     aws-ai-practitioner,
     domain-2,
     aws-services,

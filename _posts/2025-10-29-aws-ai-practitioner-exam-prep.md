@@ -5,6 +5,7 @@ date: 2025-10-29 22:00:00 +0000
 categories: [aws, certification, ai, machine-learning, exams]
 tags:
   [
+    aws,
     aws-ai-practitioner,
     certification,
     ai-ml,

@@ -5,6 +5,7 @@ date: 2025-11-05 12:00:00 +0000
 categories: [aws, certification, ai, generative-ai, machine-learning]
 tags:
   [
+    aws,
     aws-ai-practitioner,
     domain-3,
     generative-ai,

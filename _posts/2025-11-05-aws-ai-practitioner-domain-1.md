@@ -5,6 +5,7 @@ date: 2025-11-05 10:00:00 +0000
 categories: [aws, certification, ai, machine-learning, fundamentals]
 tags:
   [
+    aws,
     aws-ai-practitioner,
     domain-1,
     machine-learning,
