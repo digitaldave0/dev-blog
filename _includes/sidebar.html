@@ -5,6 +5,11 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper initially-hide">
+    {% if site.avatar %}
+      <div class="avatar">
+        <img src="{{ site.avatar | relative_url }}" alt="avatar" />
+      </div>
+    {% endif %}
     <h1 class="site-title">
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </h1>
