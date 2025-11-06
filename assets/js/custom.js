@@ -438,6 +438,33 @@ async function loadInspirationalQuote() {
   }
 }
 
+// Initialize tag interactions and animations
+function initializeTagInteractions() {
+  const tagLinks = document.querySelectorAll('.tag-link');
+  
+  tagLinks.forEach((tag, index) => {
+    // Add staggered animation delay
+    tag.style.animationDelay = `${index * 0.1}s`;
+    tag.classList.add('tag-animate-in');
+    
+    // Add click tracking (optional analytics)
+    tag.addEventListener('click', function(e) {
+      // Add ripple effect
+      const ripple = document.createElement('span');
+      ripple.className = 'tag-ripple';
+      ripple.style.left = `${e.offsetX}px`;
+      ripple.style.top = `${e.offsetY}px`;
+      this.appendChild(ripple);
+      
+      setTimeout(() => ripple.remove(), 600);
+    });
+    
+    // Add tooltip with post count
+    const count = tag.dataset.count;
+    tag.title = `${count} post${count > 1 ? 's' : ''} tagged with "${tag.textContent.trim()}"`;
+  });
+}
+
 // Initialize datetime widget when page loads
 document.addEventListener('DOMContentLoaded', function() {
   // Update time immediately
@@ -451,4 +478,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Load inspirational quote
   loadInspirationalQuote();
+  
+  // Initialize tag interactions
+  initializeTagInteractions();
 });
