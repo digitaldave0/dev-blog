@@ -24,6 +24,8 @@ excerpt: "Level up your SageMaker skills! Learn professional ML techniques with 
 
 Building on our [beginner's SageMaker house price predictor]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}), it's time to level up to professional machine learning practices. In this post, we'll use a **real dataset**, implement **industry-standard ML techniques**, and follow **production-ready workflows**.
 
+**Ready for computer vision?** Check out our [comprehensive image recognition guide]({% post_url 2025-11-08-aws-sagemaker-image-recognition %}) covering traditional ML, deep learning CNNs, and AWS Rekognition!
+
 ## 🎯 What's Different This Time?
 
 **Beginner Version**: Synthetic data, basic linear regression, simple evaluation
@@ -497,14 +499,20 @@ print("This means the predicted house price is ${predicted_price * 100000:,.0f}"
 
 Now that you have professional ML skills, here are the next steps:
 
-### **Level 5: Production ML Engineering**
+### **Level 5: Specialized ML Domains**
+- **[Computer Vision Mastery]({% post_url 2025-11-08-aws-sagemaker-image-recognition %})**: Traditional ML, CNNs, and AWS Rekognition
+- **Natural Language Processing**: Text classification, sentiment analysis, transformers
+- **Time Series Forecasting**: ARIMA, Prophet, LSTM networks
+- **Recommendation Systems**: Collaborative filtering, content-based methods
+
+### **Level 6: Production ML Engineering**
 - **Model versioning** with DVC or similar tools
 - **CI/CD pipelines** for ML models
 - **Model monitoring** and drift detection
 - **A/B testing** frameworks
 - **Model serving** with FastAPI or similar
 
-### **Level 6: MLOps and Scale**
+### **Level 7: MLOps and Scale**
 - **Kubernetes** for ML workloads
 - **Distributed training** with multiple GPUs
 - **Feature stores** for feature management
@@ -551,4 +559,4 @@ Ready to take your ML skills to the next level? The journey from beginner to pro
 
 ---
 
-*This post builds on our [SageMaker beginner's guide]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}). Next up: Deploying ML models to production with AWS services!*"
+*This post builds on our [SageMaker beginner's guide]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}). Ready for computer vision? Check out our [image recognition deep dive]({% post_url 2025-11-08-aws-sagemaker-image-recognition %})! Next up: Deploying ML models to production with AWS services!* 🚀
