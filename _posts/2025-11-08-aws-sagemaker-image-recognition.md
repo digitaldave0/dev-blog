@@ -2,7 +2,16 @@
 layout: default
 title: "AWS SageMaker Image Recognition: From Traditional ML to Deep Learning"
 date: 2025-11-08 10:00:00 +0000
-categories: [aws, machine-learning, sagemaker, computer-vision, image-recognition, cnn, traditional-ml]
+categories:
+  [
+    aws,
+    machine-learning,
+    sagemaker,
+    computer-vision,
+    image-recognition,
+    cnn,
+    traditional-ml,
+  ]
 tags:
   [
     aws,
@@ -28,6 +37,30 @@ excerpt: "Unlock the power of computer vision! Learn image recognition algorithm
 Welcome to the fascinating world of **computer vision**! After mastering [basic ML concepts]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}) and [professional ML techniques]({% post_url 2025-11-07-aws-sagemaker-professional-ml %}), it's time to dive into **image recognition** - one of the most exciting applications of machine learning.
 
 This medium-level guide covers everything from traditional machine learning approaches to cutting-edge deep learning, with practical AWS SageMaker implementations.
+
+## 🎯 MLS-C01 Exam Alignment: Computer Vision Expertise
+
+**This image recognition guide directly supports multiple AWS Certified Machine Learning - Specialty (MLS-C01) exam domains:**
+
+### **Domain 2: Exploratory Data Analysis (24%) - Advanced Feature Engineering**
+
+- Advanced feature engineering for image data (HOG, SIFT, CNN features)
+- Data transformation and preprocessing for computer vision
+- Handling high-dimensional image data
+
+### **Domain 3: Modeling (36%) - Algorithm Selection & Training**
+
+- **Selecting appropriate models**: Traditional ML vs Deep Learning vs Managed Services
+- **Training ML models**: CNN architectures, transfer learning, hyperparameter optimization
+- **Evaluating ML models**: Computer vision specific metrics and validation techniques
+
+### **Domain 4: ML Implementation and Operations (20%) - Production CV Systems**
+
+- **AWS ML services**: Rekognition vs SageMaker vs custom implementations
+- **Performance optimization**: Model compression, inference optimization
+- **Scalability**: Batch processing, real-time inference, auto-scaling
+
+**Exam Tip**: Computer vision questions frequently appear on the MLS-C01 exam. Understanding when to use Rekognition vs custom SageMaker models is crucial for the "Recommend and implement the appropriate machine learning services" objective.
 
 ## 🎯 What Makes Image Recognition Special?
 
@@ -415,13 +448,13 @@ def create_rekognition_custom_model(project_name, bucket_name, s3_client, rekogn
 
 ### Decision Framework
 
-| Algorithm | Dataset Size | Accuracy Potential | Training Time | Use Case |
-|-----------|-------------|-------------------|---------------|----------|
-| **SVM** | Small (<10K) | Medium | Fast | Quick prototypes, limited data |
-| **Random Forest** | Medium (10K-100K) | Medium-High | Medium | Interpretable results, mixed data types |
-| **CNN (Custom)** | Large (100K+) | High | Slow | Novel problems, custom architectures |
-| **Transfer Learning** | Medium (10K+) | Very High | Medium | Similar to ImageNet tasks |
-| **AWS Rekognition** | Any | High | None | Standard CV tasks, quick deployment |
+| Algorithm             | Dataset Size      | Accuracy Potential | Training Time | Use Case                                |
+| --------------------- | ----------------- | ------------------ | ------------- | --------------------------------------- |
+| **SVM**               | Small (<10K)      | Medium             | Fast          | Quick prototypes, limited data          |
+| **Random Forest**     | Medium (10K-100K) | Medium-High        | Medium        | Interpretable results, mixed data types |
+| **CNN (Custom)**      | Large (100K+)     | High               | Slow          | Novel problems, custom architectures    |
+| **Transfer Learning** | Medium (10K+)     | Very High          | Medium        | Similar to ImageNet tasks               |
+| **AWS Rekognition**   | Any               | High               | None          | Standard CV tasks, quick deployment     |
 
 ### Performance Comparison
 
@@ -514,21 +547,25 @@ def process_images_batch(image_paths, rekognition_client, output_bucket):
 ## 📊 Real-World Use Cases
 
 ### 1. **E-commerce Product Recognition**
+
 - **Problem**: Automatically categorize products from images
 - **Solution**: Transfer learning with ResNet50 + custom classification head
 - **Why**: Pre-trained features + domain-specific fine-tuning
 
 ### 2. **Medical Image Analysis**
+
 - **Problem**: Detect abnormalities in X-rays, MRIs
 - **Solution**: Custom CNN with domain expert validation
 - **Why**: Requires specialized training data and regulatory compliance
 
 ### 3. **Security & Surveillance**
+
 - **Problem**: Real-time face detection and recognition
 - **Solution**: AWS Rekognition with custom model training
 - **Why**: Managed service with high accuracy and scalability
 
 ### 4. **Quality Control**
+
 - **Problem**: Detect defects in manufacturing
 - **Solution**: Traditional ML (SVM) with engineered features
 - **Why**: Often works well with limited training data
@@ -536,18 +573,21 @@ def process_images_batch(image_paths, rekognition_client, output_bucket):
 ## 🔧 Best Practices for Image Recognition
 
 ### Data Preparation
+
 1. **Consistent sizing**: Resize all images to same dimensions
 2. **Data augmentation**: Rotate, flip, crop for robustness
 3. **Class balance**: Ensure equal representation of classes
 4. **Quality filtering**: Remove corrupted or irrelevant images
 
 ### Model Training
+
 1. **Start simple**: Begin with transfer learning
 2. **Monitor overfitting**: Use validation sets and early stopping
 3. **Hyperparameter tuning**: Grid search or Bayesian optimization
 4. **Cross-validation**: Especially important for small datasets
 
 ### Production Considerations
+
 1. **Model versioning**: Track model changes and performance
 2. **Monitoring**: Watch for concept drift and accuracy degradation
 3. **Scalability**: Choose appropriate instance types and auto-scaling
@@ -575,4 +615,4 @@ def process_images_batch(image_paths, rekognition_client, output_bucket):
 
 ---
 
-*This medium-level guide bridges basic ML concepts with advanced computer vision techniques. Next: [Professional ML practices]({% post_url 2025-11-07-aws-sagemaker-professional-ml %}) for production-ready models!* 🚀
+_This medium-level guide bridges basic ML concepts with advanced computer vision techniques. Next: [Professional ML practices]({% post_url 2025-11-07-aws-sagemaker-professional-ml %}) for production-ready models!_ 🚀

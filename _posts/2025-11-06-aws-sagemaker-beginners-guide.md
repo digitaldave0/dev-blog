@@ -61,6 +61,33 @@ SageMaker is used across industries for:
 - Fraud detection
 - Quality control and anomaly detection
 
+## 🎯 MLS-C01 Exam Alignment: Foundational Knowledge
+
+**This beginner guide covers fundamental concepts tested in the AWS Certified Machine Learning - Specialty (MLS-C01) exam:**
+
+### **Domain 1: Data Engineering (20%) - Basic Concepts**
+
+- Understanding data repositories and ingestion solutions
+- Basic data transformation concepts
+
+### **Domain 2: Exploratory Data Analysis (24%) - Getting Started**
+
+- Introduction to data preparation and visualization
+- Basic feature engineering concepts
+
+### **Domain 3: Modeling (36%) - Core ML Knowledge**
+
+- Framing business problems as ML problems
+- Understanding different ML algorithms and when to use them
+- Basic model training and evaluation concepts
+
+### **Domain 4: ML Implementation and Operations (20%) - AWS Services**
+
+- AWS ML service selection and basic implementation
+- Security practices and operational considerations
+
+**Exam Tip**: This post provides the foundational knowledge needed before diving into advanced MLS-C01 topics covered in our [professional ML guide]({% post_url 2025-11-07-aws-sagemaker-professional-ml %}) and [computer vision deep dive]({% post_url 2025-11-08-aws-sagemaker-image-recognition %}).
+
 ## Prerequisites and Setup
 
 Before diving into SageMaker, ensure you have:
@@ -583,6 +610,7 @@ For this beginner tutorial, we're creating a **synthetic dataset** using Python'
 4. **Privacy-safe**: No real personal data is involved
 
 **In real projects, you'd typically get data from:**
+
 - **Kaggle datasets**: Free public datasets for ML practice
 - **UCI Machine Learning Repository**: Academic datasets
 - **Your company's databases**: Internal business data
