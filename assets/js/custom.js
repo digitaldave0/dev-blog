@@ -199,3 +199,74 @@ function displayFallbackTable() {
 
   container.innerHTML = html;
 }
+
+// DateTime Widget Functionality
+function updateDateTime() {
+  const now = new Date();
+  
+  // Update time
+  const timeElement = document.getElementById('current-time');
+  if (timeElement) {
+    const timeString = now.toLocaleTimeString('en-US', {
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    timeElement.textContent = timeString;
+  }
+  
+  // Update date
+  const dateElement = document.getElementById('current-date');
+  if (dateElement) {
+    const dateString = now.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    dateElement.textContent = dateString;
+  }
+}
+
+// Get user's location
+async function getUserLocation() {
+  const locationElement = document.getElementById('current-location');
+  if (!locationElement) return;
+  
+  try {
+    // Try to get location using IP-based geolocation
+    const response = await fetch('https://ipapi.co/json/');
+    const data = await response.json();
+    
+    if (data.city && data.country_name) {
+      locationElement.textContent = `${data.city}, ${data.country_name}`;
+    } else {
+      // Fallback to timezone-based location
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const timezoneCity = timezone.split('/').pop().replace('_', ' ');
+      locationElement.textContent = timezoneCity;
+    }
+  } catch (error) {
+    // Fallback to timezone
+    try {
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const timezoneCity = timezone.split('/').pop().replace('_', ' ');
+      locationElement.textContent = timezoneCity;
+    } catch (fallbackError) {
+      locationElement.textContent = 'Unknown Location';
+    }
+  }
+}
+
+// Initialize datetime widget when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  // Update time immediately
+  updateDateTime();
+  
+  // Update time every second
+  setInterval(updateDateTime, 1000);
+  
+  // Get location (only once on page load)
+  getUserLocation();
+});
