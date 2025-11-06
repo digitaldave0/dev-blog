@@ -153,6 +153,66 @@ html[data-theme="dark"] .inspirational-quote {
   background: rgba(255, 255, 255, 0.05);
 }
 
+/* Networking Details Widget styling */
+.networking-details {
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.networking-details i.fa-network-wired {
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  opacity: 0.6;
+}
+
+#network-info {
+  flex: 1;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.network-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.network-item:last-child {
+  margin-bottom: 0;
+}
+
+.network-item i {
+  width: 12px;
+  font-size: 0.7rem;
+  color: #007bff;
+  opacity: 0.7;
+}
+
+.network-item span {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.7rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* Dark mode adjustments for networking details */
+html[data-theme="dark"] .networking-details {
+  border-top-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
 /* Improve code block styling */
 pre {
   background-color: #f6f8fa !important;

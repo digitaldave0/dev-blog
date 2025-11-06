@@ -232,15 +232,45 @@ function updateDateTime() {
 // Get user's location
 async function getUserLocation() {
   const locationElement = document.getElementById('current-location');
-  if (!locationElement) return;
+  const publicIpElement = document.getElementById('public-ip');
+  const ispElement = document.getElementById('isp-info');
+  const proxyElement = document.getElementById('proxy-status');
   
   try {
-    // Try to get location using IP-based geolocation
+    // Try to get location using IP-based geolocation with detailed networking info
     const response = await fetch('https://ipapi.co/json/');
     const data = await response.json();
     
     if (data.city && data.country_name) {
       locationElement.textContent = `${data.city}, ${data.country_name}`;
+      
+      // Update networking details
+      if (publicIpElement) {
+        publicIpElement.textContent = data.ip || 'Unknown';
+      }
+      
+      if (ispElement) {
+        const isp = data.org || data.isp || 'Unknown ISP';
+        ispElement.textContent = isp.length > 20 ? isp.substring(0, 17) + '...' : isp;
+      }
+      
+      if (proxyElement) {
+        // Check for proxy/VPN indicators
+        const isProxy = data.proxy || data.vpn || data.tor || false;
+        const isHosting = data.hosting || false;
+        
+        if (isProxy) {
+          proxyElement.textContent = 'Proxy/VPN Detected';
+          proxyElement.style.color = '#ffc107'; // Warning yellow
+        } else if (isHosting) {
+          proxyElement.textContent = 'Hosting Service';
+          proxyElement.style.color = '#17a2b8'; // Info blue
+        } else {
+          proxyElement.textContent = 'Direct Connection';
+          proxyElement.style.color = '#28a745'; // Success green
+        }
+      }
+      
       // Get weather for this location
       getWeatherData(data.latitude, data.longitude);
     } else {
@@ -248,6 +278,15 @@ async function getUserLocation() {
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       const timezoneCity = timezone.split('/').pop().replace('_', ' ');
       locationElement.textContent = timezoneCity;
+      
+      // Set fallback networking info
+      if (publicIpElement) publicIpElement.textContent = 'Unknown';
+      if (ispElement) ispElement.textContent = 'Unknown ISP';
+      if (proxyElement) {
+        proxyElement.textContent = 'Unable to detect';
+        proxyElement.style.color = '#6c757d';
+      }
+      
       // Try to get weather with approximate coordinates
       getWeatherData(51.5074, -0.1278); // Default to London coordinates
     }
@@ -257,10 +296,25 @@ async function getUserLocation() {
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       const timezoneCity = timezone.split('/').pop().replace('_', ' ');
       locationElement.textContent = timezoneCity;
+      
+      // Set error networking info
+      if (publicIpElement) publicIpElement.textContent = 'Error';
+      if (ispElement) ispElement.textContent = 'Error';
+      if (proxyElement) {
+        proxyElement.textContent = 'Detection failed';
+        proxyElement.style.color = '#dc3545'; // Error red
+      }
+      
       // Try to get weather with approximate coordinates
       getWeatherData(51.5074, -0.1278); // Default to London coordinates
     } catch (fallbackError) {
       locationElement.textContent = 'Unknown Location';
+      if (publicIpElement) publicIpElement.textContent = 'Unknown';
+      if (ispElement) ispElement.textContent = 'Unknown';
+      if (proxyElement) {
+        proxyElement.textContent = 'Unknown';
+        proxyElement.style.color = '#6c757d';
+      }
       document.getElementById('current-weather').textContent = 'Weather unavailable';
     }
   }
@@ -392,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Update time every second
   setInterval(updateDateTime, 1000);
   
-  // Get location (only once on page load)
+  // Get location and networking details (only once on page load)
   getUserLocation();
   
   // Load inspirational quote
