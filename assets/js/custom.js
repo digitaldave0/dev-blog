@@ -241,11 +241,15 @@ async function getUserLocation() {
     
     if (data.city && data.country_name) {
       locationElement.textContent = `${data.city}, ${data.country_name}`;
+      // Get weather for this location
+      getWeatherData(data.latitude, data.longitude);
     } else {
       // Fallback to timezone-based location
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       const timezoneCity = timezone.split('/').pop().replace('_', ' ');
       locationElement.textContent = timezoneCity;
+      // Try to get weather with approximate coordinates
+      getWeatherData(51.5074, -0.1278); // Default to London coordinates
     }
   } catch (error) {
     // Fallback to timezone
@@ -253,10 +257,90 @@ async function getUserLocation() {
       const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       const timezoneCity = timezone.split('/').pop().replace('_', ' ');
       locationElement.textContent = timezoneCity;
+      // Try to get weather with approximate coordinates
+      getWeatherData(51.5074, -0.1278); // Default to London coordinates
     } catch (fallbackError) {
       locationElement.textContent = 'Unknown Location';
+      document.getElementById('current-weather').textContent = 'Weather unavailable';
     }
   }
+}
+
+// Get weather data from Open-Meteo API
+async function getWeatherData(latitude, longitude) {
+  const weatherElement = document.getElementById('current-weather');
+  const weatherIcon = document.getElementById('weather-icon');
+  
+  if (!weatherElement || !weatherIcon) return;
+  
+  try {
+    // Open-Meteo API call
+    const response = await fetch(
+      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relative_humidity_2m&timezone=auto`
+    );
+    
+    if (!response.ok) {
+      throw new Error('Weather API request failed');
+    }
+    
+    const data = await response.json();
+    const currentWeather = data.current_weather;
+    
+    if (currentWeather) {
+      const temperature = Math.round(currentWeather.temperature);
+      const weatherCode = currentWeather.weathercode;
+      const isDay = currentWeather.is_day === 1;
+      
+      // Update temperature display
+      weatherElement.textContent = `${temperature}°C`;
+      
+      // Update weather icon based on weather code
+      updateWeatherIcon(weatherIcon, weatherCode, isDay);
+    } else {
+      weatherElement.textContent = 'Weather unavailable';
+    }
+  } catch (error) {
+    console.log('Weather fetch error:', error);
+    weatherElement.textContent = 'Weather unavailable';
+    weatherIcon.className = 'fas fa-question-circle';
+  }
+}
+
+// Update weather icon based on WMO weather codes
+function updateWeatherIcon(iconElement, weatherCode, isDay) {
+  // WMO Weather Codes: https://open-meteo.com/en/docs
+  const iconMap = {
+    // Clear sky
+    0: isDay ? 'fas fa-sun' : 'fas fa-moon',
+    // Mainly clear
+    1: isDay ? 'fas fa-cloud-sun' : 'fas fa-cloud-moon',
+    // Partly cloudy
+    2: 'fas fa-cloud-sun',
+    // Overcast
+    3: 'fas fa-cloud',
+    // Fog
+    45: 'fas fa-smog',
+    48: 'fas fa-smog',
+    // Drizzle
+    51: 'fas fa-cloud-rain',
+    53: 'fas fa-cloud-rain',
+    55: 'fas fa-cloud-rain',
+    // Rain
+    61: 'fas fa-cloud-showers-heavy',
+    63: 'fas fa-cloud-showers-heavy',
+    65: 'fas fa-cloud-showers-heavy',
+    // Snow
+    71: 'fas fa-snowflake',
+    73: 'fas fa-snowflake',
+    75: 'fas fa-snowflake',
+    // Thunderstorm
+    95: 'fas fa-bolt',
+    96: 'fas fa-bolt',
+    99: 'fas fa-bolt'
+  };
+  
+  const iconClass = iconMap[weatherCode] || 'fas fa-cloud-sun';
+  iconElement.className = iconClass;
 }
 
 // Initialize datetime widget when page loads
