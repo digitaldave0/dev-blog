@@ -69,6 +69,43 @@
   opacity: 0.9;
 }
 
+.datetime-weather {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  color: var(--text-color);
+}
+
+.datetime-weather i {
+  width: 16px;
+  margin-right: 0.5rem;
+  opacity: 0.7;
+}
+
+/* Weather icon animations */
+.datetime-weather i.fa-sun {
+  color: #ffd700;
+}
+
+.datetime-weather i.fa-cloud {
+  color: #6c757d;
+}
+
+.datetime-weather i.fa-cloud-rain,
+.datetime-weather i.fa-cloud-showers-heavy {
+  color: #007bff;
+}
+
+.datetime-weather i.fa-snowflake {
+  color: #e9ecef;
+}
+
+.datetime-weather i.fa-bolt {
+  color: #ffc107;
+}
+
 /* Improve code block styling */
 pre {
   background-color: #f6f8fa !important;
