@@ -343,6 +343,47 @@ function updateWeatherIcon(iconElement, weatherCode, isDay) {
   iconElement.className = iconClass;
 }
 
+// Load inspirational quote from ZenQuotes API
+async function loadInspirationalQuote() {
+  const quoteTextElement = document.getElementById('quote-text');
+  const quoteAuthorElement = document.getElementById('quote-author');
+  
+  if (!quoteTextElement || !quoteAuthorElement) return;
+  
+  try {
+    // ZenQuotes API - provides random inspirational quotes
+    const response = await fetch('https://zenquotes.io/api/random');
+    
+    if (!response.ok) {
+      throw new Error('Quote API request failed');
+    }
+    
+    const data = await response.json();
+    const quote = data[0];
+    
+    if (quote && quote.q && quote.a) {
+      quoteTextElement.textContent = `"${quote.q}"`;
+      quoteAuthorElement.textContent = `— ${quote.a}`;
+    } else {
+      throw new Error('Invalid quote data');
+    }
+  } catch (error) {
+    console.log('Quote fetch error:', error);
+    // Fallback quotes
+    const fallbackQuotes = [
+      { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+      { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+      { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+      { text: "You miss 100% of the shots you don't take.", author: "Wayne Gretzky" },
+      { text: "The best way to predict the future is to create it.", author: "Peter Drucker" }
+    ];
+    
+    const randomQuote = fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
+    quoteTextElement.textContent = `"${randomQuote.text}"`;
+    quoteAuthorElement.textContent = `— ${randomQuote.author}`;
+  }
+}
+
 // Initialize datetime widget when page loads
 document.addEventListener('DOMContentLoaded', function() {
   // Update time immediately
@@ -353,4 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Get location (only once on page load)
   getUserLocation();
+  
+  // Load inspirational quote
+  loadInspirationalQuote();
 });
