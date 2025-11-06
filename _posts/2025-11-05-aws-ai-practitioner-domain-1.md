@@ -436,31 +436,39 @@ Think of training like teaching a child:
 **Accuracy**: What percentage did you get right?
 
 ```
+
 Accuracy = (Correct Answers) / (Total Questions) × 100
 
 Example: 9 out of 10 correct = 90% accuracy
+
 ```
 
 **Precision**: When you say "Yes", how often are you right?
 
 ```
+
 Precision = (Correct "Yes" answers) / (All your "Yes" guesses)
 
 Example: You flagged 5 spam emails, 4 were actually spam = 80% precision
+
 ```
 
 **Recall**: How many real "Yes" cases did you catch?
 
 ```
+
 Recall = (Correct "Yes" answers) / (Total real "Yes" cases)
 
 Example: There were 10 spam emails, you caught 8 = 80% recall
+
 ```
 
 **Real-World Example: Medical Test**
 
 ```
+
 Cancer Test Results:
+
 - 90 patients correctly identified as having cancer
 - 10 healthy people incorrectly flagged as having cancer
 - 890 healthy people correctly identified as healthy
@@ -469,6 +477,7 @@ Cancer Test Results:
 Accuracy: (90 + 890) / 1000 = 98% (looks great!)
 Precision: 90 / (90 + 10) = 90% (when we say cancer, we're usually right)
 Recall: 90 / (90 + 10) = 90% (we catch most cancer cases)
+
 ```
 
 #### For Number Predictions (Regression)
@@ -476,11 +485,13 @@ Recall: 90 / (90 + 10) = 90% (we catch most cancer cases)
 **Mean Absolute Error (MAE)**: Average amount you're off by
 
 ```
+
 Example: Predict house prices
 Your guesses: $200K, $250K, $300K
 Actual prices: $195K, $255K, $295K
 Errors: $5K, $5K, $5K
 MAE = ($5K + $5K + $5K) / 3 = $5K (off by $5,000 on average)
+
 ```
 
 ### Common Problems and Solutions
@@ -498,8 +509,10 @@ MAE = ($5K + $5K + $5K) / 3 = $5K (off by $5,000 on average)
 **Real Examples:**
 
 ```
+
 Underfitting: Using a straight line to predict wavy patterns
 Overfitting: Memorizing exact answers instead of learning concepts
+
 ```
 
 ## Common ML Algorithms Deep Dive

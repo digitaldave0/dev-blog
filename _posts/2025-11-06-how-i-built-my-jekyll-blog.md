@@ -79,44 +79,44 @@ name: Deploy Jekyll site
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1'
-        bundler-cache: true
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
 
-    - name: Build with Jekyll
-      run: |
-        bundle exec jekyll build
-        bundle exec jekyll doctor
+      - name: Build with Jekyll
+        run: |
+          bundle exec jekyll build
+          bundle exec jekyll doctor
 
-    - name: Test HTML
-      run: |
-        bundle exec htmlproofer ./_site \
-          --disable-external \
-          --check-html \
-          --check-opengraph \
-          --report-missing-names \
-          --report-missing-alt-tags
+      - name: Test HTML
+        run: |
+          bundle exec htmlproofer ./_site \
+            --disable-external \
+            --check-html \
+            --check-opengraph \
+            --report-missing-names \
+            --report-missing-alt-tags
 
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
 ```
 
 ### Key Automation Features
@@ -187,7 +187,7 @@ Custom prompt focus:
 
 All content starts as Markdown, which Jekyll renders beautifully:
 
-```markdown
+````markdown
 ---
 layout: default
 title: "AWS AI Practitioner Domain 1: Fundamentals"
@@ -199,9 +199,11 @@ tags: [aws, ai, machine-learning, exam-prep]
 # Post Title
 
 ## Section 1
-Content with **bold** and *italic* text.
+
+Content with **bold** and _italic_ text.
 
 ## Section 2
+
 - Bullet points
 - Code examples
 - Links and references
@@ -210,7 +212,9 @@ Content with **bold** and *italic* text.
 # Code blocks with syntax highlighting
 echo "Hello, World!"
 ```
-```
+````
+
+````
 
 ### Screenshot Integration
 
@@ -230,9 +234,10 @@ description: "Meta description under 160 characters"
 excerpt: "Longer excerpt for social sharing"
 tags: [primary, secondary, tertiary]
 ---
-```
+````
 
 **Image Optimization**:
+
 - WebP format for faster loading
 - Responsive images with multiple sizes
 - Lazy loading for performance
@@ -253,11 +258,13 @@ JEKYLL_ENV=production bundle exec jekyll build
 ### Version Control Strategy
 
 **Branching Model**:
+
 - `main`: Production-ready code
 - `feature/*`: New features and content
 - `hotfix/*`: Urgent fixes
 
 **Commit Convention**:
+
 ```
 feat: add new blog post about Jekyll workflow
 fix: correct typo in AWS certification guide
@@ -270,11 +277,13 @@ refactor: optimize GitHub Actions workflow
 ### Performance Tracking
 
 **GitHub Actions Integration**:
+
 - Lighthouse CI for performance scores
 - Bundle analyzer for asset optimization
 - SEO audits on every deployment
 
 **Custom Analytics**:
+
 - Google Analytics 4 for user behavior
 - Search Console for SEO performance
 - Social media engagement tracking
@@ -282,6 +291,7 @@ refactor: optimize GitHub Actions workflow
 ### Content Performance
 
 **Key Metrics Tracked**:
+
 - Page views and unique visitors
 - Average session duration
 - Popular content and referral sources
@@ -292,14 +302,17 @@ refactor: optimize GitHub Actions workflow
 ### Common Issues Faced
 
 **Jekyll Build Failures**:
+
 - Solution: Comprehensive CI testing catches issues before deployment
 - Prevention: Local testing before pushing changes
 
 **Content Consistency**:
+
 - Solution: Standardized templates and style guides
 - AI assistance maintains consistent tone and quality
 
 **Performance Degradation**:
+
 - Solution: Automated performance monitoring and optimization
 - Image optimization and caching strategies
 
@@ -314,16 +327,19 @@ refactor: optimize GitHub Actions workflow
 ### Planned Improvements
 
 **Advanced Automation**:
+
 - Automated content scheduling
 - Social media cross-posting
 - Newsletter integration
 
 **Enhanced AI Integration**:
+
 - Automated content suggestions
 - SEO optimization assistance
 - Multi-language content generation
 
 **Performance Optimizations**:
+
 - CDN integration for global distribution
 - Advanced caching strategies
 - Progressive Web App features
@@ -341,12 +357,14 @@ refactor: optimize GitHub Actions workflow
 ### Recommendations for Others
 
 **Getting Started**:
+
 1. Choose Jekyll for its simplicity and GitHub Pages integration
 2. Start with a proven theme like Chirpy
 3. Set up GitHub Actions early for automated deployment
 4. Use AI tools for content creation, but maintain editorial control
 
 **Best Practices**:
+
 - Test locally before deploying
 - Use descriptive commit messages
 - Keep dependencies updated
@@ -365,4 +383,4 @@ Have you built your own blog or technical site? I'd love to hear about your work
 
 ---
 
-*This post was created using the exact workflow described above - AI-assisted content creation, Jekyll rendering, and automated deployment via GitHub Actions.*
+_This post was created using the exact workflow described above - AI-assisted content creation, Jekyll rendering, and automated deployment via GitHub Actions._
