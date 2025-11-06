@@ -2,6 +2,7 @@
 layout: post
 title: "🚀 AWS CLI Cheatsheet: Top 100 Commands for DevOps Engineers"
 categories: [AWS, DevOps, Cloud, Cheatsheet]
+tags: [aws, cli, devops, cheatsheet, ec2, s3, lambda, ecs]
 excerpt: "A comprehensive collection of essential AWS CLI commands for DevOps engineers. Includes practical examples and use cases for EC2, S3, ECS, Lambda, and more!"
 description: "Master the AWS CLI with this detailed cheatsheet covering 100 essential commands across different AWS services. Perfect for DevOps engineers working with AWS infrastructure, featuring real-world examples and common use cases."
 ---

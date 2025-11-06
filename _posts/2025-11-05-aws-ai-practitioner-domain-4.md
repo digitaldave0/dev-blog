@@ -5,6 +5,7 @@ date: 2025-11-05 13:00:00 +0000
 categories: [aws, certification, ai, ethics, responsible-ai]
 tags:
   [
+    aws,
     aws-ai-practitioner,
     domain-4,
     ai-ethics,
