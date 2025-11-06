@@ -114,7 +114,7 @@ function loadPremierLeagueTable() {
     .then(data => {
       console.log('API data received:', data);
       if (data.standings && data.standings[0] && data.standings[0].table) {
-        displayPremierLeagueTable(data.standings[0].table.slice(0, 6));
+        displayPremierLeagueTable(data.standings[0].table.slice(0, 10));
       } else {
         console.warn('Data structure not as expected, using fallback');
         displayFallbackTable();
@@ -169,7 +169,11 @@ function displayFallbackTable() {
     { pos: 3, team: 'Chelsea', pts: 24 },
     { pos: 4, team: 'Man City', pts: 23 },
     { pos: 5, team: 'Newcastle', pts: 21 },
-    { pos: 6, team: 'Aston Villa', pts: 20 }
+    { pos: 6, team: 'Aston Villa', pts: 20 },
+    { pos: 7, team: 'Tottenham', pts: 19 },
+    { pos: 8, team: 'West Ham', pts: 18 },
+    { pos: 9, team: 'Brighton', pts: 17 },
+    { pos: 10, team: 'Crystal Palace', pts: 16 }
   ];
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
