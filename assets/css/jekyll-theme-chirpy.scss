@@ -10,6 +10,24 @@
 
 /* append your custom style below */
 
+/* Avatar styling for sidebar */
+.avatar {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #e9ecef;
+  transition: border-color 0.3s ease;
+}
+
+.avatar img:hover {
+  border-color: #007bff;
+}
+
 /* Improve code block styling */
 pre {
   background-color: #f6f8fa !important;
