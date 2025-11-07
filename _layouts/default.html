@@ -1,0 +1,79 @@
+---
+# Default layout override
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- Add other head elements as needed -->
+</head>
+<body>
+  <div id="reminder-banner" class="reminder-banner hidden">
+    <span>Reminder: Complete your weekly timesheet!</span>
+    <span class="dismiss-icon" onclick="dismissReminder()">✕</span>
+  </div>
+
+  <style>
+  .reminder-banner {
+      background-color: yellow;
+      color: black;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  .reminder-banner.hidden {
+      display: none;
+  }
+  .dismiss-icon {
+      cursor: pointer;
+      font-size: 20px;
+  }
+  </style>
+
+  {{ content }}
+
+  <script>
+  function isFriday() {
+      const now = new Date();
+      return now.getDay() === 5; // 0 = Sunday, 5 = Friday
+  }
+
+  function isBetween9amAnd6pm() {
+      const now = new Date();
+      const hours = now.getHours();
+      return hours >= 9 && hours < 18; // 18:00 is 6pm
+  }
+
+  function showReminder() {
+      const banner = document.getElementById('reminder-banner');
+      const dismissed = localStorage.getItem('timesheetReminderDismissed');
+      if (isFriday() && isBetween9amAnd6pm() && !dismissed) {
+          banner.classList.remove('hidden');
+      } else {
+          banner.classList.add('hidden');
+      }
+  }
+
+  function dismissReminder() {
+      localStorage.setItem('timesheetReminderDismissed', 'true');
+      document.getElementById('reminder-banner').classList.add('hidden');
+  }
+
+  // Check on page load
+  showReminder();
+
+  // Check periodically (every minute)
+  setInterval(showReminder, 60000);
+  </script>
+</body>
+</html>
