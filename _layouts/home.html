@@ -32,6 +32,17 @@ layout: default
     </div>
 
     <div class="sidebar-section">
+      <h3>🌡️ Weather</h3>
+      <div id="weather-info">
+        <p>13°C</p>
+      </div>
+      <div id="timesheet-reminder" class="timesheet-reminder hidden">
+        <p>Reminder: Complete your weekly timesheet!</p>
+        <span class="dismiss-icon" onclick="dismissReminder()">✕</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
       <h3>🔥 Popular Tags</h3>
       <div class="trending-tags">
         {% assign tag_data = "" %}
@@ -84,5 +95,59 @@ layout: default
     </div>
   </aside>
 </div>
+
+<style>
+.timesheet-reminder {
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.timesheet-reminder.hidden {
+    display: none;
+}
+.dismiss-icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+</style>
+
+<script>
+function isFriday() {
+    const now = new Date();
+    return now.getDay() === 5; // 0 = Sunday, 5 = Friday
+}
+
+function isBetween9amAnd6pm() {
+    const now = new Date();
+    const hours = now.getHours();
+    return hours >= 9 && hours < 18; // 18:00 is 6pm
+}
+
+function showReminder() {
+    const reminder = document.getElementById('timesheet-reminder');
+    const dismissed = localStorage.getItem('timesheetReminderDismissed');
+    if (isFriday() && isBetween9amAnd6pm() && !dismissed) {
+        reminder.classList.remove('hidden');
+    } else {
+        reminder.classList.add('hidden');
+    }
+}
+
+function dismissReminder() {
+    localStorage.setItem('timesheetReminderDismissed', 'true');
+    document.getElementById('timesheet-reminder').classList.add('hidden');
+}
+
+// Check on page load
+showReminder();
+
+// Check periodically (every minute)
+setInterval(showReminder, 60000);
+</script>
 
 <script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
