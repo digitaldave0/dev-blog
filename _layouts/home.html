@@ -131,7 +131,7 @@ function isBetween9amAnd6pm() {
 function showReminder() {
     const reminder = document.getElementById('timesheet-reminder');
     const dismissed = localStorage.getItem('timesheetReminderDismissed');
-    if (true) {  // Temporarily always show for testing
+    if (isFriday() && isBetween9amAnd6pm() && !dismissed) {
         reminder.classList.remove('hidden');
     } else {
         reminder.classList.add('hidden');
