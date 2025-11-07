@@ -21,10 +21,6 @@ layout: default
         </article>
       {% endfor %}
     </div>
-    <div id="timesheet-reminder" class="timesheet-reminder hidden">
-      <p>Reminder: Complete your weekly timesheet!</p>
-      <span class="dismiss-icon" onclick="dismissReminder()">✕</span>
-    </div>
   </div>
 
   <aside class="sidebar">
@@ -37,8 +33,14 @@ layout: default
 
     <div class="sidebar-section">
       <h3>🌡️ Weather</h3>
-      <div id="weather-info">
-        <p>13°C</p>
+      <div class="weather-row">
+        <div id="weather-info">
+          <p>13°C</p>
+        </div>
+        <div id="timesheet-reminder" class="timesheet-reminder hidden">
+          <p>Reminder: Complete your weekly timesheet!</p>
+          <span class="dismiss-icon" onclick="dismissReminder()">✕</span>
+        </div>
       </div>
     </div>
 
@@ -113,6 +115,11 @@ layout: default
 .dismiss-icon {
     cursor: pointer;
     font-size: 20px;
+}
+.weather-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 </style>
 
