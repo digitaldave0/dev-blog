@@ -1,0 +1,17 @@
+---
+layout: default
+title: Search
+sitemap: false
+---
+
+<div id="search-container">
+  <h1>Search</h1>
+  <p>Find posts by keyword.</p>
+  <input type="text" id="search-input" placeholder="Type to search..." autocomplete="off">
+  <div id="search-results" class="mt-4">
+    <p>Start typing to see results.</p>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
