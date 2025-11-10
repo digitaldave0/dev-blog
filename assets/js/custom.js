@@ -143,14 +143,11 @@ function loadPremierLeagueTable() {
     .then(data => {
       console.log('API data received:', data);
       if (data.response && data.response[0] && data.response[0].league && data.response[0].league.standings && data.response[0].league.standings[0]) {
-        const top10Teams = data.response[0].league.standings[0].slice(0, 10).map(team => ({
-          team: { name: team.team.name },
-          points: team.points
-        }));
-        displayPremierLeagueTable(top10Teams);
+        const teams = data.response[0].league.standings[0].slice(0, 10);
+        displayPremierLeagueTable(teams);
         
         // Cache the data
-        localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
+        localStorage.setItem(cacheKey, JSON.stringify(teams));
         localStorage.setItem(cacheTimestampKey, now.getTime().toString());
         console.log('Premier League data cached');
       } else {
@@ -171,21 +168,45 @@ function loadPremierLeagueTable() {
 function displayPremierLeagueTable(teams) {
   const container = document.getElementById('premier-league-table');
 
-  let html = '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
-  html += '<span class="pos">#</span>';
+  let html = '<div class="league-table" style="font-size: 0.6rem;">';
+  html += '<div class="table-header" style="grid-template-columns: 25px 1fr 25px 25px 25px 25px 30px 30px 30px 50px 30px;">';
+  html += '<span class="pos">Pos</span>';
   html += '<span class="team">Team</span>';
+  html += '<span class="pl">Pl</span>';
+  html += '<span class="w">W</span>';
+  html += '<span class="d">D</span>';
+  html += '<span class="l">L</span>';
+  html += '<span class="gf">GF</span>';
+  html += '<span class="ga">GA</span>';
+  html += '<span class="gd">GD</span>';
+  html += '<span class="form">Form</span>';
   html += '<span class="pts">Pts</span>';
   html += '</div>';
 
-  teams.forEach((team, index) => {
-    const position = index + 1;
-    const teamName = team.team.name.replace('FC', '').replace('United', 'Utd').trim();
-    const points = team.points;
+  teams.forEach((teamData, index) => {
+    const pos = teamData.rank;
+    const teamName = teamData.team.name.replace('FC', '').replace('United', 'Utd').trim();
+    const played = teamData.all.played;
+    const wins = teamData.all.win;
+    const draws = teamData.all.draw;
+    const losses = teamData.all.lose;
+    const goalsFor = teamData.all.goals.for;
+    const goalsAgainst = teamData.all.goals.against;
+    const goalDiff = teamData.goalsDiff;
+    const form = teamData.form || '-----';
+    const points = teamData.points;
 
-    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
-    html += `<span class="pos" style="text-align: center; font-weight: bold;">${position}</span>`;
-    html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${teamName}</span>`;
+    html += '<div class="table-row" style="grid-template-columns: 25px 1fr 25px 25px 25px 25px 30px 30px 30px 50px 30px;">';
+    html += `<span class="pos" style="text-align: center; font-weight: bold;">${pos}</span>`;
+    html += `<span class="team" style="font-size: 0.65rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${teamName}</span>`;
+    html += `<span class="pl" style="text-align: center;">${played}</span>`;
+    html += `<span class="w" style="text-align: center;">${wins}</span>`;
+    html += `<span class="d" style="text-align: center;">${draws}</span>`;
+    html += `<span class="l" style="text-align: center;">${losses}</span>`;
+    html += `<span class="gf" style="text-align: center;">${goalsFor}</span>`;
+    html += `<span class="ga" style="text-align: center;">${goalsAgainst}</span>`;
+    html += `<span class="gd" style="text-align: center; ${goalDiff >= 0 ? 'color: #28a745;' : 'color: #dc3545;'}">${goalDiff > 0 ? '+' : ''}${goalDiff}</span>`;
+    html += `<span class="form" style="text-align: center; font-size: 0.6rem;">${form}</span>`;
     html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${points}</span>`;
     html += '</div>';
   });
@@ -202,29 +223,45 @@ function displayFallbackTable() {
   const container = document.getElementById('premier-league-table');
 
   const fallbackData = [
-    { pos: 1, team: 'Liverpool', pts: 32 },
-    { pos: 2, team: 'Arsenal', pts: 30 },
-    { pos: 3, team: 'Nottingham Forest', pts: 27 },
-    { pos: 4, team: 'Chelsea', pts: 26 },
-    { pos: 5, team: 'Newcastle', pts: 25 },
-    { pos: 6, team: 'Man City', pts: 24 },
-    { pos: 7, team: 'Bournemouth', pts: 23 },
-    { pos: 8, team: 'Aston Villa', pts: 22 },
-    { pos: 9, team: 'Brighton', pts: 21 },
-    { pos: 10, team: 'Fulham', pts: 20 }
+    { pos: 1, team: 'Arsenal', pl: 11, w: 8, d: 2, l: 1, gf: 20, ga: 5, gd: 15, form: 'WDWWW', pts: 26 },
+    { pos: 2, team: 'Manchester City', pl: 11, w: 7, d: 1, l: 3, gf: 23, ga: 8, gd: 15, form: 'WWLWD', pts: 22 },
+    { pos: 3, team: 'Chelsea', pl: 11, w: 6, d: 2, l: 3, gf: 21, ga: 11, gd: 10, form: 'WDLWW', pts: 20 },
+    { pos: 4, team: 'Sunderland', pl: 11, w: 5, d: 4, l: 2, gf: 14, ga: 10, gd: 4, form: 'DDWWD', pts: 19 },
+    { pos: 5, team: 'Tottenham Hotspur', pl: 11, w: 5, d: 3, l: 3, gf: 19, ga: 10, gd: 9, form: 'WLWDL', pts: 18 },
+    { pos: 6, team: 'Aston Villa', pl: 11, w: 5, d: 3, l: 3, gf: 13, ga: 10, gd: 3, form: 'DWWLW', pts: 18 },
+    { pos: 7, team: 'Manchester United', pl: 11, w: 5, d: 3, l: 3, gf: 19, ga: 18, gd: 1, form: 'LWWDW', pts: 18 },
+    { pos: 8, team: 'Liverpool', pl: 11, w: 6, d: 0, l: 5, gf: 18, ga: 17, gd: 1, form: 'WLWWW', pts: 18 },
+    { pos: 9, team: 'Bournemouth', pl: 11, w: 5, d: 3, l: 3, gf: 17, ga: 18, gd: -1, form: 'WDLWD', pts: 18 },
+    { pos: 10, team: 'Crystal Palace', pl: 11, w: 4, d: 4, l: 3, gf: 15, ga: 14, gd: 1, form: 'DDLDL', pts: 16 }
   ];
 
-  let html = '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
-  html += '<span class="pos">#</span>';
+  let html = '<div class="league-table" style="font-size: 0.6rem;">';
+  html += '<div class="table-header" style="grid-template-columns: 25px 1fr 25px 25px 25px 25px 30px 30px 30px 50px 30px;">';
+  html += '<span class="pos">Pos</span>';
   html += '<span class="team">Team</span>';
+  html += '<span class="pl">Pl</span>';
+  html += '<span class="w">W</span>';
+  html += '<span class="d">D</span>';
+  html += '<span class="l">L</span>';
+  html += '<span class="gf">GF</span>';
+  html += '<span class="ga">GA</span>';
+  html += '<span class="gd">GD</span>';
+  html += '<span class="form">Form</span>';
   html += '<span class="pts">Pts</span>';
   html += '</div>';
 
   fallbackData.forEach(team => {
-    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
+    html += '<div class="table-row" style="grid-template-columns: 25px 1fr 25px 25px 25px 25px 30px 30px 30px 50px 30px;">';
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${team.pos}</span>`;
-    html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${team.team}</span>`;
+    html += `<span class="team" style="font-size: 0.65rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${team.team}</span>`;
+    html += `<span class="pl" style="text-align: center;">${team.pl}</span>`;
+    html += `<span class="w" style="text-align: center;">${team.w}</span>`;
+    html += `<span class="d" style="text-align: center;">${team.d}</span>`;
+    html += `<span class="l" style="text-align: center;">${team.l}</span>`;
+    html += `<span class="gf" style="text-align: center;">${team.gf}</span>`;
+    html += `<span class="ga" style="text-align: center;">${team.ga}</span>`;
+    html += `<span class="gd" style="text-align: center; ${team.gd >= 0 ? 'color: #28a745;' : 'color: #dc3545;'}">${team.gd > 0 ? '+' : ''}${team.gd}</span>`;
+    html += `<span class="form" style="text-align: center; font-size: 0.6rem;">${team.form}</span>`;
     html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${team.pts}</span>`;
     html += '</div>';
   });
