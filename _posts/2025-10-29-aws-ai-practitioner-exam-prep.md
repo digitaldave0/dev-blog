@@ -87,6 +87,16 @@ The option that says: MSE (Mean Squared Error) is incorrect because it is primar
 
 The option that says: Precision is incorrect because it only measures the accuracy of positive predictions without offering a detailed breakdown of performance across all classes.
 
+**Average Response Time: Measuring Model Efficiency**
+
+Average response time is simply the time it takes for a model to process an input and give an output. It's a key factor when determining how well an AI model works in real-time scenarios. Suppose a model has a short average response time. In that case, it can handle requests quickly, making it more efficient and responsive in environments where speed matters, like live applications or services.
+
+The option that says: Customer satisfaction score (CSAT) is incorrect because it only measures user satisfaction after interacting with a service or product. It evaluates customer experiences, not the operational or runtime efficiency of an AI model.
+
+The option that says: Memory utilization during inference is incorrect because it simply tracks how much memory a model uses while making predictions. It doesn't directly measure how quickly the model produces a result. Reducing memory usage might help improve speed, but the metric focuses on hardware performance, not the runtime efficiency of the model.
+
+The option that says: Model accuracy is incorrect because it typically assesses how well the model makes predictions compared to actual outcomes, not how fast it produces predictions. Therefore, it doesn't measure the efficiency of real-time predictions or how quickly the model operates in production environments.
+
 **Common ML Algorithms**
 
 - Linear Regression: Predicting continuous values with straight-line relationships
