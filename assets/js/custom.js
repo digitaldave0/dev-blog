@@ -103,6 +103,7 @@ function loadPremierLeagueTable() {
   const isMonday = now.getDay() === 1; // 0 = Sunday, 1 = Monday
   const cacheKey = 'premierLeagueTable';
   const cacheTimestampKey = 'premierLeagueTableTimestamp';
+  const previousCacheKey = 'premierLeagueTablePrevious';
 
   // Get the Monday of the current week
   const mondayOfWeek = new Date(now);
@@ -143,11 +144,17 @@ function loadPremierLeagueTable() {
     .then(data => {
       console.log('API data received:', data);
       if (data.response && data.response[0] && data.response[0].league && data.response[0].league.standings && data.response[0].league.standings[0]) {
-        const teams = data.response[0].league.standings[0].slice(0, 10);
-        displayPremierLeagueTable(teams);
+        const top10Teams = data.response[0].league.standings[0].slice(0, 10);
+        displayPremierLeagueTable(top10Teams);
+        
+        // Store previous week's data before updating cache
+        const currentCached = localStorage.getItem(cacheKey);
+        if (currentCached) {
+          localStorage.setItem(previousCacheKey, currentCached);
+        }
         
         // Cache the data
-        localStorage.setItem(cacheKey, JSON.stringify(teams));
+        localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
         localStorage.setItem(cacheTimestampKey, now.getTime().toString());
         console.log('Premier League data cached');
       } else {
@@ -167,20 +174,57 @@ function loadPremierLeagueTable() {
 
 function displayPremierLeagueTable(teams) {
   const container = document.getElementById('premier-league-table');
+  
+  // Get previous week's data for position change calculation
+  const previousData = localStorage.getItem('premierLeagueTablePrevious');
+  const previousTeams = previousData ? JSON.parse(previousData) : [];
+  
+  // Create a map of team names to previous positions
+  const previousPositions = {};
+  previousTeams.forEach((team, index) => {
+    const teamName = team.team.name.replace('FC', '').replace('United', 'Utd').trim();
+    previousPositions[teamName] = index + 1;
+  });
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 30px 1fr;">';
+  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px 25px;">';
   html += '<span class="pos">#</span>';
   html += '<span class="team">Team</span>';
+  html += '<span class="pts">Pts</span>';
+  html += '<span class="change"></span>';
   html += '</div>';
 
   teams.forEach((teamData, index) => {
     const pos = teamData.rank;
     const teamName = teamData.team.name.replace('FC', '').replace('United', 'Utd').trim();
+    const points = teamData.points;
+    
+    // Calculate position change
+    const previousPos = previousPositions[teamName];
+    let changeIcon = '';
+    let changeClass = '';
+    
+    if (previousPos !== undefined) {
+      if (pos < previousPos) {
+        changeIcon = '↑';
+        changeClass = 'change-up';
+      } else if (pos > previousPos) {
+        changeIcon = '↓';
+        changeClass = 'change-down';
+      } else {
+        changeIcon = '→';
+        changeClass = 'change-same';
+      }
+    } else {
+      changeIcon = '→';
+      changeClass = 'change-new';
+    }
 
-    html += '<div class="table-row" style="grid-template-columns: 30px 1fr;">';
+    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px 25px;">';
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${pos}</span>`;
     html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${teamName}</span>`;
+    html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${points}</span>`;
+    html += `<span class="change ${changeClass}" style="text-align: center; font-size: 0.8rem;">${changeIcon}</span>`;
     html += '</div>';
   });
 
@@ -196,28 +240,41 @@ function displayFallbackTable() {
   const container = document.getElementById('premier-league-table');
 
   const fallbackData = [
-    { pos: 1, team: 'Arsenal' },
-    { pos: 2, team: 'Manchester City' },
-    { pos: 3, team: 'Chelsea' },
-    { pos: 4, team: 'Sunderland' },
-    { pos: 5, team: 'Tottenham Hotspur' },
-    { pos: 6, team: 'Aston Villa' },
-    { pos: 7, team: 'Manchester United' },
-    { pos: 8, team: 'Liverpool' },
-    { pos: 9, team: 'Bournemouth' },
-    { pos: 10, team: 'Crystal Palace' }
+    { pos: 1, team: 'Arsenal', pts: 26, change: '→' },
+    { pos: 2, team: 'Manchester City', pts: 22, change: '→' },
+    { pos: 3, team: 'Chelsea', pts: 20, change: '→' },
+    { pos: 4, team: 'Sunderland', pts: 19, change: '→' },
+    { pos: 5, team: 'Tottenham Hotspur', pts: 18, change: '→' },
+    { pos: 6, team: 'Aston Villa', pts: 18, change: '→' },
+    { pos: 7, team: 'Manchester United', pts: 18, change: '→' },
+    { pos: 8, team: 'Liverpool', pts: 18, change: '→' },
+    { pos: 9, team: 'Bournemouth', pts: 18, change: '→' },
+    { pos: 10, team: 'Crystal Palace', pts: 16, change: '→' }
   ];
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 30px 1fr;">';
+  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px 25px;">';
   html += '<span class="pos">#</span>';
   html += '<span class="team">Team</span>';
+  html += '<span class="pts">Pts</span>';
+  html += '<span class="change"></span>';
   html += '</div>';
 
   fallbackData.forEach(team => {
-    html += '<div class="table-row" style="grid-template-columns: 30px 1fr;">';
+    let changeClass = '';
+    if (team.change === '↑') {
+      changeClass = 'change-up';
+    } else if (team.change === '↓') {
+      changeClass = 'change-down';
+    } else {
+      changeClass = 'change-same';
+    }
+
+    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px 25px;">';
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${team.pos}</span>`;
     html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${team.team}</span>`;
+    html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${team.pts}</span>`;
+    html += `<span class="change ${changeClass}" style="text-align: center; font-size: 0.8rem;">${team.change}</span>`;
     html += '</div>';
   });
 
