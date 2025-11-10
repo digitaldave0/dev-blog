@@ -25,6 +25,16 @@
         </a>
       </li>
 
+      <!-- Search Bar -->
+      <li class="nav-item">
+        <div class="search-widget">
+          <form action="{{ '/search/' | relative_url }}" method="get">
+            <input type="text" id="search-box" name="query" placeholder="Search..." aria-label="Search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </li>
+
       <!-- Clock, Date, and Location Widget -->
       <li class="nav-item">
         <div class="datetime-widget">
