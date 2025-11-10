@@ -75,6 +75,18 @@ This domain covers the foundational concepts of artificial intelligence and mach
 - Testing methodologies: Evaluating final model performance on unseen data
 - Performance metrics: Accuracy, precision, recall, F1-score, and their applications
 
+**Confusion Matrix: Understanding Model Performance**
+
+A Confusion Matrix is a table that summarizes the performance of a classification model by comparing the predicted labels with the true labels. It provides a detailed breakdown of the model's predictions, including true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN). The confusion matrix is particularly useful for understanding the types of errors the model makes and can help identify potential biases or imbalances in the data.
+
+Hence, the correct answer is: Confusion Matrix.
+
+The option that says: F1 Score is incorrect because it typically combines precision and recall but does not provide a detailed breakdown of model performance across different classes.
+
+The option that says: MSE (Mean Squared Error) is incorrect because it is primarily used for regression problems and does not apply to classification tasks.
+
+The option that says: Precision is incorrect because it only measures the accuracy of positive predictions without offering a detailed breakdown of performance across all classes.
+
 **Common ML Algorithms**
 
 - Linear Regression: Predicting continuous values with straight-line relationships
