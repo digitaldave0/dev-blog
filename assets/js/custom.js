@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (premierLeagueTable) {
       loadPremierLeagueTable();
-      // Update every 10 minutes
-      setInterval(loadPremierLeagueTable, 600000);
+      // Update daily instead of every 10 minutes
+      setInterval(loadPremierLeagueTable, 86400000); // 24 hours
     } else {
       console.error('Premier League table element not found');
     }
@@ -99,9 +99,32 @@ function loadPremierLeagueTable() {
     return;
   }
 
+  const now = new Date();
+  const isMonday = now.getDay() === 1; // 0 = Sunday, 1 = Monday
+  const cacheKey = 'premierLeagueTable';
+  const cacheTimestampKey = 'premierLeagueTableTimestamp';
+
+  // Get the Monday of the current week
+  const mondayOfWeek = new Date(now);
+  mondayOfWeek.setDate(now.getDate() - now.getDay() + 1);
+  mondayOfWeek.setHours(0, 0, 0, 0);
+
+  const cachedData = localStorage.getItem(cacheKey);
+  const cachedTimestamp = localStorage.getItem(cacheTimestampKey);
+
+  // Check if we have valid cached data from this week
+  if (cachedData && cachedTimestamp) {
+    const cacheDate = new Date(parseInt(cachedTimestamp));
+    if (cacheDate >= mondayOfWeek && !isMonday) {
+      console.log('Using cached Premier League data');
+      displayPremierLeagueTable(JSON.parse(cachedData));
+      return;
+    }
+  }
+
+  // Fetch fresh data if Monday or no valid cache
   try {
-    // Using Football Data API v2 (free tier, no key required)
-    console.log('Attempting to fetch Premier League data from API');
+    console.log('Fetching fresh Premier League data from API');
     
     fetch('https://api.football-data.org/v2/competitions/2021/standings')
     .then(response => {
@@ -114,7 +137,13 @@ function loadPremierLeagueTable() {
     .then(data => {
       console.log('API data received:', data);
       if (data.standings && data.standings[0] && data.standings[0].table) {
-        displayPremierLeagueTable(data.standings[0].table.slice(0, 10));
+        const top10Teams = data.standings[0].table.slice(0, 10);
+        displayPremierLeagueTable(top10Teams);
+        
+        // Cache the data
+        localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
+        localStorage.setItem(cacheTimestampKey, now.getTime().toString());
+        console.log('Premier League data cached');
       } else {
         console.warn('Data structure not as expected, using fallback');
         displayFallbackTable();
