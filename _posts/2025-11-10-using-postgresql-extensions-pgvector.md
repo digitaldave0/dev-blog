@@ -3,7 +3,15 @@ layout: post
 title: "Using PostgreSQL Extensions: A Deep Dive into pgvector for Vector Search"
 description: "Learn how to use PostgreSQL extensions, specifically pgvector, for implementing vector search functionality. From basic setup to advanced similarity search examples."
 tags:
-  [postgresql, extensions, pgvector, vector-search, ai, machine-learning, database]
+  [
+    postgresql,
+    extensions,
+    pgvector,
+    vector-search,
+    ai,
+    machine-learning,
+    database,
+  ]
 icon: 🐘
 excerpt: >
   Discover PostgreSQL extensions and master pgvector for vector search. This comprehensive guide covers installation, basic usage, and advanced vector similarity search techniques with practical examples.
@@ -18,6 +26,7 @@ PostgreSQL is renowned for its extensibility, and extensions are one of its most
 ## What are PostgreSQL Extensions?
 
 PostgreSQL extensions are add-on modules that extend the database's capabilities. They can add:
+
 - New data types
 - New functions
 - New operators
@@ -70,6 +79,7 @@ INSERT INTO items (name, embedding) VALUES
 ### Basic Similarity Search
 
 pgvector provides several distance functions:
+
 - `<->` (L2 distance - Euclidean)
 - `<#>` (cosine distance)
 - `<=>` (inner product)
@@ -231,16 +241,19 @@ $$ LANGUAGE plpgsql;
 ## Performance Optimization Tips
 
 1. **Choose the Right Distance Function**: Different use cases benefit from different distance metrics:
+
    - L2 (Euclidean): Good for general similarity
    - Cosine: Better for text embeddings
    - Inner Product: Useful for certain ML models
 
 2. **Index Maintenance**: Regularly reindex for optimal performance:
+
    ```sql
    REINDEX INDEX CONCURRENTLY items_embedding_idx;
    ```
 
 3. **Batch Operations**: Use batch inserts for better performance:
+
    ```sql
    INSERT INTO items (name, embedding)
    SELECT name, embedding FROM unnest($1, $2) AS t(name, embedding);
