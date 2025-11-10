@@ -127,7 +127,7 @@ function loadPremierLeagueTable() {
     console.log('Fetching fresh Premier League data from API');
     
     // Using API-Football (free tier available)
-    const apiKey = 'YOUR_API_KEY_HERE'; // You'll need to sign up at https://api-football.com/
+    const apiKey = 'ebb4d5e78a6cfbfb543af1bf8cdf1acd'; // Your API-Football key
     const headers = apiKey !== 'YOUR_API_KEY_HERE' ? { 'x-apisports-key': apiKey } : {};
     
     fetch('https://v3.football.api-sports.io/standings?league=39&season=2023', {
