@@ -131,7 +131,7 @@ function loadPremierLeagueTable() {
     const apiKey = 'ebb4d5e78a6cfbfb543af1bf8cdf1acd'; // Your API-Football key
     const headers = apiKey !== 'YOUR_API_KEY_HERE' ? { 'x-apisports-key': apiKey } : {};
     
-    fetch('https://v3.football.api-sports.io/standings?league=39&season=2024', {
+    fetch('https://v3.football.api-sports.io/standings?league=39&season=2025', {
       headers: headers
     })
     .then(response => {
@@ -214,16 +214,16 @@ function displayFallbackTable() {
   const container = document.getElementById('premier-league-table');
 
   const fallbackData = [
-    { pos: 1, team: 'Liverpool', pts: 29 },
-    { pos: 2, team: 'Arsenal', pts: 27 },
-    { pos: 3, team: 'Nottingham Forest', pts: 26 },
-    { pos: 4, team: 'Chelsea', pts: 24 },
-    { pos: 5, team: 'Newcastle', pts: 23 },
-    { pos: 6, team: 'Manchester City', pts: 22 },
-    { pos: 7, team: 'Bournemouth', pts: 21 },
-    { pos: 8, team: 'Aston Villa', pts: 20 },
-    { pos: 9, team: 'Brighton', pts: 19 },
-    { pos: 10, team: 'Fulham', pts: 18 }
+    { pos: 1, team: 'Arsenal', pts: 29 },
+    { pos: 2, team: 'Liverpool', pts: 27 },
+    { pos: 3, team: 'Aston Villa', pts: 26 },
+    { pos: 4, team: 'Manchester City', pts: 24 },
+    { pos: 5, team: 'Tottenham', pts: 23 },
+    { pos: 6, team: 'Newcastle Utd', pts: 22 },
+    { pos: 7, team: 'Manchester Utd', pts: 21 },
+    { pos: 8, team: 'Chelsea', pts: 20 },
+    { pos: 9, team: 'West Ham', pts: 19 },
+    { pos: 10, team: 'Brighton', pts: 18 }
   ];
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
