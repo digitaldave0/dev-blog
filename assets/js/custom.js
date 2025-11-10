@@ -187,50 +187,24 @@ function displayPremierLeagueTable(teams) {
   });
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px 25px;">';
+  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
   html += '<span class="pos">#</span>';
   html += '<span class="team">Team</span>';
   html += '<span class="pts">Pts</span>';
-  html += '<span class="change"></span>';
   html += '</div>';
 
   teams.forEach((teamData, index) => {
     const pos = teamData.rank;
     const teamName = teamData.team.name.replace('FC', '').replace('United', 'Utd').trim();
     const points = teamData.points;
-    
-    // Calculate position change
-    const previousPos = previousPositions[teamName];
-    let changeIcon = '';
-    let changeClass = '';
-    
-    if (previousPos !== undefined) {
-      if (pos < previousPos) {
-        changeIcon = '↑';
-        changeClass = 'change-up';
-      } else if (pos > previousPos) {
-        changeIcon = '↓';
-        changeClass = 'change-down';
-      } else {
-        changeIcon = '→';
-        changeClass = 'change-same';
-      }
-    } else {
-      changeIcon = '→';
-      changeClass = 'change-new';
-    }
 
-    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px 25px;">';
+    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${pos}</span>`;
     html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${teamName}</span>`;
     html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${points}</span>`;
-    html += `<span class="change ${changeClass}" style="text-align: center; font-size: 0.8rem;">${changeIcon}</span>`;
     html += '</div>';
   });
 
-  html += '</div>';
-  html += '<div class="table-footer" style="margin-top: 0.5rem; text-align: center; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1);">';
-  html += '<a href="https://www.premierleague.com/en/tables?competition=8&season=2025&round=L_1&matchweek=-1&ha=-1" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full Table →</a>';
   html += '</div>';
 
   container.innerHTML = html;
@@ -240,48 +214,33 @@ function displayFallbackTable() {
   const container = document.getElementById('premier-league-table');
 
   const fallbackData = [
-    { pos: 1, team: 'Arsenal', pts: 26, change: '→' },
-    { pos: 2, team: 'Manchester City', pts: 22, change: '→' },
-    { pos: 3, team: 'Chelsea', pts: 20, change: '→' },
-    { pos: 4, team: 'Sunderland', pts: 19, change: '→' },
-    { pos: 5, team: 'Tottenham Hotspur', pts: 18, change: '→' },
-    { pos: 6, team: 'Aston Villa', pts: 18, change: '→' },
-    { pos: 7, team: 'Manchester United', pts: 18, change: '→' },
-    { pos: 8, team: 'Liverpool', pts: 18, change: '→' },
-    { pos: 9, team: 'Bournemouth', pts: 18, change: '→' },
-    { pos: 10, team: 'Crystal Palace', pts: 16, change: '→' }
+    { pos: 1, team: 'Arsenal', pts: 26 },
+    { pos: 2, team: 'Manchester City', pts: 22 },
+    { pos: 3, team: 'Chelsea', pts: 20 },
+    { pos: 4, team: 'Sunderland', pts: 19 },
+    { pos: 5, team: 'Tottenham Hotspur', pts: 18 },
+    { pos: 6, team: 'Aston Villa', pts: 18 },
+    { pos: 7, team: 'Manchester United', pts: 18 },
+    { pos: 8, team: 'Liverpool', pts: 18 },
+    { pos: 9, team: 'Bournemouth', pts: 18 },
+    { pos: 10, team: 'Crystal Palace', pts: 16 }
   ];
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px 25px;">';
+  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
   html += '<span class="pos">#</span>';
   html += '<span class="team">Team</span>';
   html += '<span class="pts">Pts</span>';
-  html += '<span class="change"></span>';
   html += '</div>';
 
   fallbackData.forEach(team => {
-    let changeClass = '';
-    if (team.change === '↑') {
-      changeClass = 'change-up';
-    } else if (team.change === '↓') {
-      changeClass = 'change-down';
-    } else {
-      changeClass = 'change-same';
-    }
-
-    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px 25px;">';
+    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${team.pos}</span>`;
     html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${team.team}</span>`;
     html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${team.pts}</span>`;
-    html += `<span class="change ${changeClass}" style="text-align: center; font-size: 0.8rem;">${team.change}</span>`;
     html += '</div>';
   });
 
-  html += '</div>';
-  html += '<div class="table-footer" style="margin-top: 0.5rem; text-align: center; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.7rem; color: #999;">';
-  html += 'Nov 10, 2025<br>';
-  html += '<a href="https://www.premierleague.com/en/tables?competition=8&season=2025&round=L_1&matchweek=-1&ha=-1" target="_blank" class="table-link" style="font-size: 0.7rem;">View Full Table →</a>';
   html += '</div>';
 
   container.innerHTML = html;
