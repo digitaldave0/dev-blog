@@ -2,63 +2,25 @@
   command = "bundle exec jekyll build --trace"
   publish = "_site"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Basic-Auth = "dave:pass1234%"
-
-[[redirects]]
-  from = "/*"
-  to = "/401.html"
-  status = 401
-  force = true
-  conditions = {Basic = false}
-
-[[redirects]]
-  from = "/*"
-  to = "/:splat"
-  status = 200
-  force = true
-  conditions = {Basic = true}
-
-[build.processing.html]
+[build.processing]
   pretty_urls = true
-
 [build.processing.css]
   bundle = true
   minify = true
-
 [build.processing.js]
   bundle = true
   minify = true
-
 [build.processing.images]
   compress = true
-
-[[redirects]]
-  from = "/*"
-  to = "/401.html"
-  status = 401
-  force = true
-  conditions = {Basic = ":false"}
-
-[[redirects]]
-  from = "/*"
-  to = "/:splat"
-  status = 200
-  force = true
-  conditions = {Basic = ":true"}
 
 [[headers]]
   for = "/*"
   [headers.values]
-    Basic-Auth = "dave:pass1234%"
-    WWW-Authenticate = "Basic realm=\"Restricted Area\""
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
     Cache-Control = "no-store, no-cache, must-revalidate, max-age=0, private"
     Surrogate-Control = "no-store"
     Pragma = "no-cache"
     Expires = "0"
     X-Robots-Tag = "noindex, nofollow"
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
     Clear-Site-Data = "\"cache\", \"cookies\", \"storage\""
