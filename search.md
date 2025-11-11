@@ -11,15 +11,30 @@ permalink: /search/
 
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 <script>
-var sjs = SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/assets/search.json',
-    searchResultTemplate: '<div class="search-result"><a href="{url}"><h3>{title}</h3></a><span class="date">{date}</span><p>{description}</p></div>',
-    noResultsText: 'No results found',
-    limit: 10,
-    fuzzy: false
-})
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('query');
+    const searchInput = document.getElementById('search-input');
+
+    if (searchQuery) {
+      searchInput.value = searchQuery;
+    }
+
+    var sjs = SimpleJekyllSearch({
+      searchInput: searchInput,
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{ "/assets/search.json" | relative_url }}',
+      searchResultTemplate: '<div class="search-result"><a href="{url}"><h3>{title}</h3></a><span class="date">{date}</span><p>{description}</p></div>',
+      noResultsText: 'No results found',
+      limit: 10,
+      fuzzy: false
+    });
+
+    if (searchQuery) {
+      // Trigger the search
+      sjs.search(searchQuery);
+    }
+  });
 </script>
 
 <style>

@@ -158,17 +158,17 @@ function loadPremierLeagueTable() {
         localStorage.setItem(cacheTimestampKey, now.getTime().toString());
         console.log('Premier League data cached');
       } else {
-        console.warn('Data structure not as expected, using fallback');
-        displayFallbackTable();
+        console.error('API data structure not as expected or empty.');
+        container.innerHTML = '<p style="text-align: center; color: #ffc107;">Could not load Premier League data.</p>';
       }
     })
     .catch(error => {
       console.error('Error loading Premier League table:', error);
-      displayFallbackTable();
+      container.innerHTML = `<p style="text-align: center; color: #dc3545;">API Error: ${error.message}</p>`;
     });
   } catch (error) {
     console.error('Error in loadPremierLeagueTable:', error);
-    displayFallbackTable();
+    container.innerHTML = '<p style="text-align: center; color: #dc3545;">Client-side error loading table.</p>';
   }
 }
 
@@ -202,42 +202,6 @@ function displayPremierLeagueTable(teams) {
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${pos}</span>`;
     html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${teamName}</span>`;
     html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${points}</span>`;
-    html += '</div>';
-  });
-
-  html += '</div>';
-
-  container.innerHTML = html;
-}
-
-function displayFallbackTable() {
-  const container = document.getElementById('premier-league-table');
-
-  const fallbackData = [
-    { pos: 1, team: 'Arsenal', pts: 29 },
-    { pos: 2, team: 'Liverpool', pts: 27 },
-    { pos: 3, team: 'Aston Villa', pts: 26 },
-    { pos: 4, team: 'Manchester City', pts: 24 },
-    { pos: 5, team: 'Tottenham', pts: 23 },
-    { pos: 6, team: 'Newcastle Utd', pts: 22 },
-    { pos: 7, team: 'Manchester Utd', pts: 21 },
-    { pos: 8, team: 'Chelsea', pts: 20 },
-    { pos: 9, team: 'West Ham', pts: 19 },
-    { pos: 10, team: 'Brighton', pts: 18 }
-  ];
-
-  let html = '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
-  html += '<span class="pos">#</span>';
-  html += '<span class="team">Team</span>';
-  html += '<span class="pts">Pts</span>';
-  html += '</div>';
-
-  fallbackData.forEach(team => {
-    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
-    html += `<span class="pos" style="text-align: center; font-weight: bold;">${team.pos}</span>`;
-    html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${team.team}</span>`;
-    html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${team.pts}</span>`;
     html += '</div>';
   });
 
