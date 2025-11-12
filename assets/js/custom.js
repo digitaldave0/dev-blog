@@ -118,19 +118,20 @@ function loadPremierLeagueTable() {
     }
   }
 
-  // Fetch fresh data if Monday or no valid cache
+  // Fetch fresh data
   try {
     console.log('Fetching fresh Premier League data from API');
     
-    // Using API-Football (free tier available)
-    const apiKey = 'ebb4d5e78a6cfbfb543af1bf8cdf1acd'; // Your API-Football key
-    const headers = apiKey !== 'YOUR_API_KEY_HERE' ? { 'x-apisports-key': apiKey } : {};
+    // Using API-Football - Try 2025 first, fallback to 2024 if not available
+    const apiKey = 'ebb4d5e78a6cfbfb543af1bf8cdf1acd';
+    const headers = { 'x-apisports-key': apiKey };
     
-    fetch('https://v3.football.api-sports.io/standings?league=39&season=2024', {
+    // Try current season (2025/26 = 2025)
+    fetch('https://v3.football.api-sports.io/standings?league=39&season=2025', {
       headers: headers
     })
     .then(response => {
-      console.log('API response received:', response);
+      console.log('API response received for 2025:', response);
       if (!response.ok) {
         throw new Error('API request failed with status: ' + response.status);
       }
@@ -138,32 +139,42 @@ function loadPremierLeagueTable() {
     })
     .then(data => {
       console.log('API data received:', data);
+      
+      // If 2025 season has data, use it
       if (data.response && data.response[0] && data.response[0].league && data.response[0].league.standings && data.response[0].league.standings[0]) {
         const top10Teams = data.response[0].league.standings[0].slice(0, 10);
         displayPremierLeagueTable(top10Teams);
         
-        // Store previous week's data before updating cache
-        const currentCached = localStorage.getItem(cacheKey);
-        if (currentCached) {
-          localStorage.setItem(previousCacheKey, currentCached);
-        }
+        // Cache the data
+        localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
+        localStorage.setItem(cacheTimestampKey, now.getTime().toString());
+        console.log('Premier League 2025 data cached');
+      } else {
+        // If 2025 has no data, try 2024
+        console.log('No data for 2025, trying 2024 season');
+        return fetch('https://v3.football.api-sports.io/standings?league=39&season=2024', {
+          headers: headers
+        }).then(r => r.json());
+      }
+    })
+    .then(data => {
+      if (data && data.response && data.response[0] && data.response[0].league && data.response[0].league.standings && data.response[0].league.standings[0]) {
+        const top10Teams = data.response[0].league.standings[0].slice(0, 10);
+        displayPremierLeagueTable(top10Teams);
         
         // Cache the data
         localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
         localStorage.setItem(cacheTimestampKey, now.getTime().toString());
-        console.log('Premier League data cached');
-      } else {
-        console.error('Data structure not as expected');
-        container.innerHTML = '<div style="color: red; padding: 10px;">Unable to load table data</div>';
+        console.log('Premier League 2024 data cached');
       }
     })
     .catch(error => {
       console.error('Error loading Premier League table:', error);
-      container.innerHTML = '<div style="color: red; padding: 10px;">API Error: Unable to load table</div>';
+      container.innerHTML = '<div style="color: #ffa500; padding: 10px; font-size: 0.8rem;">Premier League table temporarily unavailable</div>';
     });
   } catch (error) {
     console.error('Error in loadPremierLeagueTable:', error);
-    container.innerHTML = '<div style="color: red; padding: 10px;">Error loading table</div>';
+    container.innerHTML = '<div style="color: #ffa500; padding: 10px; font-size: 0.8rem;">Error loading table</div>';
   }
 }
 
