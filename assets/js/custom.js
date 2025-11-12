@@ -126,7 +126,7 @@ function loadPremierLeagueTable() {
     const apiKey = 'REDACTED_API_KEY'; // Your API-Football key
     const headers = apiKey !== 'YOUR_API_KEY_HERE' ? { 'x-apisports-key': apiKey } : {};
     
-    fetch('https://v3.football.api-sports.io/standings?league=39&season=2025', {
+    fetch('https://v3.football.api-sports.io/standings?league=39&season=2024', {
       headers: headers
     })
     .then(response => {
