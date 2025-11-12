@@ -123,9 +123,10 @@ function loadPremierLeagueTable() {
     console.log('Fetching fresh Premier League data from API');
     
     // Using TheSportsDB free API - no key required
+    // Try 2025-2026 first, fallback to 2024-2025 if not available
     fetch('https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4387&s=2025-2026')
     .then(response => {
-      console.log('API response received:', response);
+      console.log('API response received for 2025-2026:', response);
       if (!response.ok) {
         throw new Error('API request failed with status: ' + response.status);
       }
@@ -140,10 +141,26 @@ function loadPremierLeagueTable() {
         // Cache the data
         localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
         localStorage.setItem(cacheTimestampKey, now.getTime().toString());
-        console.log('Premier League data cached');
+        console.log('Premier League 2025-2026 data cached');
       } else {
-        console.error('No table data found');
-        container.innerHTML = '<div style="color: #ffa500; padding: 10px; font-size: 0.8rem;">Premier League table temporarily unavailable</div>';
+        // No data for 2025-2026, try 2024-2025
+        console.log('No data for 2025-2026, trying 2024-2025');
+        return fetch('https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4387&s=2024-2025')
+          .then(r => r.json())
+          .then(fallbackData => {
+            if (fallbackData.table && fallbackData.table.length > 0) {
+              const top10Teams = fallbackData.table.slice(0, 10);
+              displayPremierLeagueTableFromSportsDB(top10Teams);
+              
+              // Cache the data
+              localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
+              localStorage.setItem(cacheTimestampKey, now.getTime().toString());
+              console.log('Premier League 2024-2025 data cached');
+            } else {
+              console.error('No table data found in fallback');
+              container.innerHTML = '<div style="color: #ffa500; padding: 10px; font-size: 0.8rem;">Premier League table temporarily unavailable</div>';
+            }
+          });
       }
     })
     .catch(error => {
