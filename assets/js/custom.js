@@ -214,16 +214,16 @@ function displayFallbackTable() {
   const container = document.getElementById('premier-league-table');
 
   const fallbackData = [
-    { pos: 1, team: 'Arsenal', pts: 29 },
-    { pos: 2, team: 'Liverpool', pts: 27 },
-    { pos: 3, team: 'Aston Villa', pts: 26 },
-    { pos: 4, team: 'Manchester City', pts: 24 },
-    { pos: 5, team: 'Tottenham', pts: 23 },
-    { pos: 6, team: 'Newcastle Utd', pts: 22 },
-    { pos: 7, team: 'Manchester Utd', pts: 21 },
-    { pos: 8, team: 'Chelsea', pts: 20 },
-    { pos: 9, team: 'West Ham', pts: 19 },
-    { pos: 10, team: 'Brighton', pts: 18 }
+    { pos: 1, team: 'Liverpool', pts: 28 },
+    { pos: 2, team: 'Manchester City', pts: 23 },
+    { pos: 3, team: 'Arsenal', pts: 22 },
+    { pos: 4, team: 'Chelsea', pts: 22 },
+    { pos: 5, team: 'Brighton', pts: 22 },
+    { pos: 6, team: 'Nottingham Forest', pts: 19 },
+    { pos: 7, team: 'Tottenham', pts: 16 },
+    { pos: 8, team: 'Brentford', pts: 16 },
+    { pos: 9, team: 'Aston Villa', pts: 16 },
+    { pos: 10, team: 'Fulham', pts: 15 }
   ];
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
