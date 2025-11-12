@@ -100,23 +100,18 @@ function loadPremierLeagueTable() {
   }
 
   const now = new Date();
-  const isMonday = now.getDay() === 1; // 0 = Sunday, 1 = Monday
   const cacheKey = 'premierLeagueTable';
   const cacheTimestampKey = 'premierLeagueTableTimestamp';
   const previousCacheKey = 'premierLeagueTablePrevious';
 
-  // Get the Monday of the current week
-  const mondayOfWeek = new Date(now);
-  mondayOfWeek.setDate(now.getDate() - now.getDay() + 1);
-  mondayOfWeek.setHours(0, 0, 0, 0);
-
   const cachedData = localStorage.getItem(cacheKey);
   const cachedTimestamp = localStorage.getItem(cacheTimestampKey);
 
-  // Check if we have valid cached data from this week
+  // Check if we have cached data less than 1 hour old
   if (cachedData && cachedTimestamp) {
     const cacheDate = new Date(parseInt(cachedTimestamp));
-    if (cacheDate >= mondayOfWeek && !isMonday) {
+    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
+    if (cacheDate > oneHourAgo) {
       console.log('Using cached Premier League data');
       displayPremierLeagueTable(JSON.parse(cachedData));
       return;
@@ -158,17 +153,17 @@ function loadPremierLeagueTable() {
         localStorage.setItem(cacheTimestampKey, now.getTime().toString());
         console.log('Premier League data cached');
       } else {
-        console.warn('Data structure not as expected, using fallback');
-        displayFallbackTable();
+        console.error('Data structure not as expected');
+        container.innerHTML = '<div style="color: red; padding: 10px;">Unable to load table data</div>';
       }
     })
     .catch(error => {
       console.error('Error loading Premier League table:', error);
-      displayFallbackTable();
+      container.innerHTML = '<div style="color: red; padding: 10px;">API Error: Unable to load table</div>';
     });
   } catch (error) {
     console.error('Error in loadPremierLeagueTable:', error);
-    displayFallbackTable();
+    container.innerHTML = '<div style="color: red; padding: 10px;">Error loading table</div>';
   }
 }
 
@@ -202,42 +197,6 @@ function displayPremierLeagueTable(teams) {
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${pos}</span>`;
     html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${teamName}</span>`;
     html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${points}</span>`;
-    html += '</div>';
-  });
-
-  html += '</div>';
-
-  container.innerHTML = html;
-}
-
-function displayFallbackTable() {
-  const container = document.getElementById('premier-league-table');
-
-  const fallbackData = [
-    { pos: 1, team: 'Liverpool', pts: 28 },
-    { pos: 2, team: 'Manchester City', pts: 23 },
-    { pos: 3, team: 'Arsenal', pts: 22 },
-    { pos: 4, team: 'Chelsea', pts: 22 },
-    { pos: 5, team: 'Brighton', pts: 22 },
-    { pos: 6, team: 'Nottingham Forest', pts: 19 },
-    { pos: 7, team: 'Tottenham', pts: 16 },
-    { pos: 8, team: 'Brentford', pts: 16 },
-    { pos: 9, team: 'Aston Villa', pts: 16 },
-    { pos: 10, team: 'Fulham', pts: 15 }
-  ];
-
-  let html = '<div class="league-table" style="font-size: 0.75rem;">';
-  html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
-  html += '<span class="pos">#</span>';
-  html += '<span class="team">Team</span>';
-  html += '<span class="pts">Pts</span>';
-  html += '</div>';
-
-  fallbackData.forEach(team => {
-    html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
-    html += `<span class="pos" style="text-align: center; font-weight: bold;">${team.pos}</span>`;
-    html += `<span class="team" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${team.team}</span>`;
-    html += `<span class="pts" style="text-align: center; font-weight: bold; color: #ffd700;">${team.pts}</span>`;
     html += '</div>';
   });
 
