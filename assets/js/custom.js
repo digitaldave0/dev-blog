@@ -123,7 +123,7 @@ function loadPremierLeagueTable() {
     console.log('Fetching fresh Premier League data from API');
     
     // Using TheSportsDB free API - no key required
-    fetch('https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4387&s=2024-2025')
+    fetch('https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4387&s=2025-2026')
     .then(response => {
       console.log('API response received:', response);
       if (!response.ok) {
