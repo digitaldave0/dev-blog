@@ -122,16 +122,10 @@ function loadPremierLeagueTable() {
   try {
     console.log('Fetching fresh Premier League data from API');
     
-    // Using API-Football - Try 2025 first, fallback to 2024 if not available
-    const apiKey = 'ebb4d5e78a6cfbfb543af1bf8cdf1acd';
-    const headers = { 'x-apisports-key': apiKey };
-    
-    // Try current season (2025/26 = 2025)
-    fetch('https://v3.football.api-sports.io/standings?league=39&season=2025', {
-      headers: headers
-    })
+    // Using TheSportsDB free API - no key required
+    fetch('https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4387&s=2024-2025')
     .then(response => {
-      console.log('API response received for 2025:', response);
+      console.log('API response received:', response);
       if (!response.ok) {
         throw new Error('API request failed with status: ' + response.status);
       }
@@ -139,33 +133,17 @@ function loadPremierLeagueTable() {
     })
     .then(data => {
       console.log('API data received:', data);
-      
-      // If 2025 season has data, use it
-      if (data.response && data.response[0] && data.response[0].league && data.response[0].league.standings && data.response[0].league.standings[0]) {
-        const top10Teams = data.response[0].league.standings[0].slice(0, 10);
-        displayPremierLeagueTable(top10Teams);
+      if (data.table && data.table.length > 0) {
+        const top10Teams = data.table.slice(0, 10);
+        displayPremierLeagueTableFromSportsDB(top10Teams);
         
         // Cache the data
         localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
         localStorage.setItem(cacheTimestampKey, now.getTime().toString());
-        console.log('Premier League 2025 data cached');
+        console.log('Premier League data cached');
       } else {
-        // If 2025 has no data, try 2024
-        console.log('No data for 2025, trying 2024 season');
-        return fetch('https://v3.football.api-sports.io/standings?league=39&season=2024', {
-          headers: headers
-        }).then(r => r.json());
-      }
-    })
-    .then(data => {
-      if (data && data.response && data.response[0] && data.response[0].league && data.response[0].league.standings && data.response[0].league.standings[0]) {
-        const top10Teams = data.response[0].league.standings[0].slice(0, 10);
-        displayPremierLeagueTable(top10Teams);
-        
-        // Cache the data
-        localStorage.setItem(cacheKey, JSON.stringify(top10Teams));
-        localStorage.setItem(cacheTimestampKey, now.getTime().toString());
-        console.log('Premier League 2024 data cached');
+        console.error('No table data found');
+        container.innerHTML = '<div style="color: #ffa500; padding: 10px; font-size: 0.8rem;">Premier League table temporarily unavailable</div>';
       }
     })
     .catch(error => {
@@ -178,19 +156,8 @@ function loadPremierLeagueTable() {
   }
 }
 
-function displayPremierLeagueTable(teams) {
+function displayPremierLeagueTableFromSportsDB(teams) {
   const container = document.getElementById('premier-league-table');
-  
-  // Get previous week's data for position change calculation
-  const previousData = localStorage.getItem('premierLeagueTablePrevious');
-  const previousTeams = previousData ? JSON.parse(previousData) : [];
-  
-  // Create a map of team names to previous positions
-  const previousPositions = {};
-  previousTeams.forEach((team, index) => {
-    const teamName = team.team.name.replace('FC', '').replace('United', 'Utd').trim();
-    previousPositions[teamName] = index + 1;
-  });
 
   let html = '<div class="league-table" style="font-size: 0.75rem;">';
   html += '<div class="table-header" style="grid-template-columns: 30px 1fr 35px;">';
@@ -199,10 +166,10 @@ function displayPremierLeagueTable(teams) {
   html += '<span class="pts">Pts</span>';
   html += '</div>';
 
-  teams.forEach((teamData, index) => {
-    const pos = teamData.rank;
-    const teamName = teamData.team.name.replace('FC', '').replace('United', 'Utd').trim();
-    const points = teamData.points;
+  teams.forEach((teamData) => {
+    const pos = teamData.intRank || teamData.rank;
+    const teamName = teamData.strTeam.replace('FC', '').replace('United', 'Utd').trim();
+    const points = teamData.intPoints || teamData.points;
 
     html += '<div class="table-row" style="grid-template-columns: 30px 1fr 35px;">';
     html += `<span class="pos" style="text-align: center; font-weight: bold;">${pos}</span>`;
