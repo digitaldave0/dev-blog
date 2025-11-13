@@ -19,21 +19,21 @@ If you've been exploring AI-powered development tools, you've likely encountered
 
 ## Quick Comparison Table
 
-| Feature | Claude Code | Gemini CLI |
-|---------|-----------|-----------|
-| **Company** | Anthropic | Google |
-| **Access Method** | Desktop app or web-based | Terminal-only (Node.js) |
-| **Installation** | Native installer (simple) | NPM / Homebrew |
-| **Authentication** | Claude.ai account or API | Google account or API key |
-| **Free Tier** | Limited (subscription focused) | Generous: 60 req/min, 1000 req/day |
-| **Model** | Claude (multiple versions) | Gemini 2.5 Pro |
-| **Cost** | $20/month (Pro) or pay-as-you-go | Free tier or pay-as-you-go |
-| **Terminal Integration** | Limited | Native, full integration |
-| **Web Interface** | Yes (claude.ai) | No |
-| **File Operations** | Yes | Yes (with permissions) |
-| **Git Integration** | Yes | Yes |
-| **MCP Support** | Yes | Yes |
-| **Customization** | Configuration files | Settings.json + custom commands |
+| Feature                  | Claude Code                      | Gemini CLI                         |
+| ------------------------ | -------------------------------- | ---------------------------------- |
+| **Company**              | Anthropic                        | Google                             |
+| **Access Method**        | Desktop app or web-based         | Terminal-only (Node.js)            |
+| **Installation**         | Native installer (simple)        | NPM / Homebrew                     |
+| **Authentication**       | Claude.ai account or API         | Google account or API key          |
+| **Free Tier**            | Limited (subscription focused)   | Generous: 60 req/min, 1000 req/day |
+| **Model**                | Claude (multiple versions)       | Gemini 2.5 Pro                     |
+| **Cost**                 | $20/month (Pro) or pay-as-you-go | Free tier or pay-as-you-go         |
+| **Terminal Integration** | Limited                          | Native, full integration           |
+| **Web Interface**        | Yes (claude.ai)                  | No                                 |
+| **File Operations**      | Yes                              | Yes (with permissions)             |
+| **Git Integration**      | Yes                              | Yes                                |
+| **MCP Support**          | Yes                              | Yes                                |
+| **Customization**        | Configuration files              | Settings.json + custom commands    |
 
 ---
 
@@ -44,21 +44,25 @@ If you've been exploring AI-powered development tools, you've likely encountered
 ### Key Strengths
 
 **1. Easy Installation & Setup**
+
 - Download and run an installer—no dependency management
 - Works on macOS, Linux, Windows, and WSL
 - Seamless account integration with Claude.ai
 
 **2. Flexible Access**
+
 - Use on web (claude.ai) for quick tasks
 - Desktop app for deeper work
 - Both stay in sync
 
 **3. Polished User Experience**
+
 - Beautiful UI with clear conversation flow
 - Web-based IDE integration
 - Approval system shows exactly what Claude will do before execution
 
 **4. Great for Beginners**
+
 - Lower barrier to entry
 - Subscription model ($20/month) gives predictable costs
 - No API key hassles (unless you use Console)
@@ -97,28 +101,33 @@ claude
 ### Key Strengths
 
 **1. Incredibly Generous Free Tier**
+
 - 60 requests per minute
 - 1,000 requests per day
 - Includes Google account login (no API key needed)
 - Full access to Gemini 2.5 Pro with 1M token context
 
 **2. Terminal Native**
+
 - Built from the ground up for command-line workflows
 - Perfect for developers who live in terminal
 - Shell commands, file operations, web fetching built-in
 
 **3. Powerful Permission System**
+
 - Explicit approval for every action
 - "Accept all" mode when you trust Claude
 - Trusted folders for automatic execution
 - Run safely in scripts with permission controls
 
 **4. Extensible with MCP**
+
 - Connect GitHub, databases, Slack, etc.
 - Custom MCP servers for specialized tools
 - Deep integration with your dev infrastructure
 
 **5. Open Source (Apache 2.0)**
+
 - Inspect the code
 - Run it locally
 - Contribute improvements
@@ -157,6 +166,7 @@ gemini
 ### Example 1: Analyzing a Project
 
 **Claude Code:**
+
 ```bash
 claude
 > what technologies does this project use?
@@ -165,6 +175,7 @@ claude
 ```
 
 **Gemini CLI:**
+
 ```bash
 gemini
 > what technologies does this project use?
@@ -177,6 +188,7 @@ gemini
 ### Example 2: Making Code Changes
 
 **Claude Code:**
+
 ```bash
 claude
 > add error handling to the payment API
@@ -186,6 +198,7 @@ claude
 ```
 
 **Gemini CLI:**
+
 ```bash
 gemini
 > add error handling to the payment API
@@ -199,6 +212,7 @@ gemini
 ### Example 3: Using Git
 
 **Claude Code:**
+
 ```bash
 > what files have I changed?
 > commit my changes - add new payment API with error handling
@@ -206,6 +220,7 @@ gemini
 ```
 
 **Gemini CLI:**
+
 ```bash
 > what files have I changed?
 > commit my changes - add new payment API with error handling
@@ -217,10 +232,12 @@ gemini
 ### Example 4: Working for Free
 
 **Claude Code:**
+
 - Free: Limited to a few tasks
 - Pro: $20/month for unlimited access
 
 **Gemini CLI:**
+
 - Free: 1,000 requests/day with Google account
 - That's roughly 100-200 tasks per day
 
@@ -237,7 +254,7 @@ gemini
 ✅ **Need web access** - Work from browser anywhere  
 ✅ **Have budget for subscription** - $20/month is acceptable  
 ✅ **Want corporate support** - Anthropic is growing enterprise team  
-✅ **Like polished UX** - Claude Code has beautiful design  
+✅ **Like polished UX** - Claude Code has beautiful design
 
 ### Choose Gemini CLI If You:
 
@@ -247,7 +264,7 @@ gemini
 ✅ **Like MCP extensibility** - Need custom tool integrations  
 ✅ **Want Google infrastructure** - Trust Google's data centers  
 ✅ **Need powerful permissions** - Explicit approval control  
-✅ **Build for automation** - Great for CI/CD workflows  
+✅ **Build for automation** - Great for CI/CD workflows
 
 ---
 
@@ -298,11 +315,13 @@ gemini
 ### For Your First Time
 
 **Try Claude Code first** if you want:
+
 - Smoothest learning curve
 - Visual feedback
 - No terminal fears
 
 **Try Gemini CLI first** if you want:
+
 - Maximum free usage
 - Terminal confidence
 - Open-source philosophy
@@ -310,6 +329,7 @@ gemini
 ### Real Developer Workflow
 
 Many developers use **both**:
+
 - Gemini CLI for terminal work (quick fixes, scripting)
 - Claude Code for bigger refactoring (visual approval system)
 - Switch between them based on the task
