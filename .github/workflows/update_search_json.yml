@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '_posts/**'
+      - "_posts/**"
 
 jobs:
   update-search:
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Run search index generator
         run: |
