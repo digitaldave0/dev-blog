@@ -11,7 +11,22 @@ date: 2025-11-16 10:00:00 +0000
 
 Welcome to **Part 2** of the Gemini CLI tutorial series. In the [previous post](/posts/gemini-cli-getting-started/), we covered installation, authentication, and your first interactive session.
 
+**In this post, we explore THE POWER CENTER of Gemini CLI—where the real magic happens.**
+
 In this post, we'll explore the **`/tools` command** in depth—the real power center of Gemini CLI. This is where you discover what capabilities the AI can access to interact with your environment.
+
+## The Real Power: What Makes Gemini CLI Special
+
+Most AI chatbots can only talk. Gemini CLI can **act**. With tools, the AI becomes your development partner that can:
+
+- **Create entire projects** from a single description
+- **Modify your code** across multiple files
+- **Run commands** on your computer
+- **Deploy applications** to servers
+- **Generate documentation** automatically
+- **Write and run tests** without manual setup
+
+And here's the key: **You control every action.** The AI proposes, explains, and waits for your approval before executing anything.
 
 ## Understanding Tools in Gemini CLI
 
