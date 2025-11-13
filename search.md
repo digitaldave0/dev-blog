@@ -18,7 +18,7 @@ var sjs = SimpleJekyllSearch({
     searchResultTemplate: '<div class="search-result"><a href="{url}"><h3>{title}</h3></a><span class="date">{date}</span><p>{description}</p></div>',
     noResultsText: 'No results found',
     limit: 10,
-    fuzzy: false
+    fuzzy: true
 })
 </script>
 
