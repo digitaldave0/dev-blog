@@ -94,54 +94,73 @@ Edit or create `~/.gemini/config.json`:
 ### Step 2: Install MCP Server Packages
 
 ```bash
-# GitHub MCP Server
-pip install mcp-github-server
+# GitHub MCP Server for repository management
+pip install anthropic-mcp-github
 
-# Firebase MCP Server
-pip install mcp-firebase-server
+# SQLite Database MCP Server for local databases
+pip install mcp-sqlite
 
-# Google Workspace MCP Server
-pip install mcp-google-workspace-server
-
-# Database MCP Toolbox
-pip install mcp-database-toolbox
+# Simple Text Files MCP Server
+pip install mcp-filesystem
 ```
 
-### Step 3: Set Up Authentication
+### Step 3: Configure MCP Servers
 
-Each MCP server requires authentication:
+Edit `~/.gemini/config.json`:
 
-**GitHub:**
+```json
+{
+  "mcp": {
+    "servers": [
+      {
+        "name": "github",
+        "command": "python3",
+        "args": ["-m", "anthropic_mcp_github"],
+        "env": {
+          "GITHUB_TOKEN": "ghp_YOUR_TOKEN_HERE"
+        }
+      },
+      {
+        "name": "sqlite",
+        "command": "python3",
+        "args": ["-m", "mcp_sqlite", "--db", "/path/to/database.db"]
+      },
+      {
+        "name": "filesystem",
+        "command": "python3",
+        "args": ["-m", "mcp_filesystem", "/home/user/projects"]
+      }
+    ]
+  }
+}
+```
+
+### Step 4: Get Authentication Tokens
+
+**GitHub Token:**
+
+1. Go to https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Select scopes: `repo`, `gist`, `read:user`
+4. Copy token and add to `.env`:
 
 ```bash
 export GITHUB_TOKEN="ghp_your_personal_access_token"
 ```
 
-**Google Cloud (Firebase, Workspace):**
-
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account-key.json"
-```
-
-**Database:**
-
-```bash
-export DATABASE_URL="postgresql://user:password@localhost/dbname"
-```
-
-### Step 4: Test the Connection
+### Step 5: Test the Connection
 
 ```bash
 gemini
 ```
 
-Then in the Gemini CLI:
+Then in Gemini CLI:
 
 ```
-/tools
+/mcp list
 ```
 
-You should see tools from your installed MCP servers!
+You should see your configured servers!
 
 ## Real-World Example: GitHub Integration
 

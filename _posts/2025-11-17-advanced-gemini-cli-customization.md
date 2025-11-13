@@ -130,41 +130,54 @@ GEMINI_CONTEXT_SIZE=50000       # Context window size
 
 Gemini CLI supports custom slash commands. Create them in `~/.gemini/commands/`:
 
-### Example: Custom Summarize Command
+### Example: Custom Code Formatter Command
 
-Create `~/.gemini/commands/summarize.json`:
-
-```json
-{
-  "name": "summarize",
-  "description": "Summarize text concisely",
-  "prompt": "Summarize the following text in 2-3 sentences:\n\n{input}"
-}
-```
-
-Now use it:
-
-```
-/summarize The quick brown fox jumped over the lazy dog...
-```
-
-### Example: Custom Code Review Command
-
-Create `~/.gemini/commands/review.json`:
+Create `~/.gemini/commands/format-code.json`:
 
 ```json
 {
-  "name": "review",
-  "description": "Review code for issues",
-  "prompt": "Review the following code for bugs, performance issues, and best practices. Provide specific recommendations:\n\n{input}"
+  "name": "format",
+  "description": "Format and clean up code with suggestions",
+  "prompt": "Format and improve this code. Check for:\n- Proper indentation\n- Naming conventions\n- Error handling\n- Comments where needed\n\nCode:\n{input}"
 }
 ```
 
 Use it:
 
 ```
-/review
+/format
 [paste your code here]
+```
+
+### Example: Custom Documentation Generator
+
+Create `~/.gemini/commands/docgen.json`:
+
+```json
+{
+  "name": "docgen",
+  "description": "Generate API documentation",
+  "prompt": "Generate comprehensive API documentation in Markdown for this code. Include:\n- Function descriptions\n- Parameters and return types\n- Example usage\n- Error codes\n\nCode:\n{input}"
+}
+```
+
+Use it:
+
+```
+/docgen
+[paste your API code here]
+```
+
+### Example: Quick Test Case Generator
+
+Create `~/.gemini/commands/testgen.json`:
+
+```json
+{
+  "name": "testgen",
+  "description": "Generate unit test cases",
+  "prompt": "Generate pytest test cases for this function. Include:\n- Happy path tests\n- Edge cases\n- Error scenarios\n- Mocking where needed\n\nFunction:\n{input}"
+}
 ```
 
 ## System Prompts and Instructions

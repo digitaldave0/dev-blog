@@ -163,13 +163,13 @@ def index():
     cities = flask.request.args.getlist('cities')
     if not cities:
         cities = ['New York', 'London', 'Tokyo']
-    
+
     weather_data = []
     for city in cities:
         data = get_weather(city)
         if data:
             weather_data.append(data)
-    
+
     return flask.render_template('index.html', weather_data=weather_data, cities=cities)
 
 if __name__ == '__main__':
@@ -193,25 +193,33 @@ And the HTML template:
   <body>
     <div class="container">
       <h1 class="mt-5">Weather Dashboard</h1>
-      
+
       <form method="get" class="mb-4">
         <div class="form-group">
-          <input type="text" name="cities" placeholder="Add city (e.g., Paris, Sydney)" class="form-control">
+          <input
+            type="text"
+            name="cities"
+            placeholder="Add city (e.g., Paris, Sydney)"
+            class="form-control"
+          />
           <button type="submit" class="btn btn-primary mt-2">Add City</button>
         </div>
       </form>
-      
+
       <div class="row mt-3">
         {% for weather in weather_data %}
         <div class="col-md-4 mb-3">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">{{ weather.name }}, {{ weather.sys.country }}</h5>
+              <h5 class="card-title">
+                {{ weather.name }}, {{ weather.sys.country }}
+              </h5>
               <p class="card-text">
-                <strong>Temperature:</strong> {{ weather.main.temp }}°C<br>
-                <strong>Humidity:</strong> {{ weather.main.humidity }}%<br>
-                <strong>Condition:</strong> {{ weather.weather[0].main }}<br>
-                <strong>Description:</strong> {{ weather.weather[0].description }}
+                <strong>Temperature:</strong> {{ weather.main.temp }}°C<br />
+                <strong>Humidity:</strong> {{ weather.main.humidity }}%<br />
+                <strong>Condition:</strong> {{ weather.weather[0].main }}<br />
+                <strong>Description:</strong> {{ weather.weather[0].description
+                }}
               </p>
             </div>
           </div>
