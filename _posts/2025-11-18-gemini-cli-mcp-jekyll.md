@@ -9,7 +9,7 @@ author: "owner"
 date: 2025-11-18 10:00:00 +0000
 ---
 
-Welcome to **Part 5** of the Gemini CLI tutorial series. In the [previous post](https://yoursite.com/posts/advanced-gemini-cli-customization/), we explored configuration and customization.
+Welcome to **Part 5** of the Gemini CLI tutorial series. In the [previous post](/posts/advanced-gemini-cli-customization/), we explored configuration and customization.
 
 In this post, we'll dive into **MCP (Model Context Protocol)** servers—one of the most powerful features of Gemini CLI. MCP servers dramatically expand what Gemini CLI can do by connecting to external services like GitHub, Google Workspace, Firebase, databases, and more.
 

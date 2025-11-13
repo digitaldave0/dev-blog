@@ -9,7 +9,7 @@ author: "owner"
 date: 2025-11-17 10:00:00 +0000
 ---
 
-Welcome to **Part 3** of the Gemini CLI tutorial series. In the [previous post](https://yoursite.com/posts/gemini-cli-tools-deep-dive/), we explored the built-in tools and how they work.
+Welcome to **Part 3** of the Gemini CLI tutorial series. In the [previous post](/posts/gemini-cli-tools-deep-dive/), we explored the built-in tools and how they work.
 
 In this post, we'll dive into **configuration files** (`settings.json` and `.env`) and show you how to customize Gemini CLI to match your specific needs and preferences.
 
