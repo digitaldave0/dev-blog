@@ -1,579 +1,778 @@
 [
-  
-    {
-      "title"    : "50 Great Git Commands: Complete Cheatsheet with Examples",
-      "category" : "",
-      "tags"     : "git, git-commands, cheatsheet, version-control, development-tools, command-line, tutorial",
-      "url"      : "/posts/50-great-git-commands-cheatsheet/",
-      "date"     : "October 29, 2025",
-      "description" : "Comprehensive cheatsheet of 50 essential Git commands with examples. From basic operations to advanced techniques, this guide covers everything you need to master Git version control."
-    } ,
-  
-    {
-      "title"    : "AWS AI Practitioner Exam Preparation: Complete Study Guide",
-      "category" : "",
-      "tags"     : "aws-ai-practitioner, certification, ai-ml, generative-ai, exam-prep, aws-services",
-      "url"      : "/posts/aws-ai-practitioner-exam-prep/",
-      "date"     : "October 29, 2025",
-      "description" : "Comprehensive guide to preparing for the AWS AI Practitioner certification exam. Covers exam domains, key concepts, AWS AI services, and practical study strategies with real-world examples."
-    } ,
-  
-    {
-      "title"    : "Complete Guide: Setting Up PostgreSQL Server on Docker with Data Management, Backup, and Security",
-      "category" : "",
-      "tags"     : "postgresql, postgres, docker, database, backup, security, tutorial, data-management, docker-compose, database-administration, postgresql-docker, psql, pgadmin",
-      "url"      : "/posts/postgresql-docker-setup/",
-      "date"     : "October 29, 2025",
-      "description" : "Comprehensive tutorial for running PostgreSQL on Docker including setup, data management, backup strategies, security hardening, and extensive housekeeping commands."
-    } ,
-  
-    {
-      "title"    : "Complete Guide: Setting Up MariaDB/MySQL Server on Docker with Data Management, Backup, and Security",
-      "category" : "",
-      "tags"     : "mariadb, mysql, docker, database, backup, security, tutorial, data-management, docker-compose, database-administration, mysql-docker, mariadb-docker",
-      "url"      : "/posts/mariadb-mysql-docker-setup/",
-      "date"     : "October 29, 2025",
-      "description" : "Comprehensive tutorial for running MariaDB/MySQL on Docker including setup, data management, backup strategies, security hardening, and extensive housekeeping commands."
-    } ,
-  
-    {
-      "title"    : "Setting Up a Developer Machine for Python and Node.js on Ubuntu LTS",
-      "category" : "",
-      "tags"     : "python, nodejs, ubuntu, setup, development-environment, tutorial",
-      "url"      : "/posts/developer-machine-setup/",
-      "date"     : "October 29, 2025",
-      "description" : "Complete guide to setting up a development environment for Python and Node.js on Ubuntu LTS, including installation, configuration, tools, databases, security, and troubleshooting."
-    } ,
-  
-    {
-      "title"    : "Building an AI-Powered Frogger Game: Training and Challenges",
-      "category" : "",
-      "tags"     : "reinforcement learning, deep q-learning, pygame, frogger",
-      "url"      : "/posts/frogger-ai-project/",
-      "date"     : "October 23, 2025",
-      "description" : ""
-    } ,
-  
-    {
-      "title"    : "Running Home Assistant in Docker with Octopus Energy Integration",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/home-assistant-docker-octopus-energy/",
-      "date"     : "October 22, 2025",
-      "description" : ""
-    } ,
-  
-    {
-      "title"    : "Windows DevOps Desktop Setup: WSL Development Environment Guide",
-      "category" : "",
-      "tags"     : "windows,, wsl,, devops,, development,, docker,, vscode,, git,, linux,, security,, development-environment",
-      "url"      : "/posts/windows-devops-desktop-wsl-setup-guide/",
-      "date"     : "October 09, 2025",
-      "description" : ""
-    } ,
-  
-    {
-      "title"    : "Windows Developer Machine Setup Guide: Complete PowerShell Environment",
-      "category" : "",
-      "tags"     : "windows, powershell, devops, setup, git, terraform, aws, vscode, development",
-      "url"      : "/posts/windows-developer-machine-setup-guide/",
-      "date"     : "October 09, 2025",
-      "description" : "Comprehensive guide to setting up a Windows development machine with PowerShell, Git, Terraform, AWS CLI, VS Code, and package management using Chocolatey, winget, and PowerShell modules"
-    } ,
-  
-    {
-      "title"    : "Ubuntu LTS Security Hardening Guide: Complete Server Setup for Beginners",
-      "category" : "",
-      "tags"     : "ubuntu, linux, security, hardening, server, ssh, firewall, fail2ban, sudo, cybersecurity",
-      "url"      : "/posts/ubuntu-lts-security-hardening-guide/",
-      "date"     : "October 09, 2025",
-      "description" : "Step-by-step guide to setting up and hardening Ubuntu LTS server with security best practices, firewall configuration, SSH hardening, intrusion prevention, and automated security monitoring. Perfect for beginners who want enterprise-level security."
-    } ,
-  
-    {
-      "title"    : "Secure Developer Machine Setup Guide: Complete Environment with Security Best Practices",
-      "category" : "",
-      "tags"     : "devops, setup, git, bash, terraform, aws, cli, vscode, development, security, cybersecurity, devsecops",
-      "url"      : "/posts/developer-machine-setup-guide/",
-      "date"     : "October 09, 2025",
-      "description" : "Comprehensive guide to setting up a secure development machine with Git SSH, Bash aliases, Terraform, AWS CLI, VS Code configuration, and package management across macOS, Windows WSL, and Ubuntu LTS. Includes security-first approach with authentication, access control, and ongoing security maintenance."
-    } ,
-  
-    {
-      "title"    : "🚀 Kubernetes GitOps and CI/CD",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/kubernetes-gitops-guide/",
-      "date"     : "August 13, 2025",
-      "description" : "A comprehensive guide to implementing GitOps practices in Kubernetes using ArgoCD and Flux CD. Learn about continuous delivery patterns, infrastructure as code, and automated deployment strategies. Perfect for teams looking to streamline their Kubernetes deployment workflows."
-    } ,
-  
-    {
-      "title"    : "📊 Kubernetes Monitoring and Observability",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/kubernetes-monitoring-guide/",
-      "date"     : "August 06, 2025",
-      "description" : "Master Kubernetes monitoring and observability with this in-depth guide. Learn how to implement Prometheus and Grafana, set up custom metrics, create powerful dashboards, and establish effective alerting strategies. Essential knowledge for maintaining production-grade Kubernetes clusters."
-    } ,
-  
-    {
-      "title"    : "🔐 Kubernetes Security: Best Practices and Implementation",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/kubernetes-security-guide/",
-      "date"     : "July 30, 2025",
-      "description" : "A comprehensive guide to Kubernetes security implementations. Learn how to secure your clusters using RBAC, Pod Security Policies, Network Policies, and SecurityContext. Includes real-world examples, security scanning tools, and best practices for enterprise environments."
-    } ,
-  
-    {
-      "title"    : "LocalStack: Local AWS Development Made Easy",
-      "category" : "",
-      "tags"     : "aws, localstack, docker, testing, development, devops, s3",
-      "url"      : "/posts/localstack-local-aws-development/",
-      "date"     : "July 25, 2025",
-      "description" : "A comprehensive guide to using LocalStack for local AWS development, including installation, examples, and CI/CD integration"
-    } ,
-  
-    {
-      "title"    : "👨‍💻 Kubernetes Advanced: Production-Ready Deployments",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/kubernetes-advanced-production/",
-      "date"     : "July 23, 2025",
-      "description" : "An advanced guide to production-ready Kubernetes deployments. Covers StatefulSets, persistent storage solutions, service mesh architecture with Istio, monitoring with Prometheus and Grafana, and best practices for high-availability deployments. Essential knowledge for DevOps engineers and platform architects."
-    } ,
-  
-    {
-      "title"    : "Advanced Terraform Tooling: Checkov, Terragota, and Atlantis for Infrastructure Management",
-      "category" : "",
-      "tags"     : "terraform, checkov, terragota, atlantis, gitops, infrastructure, cost-management",
-      "url"      : "/posts/terraform-tools-checkov-terragota-atlantis/",
-      "date"     : "July 17, 2025",
-      "description" : "Learn how to leverage Checkov, Terragota, and Atlantis for infrastructure migration, cost optimization, and GitOps workflows"
-    } ,
-  
-    {
-      "title"    : "Implementing Terraform Pipelines: Platform-Specific Examples",
-      "category" : "",
-      "tags"     : "terraform, cicd, devops, jenkins, gitlab, circleci, automation",
-      "url"      : "/posts/terraform-pipeline-implementations/",
-      "date"     : "July 16, 2025",
-      "description" : "Detailed examples of implementing Terraform pipelines in Jenkins, GitLab CI, and CircleCI with real-world configurations"
-    } ,
-  
-    {
-      "title"    : "🛠️ Kubernetes Intermediate: Configuration and Management",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/kubernetes-intermediate-configuration/",
-      "date"     : "July 16, 2025",
-      "description" : "A deep dive into Kubernetes configuration and management practices. Learn how to handle application configurations, manage sensitive data with Secrets, implement resource quotas, and master different deployment strategies. Includes real-world scenarios and best practices for production environments."
-    } ,
-  
-    {
-      "title"    : "Infrastructure as Code Pipelines: A Comprehensive Guide to Terraform CI/CD",
-      "category" : "",
-      "tags"     : "terraform, cicd, devops, jenkins, gitlab, circleci, automation",
-      "url"      : "/posts/terraform-cicd-pipeline-guide/",
-      "date"     : "July 15, 2025",
-      "description" : "Learn how to implement robust CI/CD pipelines for your Terraform code, including best practices and security considerations"
-    } ,
-  
-    {
-      "title"    : "Advanced Terraform Tooling: Terragrunt, Testing, and Best Practices",
-      "category" : "",
-      "tags"     : "terraform, terragrunt, devops, testing, automation, enterprise",
-      "url"      : "/posts/terraform-advanced-tooling/",
-      "date"     : "July 14, 2025",
-      "description" : "Master advanced Terraform tooling with Terragrunt, pre-commit hooks, automated testing, and enterprise features"
-    } ,
-  
-    {
-      "title"    : "OpenTofu: The Open Source Alternative to Terraform",
-      "category" : "",
-      "tags"     : "opentofu, terraform, iac, devops, cloud, migration",
-      "url"      : "/posts/opentofu-guide-and-migration/",
-      "date"     : "July 13, 2025",
-      "description" : "Learn about OpenTofu, how to migrate from Terraform, and understand the key differences between these Infrastructure as Code tools"
-    } ,
-  
-    {
-      "title"    : "Terraform Advanced: Modules, Workspaces, and State Management",
-      "category" : "",
-      "tags"     : "terraform, iac, devops, cloud, advanced",
-      "url"      : "/posts/terraform-advanced-concepts/",
-      "date"     : "July 12, 2025",
-      "description" : "Master advanced Terraform concepts including modules, workspaces, remote state, and best practices for large-scale infrastructure"
-    } ,
-  
-    {
-      "title"    : "Terraform Intermediate: Variables, Outputs, and Data Sources",
-      "category" : "",
-      "tags"     : "terraform, iac, devops, cloud, intermediate",
-      "url"      : "/posts/terraform-intermediate-concepts/",
-      "date"     : "July 11, 2025",
-      "description" : "Master Terraform variables, outputs, data sources, and learn how to structure your configurations effectively"
-    } ,
-  
-    {
-      "title"    : "Terraform Basics: Getting Started with Infrastructure as Code",
-      "category" : "",
-      "tags"     : "terraform, iac, devops, cloud",
-      "url"      : "/posts/terraform-basics-getting-started/",
-      "date"     : "July 10, 2025",
-      "description" : "Learn the fundamentals of Terraform, including installation, basic concepts, and your first configuration"
-    } ,
-  
-    {
-      "title"    : "🐧 Linux Commands Cheatsheet: Essential Commands for DevOps",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/linux-commands-devops-cheatsheet/",
-      "date"     : "July 10, 2025",
-      "description" : "Complete Linux command reference for DevOps engineers and system administrators. Includes 100+ essential commands with practical examples, common use cases, and best practices for daily operations."
-    } ,
-  
-    {
-      "title"    : "🏗️ Kubernetes Architecture: A Deep Dive into Master and Worker Nodes",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/kubernetes-architecture-deep-dive/",
-      "date"     : "July 10, 2025",
-      "description" : "A comprehensive deep dive into Kubernetes architecture, explaining master and worker node components, their interactions, and the core principles behind Kubernetes design. Perfect for DevOps engineers and architects wanting to understand Kubernetes internals."
-    } ,
-  
-    {
-      "title"    : "⎈ Getting Started with Helm: The Kubernetes Package Manager",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/helm-charts-kubernetes-package-manager/",
-      "date"     : "July 10, 2025",
-      "description" : "A comprehensive guide to Helm, the package manager for Kubernetes. Learn about Helm charts, templates, values, and best practices for managing complex Kubernetes applications. Perfect for developers and DevOps engineers working with Kubernetes."
-    } ,
-  
-    {
-      "title"    : "☁️ Azure CLI Cheatsheet: Essential Commands for DevOps Engineers",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/azure-cli-devops-cheatsheet/",
-      "date"     : "July 10, 2025",
-      "description" : "Complete Azure CLI command reference with real-world examples and use cases. Covers resource management, compute, containers, networking, storage, and security. Essential guide for DevOps professionals working with Azure cloud infrastructure."
-    } ,
-  
-    {
-      "title"    : "🚀 AWS CLI Cheatsheet: Top 100 Commands for DevOps Engineers",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/aws-cli-devops-cheatsheet/",
-      "date"     : "July 10, 2025",
-      "description" : "Master the AWS CLI with this detailed cheatsheet covering 100 essential commands across different AWS services. Perfect for DevOps engineers working with AWS infrastructure, featuring real-world examples and common use cases."
-    } ,
-  
-    {
-      "title"    : "🔄 Ansible Intermediate: Roles, Variables, and Templates",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/ansible-intermediate-roles-variables/",
-      "date"     : "July 10, 2025",
-      "description" : "A detailed guide to intermediate Ansible concepts including roles, variables, templates, and handlers. Features a practical example of deploying a load-balanced web application with customizable configurations."
-    } ,
-  
-    {
-      "title"    : "🎯 Ansible Basics: Getting Started with Automation",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/ansible-basics-getting-started/",
-      "date"     : "July 10, 2025",
-      "description" : "A comprehensive guide to getting started with Ansible automation, including installation, inventory management, and your first playbook. Features a practical example of configuring a basic web server."
-    } ,
-  
-    {
-      "title"    : "🚀 Ansible Advanced: Custom Modules, Dynamic Inventory, and Complex Orchestration",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/ansible-advanced-custom-modules/",
-      "date"     : "July 10, 2025",
-      "description" : "An in-depth guide to advanced Ansible concepts including custom module development, dynamic inventory scripts, and complex orchestration patterns. Features a practical example of deploying a microservices architecture with advanced monitoring."
-    } ,
-  
-    {
-      "title"    : "🔰 Kubernetes Basics: Getting Started with Kind",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/kubernetes-basics-introduction/",
-      "date"     : "July 09, 2025",
-      "description" : "A beginner-friendly introduction to Kubernetes using Kind. This comprehensive guide covers cluster setup, basic concepts like Pods and Deployments, and hands-on examples. Perfect for developers looking to start their container orchestration journey with a local development environment."
-    } ,
-  
-    {
-      "title"    : "Understanding GitHub Actions: From Setup to Pricing Tiers",
-      "category" : "",
-      "tags"     : "github-actions, ci-cd, automation, devops, workflow",
-      "url"      : "/posts/understanding-github-actions/",
-      "date"     : "July 07, 2025",
-      "description" : "A comprehensive guide to GitHub Actions, covering everything from basic setup to pricing tiers, best practices, and security considerations for effective CI/CD workflows."
-    } ,
-  
-    {
-      "title"    : "GitHub Actions in Practice: A Complete CI/CD Pipeline Demo",
-      "category" : "",
-      "tags"     : "github-actions, ci-cd, deployment, security, automation, devops",
-      "url"      : "/posts/github-actions-practical-demo/",
-      "date"     : "July 07, 2025",
-      "description" : "A hands-on guide to building a complete CI/CD pipeline with GitHub Actions, including manual approvals, secrets management, and deployment strategies."
-    } ,
-  
-    {
-      "title"    : "🚀 The Path to AGI and ASI: Understanding Superintelligence",
-      "category" : "",
-      "tags"     : "agi, asi, superintelligence, future-of-ai, ai-ethics",
-      "url"      : "/posts/future-superintelligence/",
-      "date"     : "July 05, 2025",
-      "description" : "Exploring the journey from current AI to Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI)."
-    } ,
-  
-    {
-      "title"    : "⚠️ AI Safety: Navigating the Risks of Advanced AI",
-      "category" : "",
-      "tags"     : "ai-safety, ai-risks, ai-ethics, future-of-ai, machine-learning-series",
-      "url"      : "/posts/ai-safety-risks/",
-      "date"     : "July 05, 2025",
-      "description" : "Understanding the potential risks of advanced AI systems and how to address them."
-    } ,
-  
-    {
-      "title"    : "🧩 Mixture of Experts: Many Brains Are Better Than One",
-      "category" : "",
-      "tags"     : "mixture-of-experts, moe, machine-learning-series, advanced-ml, model-architecture",
-      "url"      : "/posts/expert-mixture-of-experts/",
-      "date"     : "July 04, 2025",
-      "description" : "Understanding how Mixture of Experts combines multiple AI models for better results."
-    } ,
-  
-    {
-      "title"    : "🤔 Chain of Thought: Teaching AI to Think Step by Step",
-      "category" : "",
-      "tags"     : "chain-of-thought, prompt-engineering, machine-learning-series, advanced-ml, reasoning",
-      "url"      : "/posts/expert-chain-of-thought/",
-      "date"     : "July 04, 2025",
-      "description" : "Understanding how Chain of Thought helps AI models think like humans."
-    } ,
-  
-    {
-      "title"    : "🧠 Deep Learning: Understanding Neural Networks",
-      "category" : "",
-      "tags"     : "deep-learning, neural-networks, machine-learning-series, advanced-ml, artificial-intelligence",
-      "url"      : "/posts/deep-learning-neural-networks/",
-      "date"     : "July 03, 2025",
-      "description" : "A comprehensive introduction to neural networks and deep learning fundamentals."
-    } ,
-  
-    {
-      "title"    : "📊 Model Evaluation: Beyond Accuracy (Intermediate Series)",
-      "category" : "",
-      "tags"     : "ml-intermediate, model-evaluation, metrics, machine-learning-series",
-      "url"      : "/posts/machine-learning-model-evaluation/",
-      "date"     : "July 02, 2025",
-      "description" : "A comprehensive guide to evaluating machine learning models beyond simple accuracy metrics."
-    } ,
-  
-    {
-      "title"    : "🔧 Machine Learning Intermediate: The Art of Feature Engineering",
-      "category" : "",
-      "tags"     : "ml-intermediate, feature-engineering, data-preprocessing, machine-learning-series, data-science",
-      "url"      : "/posts/machine-learning-feature-engineering/",
-      "date"     : "July 02, 2025",
-      "description" : "Learn how to create and select better features for your machine learning models."
-    } ,
-  
-    {
-      "title"    : "🔄 Cross-Validation and Overfitting (Intermediate Series)",
-      "category" : "",
-      "tags"     : "ml-intermediate, cross-validation, overfitting, machine-learning-series",
-      "url"      : "/posts/machine-learning-cross-validation/",
-      "date"     : "July 02, 2025",
-      "description" : "Understanding cross-validation techniques and how to prevent overfitting in machine learning models."
-    } ,
-  
-    {
-      "title"    : "🚀 Migrating from GitHub Pages to Netlify: A Step-by-Step Guide",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/migrating-to-netlify/",
-      "date"     : "July 01, 2025",
-      "description" : "Learn how to migrate a Jekyll blog from GitHub Pages to Netlify, including DNS configuration and continuous deployment setup."
-    } ,
-  
-    {
-      "title"    : "🧩 Machine Learning Basics: Understanding Unsupervised Learning (Part 4)",
-      "category" : "",
-      "tags"     : "ml-basics, unsupervised-learning, clustering, machine-learning-series, data-patterns",
-      "url"      : "/posts/machine-learning-unsupervised/",
-      "date"     : "July 01, 2025",
-      "description" : "Discover how unsupervised learning finds patterns in data automatically."
-    } ,
-  
-    {
-      "title"    : "🎮 Machine Learning Basics: Understanding Reinforcement Learning (Part 5)",
-      "category" : "",
-      "tags"     : "ml-basics, reinforcement-learning, machine-learning-series, ai-gaming, robotics",
-      "url"      : "/posts/machine-learning-reinforcement/",
-      "date"     : "July 01, 2025",
-      "description" : "Learn how reinforcement learning works through simple examples and real-world applications."
-    } ,
-  
-    {
-      "title"    : "📈 Machine Learning Basics: Understanding Regression (Part 2)",
-      "category" : "",
-      "tags"     : "ml-basics, regression, supervised-learning, machine-learning-series, predictive-modeling",
-      "url"      : "/posts/machine-learning-regression/",
-      "date"     : "July 01, 2025",
-      "description" : "Learn about regression in machine learning with simple, real-world examples."
-    } ,
-  
-    {
-      "title"    : "🎯 Machine Learning Basics: Understanding Classification (Part 3)",
-      "category" : "",
-      "tags"     : "ml-basics, classification, supervised-learning, machine-learning-series, pattern-recognition",
-      "url"      : "/posts/machine-learning-classification/",
-      "date"     : "July 01, 2025",
-      "description" : "Learn about classification in machine learning with everyday examples."
-    } ,
-  
-    {
-      "title"    : "🤖 Machine Learning Basics: A Beginner&#39;s Guide (Part 1 - Introduction)",
-      "category" : "",
-      "tags"     : "ml-basics, introduction, getting-started, machine-learning-series",
-      "url"      : "/posts/machine-learning-basics-introduction/",
-      "date"     : "July 01, 2025",
-      "description" : "Understanding the fundamentals of machine learning in simple terms."
-    } ,
-  
-    {
-      "title"    : "🐳 Running Jenkins in Docker: A Complete Setup Guide",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/jenkins-docker-setup-guide/",
-      "date"     : "July 01, 2025",
-      "description" : "Learn how to run Jenkins in Docker with a complete setup guide including a custom installation script, best practices, and common troubleshooting tips."
-    } ,
-  
-    {
-      "title"    : "🧹 Data Science Fundamentals: Data Preparation and Model Fitting",
-      "category" : "",
-      "tags"     : "ml-basics, data-preparation, deduplication, data-science, machine-learning-series",
-      "url"      : "/posts/data-science-fundamentals/",
-      "date"     : "July 01, 2025",
-      "description" : "Understanding the crucial steps of data preparation and how to achieve the right model fit."
-    } ,
-  
-    {
-      "title"    : "🔧 Setting Up Azure Development Tools with Python on macOS",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/azure-python-tooling-setup-macos/",
-      "date"     : "July 01, 2025",
-      "description" : "A comprehensive guide to setting up Azure development tools with Python on macOS, including authentication, CLI, and SDK setup."
-    } ,
-  
-    {
-      "title"    : "🚀 Understanding ArgoCD: Installation, Usage, and Troubleshooting",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/Understanding-ArgoCD/",
-      "date"     : "July 01, 2025",
-      "description" : "Learn what ArgoCD is, how to install it, use it effectively, troubleshoot issues, and leverage its CLI commands."
-    } ,
-  
-    {
-      "title"    : "💰 Serverless on a Budget: Netlify as a Free Alternative to AWS and Azure",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/serverless-python-netlify-alternative-to-cloud/",
-      "date"     : "June 25, 2025",
-      "description" : ""
-    } ,
-  
-    {
-      "title"    : "🤖 Building an AI Chatbot with Netlify Functions and Together AI",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/building-ai-chatbot-netlify-huggingface/",
-      "date"     : "June 25, 2025",
-      "description" : "A comprehensive guide to building a production-ready AI chatbot using Together AI&#39;s DeepSeek-V3 model, Netlify Functions, and modern web technologies. Features cyberpunk UI, real-time responses, and robust error handling. Try the live demo and learn how to create your own AI assistant with minimal setup and costs."
-    } ,
-  
-    {
-      "title"    : "🎮 Creating a Retro-Style Scrolling Header in Jekyll",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/8bit-scroller-effect/",
-      "date"     : "June 17, 2025",
-      "description" : "Learn how to implement a classic 8-bit style scrolling header animation using CSS"
-    } ,
-  
-    {
-      "title"    : "🧠 Prompt Engineering: How to Talk to AI and Get What You Need",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/prompt-engineering/",
-      "date"     : "June 16, 2025",
-      "description" : "Prompt engineering is the art of crafting clear, accurate, useful results."
-    } ,
-  
-    {
-      "title"    : "How I Built This Blog with GitHub Pages &amp; Jekyll",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/welcome-to-my-blog/",
-      "date"     : "June 15, 2025",
-      "description" : "A quick guide to how I set up my blog using GitHub Pages, Jekyll, and is-a.dev"
-    } ,
-  
-    {
-      "title"    : "🧠 How I Use Obsidian as a Digital Scrapbook",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/using-obsidian/",
-      "date"     : "June 15, 2025",
-      "description" : "Exploring how I use Obsidian to collect ideas, connect thoughts, and build my personal knowledge base as a DevOps professional."
-    } ,
-  
-    {
-      "title"    : "🚀 How I Use Obsidian Git to Automate My Blog Publishing",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/using-obsidian-git/",
-      "date"     : "June 15, 2025",
-      "description" : "A simple guide to setting up Git in Obsidian so you can publish Markdown posts directly to GitHub Pages — fast, clean, and code-free."
-    } ,
-  
-    {
-      "title"    : "Thoughts on AI Today – Why Persistence Matters",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/posts/agi-current-state/",
-      "date"     : "June 15, 2025",
-      "description" : "Why foundation models must evolve beyond pattern recognition and embrace memory, messiness, and embodied learning."
-    } ,
-  
-    {
-      "title"    : "Building a Local RAG System with Ollama: PDF Indexing, Training, and GUI Search",
-      "category" : "",
-      "tags"     : "ollama, rag, pdf-indexing, python, gui, langchain, streamlit",
-      "url"      : "/posts/local-rag-ollama-pdf-gui/",
-      "date"     : "October 24, 2024",
-      "description" : ""
-    } ,
-  
-    {
-      "title"    : "Building a Local RAG System with Ollama: PDF Indexing, Training, and GUI Search",
-      "category" : "",
-      "tags"     : "ollama, rag, pdf-indexing, python, gui, langchain, streamlit",
-      "url"      : "/posts/local-rag-ollama-pdf-gui/",
-      "date"     : "October 24, 2024",
-      "description" : ""
-    } 
-  
+  {
+    "title": "The Ultimate Guide to the Gemini CLI: Integrating with Your Development Workflow",
+    "category": "",
+    "tags": "",
+    "url": "/posts/gemini-cli-development-workflow/",
+    "date": "November 19, 2025",
+    "description": "Welcome to the fifth and final post in our \"Ultimate Guide to the Gemini CLI\" series. In the [previous post](/2025-11-18-gemini-cli-mcp-jekyll), we explored the"
+  },
+  {
+    "title": "The Ultimate Guide to the Gemini CLI: The Model Context Protocol (MCP)",
+    "category": "",
+    "tags": "",
+    "url": "/posts/gemini-cli-mcp-jekyll/",
+    "date": "November 18, 2025",
+    "description": "Welcome to the fourth post in our \"Ultimate Guide to the Gemini CLI\" series. In the [previous post](/2025-11-17-advanced-gemini-cli-customization), we explored "
+  },
+  {
+    "title": "The Ultimate Guide to the Gemini CLI: Advanced Customization",
+    "category": "",
+    "tags": "",
+    "url": "/posts/advanced-gemini-cli-customization/",
+    "date": "November 17, 2025",
+    "description": "Welcome to the third post in our \"Ultimate Guide to the Gemini CLI\" series. In the [previous post](/2025-11-16-gemini-cli-tools-deep-dive), we took a deep dive "
+  },
+  {
+    "title": "The Ultimate Guide to the Gemini CLI: A Deep Dive into the Tools Command",
+    "category": "",
+    "tags": "",
+    "url": "/posts/gemini-cli-tools-deep-dive/",
+    "date": "November 16, 2025",
+    "description": "Welcome to the second post in our \"Ultimate Guide to the Gemini CLI\" series. In the [previous post](/2025-11-15-gemini-cli-getting-started), we covered the basi"
+  },
+  {
+    "title": "The Ultimate Guide to the Gemini CLI: Getting Started",
+    "category": "",
+    "tags": "",
+    "url": "/posts/gemini-cli-getting-started/",
+    "date": "November 15, 2025",
+    "description": "The Gemini CLI is a powerful, open-source AI agent that brings the capabilities of Google's Gemini models directly into your terminal. It's designed to be your "
+  },
+  {
+    "title": "Bandit: Python-Specific Static Security Analysis Tool",
+    "category": "",
+    "tags": "",
+    "url": "/posts/bandit-python-security/",
+    "date": "November 10, 2025",
+    "description": "Master Bandit for comprehensive Python code security analysis. Learn to detect common security issues, integrate with development workflows, and write custom security rules for your Python projects."
+  },
+  {
+    "title": "pip-audit: Scanning Python Dependencies for Known Vulnerabilities",
+    "category": "",
+    "tags": "",
+    "url": "/posts/pip-audit-vulnerability-scanner/",
+    "date": "November 10, 2025",
+    "description": "Comprehensive guide to using pip-audit, a tool for scanning Python environments and dependencies for known security vulnerabilities. Learn how to integrate it into your development workflow."
+  },
+  {
+    "title": "Safety: Comprehensive Python Dependency Vulnerability Scanner",
+    "category": "",
+    "tags": "",
+    "url": "/posts/safety-dependency-scanner/",
+    "date": "November 10, 2025",
+    "description": "Master Safety CLI for scanning Python dependencies and licenses. Learn how to detect vulnerable and malicious packages, integrate with CI/CD, and strengthen your software supply chain security."
+  },
+  {
+    "title": "Semgrep: Fast and Scalable Static Analysis for Code Security",
+    "category": "",
+    "tags": "",
+    "url": "/posts/semgrep-static-analysis/",
+    "date": "November 10, 2025",
+    "description": "Master Semgrep for comprehensive code security scanning. Learn SAST, SCA, and secrets detection with AI-powered analysis that reduces false positives and integrates seamlessly into development workflows."
+  },
+  {
+    "title": "Using PostgreSQL Extensions: A Deep Dive into pgvector for Vector Search",
+    "category": "",
+    "tags": "",
+    "url": "/posts/using-postgresql-extensions-pgvector/",
+    "date": "November 10, 2025",
+    "description": "Learn how to use PostgreSQL extensions, specifically pgvector, for implementing vector search functionality. From basic setup to advanced similarity search examples."
+  },
+  {
+    "title": "AWS Certified Machine Learning Specialty (MLS-C01) Study Guide: Complete Learning Path",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-mls-c01-study-guide/",
+    "date": "November 09, 2025",
+    "description": "Complete study guide for AWS Certified Machine Learning Specialty (MLS-C01) exam. Maps our comprehensive SageMaker tutorials to all exam domains with practical examples and exam tips."
+  },
+  {
+    "title": "AWS SageMaker Image Recognition: From Traditional ML to Deep Learning",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-sagemaker-image-recognition/",
+    "date": "November 08, 2025",
+    "description": "Master image recognition with AWS SageMaker: Learn traditional ML approaches, deep learning CNNs, and AWS Rekognition. Understand when to use each algorithm for optimal results."
+  },
+  {
+    "title": "AWS SageMaker Professional ML: Real Dataset House Price Prediction",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-sagemaker-professional-ml/",
+    "date": "November 07, 2025",
+    "description": "Take your SageMaker skills to the next level with professional ML practices using real datasets. Learn feature engineering, cross-validation, hyperparameter tuning, and model deployment."
+  },
+  {
+    "title": "AWS SageMaker for Beginners: Complete Setup Guide with Cost Optimization",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-sagemaker-beginners-guide/",
+    "date": "November 06, 2025",
+    "description": "Complete beginner's guide to AWS SageMaker: what it is, how to set up, cost optimization tips, Terraform automation, and hands-on Jupyter notebook examples."
+  },
+  {
+    "title": "How I Built My Jekyll Blog: Automation, AI, and GitHub Actions Workflow",
+    "category": "",
+    "tags": "",
+    "url": "/posts/how-i-built-my-jekyll-blog/",
+    "date": "November 06, 2025",
+    "description": "A deep dive into my Jekyll blog development workflow, featuring GitHub Actions automation, AI-assisted content creation, and custom prompts for technical writing."
+  },
+  {
+    "title": "AI Foundation: Understanding the Core Concepts and Models",
+    "category": "",
+    "tags": "",
+    "url": "/posts/ai-foundation/",
+    "date": "November 05, 2025",
+    "description": "Comprehensive guide to AI fundamentals, machine learning basics, neural networks, transformers, and the foundation concepts needed to understand modern AI systems."
+  },
+  {
+    "title": "AWS Advanced Guide: Mastering Cloud Infrastructure",
+    "category": "",
+    "tags": "[aws, cloud, infrastructure, devops, cost-optimization, security]",
+    "url": "/posts/aws-advanced-guide/",
+    "date": "November 05, 2025",
+    "description": "Comprehensive guide to advanced AWS services, architecture patterns, cost optimization, and best practices for enterprise cloud deployments."
+  },
+  {
+    "title": "AWS Certified AI Practitioner Domain 1: AI/ML Fundamentals Made Simple",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-ai-practitioner-domain-1/",
+    "date": "November 05, 2025",
+    "description": "Simple guide to Domain 1 of AWS Certified AI Practitioner exam: AI/ML Fundamentals. Learn core concepts, algorithms, data preparation, and model evaluation with easy-to-understand examples."
+  },
+  {
+    "title": "AWS Certified AI Practitioner Domain 2: AWS AI Services Deep Dive",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-ai-practitioner-domain-2/",
+    "date": "November 05, 2025",
+    "description": "Comprehensive guide to Domain 2 of AWS Certified AI Practitioner exam: AWS AI Services. Learn SageMaker, Rekognition, Comprehend, and other AWS AI services with practical examples and use cases."
+  },
+  {
+    "title": "AWS Certified AI Practitioner Domain 3: Generative AI Deep Dive",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-ai-practitioner-domain-3/",
+    "date": "November 05, 2025",
+    "description": "Comprehensive guide to Domain 3 of AWS Certified AI Practitioner exam: Generative AI. Learn foundation models, prompt engineering, Amazon Q, Titan, and responsible AI practices."
+  },
+  {
+    "title": "AWS Certified AI Practitioner Domain 4: AI Ethics and Responsible AI",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-ai-practitioner-domain-4/",
+    "date": "November 05, 2025",
+    "description": "Comprehensive guide to Domain 4 of AWS Certified AI Practitioner exam: AI Ethics and Responsible AI. Learn fairness, bias mitigation, privacy, transparency, and responsible AI practices."
+  },
+  {
+    "title": "AWS Solutions Architect Associate: Domain 1 - Design Resilient Architectures",
+    "category": "",
+    "tags": "[aws, certification, architect, domain-1, resilience, high-availability]",
+    "url": "/posts/aws-domain-1/",
+    "date": "November 05, 2025",
+    "description": "Complete guide to AWS Domain 1: designing resilient architectures for high availability and fault tolerance. Covers multi-AZ deployments, Auto Scaling, and architectural patterns."
+  },
+  {
+    "title": "AWS Solutions Architect Associate: Domain 2 - Define Performant Architectures",
+    "category": "",
+    "tags": "[aws, certification, architect, domain-2, performance, optimization]",
+    "url": "/posts/aws-domain-2/",
+    "date": "November 05, 2025",
+    "description": "Complete guide to Domain 2: defining performant architectures using caching, databases, content delivery, and optimization techniques."
+  },
+  {
+    "title": "AWS Solutions Architect Associate: Domain 3 - Specify Secure and Compliant Architectures",
+    "category": "",
+    "tags": "[aws, certification, architect, domain-3, security, compliance, iam]",
+    "url": "/posts/aws-domain-3/",
+    "date": "November 05, 2025",
+    "description": "Complete guide to Domain 3: designing secure and compliant AWS architectures using IAM, encryption, network security, and compliance frameworks."
+  },
+  {
+    "title": "AWS Solutions Architect Associate: Domain 4 - Design Cost-Optimized Architectures",
+    "category": "",
+    "tags": "[aws, certification, architect, domain-4, cost-optimization, pricing]",
+    "url": "/posts/aws-domain-4/",
+    "date": "November 05, 2025",
+    "description": "Complete guide to Domain 4: designing cost-optimized AWS architectures using pricing models, resource optimization, and cost management strategies."
+  },
+  {
+    "title": "AWS Solutions Architect Associate: Domain 5 - Define Operationally Excellent Architectures",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-domain-5/",
+    "date": "November 05, 2025",
+    "description": "Complete guide to Domain 5: designing operationally excellent architectures using infrastructure as code, monitoring, automation, and best practices."
+  },
+  {
+    "title": "AWS Machine Learning and AI Services: Complete Guide for Exam Preparation",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-machine-learning-ai-guide/",
+    "date": "November 05, 2025",
+    "description": "Comprehensive guide to AWS Machine Learning and AI services for the AWS Certified Machine Learning Specialty exam. Learn key concepts, features, and practical applications."
+  },
+  {
+    "title": "50 Great Git Commands: Complete Cheatsheet with Examples",
+    "category": "",
+    "tags": "",
+    "url": "/posts/50-great-git-commands-cheatsheet/",
+    "date": "October 29, 2025",
+    "description": "Comprehensive cheatsheet of 50 essential Git commands with examples. From basic operations to advanced techniques, this guide covers everything you need to master Git version control."
+  },
+  {
+    "title": "AWS AI Practitioner Exam Preparation: Complete Study Guide",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-ai-practitioner-exam-prep/",
+    "date": "October 29, 2025",
+    "description": "Comprehensive guide to preparing for the AWS AI Practitioner certification exam. Covers exam domains, key concepts, AWS AI services, and practical study strategies with real-world examples."
+  },
+  {
+    "title": "AWS Glue Complete Tutorial: Serverless ETL Made Easy",
+    "category": "",
+    "tags": "",
+    "url": "/posts/aws-glue-complete-tutorial/",
+    "date": "October 29, 2025",
+    "description": "Master AWS Glue from basics to advanced. Learn to build serverless ETL pipelines, use Glue Studio, crawlers, and catalog for data integration at any scale."
+  },
+  {
+    "title": "Complete Guide: Setting Up Self-Hosted GitLab Server with CI/CD and Advanced Features",
+    "category": "",
+    "tags": "",
+    "url": "/posts/complete-gitlab-self-hosted-server-guide/",
+    "date": "October 29, 2025",
+    "description": "Comprehensive tutorial for setting up your own GitLab server, mastering CI/CD pipelines, and exploring advanced GitLab features from basics to enterprise-level usage."
+  },
+  {
+    "title": "Complete Guide: Setting Up MariaDB/MySQL Server on Docker with Data Management, Backup, and Security",
+    "category": "",
+    "tags": "",
+    "url": "/posts/complete-mariadb-mysql-docker-guide/",
+    "date": "October 29, 2025",
+    "description": "Comprehensive tutorial for running MariaDB/MySQL on Docker including setup, data management, backup strategies, security hardening, and extensive housekeeping commands."
+  },
+  {
+    "title": "Complete Guide: Setting Up PostgreSQL Server on Docker with Data Management, Backup, and Security",
+    "category": "",
+    "tags": "",
+    "url": "/posts/complete-postgresql-docker-guide/",
+    "date": "October 29, 2025",
+    "description": "Comprehensive tutorial for running PostgreSQL on Docker including setup, data management, backup strategies, security hardening, and extensive housekeeping commands."
+  },
+  {
+    "title": "Advanced ETL: Enterprise-Scale Data Pipelines and Real-Time Processing - Part 3: Advanced Level",
+    "category": "",
+    "tags": "",
+    "url": "/posts/etl-advanced-enterprise/",
+    "date": "October 29, 2025",
+    "description": "Master advanced ETL concepts including real-time processing, ML integration, multi-cloud architectures, performance optimization, and enterprise governance."
+  },
+  {
+    "title": "ETL on AWS: Building Data Pipelines with Cloud Services - Part 2: Medium Level",
+    "category": "",
+    "tags": "",
+    "url": "/posts/etl-aws-medium-level/",
+    "date": "October 29, 2025",
+    "description": "Master ETL pipelines on AWS. Learn AWS Glue, Lambda functions, Step Functions, and build complete data processing workflows in the cloud."
+  },
+  {
+    "title": "ETL Fundamentals: Extract, Transform, Load Explained - Part 1: The Basics",
+    "category": "",
+    "tags": "",
+    "url": "/posts/etl-fundamentals-basics/",
+    "date": "October 29, 2025",
+    "description": "Master the fundamentals of ETL (Extract, Transform, Load) processes. Learn what ETL is, why it's important, basic concepts, and simple implementation examples."
+  },
+  {
+    "title": "⚡ FastAPI with Uvicorn: Building High-Performance Python APIs",
+    "category": "",
+    "tags": "[FastAPI, Uvicorn, ASGI, Python, REST API, async, performance]",
+    "url": "/posts/fastapi-uvicorn-python/",
+    "date": "October 29, 2025",
+    "description": "Complete guide to building fast, modern APIs with FastAPI and Uvicorn. Learn how to create production-ready Python web services with automatic documentation and async support."
+  },
+  {
+    "title": "Setting Up a Developer Machine for Python and Node.js on Ubuntu LTS",
+    "category": "",
+    "tags": "[python, nodejs, ubuntu, setup, development-environment, tutorial]",
+    "url": "/posts/setting-up-developer-machine-python-node-ubuntu-lts/",
+    "date": "October 29, 2025",
+    "description": "Complete guide to setting up a development environment for Python and Node.js on Ubuntu LTS, including installation, configuration, tools, databases, security, and troubleshooting."
+  },
+  {
+    "title": "Building an AI-Powered Frogger Game: Training and Challenges",
+    "category": "",
+    "tags": "[reinforcement learning, deep q-learning, pygame, frogger]",
+    "url": "/posts/frogger-ai-project/",
+    "date": "October 23, 2025",
+    "description": "Have you ever played the classic arcade game Frogger? You know, the one where you guide a little frog across busy roads and rivers to reach the other side? Well"
+  },
+  {
+    "title": "Running Home Assistant in Docker with Octopus Energy Integration",
+    "category": "",
+    "tags": "",
+    "url": "/posts/home-assistant-docker-octopus-energy/",
+    "date": "October 22, 2025",
+    "description": "Home Assistant is an open-source home automation platform that lets you control smart devices, monitor your home, and integrate with various services. In this p"
+  },
+  {
+    "title": "GitHub Actions in Practice: A Complete CI/CD Pipeline Demo",
+    "category": "",
+    "tags": "",
+    "url": "/posts/github-actions-practical-demo/",
+    "date": "July 07, 2025",
+    "description": "A hands-on guide to building a complete CI/CD pipeline with GitHub Actions, including manual approvals, secrets management, and deployment strategies."
+  },
+  {
+    "title": "Understanding GitHub Actions: From Setup to Pricing Tiers",
+    "category": "",
+    "tags": "",
+    "url": "/posts/understanding-github-actions/",
+    "date": "July 07, 2025",
+    "description": "A comprehensive guide to GitHub Actions, covering everything from basic setup to pricing tiers, best practices, and security considerations for effective CI/CD workflows."
+  },
+  {
+    "title": "⚠️ AI Safety: Navigating the Risks of Advanced AI",
+    "category": "",
+    "tags": "[ai-safety, ai-risks, ai-ethics, future-of-ai, machine-learning-series]",
+    "url": "/posts/ai-safety-risks/",
+    "date": "July 05, 2025",
+    "description": "Understanding the potential risks of advanced AI systems and how to address them."
+  },
+  {
+    "title": "🚀 The Path to AGI and ASI: Understanding Superintelligence",
+    "category": "",
+    "tags": "[agi, asi, superintelligence, future-of-ai, ai-ethics]",
+    "url": "/posts/future-superintelligence/",
+    "date": "July 05, 2025",
+    "description": "Exploring the journey from current AI to Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI)."
+  },
+  {
+    "title": "🤔 Chain of Thought: Teaching AI to Think Step by Step",
+    "category": "",
+    "tags": "[chain-of-thought, prompt-engineering, machine-learning-series, advanced-ml, reasoning]",
+    "url": "/posts/expert-chain-of-thought/",
+    "date": "July 04, 2025",
+    "description": "Understanding how Chain of Thought helps AI models think like humans."
+  },
+  {
+    "title": "🧩 Mixture of Experts: Many Brains Are Better Than One",
+    "category": "",
+    "tags": "[mixture-of-experts, moe, machine-learning-series, advanced-ml, model-architecture]",
+    "url": "/posts/expert-mixture-of-experts/",
+    "date": "July 04, 2025",
+    "description": "Understanding how Mixture of Experts combines multiple AI models for better results."
+  },
+  {
+    "title": "🧠 Deep Learning: Understanding Neural Networks",
+    "category": "",
+    "tags": "[deep-learning, neural-networks, machine-learning-series, advanced-ml, artificial-intelligence]",
+    "url": "/posts/deep-learning-neural-networks/",
+    "date": "July 03, 2025",
+    "description": "A comprehensive introduction to neural networks and deep learning fundamentals."
+  },
+  {
+    "title": "🔄 Cross-Validation and Overfitting (Intermediate Series)",
+    "category": "",
+    "tags": "[ml-intermediate, cross-validation, overfitting, machine-learning-series]",
+    "url": "/posts/machine-learning-cross-validation/",
+    "date": "July 02, 2025",
+    "description": "Understanding cross-validation techniques and how to prevent overfitting in machine learning models."
+  },
+  {
+    "title": "🔧 Machine Learning Intermediate: The Art of Feature Engineering",
+    "category": "",
+    "tags": "[ml-intermediate, feature-engineering, data-preprocessing, machine-learning-series, data-science]",
+    "url": "/posts/machine-learning-feature-engineering/",
+    "date": "July 02, 2025",
+    "description": "Learn how to create and select better features for your machine learning models."
+  },
+  {
+    "title": "📊 Model Evaluation: Beyond Accuracy (Intermediate Series)",
+    "category": "",
+    "tags": "[ml-intermediate, model-evaluation, metrics, machine-learning-series]",
+    "url": "/posts/machine-learning-model-evaluation/",
+    "date": "July 02, 2025",
+    "description": "A comprehensive guide to evaluating machine learning models beyond simple accuracy metrics."
+  },
+  {
+    "title": "🚀 Understanding ArgoCD: Installation, Usage, and Troubleshooting",
+    "category": "",
+    "tags": "",
+    "url": "/posts/Understanding-ArgoCD/",
+    "date": "July 01, 2025",
+    "description": "Learn what ArgoCD is, how to install it, use it effectively, troubleshoot issues, and leverage its CLI commands."
+  },
+  {
+    "title": "🧹 Data Science Fundamentals: Data Preparation and Model Fitting",
+    "category": "",
+    "tags": "[ml-basics, data-preparation, deduplication, data-science, machine-learning-series]",
+    "url": "/posts/data-science-fundamentals/",
+    "date": "July 01, 2025",
+    "description": "Understanding the crucial steps of data preparation and how to achieve the right model fit."
+  },
+  {
+    "title": "🤖 Machine Learning Basics: A Beginner's Guide (Part 1 - Introduction)",
+    "category": "",
+    "tags": "[ml-basics, introduction, getting-started, machine-learning-series]",
+    "url": "/posts/machine-learning-basics-introduction/",
+    "date": "July 01, 2025",
+    "description": "Understanding the fundamentals of machine learning in simple terms."
+  },
+  {
+    "title": "🎯 Machine Learning Basics: Understanding Classification (Part 3)",
+    "category": "",
+    "tags": "[ml-basics, classification, supervised-learning, machine-learning-series, pattern-recognition]",
+    "url": "/posts/machine-learning-classification/",
+    "date": "July 01, 2025",
+    "description": "Learn about classification in machine learning with everyday examples."
+  },
+  {
+    "title": "📈 Machine Learning Basics: Understanding Regression (Part 2)",
+    "category": "",
+    "tags": "[ml-basics, regression, supervised-learning, machine-learning-series, predictive-modeling]",
+    "url": "/posts/machine-learning-regression/",
+    "date": "July 01, 2025",
+    "description": "Learn about regression in machine learning with simple, real-world examples."
+  },
+  {
+    "title": "🎮 Machine Learning Basics: Understanding Reinforcement Learning (Part 5)",
+    "category": "",
+    "tags": "[ml-basics, reinforcement-learning, machine-learning-series, ai-gaming, robotics]",
+    "url": "/posts/machine-learning-reinforcement/",
+    "date": "July 01, 2025",
+    "description": "Learn how reinforcement learning works through simple examples and real-world applications."
+  },
+  {
+    "title": "🧩 Machine Learning Basics: Understanding Unsupervised Learning (Part 4)",
+    "category": "",
+    "tags": "[ml-basics, unsupervised-learning, clustering, machine-learning-series, data-patterns]",
+    "url": "/posts/machine-learning-unsupervised/",
+    "date": "July 01, 2025",
+    "description": "Discover how unsupervised learning finds patterns in data automatically."
+  },
+  {
+    "title": "🚀 Migrating from GitHub Pages to Netlify: A Step-by-Step Guide",
+    "category": "",
+    "tags": "",
+    "url": "/posts/migrating-to-netlify/",
+    "date": "July 01, 2025",
+    "description": "Learn how to migrate a Jekyll blog from GitHub Pages to Netlify, including DNS configuration and continuous deployment setup."
+  },
+  {
+    "title": "Building a Local RAG System with Ollama: PDF Indexing, Training, and GUI Search",
+    "category": "",
+    "tags": "[ollama, rag, pdf-indexing, python, gui, langchain, streamlit]",
+    "url": "/posts/local-rag-ollama-pdf-gui/",
+    "date": "October 24, 2024",
+    "description": ">"
+  },
+  {
+    "title": "Building a Local RAG System with Ollama: PDF Indexing, Training, and GUI Search",
+    "category": "",
+    "tags": "[ollama, rag, pdf-indexing, python, gui, langchain, streamlit]",
+    "url": "/posts/local-rag-ollama-pdf-gui/",
+    "date": "October 24, 2024",
+    "description": ">"
+  },
+  {
+    "title": "Thoughts on AI Today – Why Persistence Matters",
+    "category": "",
+    "tags": "",
+    "url": "/posts/agi-current-state/",
+    "date": "",
+    "description": "Why foundation models must evolve beyond pattern recognition and embrace memory, messiness, and embodied learning."
+  },
+  {
+    "title": "🚀 How I Use Obsidian Git to Automate My Blog Publishing",
+    "category": "",
+    "tags": "",
+    "url": "/posts/using-obsidian-git/",
+    "date": "",
+    "description": "A simple guide to setting up Git in Obsidian so you can publish Markdown posts directly to GitHub Pages — fast, clean, and code-free."
+  },
+  {
+    "title": "🧠 How I Use Obsidian as a Digital Scrapbook",
+    "category": "",
+    "tags": "",
+    "url": "/posts/using-obsidian/",
+    "date": "",
+    "description": "Exploring how I use Obsidian to collect ideas, connect thoughts, and build my personal knowledge base as a DevOps professional."
+  },
+  {
+    "title": "How I Built This Blog with GitHub Pages & Jekyll",
+    "category": "",
+    "tags": "",
+    "url": "/posts/welcome-to-my-blog/",
+    "date": "",
+    "description": "A quick guide to how I set up my blog using GitHub Pages, Jekyll, and is-a.dev"
+  },
+  {
+    "title": "🧠 Prompt Engineering: How to Talk to AI and Get What You Need",
+    "category": "",
+    "tags": "",
+    "url": "/posts/prompt-engineering/",
+    "date": "",
+    "description": "Prompt engineering is the art of crafting clear, accurate, useful results."
+  },
+  {
+    "title": "🎮 Creating a Retro-Style Scrolling Header in Jekyll",
+    "category": "",
+    "tags": "",
+    "url": "/posts/8bit-scroller-effect/",
+    "date": "",
+    "description": "Learn how to implement a classic 8-bit style scrolling header animation using CSS"
+  },
+  {
+    "title": "🤖 Building an AI Chatbot with Netlify Functions and Together AI",
+    "category": "",
+    "tags": "",
+    "url": "/posts/building-ai-chatbot-netlify-huggingface/",
+    "date": "",
+    "description": "A comprehensive guide to building a production-ready AI chatbot using Together AI's DeepSeek-V3 model, Netlify Functions, and modern web technologies. Features cyberpunk UI, real-time responses, and robust error handling. Try the live demo and learn how to create your own AI assistant with minimal setup and costs."
+  },
+  {
+    "title": "💰 Serverless on a Budget: Netlify as a Free Alternative to AWS and Azure",
+    "category": "",
+    "tags": "",
+    "url": "/posts/serverless-python-netlify-alternative-to-cloud/",
+    "date": "",
+    "description": "Discover how to deploy Python serverless functions on Netlify's generous free tier instead of paying for AWS Lambda or Azure Functions. Perfect for hobby projects and MVPs!"
+  },
+  {
+    "title": "🔧 Setting Up Azure Development Tools with Python on macOS",
+    "category": "",
+    "tags": "",
+    "url": "/posts/azure-python-tooling-setup-macos/",
+    "date": "",
+    "description": "A comprehensive guide to setting up Azure development tools with Python on macOS, including authentication, CLI, and SDK setup."
+  },
+  {
+    "title": "🐳 Running Jenkins in Docker: A Complete Setup Guide",
+    "category": "",
+    "tags": "",
+    "url": "/posts/jenkins-docker-setup-guide/",
+    "date": "",
+    "description": "Learn how to run Jenkins in Docker with a complete setup guide including a custom installation script, best practices, and common troubleshooting tips."
+  },
+  {
+    "title": "🔰 Kubernetes Basics: Getting Started with Kind",
+    "category": "",
+    "tags": "",
+    "url": "/posts/kubernetes-basics-introduction/",
+    "date": "",
+    "description": "A beginner-friendly introduction to Kubernetes using Kind. This comprehensive guide covers cluster setup, basic concepts like Pods and Deployments, and hands-on examples. Perfect for developers looking to start their container orchestration journey with a local development environment."
+  },
+  {
+    "title": "🚀 Ansible Advanced: Custom Modules, Dynamic Inventory, and Complex Orchestration",
+    "category": "",
+    "tags": "",
+    "url": "/posts/ansible-advanced-custom-modules/",
+    "date": "",
+    "description": "An in-depth guide to advanced Ansible concepts including custom module development, dynamic inventory scripts, and complex orchestration patterns. Features a practical example of deploying a microservices architecture with advanced monitoring."
+  },
+  {
+    "title": "🎯 Ansible Basics: Getting Started with Automation",
+    "category": "",
+    "tags": "",
+    "url": "/posts/ansible-basics-getting-started/",
+    "date": "",
+    "description": "A comprehensive guide to getting started with Ansible automation, including installation, inventory management, and your first playbook. Features a practical example of configuring a basic web server."
+  },
+  {
+    "title": "🔄 Ansible Intermediate: Roles, Variables, and Templates",
+    "category": "",
+    "tags": "",
+    "url": "/posts/ansible-intermediate-roles-variables/",
+    "date": "",
+    "description": "A detailed guide to intermediate Ansible concepts including roles, variables, templates, and handlers. Features a practical example of deploying a load-balanced web application with customizable configurations."
+  },
+  {
+    "title": "🚀 AWS CLI Cheatsheet: Top 100 Commands for DevOps Engineers",
+    "category": "",
+    "tags": "[aws, cli, devops, cheatsheet, ec2, s3, lambda, ecs]",
+    "url": "/posts/aws-cli-devops-cheatsheet/",
+    "date": "",
+    "description": "Master the AWS CLI with this detailed cheatsheet covering 100 essential commands across different AWS services. Perfect for DevOps engineers working with AWS infrastructure, featuring real-world examples and common use cases."
+  },
+  {
+    "title": "☁️ Azure CLI Cheatsheet: Essential Commands for DevOps Engineers",
+    "category": "",
+    "tags": "",
+    "url": "/posts/azure-cli-devops-cheatsheet/",
+    "date": "",
+    "description": "Complete Azure CLI command reference with real-world examples and use cases. Covers resource management, compute, containers, networking, storage, and security. Essential guide for DevOps professionals working with Azure cloud infrastructure."
+  },
+  {
+    "title": "⎈ Getting Started with Helm: The Kubernetes Package Manager",
+    "category": "",
+    "tags": "",
+    "url": "/posts/helm-charts-kubernetes-package-manager/",
+    "date": "",
+    "description": "A comprehensive guide to Helm, the package manager for Kubernetes. Learn about Helm charts, templates, values, and best practices for managing complex Kubernetes applications. Perfect for developers and DevOps engineers working with Kubernetes."
+  },
+  {
+    "title": "🏗️ Kubernetes Architecture: A Deep Dive into Master and Worker Nodes",
+    "category": "",
+    "tags": "",
+    "url": "/posts/kubernetes-architecture-deep-dive/",
+    "date": "",
+    "description": "A comprehensive deep dive into Kubernetes architecture, explaining master and worker node components, their interactions, and the core principles behind Kubernetes design. Perfect for DevOps engineers and architects wanting to understand Kubernetes internals."
+  },
+  {
+    "title": "🐧 Linux Commands Cheatsheet: Essential Commands for DevOps",
+    "category": "",
+    "tags": "",
+    "url": "/posts/linux-commands-devops-cheatsheet/",
+    "date": "",
+    "description": "Complete Linux command reference for DevOps engineers and system administrators. Includes 100+ essential commands with practical examples, common use cases, and best practices for daily operations."
+  },
+  {
+    "title": "Terraform Basics: Getting Started with Infrastructure as Code",
+    "category": "",
+    "tags": "[terraform, iac, devops, cloud]",
+    "url": "/posts/terraform-basics-getting-started/",
+    "date": "",
+    "description": "Learn the fundamentals of Terraform, including installation, basic concepts, and your first configuration"
+  },
+  {
+    "title": "Terraform Intermediate: Variables, Outputs, and Data Sources",
+    "category": "",
+    "tags": "[terraform, iac, devops, cloud, intermediate]",
+    "url": "/posts/terraform-intermediate-concepts/",
+    "date": "",
+    "description": "Master Terraform variables, outputs, data sources, and learn how to structure your configurations effectively"
+  },
+  {
+    "title": "Terraform Advanced: Modules, Workspaces, and State Management",
+    "category": "",
+    "tags": "[terraform, iac, devops, cloud, advanced]",
+    "url": "/posts/terraform-advanced-concepts/",
+    "date": "",
+    "description": "Master advanced Terraform concepts including modules, workspaces, remote state, and best practices for large-scale infrastructure"
+  },
+  {
+    "title": "OpenTofu: The Open Source Alternative to Terraform",
+    "category": "",
+    "tags": "[opentofu, terraform, iac, devops, cloud, migration]",
+    "url": "/posts/opentofu-guide-and-migration/",
+    "date": "",
+    "description": "Learn about OpenTofu, how to migrate from Terraform, and understand the key differences between these Infrastructure as Code tools"
+  },
+  {
+    "title": "Advanced Terraform Tooling: Terragrunt, Testing, and Best Practices",
+    "category": "",
+    "tags": "[terraform, terragrunt, devops, testing, automation, enterprise]",
+    "url": "/posts/terraform-advanced-tooling/",
+    "date": "",
+    "description": "Master advanced Terraform tooling with Terragrunt, pre-commit hooks, automated testing, and enterprise features"
+  },
+  {
+    "title": "Infrastructure as Code Pipelines: A Comprehensive Guide to Terraform CI/CD",
+    "category": "",
+    "tags": "[terraform, cicd, devops, jenkins, gitlab, circleci, automation]",
+    "url": "/posts/terraform-cicd-pipeline-guide/",
+    "date": "",
+    "description": "Learn how to implement robust CI/CD pipelines for your Terraform code, including best practices and security considerations"
+  },
+  {
+    "title": "🛠️ Kubernetes Intermediate: Configuration and Management",
+    "category": "",
+    "tags": "",
+    "url": "/posts/kubernetes-intermediate-configuration/",
+    "date": "",
+    "description": "A deep dive into Kubernetes configuration and management practices. Learn how to handle application configurations, manage sensitive data with Secrets, implement resource quotas, and master different deployment strategies. Includes real-world scenarios and best practices for production environments."
+  },
+  {
+    "title": "Implementing Terraform Pipelines: Platform-Specific Examples",
+    "category": "",
+    "tags": "[terraform, cicd, devops, jenkins, gitlab, circleci, automation]",
+    "url": "/posts/terraform-pipeline-implementations/",
+    "date": "",
+    "description": "Detailed examples of implementing Terraform pipelines in Jenkins, GitLab CI, and CircleCI with real-world configurations"
+  },
+  {
+    "title": "Advanced Terraform Tooling: Checkov, Terragota, and Atlantis for Infrastructure Management",
+    "category": "",
+    "tags": "[terraform, checkov, terragota, atlantis, gitops, infrastructure, cost-management]",
+    "url": "/posts/terraform-tools-checkov-terragota-atlantis/",
+    "date": "",
+    "description": "Learn how to leverage Checkov, Terragota, and Atlantis for infrastructure migration, cost optimization, and GitOps workflows"
+  },
+  {
+    "title": "👨‍💻 Kubernetes Advanced: Production-Ready Deployments",
+    "category": "",
+    "tags": "",
+    "url": "/posts/kubernetes-advanced-production/",
+    "date": "",
+    "description": "An advanced guide to production-ready Kubernetes deployments. Covers StatefulSets, persistent storage solutions, service mesh architecture with Istio, monitoring with Prometheus and Grafana, and best practices for high-availability deployments. Essential knowledge for DevOps engineers and platform architects."
+  },
+  {
+    "title": "LocalStack: Local AWS Development Made Easy",
+    "category": "",
+    "tags": "[aws, localstack, docker, testing, development, devops, s3]",
+    "url": "/posts/localstack-local-aws-development/",
+    "date": "",
+    "description": "A comprehensive guide to using LocalStack for local AWS development, including installation, examples, and CI/CD integration"
+  },
+  {
+    "title": "🔐 Kubernetes Security: Best Practices and Implementation",
+    "category": "",
+    "tags": "",
+    "url": "/posts/kubernetes-security-guide/",
+    "date": "",
+    "description": "A comprehensive guide to Kubernetes security implementations. Learn how to secure your clusters using RBAC, Pod Security Policies, Network Policies, and SecurityContext. Includes real-world examples, security scanning tools, and best practices for enterprise environments."
+  },
+  {
+    "title": "📊 Kubernetes Monitoring and Observability",
+    "category": "",
+    "tags": "",
+    "url": "/posts/kubernetes-monitoring-guide/",
+    "date": "",
+    "description": "Master Kubernetes monitoring and observability with this in-depth guide. Learn how to implement Prometheus and Grafana, set up custom metrics, create powerful dashboards, and establish effective alerting strategies. Essential knowledge for maintaining production-grade Kubernetes clusters."
+  },
+  {
+    "title": "🚀 Kubernetes GitOps and CI/CD",
+    "category": "",
+    "tags": "",
+    "url": "/posts/kubernetes-gitops-guide/",
+    "date": "",
+    "description": "A comprehensive guide to implementing GitOps practices in Kubernetes using ArgoCD and Flux CD. Learn about continuous delivery patterns, infrastructure as code, and automated deployment strategies. Perfect for teams looking to streamline their Kubernetes deployment workflows."
+  },
+  {
+    "title": "Secure Developer Machine Setup Guide: Complete Environment with Security Best Practices",
+    "category": "",
+    "tags": "[devops, setup, git, bash, terraform, aws, cli, vscode, development, security, cybersecurity, devsecops]",
+    "url": "/posts/developer-machine-setup-guide/",
+    "date": "",
+    "description": "Comprehensive guide to setting up a secure development machine with Git SSH, Bash aliases, Terraform, AWS CLI, VS Code configuration, and package management across macOS, Windows WSL, and Ubuntu LTS. Includes security-first approach with authentication, access control, and ongoing security maintenance."
+  },
+  {
+    "title": "Ubuntu LTS Security Hardening Guide: Complete Server Setup for Beginners",
+    "category": "",
+    "tags": "",
+    "url": "/posts/ubuntu-lts-security-hardening-guide/",
+    "date": "",
+    "description": "Step-by-step guide to setting up and hardening Ubuntu LTS server with security best practices, firewall configuration, SSH hardening, intrusion prevention, and automated security monitoring. Perfect for beginners who want enterprise-level security."
+  },
+  {
+    "title": "Windows Developer Machine Setup Guide: Complete PowerShell Environment",
+    "category": "",
+    "tags": "",
+    "url": "/posts/windows-developer-machine-setup-guide/",
+    "date": "",
+    "description": "Comprehensive guide to setting up a Windows development machine with PowerShell, Git, Terraform, AWS CLI, VS Code, and package management using Chocolatey, winget, and PowerShell modules"
+  },
+  {
+    "title": "Windows DevOps Desktop Setup: WSL Development Environment Guide",
+    "category": "",
+    "tags": "windows, wsl, devops, development, docker, vscode, git, linux, security, development-environment",
+    "url": "/posts/windows-devops-desktop-wsl-setup-guide/",
+    "date": "",
+    "description": ">"
+  }
 ]
