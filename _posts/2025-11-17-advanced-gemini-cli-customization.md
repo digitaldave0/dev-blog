@@ -9,152 +9,285 @@ author: "owner"
 date: 2025-11-17 10:00:00 +0000
 ---
 
-Welcome to the third post in our "Ultimate Guide to the Gemini CLI" series. In the [previous post](/2025-11-16-gemini-cli-tools-deep-dive), we took a deep dive into the `tools` command. In this post, we'll explore some advanced customization techniques that will take your Gemini CLI experience to the next level.
+Welcome to **Part 3** of the Gemini CLI tutorial series. In the [previous post](https://yoursite.com/posts/gemini-cli-tools-deep-dive/), we explored the built-in tools and how they work.
 
-We'll cover:
+In this post, we'll dive into **configuration files** (`settings.json` and `.env`) and show you how to customize Gemini CLI to match your specific needs and preferences.
 
-- The `~/.gemini/` directory and its configuration files.
-- Creating your own custom tool commands.
-- Building a library of your own instructions and prompts.
+## The `~/.gemini/` Configuration Directory
 
-## The `~/.gemini/` Directory: Your Configuration Hub
+When you first run Gemini CLI, it creates a configuration directory at `~/.gemini/` (in your home folder). This directory contains all your settings, authentication tokens, and customizations.
 
-The `~/.gemini/` directory is the heart of your Gemini CLI configuration. It's where the CLI stores its settings, context, and extensions. Let's take a look at some of the key files and directories you'll find here.
-
-### `config.toml`: The Main Configuration File
-
-This file contains the main configuration for the Gemini CLI. You can use it to customize various aspects of the CLI's behavior, such as the default model, output format, and more.
-
-Here's an example of what a `config.toml` file might look like:
-
-```toml
-# The default model to use for generation
-default_model = "gemini-pro"
-
-# The default output format for commands
-output_format = "text"
-```
-
-### `context.json`: Storing Your Conversation History
-
-The `context.json` file is where the Gemini CLI stores your conversation history. This allows you to maintain context between commands and have more natural, multi-turn conversations with the model.
-
-You can also create and manage multiple contexts, which is useful for separating different projects or tasks.
-
-### The `extensions` Directory: Adding New Tools
-
-The `extensions` directory is where the Gemini CLI stores installed tool extensions. When you run `gemini extensions install`, the extension's files are downloaded and placed in this directory.
-
-## Creating Custom Tool Commands
-
-One of the most powerful features of the Gemini CLI is the ability to create your own custom tool commands. This allows you to integrate the CLI with your own scripts and workflows, effectively extending its functionality to do almost anything you can imagine.
-
-### The `commands` Directory: Your Custom Tool Hub
-
-To create custom tools, you'll need to create a `commands` or `tools` directory. The Gemini CLI will automatically discover and register any executable files in this directory as custom tools.
-
-You can create this directory anywhere on your system and then tell the Gemini CLI where to find it by setting the `GEMINI_TOOLS_PATH` environment variable. For simplicity, you can create it inside your `~/.gemini/` directory:
+Let's explore what's in there:
 
 ```bash
-mkdir ~/.gemini/commands
+ls -la ~/.gemini/
 ```
 
-### Creating a Simple Custom Tool
+You should see files like:
 
-Let's create a simple "hello world" tool.
+- `config.json` or `settings.json` - Main configuration
+- `.env` - Environment variables
+- `history` - Conversation history
+- `extensions/` - Installed MCP servers and extensions
 
-1.  **Create a script:**
+## Configuration with `settings.json`
 
-    Create a file named `hello` in your `~/.gemini/commands` directory:
+The `settings.json` file is where you define how Gemini CLI behaves. Here's what you can configure:
 
-    ```bash
-    #!/bin/bash
-    echo "Hello from my custom tool!"
-    ```
+### Example Configuration
 
-2.  **Make it executable:**
+```json
+{
+  "model": "gemini-2.5-pro",
+  "theme": "dark",
+  "outputFormat": "markdown",
+  "defaultContext": "default",
+  "sandbox": false,
+  "codeExecution": {
+    "enabled": true,
+    "languages": ["python", "javascript", "bash"]
+  },
+  "tools": {
+    "fileSystem": { "enabled": true, "maxSize": "100mb" },
+    "shell": { "enabled": true, "restrictedCommands": ["rm -rf /", "sudo"] },
+    "search": { "enabled": true }
+  }
+}
+```
 
-    ```bash
-    chmod +x ~/.gemini/commands/hello
-    ```
+### Key Configuration Options
 
-Now, you can run your custom tool from the Gemini CLI:
+**Model Selection**
+
+```json
+"model": "gemini-2.5-pro"
+```
+
+Available models:
+
+- `gemini-2.5-pro` - Latest high-performance model
+- `gemini-2.0-flash` - Fast, efficient model
+- `gemini-1.5-pro` - Previous generation
+
+**Theme**
+
+```json
+"theme": "dark"
+```
+
+Options: `dark`, `light`, or a custom theme name
+
+**Output Format**
+
+```json
+"outputFormat": "markdown"
+```
+
+Options: `markdown`, `text`, `html`, `json`
+
+**Sandbox Mode**
+
+```json
+"sandbox": false
+```
+
+When `true`, isolates AI operations to prevent dangerous file or shell operations
+
+## Environment Variables with `.env`
+
+The `.env` file stores sensitive information and environment-specific settings:
 
 ```bash
-gemini tools hello
+# .env file
+GEMINI_API_KEY=your-api-key-here
+GEMINI_MODEL=gemini-2.5-pro
+GEMINI_MAX_TOKENS=8000
+GEMINI_TEMPERATURE=0.7
+GEMINI_TOP_P=0.95
 ```
 
-And you'll see the output:
-
-```
-Hello from my custom tool!
-```
-
-### A More Advanced Example: A Tool with Arguments
-
-Let's create a tool that takes an argument.
-
-1.  **Create a script:**
-
-    Create a file named `greet` in your `~/.gemini/commands` directory:
-
-    ```bash
-    #!/bin/bash
-    echo "Hello, $1!"
-    ```
-
-2.  **Make it executable:**
-
-    ```bash
-    chmod +x ~/.gemini/commands/greet
-    ```
-
-Now you can use your `greet` tool with an argument:
+### Key Environment Variables
 
 ```bash
-gemini tools greet "World"
+# Authentication
+GEMINI_API_KEY=your-key         # Gemini API key
+GOOGLE_APPLICATION_CREDENTIALS  # Path to GCP service account JSON
+
+# Model Parameters
+GEMINI_MODEL=gemini-2.5-pro    # Which model to use
+GEMINI_MAX_TOKENS=8000         # Max response length
+GEMINI_TEMPERATURE=0.7          # Creativity (0-1, higher = more creative)
+GEMINI_TOP_P=0.95              # Diversity (0-1)
+GEMINI_TOP_K=40                # Top K tokens to consider
+
+# Behavior
+GEMINI_SANDBOX=false            # Enable/disable sandbox
+GEMINI_VERBOSE=true             # Show detailed output
+GEMINI_CONTEXT_SIZE=50000       # Context window size
 ```
 
-The output will be:
+## Creating Custom Commands (Slash Commands)
+
+Gemini CLI supports custom slash commands. Create them in `~/.gemini/commands/`:
+
+### Example: Custom Summarize Command
+
+Create `~/.gemini/commands/summarize.json`:
+
+```json
+{
+  "name": "summarize",
+  "description": "Summarize text concisely",
+  "prompt": "Summarize the following text in 2-3 sentences:\n\n{input}"
+}
+```
+
+Now use it:
 
 ```
-Hello, World!
+/summarize The quick brown fox jumped over the lazy dog...
 ```
 
-## Building a Library of Your Own Instructions
+### Example: Custom Code Review Command
 
-As you use the Gemini CLI more and more, you'll likely find yourself using the same prompts and instructions over and over again. To save time and effort, you can create a library of your own custom instructions.
+Create `~/.gemini/commands/review.json`:
 
-### The `prompts` Directory: Your Instruction Library
+```json
+{
+  "name": "review",
+  "description": "Review code for issues",
+  "prompt": "Review the following code for bugs, performance issues, and best practices. Provide specific recommendations:\n\n{input}"
+}
+```
 
-You can create a `prompts` directory inside your `~/.gemini/` directory to store your custom prompts. Each prompt can be a simple text file.
+Use it:
+
+```
+/review
+[paste your code here]
+```
+
+## System Prompts and Instructions
+
+Set default instructions for every conversation:
+
+### Create `~/.gemini/instructions.md`:
+
+```markdown
+# System Instructions for Gemini CLI
+
+## You are a helpful coding assistant.
+
+### Guidelines:
+
+- Always provide working code examples
+- Explain concepts clearly
+- Suggest best practices
+- Ask clarifying questions when needed
+
+### Constraints:
+
+- Don't suggest using deprecated libraries
+- Always recommend security best practices
+- Test code before suggesting it
+```
+
+Gemini CLI will use these as baseline instructions for all conversations.
+
+## Managing Multiple Contexts
+
+Separate your work by creating multiple contexts for different projects:
 
 ```bash
-mkdir ~/.gemini/prompts
+# List all contexts
+/context list
+
+# Create a new context for a project
+/context create my-project
+
+# Switch to a context
+/context switch my-project
+
+# View current context
+/context info
 ```
 
-### Creating a Custom Prompt
+Each context maintains its own conversation history and can have different settings.
 
-Let's create a prompt for summarizing text.
+## Advanced: Programmatic Configuration
 
-Create a file named `summarize.txt` in your `~/.gemini/prompts` directory with the following content:
+You can also configure Gemini CLI programmatically. For example, set a project-specific config:
 
+Create `GEMINI.md` in your project root:
+
+```markdown
+# Project Configuration for Gemini CLI
+
+## Model Settings
+
+- Model: gemini-2.5-pro
+- Max Tokens: 4000
+- Temperature: 0.5
+
+## Project Context
+
+This is a Flask web application project. Consider:
+
+- Python best practices
+- Flask framework patterns
+- Database migration strategies
+
+## Relevant Files
+
+- app.py - Main Flask application
+- requirements.txt - Python dependencies
+- config.py - Configuration settings
 ```
-Summarize the following text in a few sentences:
-```
 
-### Using Your Custom Prompt
-
-Now, you can use your custom prompt with the `generate` command by referencing the file:
+When you launch Gemini CLI from this project:
 
 ```bash
-gemini generate --prompt ~/.gemini/prompts/summarize.txt "Your long text here..."
+gemini
 ```
 
-This will insert the content of your `summarize.txt` file into the prompt, saving you from having to type it out every time.
+It automatically loads the `GEMINI.md` file as context!
 
-## Next Steps
+## Best Practices for Configuration
 
-In the next post in this series, we'll explore how to integrate the Gemini CLI with your development workflow. We'll look at how to use the Gemini CLI with Git, shell scripts, and other development tools.
+1. **Use `.env` for secrets** - Never commit API keys to version control
+2. **Create project-specific contexts** - Keep work organized
+3. **Set appropriate sandbox settings** - Balance flexibility with safety
+4. **Version your configurations** - Commit `settings.json` to git (without secrets)
+5. **Document custom commands** - Help your team understand available commands
 
-Stay tuned!
+## Troubleshooting Configuration
+
+**Check current configuration:**
+
+```bash
+/config show
+```
+
+**Reset to defaults:**
+
+```bash
+/config reset
+```
+
+**View which config file is being used:**
+
+```
+/config path
+```
+
+## Part 4 Preview
+
+In **Part 4**, we'll dive deeper into the built-in tools available and show you how to use each one effectively with real-world examples.
+
+In **Part 5**, we'll explore MCP (Model Context Protocol) servers to dramatically expand Gemini CLI's capabilities with integrations like GitHub, Firebase, and Google Workspace.
+
+## Resources
+
+- [Gemini CLI Configuration Docs](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md)
+- [Official Tutorial Series - Part 3](https://medium.com/google-cloud/gemini-cli-tutorial-series-part-3-configuration-settings-via-settings-json-and-env-files-669c6ab6fd44)
+- [GitHub Repository](https://github.com/google-gemini/gemini-cli)

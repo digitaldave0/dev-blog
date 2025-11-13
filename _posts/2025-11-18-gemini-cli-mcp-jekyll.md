@@ -9,111 +9,315 @@ author: "owner"
 date: 2025-11-18 10:00:00 +0000
 ---
 
-Welcome to the fourth post in our "Ultimate Guide to the Gemini CLI" series. In the [previous post](/2025-11-17-advanced-gemini-cli-customization), we explored advanced customization techniques for the Gemini CLI. In this post, we'll dive into the Model Context Protocol (MCP), an emerging standard that enables AI models to interact with external tools and data sources in a structured way.
+Welcome to **Part 5** of the Gemini CLI tutorial series. In the [previous post](https://yoursite.com/posts/advanced-gemini-cli-customization/), we explored configuration and customization.
 
-We'll explore how to use the Gemini CLI with an MCP server to automate a real-world workflow: managing a Jekyll blog.
+In this post, we'll dive into **MCP (Model Context Protocol)** servers—one of the most powerful features of Gemini CLI. MCP servers dramatically expand what Gemini CLI can do by connecting to external services like GitHub, Google Workspace, Firebase, databases, and more.
 
 ## What is the Model Context Protocol (MCP)?
 
-The Model Context Protocol (MCP) is a standard that defines how AI models can communicate with external tools and services. It provides a structured way for models to discover available tools, understand their capabilities, and execute them with the correct parameters.
+The Model Context Protocol (MCP) is an open standard developed by Anthropic that enables AI models to securely interact with external tools and data sources in a structured way.
 
-MCP is a key component of the Gemini CLI's extensibility model. It allows the CLI to connect to and interact with a wide range of tools and services, from simple scripts to complex APIs.
+**Key benefits of MCP:**
 
-## Automating a Jekyll Blog with Gemini CLI and MCP
+- **Standardized tool communication** - Consistent interface for all integrations
+- **Security** - Permissions and sandboxing built-in
+- **Scalability** - Easy to add new integrations
+- **Transparency** - AI shows what it's doing before doing it
 
-To demonstrate the power of MCP, we'll walk through a practical example: automating a Jekyll blog with the Gemini CLI and an MCP server for Jekyll.
+Think of MCP servers as "skill plugins" that give Gemini CLI access to specific systems (GitHub, databases, APIs, etc.).
 
-### The Goal
+## Available MCP Servers for Gemini CLI
 
-Our goal is to create a seamless workflow for creating and publishing blog posts to a Jekyll site, all from the command line. We'll use the Gemini CLI to generate the content for our posts and an MCP server to send them to our Jekyll site.
+### Official MCP Servers
 
-### The Components
+**GitHub MCP Server**
 
-- **Gemini CLI:** Our primary interface for interacting with the Gemini model and our MCP server.
-- **Jekyll:** A popular static site generator that we'll use to build our blog.
-- **Jekyll MCP Server:** A dedicated MCP server for Jekyll that exposes tools for interacting with a Jekyll site.
+- Manage repositories, issues, pull requests
+- Read code across your projects
+- Automate workflows
 
-### Setting up the Environment
+**Firebase MCP Server**
 
-First, let's get all the necessary tools installed and configured.
+- Deploy applications to Firebase
+- Manage databases and authentication
+- Configure cloud functions
 
-**1. Install the Gemini CLI**
+**Google Workspace MCP Server**
 
-If you haven't already, install the Gemini CLI by following the instructions in the [first post in this series](/2025-11-15-gemini-cli-getting-started).
+- Create and edit Google Docs
+- Manage Gmail and Calendar
+- Work with Google Sheets
 
-**2. Install Jekyll**
+**Google Gen AI Media Services**
 
-Jekyll is a Ruby gem. You can install it with:
+- Generate and edit images
+- Process media files
+- Convert between formats
+
+**MCP Toolbox (Database Support)**
+
+- Connect to PostgreSQL, MySQL, MongoDB
+- Run queries and manage data
+- Schema inspection and migrations
+
+## Installing and Configuring MCP Servers
+
+### Step 1: Configure MCP Servers
+
+Edit or create `~/.gemini/config.json`:
+
+```json
+{
+  "mcp": {
+    "servers": [
+      {
+        "name": "github",
+        "command": "python",
+        "args": ["-m", "mcp_github_server"],
+        "env": {
+          "GITHUB_TOKEN": "your-github-token-here"
+        }
+      },
+      {
+        "name": "firebase",
+        "command": "python",
+        "args": ["-m", "mcp_firebase_server"],
+        "env": {
+          "GOOGLE_APPLICATION_CREDENTIALS": "/path/to/service-account.json"
+        }
+      }
+    ]
+  }
+}
+```
+
+### Step 2: Install MCP Server Packages
 
 ```bash
-gem install jekyll bundler
+# GitHub MCP Server
+pip install mcp-github-server
+
+# Firebase MCP Server
+pip install mcp-firebase-server
+
+# Google Workspace MCP Server
+pip install mcp-google-workspace-server
+
+# Database MCP Toolbox
+pip install mcp-database-toolbox
 ```
 
-**3. Install the Jekyll MCP Server**
+### Step 3: Set Up Authentication
 
-A dedicated MCP server for Jekyll has been created by Evanth. This server exposes tools to interact with a Jekyll site. Install it using pip:
+Each MCP server requires authentication:
+
+**GitHub:**
 
 ```bash
-pip install jekyll-mcp-server
+export GITHUB_TOKEN="ghp_your_personal_access_token"
 ```
 
-**4. Create a Jekyll Site**
-
-If you don't have a Jekyll site, you can create a new one:
+**Google Cloud (Firebase, Workspace):**
 
 ```bash
-jekyll new my-awesome-blog
-cd my-awesome-blog
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account-key.json"
 ```
 
-**5. Configure the Jekyll MCP Server**
-
-The Jekyll MCP Server needs to know the location of your Jekyll site's `_posts` directory. You can configure this by setting an environment variable. From the root of your Jekyll site, run:
+**Database:**
 
 ```bash
-export JEKYLL_POSTS_DIR=$(pwd)/_posts
+export DATABASE_URL="postgresql://user:password@localhost/dbname"
 ```
 
-### Running the Jekyll MCP Server
-
-With the server installed and configured, you can start it by running the following command from your Jekyll site's root directory:
+### Step 4: Test the Connection
 
 ```bash
-jekyll-mcp-server
+gemini
 ```
 
-The server will start and listen for requests from MCP clients.
-
-### Creating and Publishing a Blog Post
-
-Now for the fun part! We'll use the Gemini CLI to create a new blog post and publish it to our Jekyll site.
-
-**1. Generate the Blog Post Content**
-
-Use the `generate` command in the Gemini CLI to create the content for your blog post.
+Then in the Gemini CLI:
 
 ```
-> generate "Write a blog post in Markdown about the benefits of using a static site generator like Jekyll. The post should have a title, a brief introduction, three main points with explanations, and a conclusion. The filename should be `2025-11-18-benefits-of-jekyll.md`."
+/tools
 ```
 
-**2. Save the Content to a File**
+You should see tools from your installed MCP servers!
 
-Copy the generated Markdown and save it to a file with the name provided in the prompt.
+## Real-World Example: GitHub Integration
 
-**3. Publish the Post with an MCP Client**
+Let's automate a GitHub workflow using the GitHub MCP Server.
 
-To send the newly created post to the Jekyll MCP Server, you need an MCP client. The MCP ecosystem is still evolving, and dedicated command-line clients are not yet commonplace.
+### Use Case: Automated Code Review
 
-For this tutorial, we will simulate the interaction with a hypothetical `mcp-client` command-line tool. This demonstrates the concept of how an MCP client would work.
+**Request:**
 
-```bash
-mcp-client --server jekyll-mcp-server --tool create-post --param-file 2025-11-18-benefits-of-jekyll.md
+```
+Review all open pull requests in my repository davidhibbitts/dev-blog.
+For each PR:
+1. Analyze the code changes
+2. Check for potential issues
+3. Provide feedback
+4. Add a comment to the PR with your analysis
 ```
 
-After running this command, the Jekyll MCP Server would receive the file and save it to the `_posts` directory of your Jekyll site, ready to be built and deployed.
+**What Gemini CLI will do:**
 
-## Next Steps
+1. Use the GitHub MCP server to fetch open PRs
+2. Get the full diff for each PR
+3. Analyze the code with Gemini
+4. Post comments back to GitHub (with your permission)
 
-In the next and final post in this series, we'll explore how to integrate the Gemini CLI with your development workflow. We'll look at how to use the Gemini CLI with Git, shell scripts, and other development tools to automate common tasks and boost your productivity.
+### Use Case: Automated Issue Triage
 
-Stay tuned!
+**Request:**
+
+```
+Review all open issues in my repository with the 'bug' label.
+For each issue:
+1. Read the issue description
+2. Check related code files mentioned
+3. Suggest a priority level (high/medium/low)
+4. Propose a potential fix
+5. Add labels to categorize the issue
+```
+
+## Real-World Example: Database Integration
+
+Let's use the MCP Database Toolbox to query and analyze your database.
+
+### Use Case: Schema Analysis
+
+**Request:**
+
+```
+Analyze my PostgreSQL database schema.
+Create a comprehensive documentation of:
+- All tables and their purposes
+- Relationships between tables
+- Indexes and their effectiveness
+- Potential optimization opportunities
+```
+
+**What it will do:**
+
+1. Query the database schema
+2. Analyze table sizes and relationships
+3. Review index performance
+4. Generate recommendations
+5. Create documentation
+
+### Use Case: Data Migration
+
+**Request:**
+
+```
+I have a table 'users' with old_email and new_email columns.
+Help me create a migration script that:
+1. Validates all emails are properly formatted
+2. Updates the main email column
+3. Removes duplicate entries
+4. Creates proper indexes
+5. Tests the migration on sample data
+```
+
+## Real-World Example: Google Workspace Integration
+
+Automate documentation and collaboration.
+
+### Use Case: Auto-Generate Documentation
+
+**Request:**
+
+```
+Create a Google Doc with comprehensive documentation for the Gemini CLI project.
+Include:
+1. Installation instructions
+2. Quick start guide
+3. Configuration reference
+4. FAQ section
+5. Links to official resources
+Share it with my team.
+```
+
+## Real-World Example: Firebase Integration
+
+Deploy and manage serverless applications.
+
+### Use Case: Deploy a Web App
+
+**Request:**
+
+```
+Deploy this Flask web application to Firebase:
+1. Create a production environment
+2. Set up environment variables
+3. Deploy the application
+4. Configure custom domain
+5. Set up monitoring and alerts
+6. Verify the deployment
+```
+
+## Listing and Managing MCP Servers
+
+Check what MCP servers are available:
+
+```
+/mcp list
+```
+
+See detailed info:
+
+```
+/mcp info github
+```
+
+Disable a server temporarily:
+
+```
+/mcp disable firebase
+```
+
+## Best Practices for Using MCP Servers
+
+1. **Use appropriate permissions** - Grant only necessary access tokens
+2. **Test in development first** - Don't run automated tasks directly on production
+3. **Review changes before approval** - Always check what the AI proposes before confirming
+4. **Keep credentials secure** - Never commit `.env` files with tokens to git
+5. **Monitor usage** - Watch MCP server logs for errors or unexpected behavior
+6. **Document your workflows** - Create notes on which MCP servers you use for what tasks
+
+## Security Considerations
+
+**Sandbox Mode**
+Always run sensitive operations in sandbox mode:
+
+```json
+{
+  "sandbox": true,
+  "mcp": {
+    "restrictedServers": ["database", "github"]
+  }
+}
+```
+
+**Audit MCP Operations**
+
+```
+/mcp audit log
+```
+
+## Part 6 Preview
+
+In **Part 6**, we'll explore even more MCP servers including:
+
+- Building custom MCP servers
+- Integrating with more services
+- Creating complex automated workflows
+
+## Resources
+
+- [Model Context Protocol Official Docs](https://modelcontextprotocol.io/)
+- [Official Tutorial Series - Part 5](https://medium.com/google-cloud/gemini-cli-tutorial-series-part-5-github-mcp-server-b557ae449e6e)
+- [Part 6: More MCP Servers](https://medium.com/google-cloud/gemini-cli-tutorial-series-part-6-more-mcp-servers-91422cadaa35)
+- [GitHub Repository](https://github.com/google-gemini/gemini-cli)
+- [MCP Servers Registry](https://glama.ai/mcp/servers)
