@@ -1,15 +1,21 @@
 ---
-title: "The Ultimate Guide to the Gemini CLI: Advanced Customization"
-date: 2025-11-17
+layout: post
+title: "Gemini CLI: Advanced Customization"
+description: "Master advanced customization of Gemini CLI, including configuration files, custom tools, and building instruction libraries."
+tags: ["gemini", "cli", "customization", "configuration", "tools", "prompts"]
+excerpt: >
+  Unlock advanced features of Gemini CLI with custom configurations, tool creation, and personalized instruction libraries for enhanced productivity.
+author: "owner"
+date: 2025-11-17 10:00:00 +0000
 ---
 
 Welcome to the third post in our "Ultimate Guide to the Gemini CLI" series. In the [previous post](/2025-11-16-gemini-cli-tools-deep-dive), we took a deep dive into the `tools` command. In this post, we'll explore some advanced customization techniques that will take your Gemini CLI experience to the next level.
 
 We'll cover:
 
-*   The `~/.gemini/` directory and its configuration files.
-*   Creating your own custom tool commands.
-*   Building a library of your own instructions and prompts.
+- The `~/.gemini/` directory and its configuration files.
+- Creating your own custom tool commands.
+- Building a library of your own instructions and prompts.
 
 ## The `~/.gemini/` Directory: Your Configuration Hub
 
