@@ -144,7 +144,7 @@ Let's automate a GitHub workflow using the GitHub MCP Server.
 **Request:**
 
 ```
-Review all open pull requests in my repository davidhibbitts/dev-blog.
+Review all open pull requests in my repository myorg/myproject.
 For each PR:
 1. Analyze the code changes
 2. Check for potential issues
