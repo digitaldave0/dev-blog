@@ -9,7 +9,19 @@ author: "owner"
 date: 2025-11-15 10:00:00 +0000
 ---
 
-Gemini CLI is an open-source AI agent that brings the power of Google's Gemini directly into your terminal. It's designed for both coding tasks and general productivity, comes integrated with various tools, supports MCP (Model Context Protocol) servers, and offers a generous free tier: **60 requests/min and 1,000 requests/day with a personal Google account**.
+## Why Gemini CLI?
+
+Imagine having an AI assistant that sits in your terminal and can:
+
+- Generate entire applications from a description
+- Debug errors by analyzing stack traces
+- Write tests, documentation, and commit messages
+- Manage your GitHub, databases, and files
+- All with your explicit permission at every step
+
+That's Gemini CLI—an open-source AI agent that transforms how developers work.
+
+Gemini CLI brings the power of Google's Gemini directly into your terminal. It's designed for both coding tasks and general productivity, comes integrated with various tools, supports MCP (Model Context Protocol) servers, and offers a generous free tier: **60 requests/min and 1,000 requests/day with a personal Google account**.
 
 This is Part 1 of the Gemini CLI tutorial series. In this post, we'll cover installation, authentication, and your first interactive session with Gemini CLI.
 

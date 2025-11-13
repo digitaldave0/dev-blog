@@ -11,6 +11,8 @@ date: 2025-11-18 10:00:00 +0000
 
 Welcome to **Part 5** of the Gemini CLI tutorial series. In the [previous post](/posts/advanced-gemini-cli-customization/), we explored configuration and customization.
 
+**This is where Gemini CLI becomes a development superpower.** MCP servers transform Gemini CLI from a general AI assistant into a specialized agent with deep integration into your entire development infrastructure.
+
 In this post, we'll dive into **MCP (Model Context Protocol)** servers—one of the most powerful features of Gemini CLI. MCP servers dramatically expand what Gemini CLI can do by connecting to external services like GitHub, Google Workspace, Firebase, databases, and more.
 
 ## What is the Model Context Protocol (MCP)?
@@ -62,36 +64,7 @@ Think of MCP servers as "skill plugins" that give Gemini CLI access to specific 
 
 ## Installing and Configuring MCP Servers
 
-### Step 1: Configure MCP Servers
-
-Edit or create `~/.gemini/config.json`:
-
-```json
-{
-  "mcp": {
-    "servers": [
-      {
-        "name": "github",
-        "command": "python",
-        "args": ["-m", "mcp_github_server"],
-        "env": {
-          "GITHUB_TOKEN": "your-github-token-here"
-        }
-      },
-      {
-        "name": "firebase",
-        "command": "python",
-        "args": ["-m", "mcp_firebase_server"],
-        "env": {
-          "GOOGLE_APPLICATION_CREDENTIALS": "/path/to/service-account.json"
-        }
-      }
-    ]
-  }
-}
-```
-
-### Step 2: Install MCP Server Packages
+### Step 1: Install MCP Server Packages
 
 ```bash
 # GitHub MCP Server for repository management
@@ -104,7 +77,7 @@ pip install mcp-sqlite
 pip install mcp-filesystem
 ```
 
-### Step 3: Configure MCP Servers
+### Step 2: Configure MCP Servers
 
 Edit `~/.gemini/config.json`:
 
@@ -135,7 +108,7 @@ Edit `~/.gemini/config.json`:
 }
 ```
 
-### Step 4: Get Authentication Tokens
+### Step 3: Get Authentication Tokens
 
 **GitHub Token:**
 
@@ -148,7 +121,7 @@ Edit `~/.gemini/config.json`:
 export GITHUB_TOKEN="ghp_your_personal_access_token"
 ```
 
-### Step 5: Test the Connection
+### Step 4: Test the Connection
 
 ```bash
 gemini
