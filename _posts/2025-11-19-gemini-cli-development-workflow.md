@@ -18,7 +18,7 @@ author: "owner"
 date: 2025-11-19 10:00:00 +0000
 ---
 
-Welcome to **Part 6** of the Gemini CLI tutorial series—our final post! In the [previous post](https://yoursite.com/posts/gemini-cli-mcp-jekyll/), we explored MCP servers and powerful integrations.
+Welcome to **Part 6** of the Gemini CLI tutorial series—our final post! In the [previous post](/posts/gemini-cli-mcp-jekyll/), we explored MCP servers and powerful integrations.
 
 In this post, we'll show you practical ways to integrate Gemini CLI directly into your daily development workflow—from Git commits to automated documentation to CI/CD pipelines.
 

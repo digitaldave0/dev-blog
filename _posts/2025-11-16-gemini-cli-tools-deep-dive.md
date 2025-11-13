@@ -9,7 +9,7 @@ author: "owner"
 date: 2025-11-16 10:00:00 +0000
 ---
 
-Welcome to **Part 2** of the Gemini CLI tutorial series. In the [previous post](https://yoursite.com/posts/gemini-cli-getting-started/), we covered installation, authentication, and your first interactive session.
+Welcome to **Part 2** of the Gemini CLI tutorial series. In the [previous post](/posts/gemini-cli-getting-started/), we covered installation, authentication, and your first interactive session.
 
 In this post, we'll explore the **`/tools` command** in depth—the real power center of Gemini CLI. This is where you discover what capabilities the AI can access to interact with your environment.
 
@@ -116,7 +116,7 @@ Gemini CLI will:
 Here's where tools become incredibly powerful. Let's build a simple Flask web application:
 
 ```
-Create a Python Flask application that displays live cricket scores from this RSS feed: https://static.cricinfo.com/rss/livescores.xml
+Create a Python Flask application that displays current weather for multiple cities using the OpenWeatherMap API. Include a search form to add new cities and display temperature, humidity, and weather description.
 ```
 
 When you make this request, Gemini CLI will:
@@ -124,7 +124,7 @@ When you make this request, Gemini CLI will:
 1. **Plan the directory structure** - Create folders for your project
 2. **Create the Flask app** (`app.py`) - Write Python code
 3. **Create templates** (`templates/index.html`) - Write HTML
-4. **Identify dependencies** - Recognize Flask, requests, feedparser are needed
+4. **Identify dependencies** - Recognize Flask, requests are needed
 5. **Install packages** - Ask permission to run `pip install`
 6. **Set up virtual environment** - Create and configure Python venv
 7. **Run the application** - Start your Flask server
@@ -135,28 +135,42 @@ The generated app.py might look like:
 
 ```python
 import flask
-import feedparser
 import requests
+import os
 
 app = flask.Flask(__name__)
+API_KEY = os.environ.get('OPENWEATHER_API_KEY')
 
-def get_live_scores():
-    """Fetches and parses live cricket scores from the RSS feed."""
-    rss_url = "https://static.cricinfo.com/rss/livescores.xml"
+def get_weather(city):
+    """Fetches weather data for a given city from OpenWeatherMap API."""
+    url = "https://api.openweathermap.org/data/2.5/weather"
+    params = {
+        'q': city,
+        'appid': API_KEY,
+        'units': 'metric'
+    }
     try:
-        response = requests.get(rss_url)
+        response = requests.get(url, params=params)
         response.raise_for_status()
-        feed = feedparser.parse(response.content)
-        return feed.entries
+        return response.json()
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching RSS feed: {e}")
-        return []
+        print(f"Error fetching weather data: {e}")
+        return None
 
 @app.route('/')
 def index():
-    """Renders the index page with live scores."""
-    scores = get_live_scores()
-    return flask.render_template('index.html', scores=scores)
+    """Renders the index page with weather data."""
+    cities = flask.request.args.getlist('cities')
+    if not cities:
+        cities = ['New York', 'London', 'Tokyo']
+    
+    weather_data = []
+    for city in cities:
+        data = get_weather(city)
+        if data:
+            weather_data.append(data)
+    
+    return flask.render_template('index.html', weather_data=weather_data, cities=cities)
 
 if __name__ == '__main__':
     app.run(debug=True, port=7000)
@@ -170,7 +184,7 @@ And the HTML template:
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Live Cricket Scores</title>
+    <title>Weather Dashboard</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -178,12 +192,32 @@ And the HTML template:
   </head>
   <body>
     <div class="container">
-      <h1 class="mt-5">Live Cricket Scores</h1>
-      <ul class="list-group mt-3">
-        {% for score in scores %}
-        <li class="list-group-item">{{ score.title }}</li>
+      <h1 class="mt-5">Weather Dashboard</h1>
+      
+      <form method="get" class="mb-4">
+        <div class="form-group">
+          <input type="text" name="cities" placeholder="Add city (e.g., Paris, Sydney)" class="form-control">
+          <button type="submit" class="btn btn-primary mt-2">Add City</button>
+        </div>
+      </form>
+      
+      <div class="row mt-3">
+        {% for weather in weather_data %}
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ weather.name }}, {{ weather.sys.country }}</h5>
+              <p class="card-text">
+                <strong>Temperature:</strong> {{ weather.main.temp }}°C<br>
+                <strong>Humidity:</strong> {{ weather.main.humidity }}%<br>
+                <strong>Condition:</strong> {{ weather.weather[0].main }}<br>
+                <strong>Description:</strong> {{ weather.weather[0].description }}
+              </p>
+            </div>
+          </div>
+        </div>
         {% endfor %}
-      </ul>
+      </div>
     </div>
   </body>
 </html>
