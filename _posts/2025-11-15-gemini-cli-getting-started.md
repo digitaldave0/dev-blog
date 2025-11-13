@@ -1,6 +1,12 @@
 ---
-title: "The Ultimate Guide to the Gemini CLI: Getting Started"
-date: 2025-11-15
+layout: post
+title: "Gemini CLI: Getting Started"
+description: "Learn the basics of getting started with the Gemini CLI, including installation, authentication, and your first commands."
+tags: ["gemini", "cli", "ai", "google", "tutorial", "getting-started"]
+excerpt: >
+  Discover how to install and set up the Gemini CLI, authenticate with Google, and run your first AI-powered commands in the terminal.
+author: "owner"
+date: 2025-11-15 10:00:00 +0000
 ---
 
 The Gemini CLI is a powerful, open-source AI agent that brings the capabilities of Google's Gemini models directly into your terminal. It's designed to be your personal AI assistant, helping you with a wide range of tasks, from writing code and documentation to automating your workflows.
@@ -37,9 +43,9 @@ After installing the Gemini CLI, you'll need to authenticate it with your Google
 
 You have a few options for authentication:
 
-*   **Personal Google Account:** This is the easiest way to get started and provides a generous free tier.
-*   **API Key:** You can use a Gemini API key for authentication.
-*   **Vertex AI:** For enterprise use cases, you can configure the Gemini CLI to use Vertex AI with a Google Cloud Project.
+- **Personal Google Account:** This is the easiest way to get started and provides a generous free tier.
+- **API Key:** You can use a Gemini API key for authentication.
+- **Vertex AI:** For enterprise use cases, you can configure the Gemini CLI to use Vertex AI with a Google Cloud Project.
 
 ## Your First Commands
 

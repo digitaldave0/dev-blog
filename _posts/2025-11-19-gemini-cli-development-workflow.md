@@ -1,15 +1,30 @@
 ---
-title: "The Ultimate Guide to the Gemini CLI: Integrating with Your Development Workflow"
-date: 2025-11-19
+layout: post
+title: "Gemini CLI: Integrating with Your Development Workflow"
+description: "Integrate Gemini CLI into your development workflow for enhanced productivity, including Git automation, shell scripts, and tool integrations."
+tags:
+  [
+    "gemini",
+    "cli",
+    "development",
+    "workflow",
+    "git",
+    "automation",
+    "productivity",
+  ]
+excerpt: >
+  Learn how to seamlessly integrate Gemini CLI into your development process, from generating commit messages to automating tasks with shell scripts and other tools.
+author: "owner"
+date: 2025-11-19 10:00:00 +0000
 ---
 
 Welcome to the fifth and final post in our "Ultimate Guide to the Gemini CLI" series. In the [previous post](/2025-11-18-gemini-cli-mcp-jekyll), we explored the Model Context Protocol (MCP) and how it enables powerful integrations with the Gemini CLI. In this post, we'll bring everything together and show you how to integrate the Gemini CLI into your daily development workflow to boost your productivity and streamline common tasks.
 
 We'll cover:
 
-*   Using the Gemini CLI with Git for commit messages and code reviews.
-*   Automating tasks with shell scripts and the Gemini CLI.
-*   Integrating with other development tools and environments.
+- Using the Gemini CLI with Git for commit messages and code reviews.
+- Automating tasks with shell scripts and the Gemini CLI.
+- Integrating with other development tools and environments.
 
 ## Gemini CLI and Git: Your AI-Powered Code Assistant
 
@@ -99,17 +114,17 @@ The Gemini CLI's flexibility allows it to be integrated with various other devel
 
 While not directly part of the CLI, the concepts of custom tools and prompts can be extended to IDE extensions. Imagine an IDE plugin that uses the Gemini CLI in the background to:
 
-*   Generate docstrings for your functions.
-*   Refactor selected code snippets.
-*   Explain complex code sections.
+- Generate docstrings for your functions.
+- Refactor selected code snippets.
+- Explain complex code sections.
 
 ### CI/CD Pipelines
 
 The Gemini CLI can be incorporated into your Continuous Integration/Continuous Deployment (CI/CD) pipelines for automated tasks such as:
 
-*   Generating release notes based on commit history.
-*   Summarizing test reports.
-*   Creating documentation updates.
+- Generating release notes based on commit history.
+- Summarizing test reports.
+- Creating documentation updates.
 
 ## Conclusion
 

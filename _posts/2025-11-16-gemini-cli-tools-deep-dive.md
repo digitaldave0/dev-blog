@@ -1,6 +1,12 @@
 ---
-title: "The Ultimate Guide to the Gemini CLI: A Deep Dive into the Tools Command"
-date: 2025-11-16
+layout: post
+title: "Gemini CLI: A Deep Dive into the Tools Command"
+description: "Explore the tools command in Gemini CLI, learn to list, use, and create custom tools for extending functionality."
+tags: ["gemini", "cli", "tools", "ai", "automation", "extensions"]
+excerpt: >
+  Dive deep into the tools command of Gemini CLI. Learn how to list available tools, install extensions, create custom tools, and build powerful workflows.
+author: "owner"
+date: 2025-11-16 10:00:00 +0000
 ---
 
 Welcome to the second post in our "Ultimate Guide to the Gemini CLI" series. In the [previous post](/2025-11-15-gemini-cli-getting-started), we covered the basics of getting started with the Gemini CLI. In this post, we're going to take a deep dive into the `tools` command, which is where the real power of the Gemini CLI lies.
@@ -172,10 +178,10 @@ For example, you could have a context for a specific project that contains all t
 
 ### Best Practices for Writing and Sharing Tools
 
-*   **Keep your tools small and focused:** Each tool should do one thing well.
-*   **Write good documentation:** Make sure to explain what your tool does and how to use it.
-*   **Use clear and consistent naming:** This will make it easier for others to understand and use your tools.
-*   **Share your tools with the community:** If you create a useful tool, consider packaging it as an extension and sharing it with other Gemini CLI users.
+- **Keep your tools small and focused:** Each tool should do one thing well.
+- **Write good documentation:** Make sure to explain what your tool does and how to use it.
+- **Use clear and consistent naming:** This will make it easier for others to understand and use your tools.
+- **Share your tools with the community:** If you create a useful tool, consider packaging it as an extension and sharing it with other Gemini CLI users.
 
 ## Next Steps
 

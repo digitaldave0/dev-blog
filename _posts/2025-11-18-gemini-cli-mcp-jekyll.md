@@ -1,6 +1,12 @@
 ---
-title: "The Ultimate Guide to the Gemini CLI: The Model Context Protocol (MCP)"
-date: 2025-11-18
+layout: post
+title: "Gemini CLI: The Model Context Protocol (MCP)"
+description: "Discover the Model Context Protocol (MCP) and learn how to automate Jekyll blog management using Gemini CLI with MCP servers."
+tags: ["gemini", "cli", "mcp", "jekyll", "automation", "blogging"]
+excerpt: >
+  Explore the Model Context Protocol and automate your Jekyll blog workflow by integrating Gemini CLI with MCP servers for seamless content creation and publishing.
+author: "owner"
+date: 2025-11-18 10:00:00 +0000
 ---
 
 Welcome to the fourth post in our "Ultimate Guide to the Gemini CLI" series. In the [previous post](/2025-11-17-advanced-gemini-cli-customization), we explored advanced customization techniques for the Gemini CLI. In this post, we'll dive into the Model Context Protocol (MCP), an emerging standard that enables AI models to interact with external tools and data sources in a structured way.
@@ -23,9 +29,9 @@ Our goal is to create a seamless workflow for creating and publishing blog posts
 
 ### The Components
 
-*   **Gemini CLI:** Our primary interface for interacting with the Gemini model and our MCP server.
-*   **Jekyll:** A popular static site generator that we'll use to build our blog.
-*   **Jekyll MCP Server:** A dedicated MCP server for Jekyll that exposes tools for interacting with a Jekyll site.
+- **Gemini CLI:** Our primary interface for interacting with the Gemini model and our MCP server.
+- **Jekyll:** A popular static site generator that we'll use to build our blog.
+- **Jekyll MCP Server:** A dedicated MCP server for Jekyll that exposes tools for interacting with a Jekyll site.
 
 ### Setting up the Environment
 
