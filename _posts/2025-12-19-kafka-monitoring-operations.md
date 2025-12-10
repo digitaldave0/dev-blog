@@ -599,7 +599,7 @@ In this comprehensive guide to Kafka monitoring and operations, we've covered:
 
 You should now be able to operate and maintain production Kafka clusters effectively.
 
-In [Part 11]({% post_url 2025-12-20-kafka-real-world-use-cases %}), we'll explore real-world use cases and best practices - applying Kafka in various scenarios with proven patterns.
+In [Part 11]({% post_url 2025-12-20-kafka-real-world-use-cases %}), we'll explore real-world use cases and best practices - applying Kafka in various scenarios with proven patterns. For production deployments on Kubernetes, check out our comprehensive [Kafka on Kubernetes deployment guide]({% post_url 2025-12-22-kafka-kubernetes-deployment-guide %}).
 
 ## Additional Resources
 
