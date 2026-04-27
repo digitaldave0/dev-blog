@@ -33,9 +33,29 @@ By defining your environment in a `.devcontainer` folder, you treat your tools e
 - **Onboarding:** Zero-to-code in minutes.
 - **Consistency:** The same environment in development, CI, and potentially production.
 
+## 2. The Architecture: How It Works Under the Hood
+
+To truly master Dev Containers, you need to understand the client-server architecture that VS Code employs. When you "Reopen in Container," VS Code doesn't just mount your files; it actually splits itself in two:
+
+- **The UI Client:** Runs on your host machine (macOS, Windows, or Linux). This handles the window, themes, and keyboard shortcuts.
+- **The VS Code Server:** Runs **inside** the Docker container. This handles the heavy lifting—IntelliSense, debugging, terminal execution, and file system operations.
+
+By running the server inside the container, VS Code ensures that all your extensions (like the Python debugger or Terraform language server) are executing in the exact same environment as your code. This is why you don't need to install Python or Node.js on your local laptop; as long as they are in the Docker image, VS Code will find them.
+
 ---
 
-## 2. Prerequisites
+## 3. The "Why": Consolidating Your Toolchain
+
+One of the most powerful realizations when moving to Dev Containers is that you no longer need local version managers.
+- **No more `nvm`:** The Node.js version is fixed in your Dockerfile.
+- **No more `pyenv` or `conda`:** Python is isolated within the container's `/usr/local/bin`.
+- **No more `tfenv`:** The specific Terraform binary is baked into the image.
+
+This consolidation reduces the cognitive load of switching between projects with different requirements and ensures that every developer on the team is using the exact same version of every tool.
+
+---
+
+## 4. Prerequisites
 
 Before we start, ensure you have the following installed on your host machine:
 - **Docker Desktop** (or Colima for macOS / WSL2 for Windows).
@@ -175,5 +195,3 @@ Astro and other modern frameworks often use "Features" in `devcontainer.json` to
 A well-crafted `.devcontainer` is more than just a convenience; it's a productivity multiplier. By standardizing your team's environment, you eliminate friction, improve security, and ensure that your focus remains on building products, not fixing bash profiles.
 
 Ready to try it? Copy the files above into a new repository, open it in VS Code, and select **"Dev Containers: Reopen in Container"** from the Command Palette.
-
-Happy (and consistent) coding!
