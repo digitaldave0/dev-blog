@@ -99,6 +99,19 @@ resource "aws_subnet" "main" {
 
 ## Basic Workflow
 
+The core of Terraform operations follows a predictable lifecycle. Visualizing this workflow helps in understanding the critical checkpoints between writing code and deploying infrastructure.
+
+```mermaid
+graph TD
+    A[Write .tf Code] --> B[terraform init]
+    B --> C[terraform plan]
+    C -->|Review Changes| D[terraform apply]
+    D --> E[Real Infrastructure Created]
+    E -->|Maintenance| A
+    E --> F[terraform destroy]
+    F --> G[Infrastructure Removed]
+```
+
 1. Initialize Terraform:
    ```bash
    terraform init
@@ -120,6 +133,15 @@ resource "aws_subnet" "main" {
    ```
 
 ## State
+
+Terraform maintains a "source of truth" known as the State. This is the bridge between your declarative code and the actual resources running in the cloud.
+
+```mermaid
+graph LR
+    Config[main.tf] -- "terraform apply" --> State[terraform.tfstate]
+    State -- "Maps to" --> Cloud[Cloud Resources]
+    Cloud -- "Drift Detection" --> State
+```
 
 Terraform keeps track of your infrastructure in a state file (`terraform.tfstate`). This file maps your configuration to real-world resources. Never edit this file manually!
 
