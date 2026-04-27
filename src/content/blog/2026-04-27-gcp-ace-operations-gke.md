@@ -21,7 +21,7 @@ heroImage: 'https://picsum.photos/seed/gcp-ace-operations/800/400'
 
 Welcome to Part 4 of our **Google Cloud ACE** series. This domain, **Ensuring Successful Operation of a Cloud Solution**, accounts for a significant portion of the exam. It’s all about the day-to-day tasks: monitoring, scaling, and maintaining your deployments.
 
-## 🔄 Managed Instance Groups (MIGs)
+## Managed Instance Groups (MIGs)
 
 MIGs are the backbone of scalable GCE workloads. They allow you to manage a group of identical VMs as a single entity.
 
@@ -44,7 +44,7 @@ gcloud compute instance-groups managed create ace-mig \
     --zone=us-central1-a
 ```
 
-## ☸️ Google Kubernetes Engine (GKE) Operations
+## Google Kubernetes Engine (GKE) Operations
 
 GKE is a complex topic for ACE, but you mostly need to know how to *operate* the cluster, not necessarily how to build complex YAML files.
 
@@ -72,7 +72,7 @@ kubectl scale deployment [DEPLOYMENT_NAME] --replicas=5
 kubectl logs [POD_NAME]
 ```
 
-## 📊 Google Cloud Operations Suite (Stackdriver)
+## Google Cloud Operations Suite (Stackdriver)
 
 Formerly known as Stackdriver, this is the observability layer of GCP.
 
@@ -94,14 +94,14 @@ graph LR
     Sink --> PS[Pub/Sub: Alerting]
 ```
 
-## 🛠️ Operational Tasks Checklist
+## Operational Tasks Checklist
 
 - [ ] **Snapshots**: Know how to take a snapshot of a persistent disk for backup.
 - [ ] **MIG Resizing**: Practice scaling a MIG manually and via autoscaler.
 - [ ] **GKE Upgrades**: Understand that GKE can automatically upgrade nodes and masters.
 - [ ] **Custom Metrics**: Know that you can install the Ops Agent to collect OS-level metrics like RAM usage.
 
-## 🏁 Summary for Part 4
+## Summary for Part 4
 
 - [ ] MIGs provide **Autohealing** and **Autoscaling**.
 - [ ] Use `kubectl` for container-level operations and `gcloud` for cluster-level operations.
@@ -111,4 +111,4 @@ graph LR
 In **Part 5**, our final post, we'll cover **Access and Security**, focusing on IAM and Service Accounts.
 
 ---
-*This is Part 4 of our Google Cloud ACE Series. [Part 5: Access, Security, and IAM →](/blog/2026-04-27-gcp-ace-security-iam)*
+*This is Part 4 of our Google Cloud ACE Series. [Part 5: Access, Security, and IAM →](/blog/google-cloud-ace-series-part-5-access-security-and-iam)*

@@ -23,7 +23,7 @@ Planning is the second domain of the **Google Cloud Associate Cloud Engineer (AC
 
 In this post, we'll build a mental framework for choosing compute and storage, and explore how to estimate costs using the Google Cloud Pricing Calculator.
 
-## 💻 Choosing the Right Compute Service
+## Choosing the Right Compute Service
 
 Google Cloud offers a spectrum of compute options, from full control (IaaS) to fully managed (PaaS/Serverless).
 
@@ -61,7 +61,7 @@ The modern favorite. It's built on Knative and scales from **zero to N**.
 - **Standard**: Scales quickly, restricted runtimes (Java, Python, Go, Node), scales to zero.
 - **Flexible**: Runs Docker containers, handles consistent traffic better, does *not* scale to zero.
 
-## 🗄️ Selecting the Correct Storage
+## Selecting the Correct Storage
 
 Data storage choice is based on **Data Structure** and **Access Patterns**.
 
@@ -81,13 +81,13 @@ For the ACE exam, remember the "Time to Access" and "Minimum Duration":
 - **Coldline**: Access < once a quarter (90-day min).
 - **Archive**: Long-term storage (365-day min).
 
-## 💰 Estimating Costs
+## Estimating Costs
 
 You must know how to use the **Google Cloud Pricing Calculator**.
 - **ACE Logic**: If a scenario asks for the "most cost-effective" solution, look for **Preemptible/Spot VMs** or **Committed Use Discounts (CUDs)**.
 - **Preemptible VMs**: Up to 80% cheaper, but Google can take them back with a 30-second warning. Great for fault-tolerant batch jobs.
 
-## 🛠️ Planning Tools Checklist
+## Planning Tools Checklist
 
 1. **Pricing Calculator**: Use it for baseline estimates.
 2. **Cloud SDK (gcloud)**: Use it to check available machine types in a region.
@@ -96,7 +96,7 @@ You must know how to use the **Google Cloud Pricing Calculator**.
    ```
 3. **Data Lifecycle Manager**: Use it to automate the movement of Cloud Storage objects from Standard to Coldline/Archive.
 
-## 🏁 Summary for Part 2
+## Summary for Part 2
 
 - [ ] Memorize the Compute Decision Tree.
 - [ ] Understand the differences between Cloud SQL and Cloud Spanner.
@@ -106,4 +106,4 @@ You must know how to use the **Google Cloud Pricing Calculator**.
 In **Part 3**, we'll move from planning to **Deployment and Networking**, where we'll build VPCs and set up Load Balancers.
 
 ---
-*This is Part 2 of our Google Cloud ACE Series. [Part 3: Deployment and Networking →](/blog/2026-04-27-gcp-ace-deployment-networking)*
+*This is Part 2 of our Google Cloud ACE Series. [Part 3: Deployment and Networking →](/blog/google-cloud-ace-series-part-3-deployment-and-networking)*

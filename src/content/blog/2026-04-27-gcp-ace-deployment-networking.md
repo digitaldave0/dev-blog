@@ -21,7 +21,7 @@ heroImage: 'https://picsum.photos/seed/gcp-ace-networking/800/400'
 
 Welcome to Part 3 of our **Google Cloud ACE** series. Today we tackle the "plumbing" of the cloud: **Networking and Deployment**. For the exam, networking is often the most challenging section because it involves complex concepts like IP CIDR ranges, firewall rules, and global load balancing.
 
-## 🌐 Virtual Private Cloud (VPC) Fundamentals
+## Virtual Private Cloud (VPC) Fundamentals
 
 A VPC is a global resource in Google Cloud. Unlike other providers where VPCs are regional, Google's network spans the globe.
 
@@ -43,7 +43,7 @@ gcloud compute networks subnets create public-subnet \
     --region=us-central1
 ```
 
-## 🔥 Securing the Network with Firewalls
+## Securing the Network with Firewalls
 
 Google Cloud uses a **distributed firewall**. Firewall rules are applied to the VPC but enforced at the instance level.
 
@@ -61,7 +61,7 @@ gcloud compute firewall-rules create allow-http \
     --description="Allow port 80 for web servers"
 ```
 
-## ⚖️ Cloud Load Balancing (CLB)
+## Cloud Load Balancing (CLB)
 
 Google Cloud offers several types of load balancers. Choosing the right one is a classic ACE exam question.
 
@@ -82,7 +82,7 @@ graph TD
 ### Health Checks
 Load balancers use health checks to ensure they only send traffic to "healthy" instances. If a health check fails, the instance is removed from the rotation.
 
-## 🚀 Deployment Tooling: Infrastructure-as-Code
+## Deployment Tooling: Infrastructure-as-Code
 
 While the exam focuses on `gcloud` and the Console, you should know the primary IaC tool: **Deployment Manager**.
 
@@ -94,7 +94,7 @@ While the exam focuses on `gcloud` and the Console, you should know the primary 
 gcloud deployment-manager deployments create my-infra --config config.yaml
 ```
 
-## 🏁 Networking Checklist for ACE
+## Networking Checklist for ACE
 
 - [ ] Know the difference between Auto and Custom VPC modes.
 - [ ] Understand that Subnets are regional but VPCs are global.
@@ -105,4 +105,4 @@ gcloud deployment-manager deployments create my-infra --config config.yaml
 In **Part 4**, we'll dive into **Operations**, focusing on Managed Instance Groups (MIGs) and Kubernetes Engine (GKE) operations.
 
 ---
-*This is Part 3 of our Google Cloud ACE Series. [Part 4: Operations and GKE Management →](/blog/2026-04-27-gcp-ace-operations-gke)*
+*This is Part 3 of our Google Cloud ACE Series. [Part 4: Operations and GKE Management →](/blog/google-cloud-ace-series-part-4-operations-and-gke-management)*

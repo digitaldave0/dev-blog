@@ -21,7 +21,7 @@ heroImage: 'https://picsum.photos/seed/gcp-ace-security/800/400'
 
 Welcome to the final installment of our **Google Cloud Associate Cloud Engineer (ACE)** series. We saved the most important for last: **Configuring access and security**. In the cloud, identity is the new perimeter. Understanding how to manage who can do what is critical for passing the exam and for professional excellence.
 
-## 🆔 Identity and Access Management (IAM)
+## Identity and Access Management (IAM)
 
 Google Cloud IAM lets you grant granular access to specific Google Cloud resources.
 
@@ -46,7 +46,7 @@ gcloud projects add-iam-policy-binding ace-project-123 \
     --role="roles/compute.instanceAdmin.v1"
 ```
 
-## 🤖 Service Accounts: The Power Players
+## Service Accounts: The Power Players
 
 Service accounts are special accounts used by applications rather than people. They are identified by an email address like `account-name@project-id.iam.gserviceaccount.com`.
 
@@ -66,7 +66,7 @@ gcloud projects add-iam-policy-binding ace-project-123 \
     --role="roles/storage.objectViewer"
 ```
 
-## 🛡️ Other Security Services
+## Other Security Services
 
 While IAM is the focus of ACE, you should be familiar with these supporting services:
 
@@ -75,7 +75,7 @@ While IAM is the focus of ACE, you should be familiar with these supporting serv
 3. **Cloud KMS**: Manage encryption keys (Customer-Managed Encryption Keys - CMEK).
 4. **Secret Manager**: Securely store API keys, passwords, and certificates.
 
-## 🔒 Security Best Practices for the ACE Exam
+## Security Best Practices for the ACE Exam
 
 ```mermaid
 graph TD
@@ -89,20 +89,20 @@ graph TD
     D --> D2[Implement IAP for admin access]
 ```
 
-## 🎓 Final ACE Exam Tips
+## Final ACE Exam Tips
 
 As you wrap up your study, keep these "Exam Logic" pointers in mind:
 - **Least Privilege**: Always choose the role that provides the *minimum* required permissions.
 - **Inheritance**: Remember that policies set at the Folder level *cannot* be restricted at the Project level (they can only be expanded).
 - **Hierarchy**: Resource hierarchy is the foundation. If you see a question about organization-wide control, look for **Organization Policy Service**.
 
-## 🏁 Series Wrap-up
+## Series Wrap-up
 
 Congratulations! You’ve covered the core domains of the Google Cloud Associate Cloud Engineer exam:
-- [Part 1: Resource Hierarchy & Setup](/blog/2026-04-27-gcp-ace-setup-hierarchy)
-- [Part 2: Planning & Compute Fit](/blog/2026-04-27-gcp-ace-planning-compute)
-- [Part 3: Deployment & Networking](/blog/2026-04-27-gcp-ace-deployment-networking)
-- [Part 4: Operations & GKE](/blog/2026-04-27-gcp-ace-operations-gke)
+- [Part 1: Resource Hierarchy & Setup](/blog/google-cloud-ace-series-part-1-resource-hierarchy-and-environment-setup)
+- [Part 2: Planning & Compute Strategies](/blog/google-cloud-ace-series-part-2-planning-and-compute-strategies)
+- [Part 3: Deployment & Networking](/blog/google-cloud-ace-series-part-3-deployment-and-networking)
+- [Part 4: Operations & GKE Management](/blog/google-cloud-ace-series-part-4-operations-and-gke-management)
 - **Part 5: Access & Security**
 
 The next step is **Hands-on Practice**. Open the Google Cloud Console, use the `gcloud` SDK, and build something!
