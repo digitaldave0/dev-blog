@@ -28,32 +28,44 @@ const {
       const theme = localStorage.getItem('theme') || 'lofi';
       document.documentElement.setAttribute('data-theme', theme);
     </script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script is:inline>
       const initializeMermaid = () => {
+        if (typeof mermaid === 'undefined') return;
+        
+        const isDark = localStorage.getItem('theme') === 'black';
         mermaid.initialize({
           startOnLoad: false,
-          theme: localStorage.getItem('theme') === 'black' ? 'dark' : 'default',
+          theme: isDark ? 'dark' : 'default',
+          securityLevel: 'loose',
         });
         
-        // Find all code blocks with the class 'language-mermaid'
-        const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
-        mermaidBlocks.forEach((block, index) => {
-          const pre = block.parentElement;
-          const content = block.textContent;
-          const id = `mermaid-${index}`;
+        // Find all code blocks that should be mermaid diagrams
+        // Standard markdown: pre code.language-mermaid
+        // Astro/Shiki might have varied structures
+        const blocks = document.querySelectorAll('pre code.language-mermaid, pre.mermaid, div.mermaid');
+        
+        console.log(`[Mermaid] Found ${blocks.length} potential diagrams`);
+
+        blocks.forEach((block, index) => {
+          const container = block.tagName === 'CODE' ? block.parentElement : block;
+          const rawContent = block.innerText || block.textContent;
           
-          // Create a new div for mermaid
+          const id = `mermaid-svg-${index}`;
           const div = document.createElement('div');
-          div.className = 'mermaid flex justify-center my-8';
-          div.id = id;
-          div.innerHTML = content;
+          div.className = 'mermaid-container flex justify-center my-8 p-4 bg-white/5 rounded-lg';
+          div.id = `container-${id}`;
           
-          // Replace the pre with the div
-          pre.replaceWith(div);
+          // Set the raw content for mermaid to process
+          div.innerHTML = rawContent.trim();
+          
+          // Replace the original block
+          container.replaceWith(div);
         });
         
-        mermaid.run();
+        mermaid.run({
+          querySelector: '.mermaid-container',
+        });
       };
 
       document.addEventListener('DOMContentLoaded', initializeMermaid);
