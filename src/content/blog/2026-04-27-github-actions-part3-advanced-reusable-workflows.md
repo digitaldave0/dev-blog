@@ -16,7 +16,7 @@ heroImage: 'https://picsum.photos/seed/github-actions-advanced/800/400'
 ---
 
 
-We've covered [Basics](./2026-04-27-github-actions-part1-basics-workflow-templates) and [Organization Templates](./2026-04-27-github-actions-part2-intermediate-organization-templates). Now, it’s time to talk about the "holy grail" of GitHub Actions: **DRY (Don't Repeat Yourself)** pipelines.
+We've covered [Basics](/blog/github-actions-masterclass-part-1-mastering-workflow-templates) and [Organization Templates](/blog/github-actions-masterclass-part-2-custom-organization-templates). Now, it’s time to talk about the "holy grail" of GitHub Actions: **DRY (Don't Repeat Yourself)** pipelines.
 
 In this final part, we’ll dive into Reusable Workflows and advanced security practices that separate the hobbyists from the professional DevOps engineers.
 
@@ -132,8 +132,8 @@ flowchart TD
 Congratulations! You’ve gone from selecting a basic template to architecting a global, secure, and reusable CI/CD ecosystem. GitHub Actions is a deep pool, and the best way to keep learning is to keep building.
 
 ### Summary of the Series:
-- **Part 1:** Getting started with GitHub's suggested templates.
-- **Part 2:** Standardizing your team with Organization Templates.
+- **Part 1:** [Getting started with GitHub's suggested templates](/blog/github-actions-masterclass-part-1-mastering-workflow-templates).
+- **Part 2:** [Standardizing your team with Organization Templates](/blog/github-actions-masterclass-part-2-custom-organization-templates).
 - **Part 3:** Scaling with Reusable Workflows and OIDC.
 
 **What will you automate next?**

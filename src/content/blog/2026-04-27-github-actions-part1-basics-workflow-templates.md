@@ -110,4 +110,4 @@ Install the [Official GitHub Actions Extension](https://marketplace.visualstudio
 
 Workflow templates are the fastest way to move from "code only" to "CI/CD enabled." In the next part of this series, we’ll go beyond the defaults and learn how to create **Organization-wide Templates** to standardize DevOps across your entire team.
 
-**Ready for more?** Move on to [Part 2: Custom Organization Templates](./2026-04-27-github-actions-part2-intermediate-organization-templates).
+**Ready for more?** Move on to [Part 2: Custom Organization Templates](/blog/github-actions-masterclass-part-2-custom-organization-templates).

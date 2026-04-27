@@ -16,7 +16,7 @@ heroImage: 'https://picsum.photos/seed/github-actions-intermediate/800/400'
 ---
 
 
-In [Part 1](./2026-04-27-github-actions-part1-basics-workflow-templates), we learned how to use GitHub's built-in templates. But what if your company has specific security requirements, or you want every project to use a specific internal deployment tool?
+In [Part 1](/blog/github-actions-masterclass-part-1-mastering-workflow-templates), we learned how to use GitHub's built-in templates. But what if your company has specific security requirements, or you want every project to use a specific internal deployment tool?
 
 This is where **Custom Organization Templates** come in. They allow you to define "golden paths" for your developers, ensuring that every new project starts with the right foundation.
 
@@ -100,4 +100,4 @@ Creating custom templates is a core part of **Platform Engineering**. Instead of
 
 By mastering organization templates, you've moved from "using tools" to "building systems." But even templates can become repetitive if you have 100 repositories. In the final part of our series, we’ll explore **Reusable Workflows** and advanced security hardening to make your pipelines truly professional.
 
-**Ready for the final step?** Move on to [Part 3: Reusable Workflows and Advanced Logic](./2026-04-27-github-actions-part3-advanced-reusable-workflows).
+**Ready for the final step?** Move on to [Part 3: Reusable Workflows and Advanced Logic](/blog/github-actions-masterclass-part-3-reusable-workflows-and-advanced-logic).
