@@ -12,52 +12,52 @@ heroImage: >-
   https://picsum.photos/seed/2026-04-27-openclaw-installation-walkthrough/800/400
 ---
 
-# Installing OpenClaw: From Binary to Container
+# Installing OpenClaw: From Binary to Daemon
 
-Now that your environment is prepared, it's time to pull the trigger on the installation. OpenClaw supports multiple deployment strategies depending on your needs.
+OpenClaw simplifies the deployment of autonomous agents by providing a streamlined installation process for all major operating systems. The official installer handles environment detection and dependency checks automatically.
 
-## Option 1: Docker (Recommended)
+## The One-Liner Installer
 
-The fastest way to get started is using the official Docker image. This ensures all dependencies are perfectly isolated.
+The most efficient way to install OpenClaw is via the official remote script. This will download the binary and set up the `openclaw` command in your terminal.
 
+### macOS / Linux / WSL2
 ```bash
-docker pull openclaw/core:latest
-docker run -d \
-  --name openclaw \
-  -p 8080:8080 \
-  --env-file .env \
-  -v $(pwd)/workspace:/app/workspace \
-  openclaw/core:latest
+curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
-## Option 2: Source Build (For Developers)
+### Windows (PowerShell)
+```powershell
+iwr -useb https://openclaw.ai/install.ps1 | iex
+```
 
-If you plan on contributing to OpenClaw or need to modify the core agent logic, a source build is the way to go.
+## Post-Installation Verification
 
-1. **Clone the repository:**
+After the script completes, you should verify the installation by checking the version and the status of the background gateway.
+
+```bash
+# Check version
+openclaw --version
+
+# Check the gateway status
+openclaw gateway status
+```
+
+## Advanced Installation: Source Build
+
+If you are a developer looking to extend OpenClaw or build custom tools, you can install it from source. Note that you will still need **Node.js 22** and `npm` installed.
+
+1. **Clone the Repo:**
    ```bash
    git clone https://github.com/openclaw/openclaw.git
    cd openclaw
    ```
 
-2. **Install dependencies:**
+2. **Install & Link:**
    ```bash
-   npm install && pip install -r requirements.txt
+   npm install
+   npm link
    ```
 
-3. **Initialize the core:**
-   ```bash
-   python setup.py develop
-   ```
-
-## Verifying the Installation
-
-Once the installation is complete, verify that the OpenClaw CLI is responsive:
-
-```bash
-openclaw --version
-```
-
-You should see the current version string. If you encounter any "Command Not Found" errors, ensure your `PATH` includes the local bin directory.
+Using `npm link` allows you to run the local version of the `openclaw` CLI anywhere on your system while you develop new features.
 
 In our next article, we will tackle the critical task of securing your OpenClaw deployment.
