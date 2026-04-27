@@ -12,6 +12,7 @@ tags:
   - reusable-workflows
   - oidc
   - series
+series: "GitHub Actions Masterclass"
 heroImage: 'https://picsum.photos/seed/github-actions-advanced/800/400'
 ---
 

@@ -12,6 +12,7 @@ tags:
   - organization
   - devops
   - series
+series: "GitHub Actions Masterclass"
 heroImage: 'https://picsum.photos/seed/github-actions-intermediate/800/400'
 ---
 

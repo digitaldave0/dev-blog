@@ -12,6 +12,7 @@ tags:
   - automation
   - devops
   - series
+series: "GitHub Actions Masterclass"
 heroImage: 'https://picsum.photos/seed/github-actions-basics/800/400'
 ---
 

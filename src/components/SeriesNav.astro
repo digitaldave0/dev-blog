@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug";
+
+const { series, currentTitle } = Astro.props;
+
+const allPosts = await getCollection("blog");
+const seriesPosts = allPosts
+  .filter((p) => p.data.series === series)
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+---
+
+{
+  seriesPosts.length > 1 && (
+    <div class="series-nav-container my-10 p-6 bg-primary/5 rounded-2xl border-2 border-primary/20 relative overflow-hidden">
+      <div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      </div>
+      
+      <div class="flex flex-col gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-primary opacity-80">Part of a series</span>
+          <h3 class="text-2xl font-black">{series}</h3>
+        </div>
+        
+        <nav class="flex flex-col gap-2">
+          {seriesPosts.map((post, index) => {
+            (post.data.title === currentTitle);
+            const isCurrent = post.data.title === currentTitle;
+            const url = "/blog/" + createSlug(post.data.title, post.slug);
+            
+            return (
+              <a 
+                href={isCurrent ? null : url}
+                class={`flex items-center gap-4 p-3 rounded-xl transition-all duration-300 ${
+                  isCurrent 
+                    ? "bg-primary text-primary-content shadow-lg shadow-primary/20" 
+                    : "hover:bg-primary/10 border border-transparent hover:border-primary/20"
+                }`}
+              >
+                <span class={`flex-none w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
+                  isCurrent ? "bg-primary-content text-primary" : "bg-primary/10 text-primary"
+                }`}>
+                  {index + 1}
+                </span>
+                <span class="font-medium">{post.data.title}</span>
+                {isCurrent && (
+                  <span class="ml-auto text-xs font-bold uppercase tracking-tighter opacity-80">Reading now</span>
+                )}
+              </a>
+            );
+          })}
+        </nav>
+      </div>
+    </div>
+  )
+}
