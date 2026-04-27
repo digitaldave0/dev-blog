@@ -19,10 +19,15 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-theme="lofi">
+<html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
+    <script is:inline>
+      // Initialize theme from local storage or default to 'lofi'
+      const theme = localStorage.getItem('theme') || 'lofi';
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
