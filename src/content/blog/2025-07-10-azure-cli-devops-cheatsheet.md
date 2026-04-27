@@ -13,7 +13,6 @@ description: >-
   infrastructure.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-07-10-azure-cli-devops-cheatsheet/800/400'
 ---
 
 

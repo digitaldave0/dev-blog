@@ -12,7 +12,6 @@ description: >-
   A comprehensive guide to GitHub Actions, covering everything from basic setup
   to pricing tiers, best practices, and security considerations for effective
   CI/CD workflows.
-heroImage: 'https://picsum.photos/seed/2025-07-07-understanding-github-actions/800/400'
 ---
 
 # Understanding GitHub Actions: A Complete Guide

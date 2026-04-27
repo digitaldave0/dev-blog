@@ -6,7 +6,6 @@ description: >-
   directly to GitHub Pages — fast, clean, and code-free.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-06-15-using-obsidian-git/800/400'
 ---
 
 Writing blog posts in Markdown is great. But what if you could **write, version, and publish** your posts to GitHub Pages — without switching apps or running Git commands?

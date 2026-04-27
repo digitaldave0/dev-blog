@@ -22,7 +22,6 @@ description: >-
   Comprehensive guide to AWS Machine Learning and AI services for the AWS
   Certified Machine Learning Specialty exam. Learn key concepts, features, and
   practical applications.
-heroImage: 'https://picsum.photos/seed/2025-11-05-aws-machine-learning-ai-guide/800/400'
 ---
 
 # AWS Machine Learning and AI Services: Complete Guide for Exam Preparation

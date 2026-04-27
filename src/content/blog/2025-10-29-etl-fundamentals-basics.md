@@ -21,7 +21,6 @@ categories:
   - ETL
   - Tutorial
 permalink: /posts/etl-fundamentals-basics/
-heroImage: 'https://picsum.photos/seed/2025-10-29-etl-fundamentals-basics/800/400'
 ---
 
 ## Introduction

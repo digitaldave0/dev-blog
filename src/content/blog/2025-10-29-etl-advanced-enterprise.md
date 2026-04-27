@@ -29,7 +29,6 @@ categories:
   - Advanced
   - Tutorial
 permalink: /posts/etl-advanced-enterprise/
-heroImage: 'https://picsum.photos/seed/2025-10-29-etl-advanced-enterprise/800/400'
 ---
 
 ## Introduction

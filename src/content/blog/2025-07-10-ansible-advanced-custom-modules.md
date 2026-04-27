@@ -12,7 +12,6 @@ description: >-
   advanced monitoring.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-07-10-ansible-advanced-custom-modules/800/400'
 ---
 
 # Advanced Ansible: Enterprise-Level Automation

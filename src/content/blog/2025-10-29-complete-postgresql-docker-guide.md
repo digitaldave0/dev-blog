@@ -28,7 +28,6 @@ categories:
   - Docker
   - Tutorial
 permalink: /posts/postgresql-docker-setup/
-heroImage: 'https://picsum.photos/seed/2025-10-29-complete-postgresql-docker-guide/800/400'
 ---
 
 ## Introduction

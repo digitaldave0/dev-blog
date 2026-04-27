@@ -13,7 +13,6 @@ description: >-
   best practices for enterprise environments.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-07-30-kubernetes-security-guide/800/400'
 ---
 
 

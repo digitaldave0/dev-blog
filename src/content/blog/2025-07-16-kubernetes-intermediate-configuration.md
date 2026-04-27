@@ -12,8 +12,6 @@ description: >-
   Includes real-world scenarios and best practices for production environments.
 tags:
   - devops
-heroImage: >-
-  https://picsum.photos/seed/2025-07-16-kubernetes-intermediate-configuration/800/400
 ---
 
 

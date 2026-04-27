@@ -12,7 +12,6 @@ description: >-
   orchestration journey with a local development environment.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-07-09-kubernetes-basics-introduction/800/400'
 ---
 
 

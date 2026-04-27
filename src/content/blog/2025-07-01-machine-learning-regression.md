@@ -12,7 +12,6 @@ tags:
   - machine-learning-series
   - predictive-modeling
 description: 'Learn about regression in machine learning with simple, real-world examples.'
-heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-regression/800/400'
 ---
 
 

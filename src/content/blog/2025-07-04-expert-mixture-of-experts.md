@@ -14,7 +14,6 @@ tags:
 description: >-
   Understanding how Mixture of Experts combines multiple AI models for better
   results.
-heroImage: 'https://picsum.photos/seed/2025-07-04-expert-mixture-of-experts/800/400'
 ---
 
 

@@ -14,7 +14,6 @@ tags:
 description: >-
   Understanding the potential risks of advanced AI systems and how to address
   them.
-heroImage: 'https://picsum.photos/seed/2025-07-05-ai-safety-risks/800/400'
 ---
 
 

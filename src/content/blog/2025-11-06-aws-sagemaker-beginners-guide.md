@@ -23,7 +23,6 @@ description: >-
   Complete beginner's guide to AWS SageMaker: what it is, how to set up, cost
   optimization tips, Terraform automation, and hands-on Jupyter notebook
   examples.
-heroImage: 'https://picsum.photos/seed/2025-11-06-aws-sagemaker-beginners-guide/800/400'
 ---
 
 # AWS SageMaker for Beginners: Complete Setup Guide with Cost Optimization

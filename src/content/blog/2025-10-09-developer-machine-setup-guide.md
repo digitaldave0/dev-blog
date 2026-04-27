@@ -23,7 +23,6 @@ tags:
   - cybersecurity
   - devsecops
 icon: �️
-heroImage: 'https://picsum.photos/seed/2025-10-09-developer-machine-setup-guide/800/400'
 ---
 
 Setting up a new development machine can be overwhelming, but having the right tools configured properly makes all the difference in productivity. This guide will walk you through setting up a complete development environment optimized for DevOps, cloud development, and infrastructure automation.

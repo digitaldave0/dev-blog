@@ -6,7 +6,6 @@ description: >-
   personal knowledge base as a DevOps professional.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-06-15-using-obsidian/800/400'
 ---
 
 I've used a lot of note-taking apps over the years, but none has felt quite as natural — or as powerful — as **Obsidian**.

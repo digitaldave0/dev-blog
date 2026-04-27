@@ -11,7 +11,6 @@ tags:
   - cloud
   - advanced
 icon: "\U0001F680"
-heroImage: 'https://picsum.photos/seed/2025-07-12-terraform-advanced-concepts/800/400'
 ---
 
 

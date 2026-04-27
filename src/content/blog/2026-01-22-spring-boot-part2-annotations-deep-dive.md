@@ -12,8 +12,6 @@ series: Spring Boot Development Series
 part: 2
 tags:
   - devops
-heroImage: >-
-  https://picsum.photos/seed/2026-01-22-spring-boot-part2-annotations-deep-dive/800/400
 ---
 
 ## Why Annotations Matter in Spring Boot

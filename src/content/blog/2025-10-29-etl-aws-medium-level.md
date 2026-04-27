@@ -24,7 +24,6 @@ categories:
   - AWS
   - Tutorial
 permalink: /posts/etl-aws-medium-level/
-heroImage: 'https://picsum.photos/seed/2025-10-29-etl-aws-medium-level/800/400'
 ---
 
 ## Introduction

@@ -11,8 +11,6 @@ description: >-
   projects and MVPs!
 tags:
   - devops
-heroImage: >-
-  https://picsum.photos/seed/2025-06-25-serverless-python-netlify-alternative-to-cloud/800/400
 ---
 
 

@@ -12,7 +12,6 @@ description: >-
   and audit logging to protect your event streaming platform.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-12-18-kafka-security-hardening/800/400'
 ---
 
 # Kafka Security - Authentication, Authorization, and Encryption

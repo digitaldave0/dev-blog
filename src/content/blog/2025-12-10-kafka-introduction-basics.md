@@ -11,7 +11,6 @@ description: >-
   why it matters, and how it powers modern data architectures.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-12-10-kafka-introduction-basics/800/400'
 ---
 
 # Introduction to Apache Kafka - What It Is and Why It Matters

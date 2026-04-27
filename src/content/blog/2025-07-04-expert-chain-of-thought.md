@@ -12,7 +12,6 @@ tags:
   - advanced-ml
   - reasoning
 description: Understanding how Chain of Thought helps AI models think like humans.
-heroImage: 'https://picsum.photos/seed/2025-07-04-expert-chain-of-thought/800/400'
 ---
 
 

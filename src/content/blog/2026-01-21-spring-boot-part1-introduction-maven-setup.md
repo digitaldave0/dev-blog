@@ -12,8 +12,6 @@ series: Spring Boot Development Series
 part: 1
 tags:
   - devops
-heroImage: >-
-  https://picsum.photos/seed/2026-01-21-spring-boot-part1-introduction-maven-setup/800/400
 ---
 
 # Spring Boot Development Series - Part 1: Introduction and Maven Setup

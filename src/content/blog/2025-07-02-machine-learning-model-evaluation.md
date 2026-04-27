@@ -13,8 +13,6 @@ tags:
 description: >-
   A comprehensive guide to evaluating machine learning models beyond simple
   accuracy metrics.
-heroImage: >-
-  https://picsum.photos/seed/2025-07-02-machine-learning-model-evaluation/800/400
 ---
 
 

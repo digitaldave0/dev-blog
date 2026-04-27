@@ -12,7 +12,6 @@ tags:
   - getting-started
 author: owner
 pubDate: 2025-11-15T10:00:00.000Z
-heroImage: 'https://picsum.photos/seed/2025-11-15-gemini-cli-getting-started/800/400'
 ---
 
 ## Why Gemini CLI?

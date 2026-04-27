@@ -11,7 +11,6 @@ description: >-
   implement data governance in Kafka ecosystems.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-12-17-schema-registry-governance/800/400'
 ---
 
 # Schema Registry and Data Governance in Kafka

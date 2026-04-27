@@ -19,7 +19,6 @@ categories:
   - Machine Learning
   - Fundamentals
 permalink: /posts/ai-foundation/
-heroImage: 'https://picsum.photos/seed/2025-11-05-ai-foundation/800/400'
 ---
 
 ## Introduction

@@ -12,7 +12,6 @@ description: >-
   and proven patterns for building scalable event-driven systems.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-12-20-kafka-real-world-use-cases/800/400'
 ---
 
 # Real-World Kafka Use Cases and Best Practices

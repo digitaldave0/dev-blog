@@ -24,7 +24,6 @@ description: >-
   Comprehensive guide to Domain 2 of AWS Certified AI Practitioner exam: AWS AI
   Services. Learn SageMaker, Rekognition, Comprehend, and other AWS AI services
   with practical examples and use cases.
-heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-2/800/400'
 ---
 
 # AWS Certified AI Practitioner Domain 2: AWS AI Services Deep Dive

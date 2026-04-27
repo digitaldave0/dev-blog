@@ -14,7 +14,6 @@ tags:
 description: >-
   Exploring the journey from current AI to Artificial General Intelligence (AGI)
   and Artificial Superintelligence (ASI).
-heroImage: 'https://picsum.photos/seed/2025-07-05-future-superintelligence/800/400'
 ---
 
 

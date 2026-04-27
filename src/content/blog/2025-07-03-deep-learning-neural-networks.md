@@ -14,7 +14,6 @@ tags:
 description: >-
   A comprehensive introduction to neural networks and deep learning
   fundamentals.
-heroImage: 'https://picsum.photos/seed/2025-07-03-deep-learning-neural-networks/800/400'
 ---
 
 # Introduction to Neural Networks

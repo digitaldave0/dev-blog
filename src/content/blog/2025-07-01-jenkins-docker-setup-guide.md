@@ -11,7 +11,6 @@ description: >-
   custom installation script, best practices, and common troubleshooting tips.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-07-01-jenkins-docker-setup-guide/800/400'
 ---
 
 

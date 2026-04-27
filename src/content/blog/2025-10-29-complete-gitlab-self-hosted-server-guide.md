@@ -29,8 +29,6 @@ categories:
   - CI/CD
   - Tutorial
 permalink: /posts/gitlab-self-hosted-server-guide/
-heroImage: >-
-  https://picsum.photos/seed/2025-10-29-complete-gitlab-self-hosted-server-guide/800/400
 ---
 
 ## Introduction

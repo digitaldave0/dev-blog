@@ -11,7 +11,6 @@ description: >-
   practical example of configuring a basic web server.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-07-10-ansible-basics-getting-started/800/400'
 ---
 
 

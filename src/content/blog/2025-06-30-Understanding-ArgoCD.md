@@ -6,7 +6,6 @@ description: >-
   issues, and leverage its CLI commands.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-06-30-Understanding-ArgoCD/800/400'
 ---
 
 

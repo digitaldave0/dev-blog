@@ -13,8 +13,6 @@ tags:
   - circleci
   - automation
 icon: ⚡
-heroImage: >-
-  https://picsum.photos/seed/2025-07-16-terraform-pipeline-implementations/800/400
 ---
 
 # Platform-Specific Terraform Pipeline Implementations

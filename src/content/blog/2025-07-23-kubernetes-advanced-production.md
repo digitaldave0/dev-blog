@@ -13,7 +13,6 @@ description: >-
   platform architects.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-07-23-kubernetes-advanced-production/800/400'
 ---
 
 

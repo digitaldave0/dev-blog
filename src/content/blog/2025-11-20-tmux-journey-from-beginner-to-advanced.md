@@ -10,8 +10,6 @@ description: >-
   multiplexing to advanced productivity techniques.
 tags:
   - devops
-heroImage: >-
-  https://picsum.photos/seed/2025-11-20-tmux-journey-from-beginner-to-advanced/800/400
 ---
 
 # Tmux: A Journey from Beginner to Advanced User

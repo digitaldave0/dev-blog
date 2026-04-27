@@ -13,7 +13,6 @@ description: >-
   streamline their Kubernetes deployment workflows.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-08-13-kubernetes-gitops-guide/800/400'
 ---
 
 

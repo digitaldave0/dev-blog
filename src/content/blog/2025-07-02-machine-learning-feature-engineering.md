@@ -14,8 +14,6 @@ tags:
 description: >-
   Learn how to create and select better features for your machine learning
   models.
-heroImage: >-
-  https://picsum.photos/seed/2025-07-02-machine-learning-feature-engineering/800/400
 ---
 
 

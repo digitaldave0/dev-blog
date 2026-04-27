@@ -11,8 +11,6 @@ tags:
   - getting-started
   - machine-learning-series
 description: Understanding the fundamentals of machine learning in simple terms.
-heroImage: >-
-  https://picsum.photos/seed/2025-07-01-machine-learning-basics-introduction/800/400
 ---
 
 

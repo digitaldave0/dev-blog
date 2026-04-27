@@ -10,7 +10,6 @@ description: >-
   configuration and continuous deployment setup.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-07-01-migrating-to-netlify/800/400'
 ---
 
 

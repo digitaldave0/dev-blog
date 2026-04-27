@@ -16,7 +16,6 @@ tags:
 icon: "\U0001F512"
 author: owner
 pubDate: 2025-11-10T12:00:00.000Z
-heroImage: 'https://picsum.photos/seed/2025-11-10-safety-dependency-scanner/800/400'
 ---
 
 # Safety: Comprehensive Python Dependency Vulnerability Scanner

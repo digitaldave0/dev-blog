@@ -23,7 +23,6 @@ description: >
   post, we'll build a complete local RAG system using Ollama, Python, and a few
   PDFs. You'll learn how to index documents, enhance a model with your data, and
   create a simple GUI for interactive searching.
-heroImage: 'https://picsum.photos/seed/2024-10-24-local-rag-ollama-pdf-gui/800/400'
 ---
 
 ## What We'll Build

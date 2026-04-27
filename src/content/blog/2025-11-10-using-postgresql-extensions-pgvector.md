@@ -15,8 +15,6 @@ tags:
 icon: "\U0001F418"
 author: owner
 pubDate: 2025-11-10T10:00:00.000Z
-heroImage: >-
-  https://picsum.photos/seed/2025-11-10-using-postgresql-extensions-pgvector/800/400
 ---
 
 # Using PostgreSQL Extensions: A Deep Dive into pgvector for Vector Search

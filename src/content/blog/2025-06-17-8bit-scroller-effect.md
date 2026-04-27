@@ -6,7 +6,6 @@ description: >-
   CSS
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-06-17-8bit-scroller-effect/800/400'
 ---
 
 

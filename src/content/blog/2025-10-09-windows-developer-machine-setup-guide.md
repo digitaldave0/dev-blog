@@ -16,8 +16,6 @@ tags:
   - vscode
   - development
 icon: "\U0001FA9F"
-heroImage: >-
-  https://picsum.photos/seed/2025-10-09-windows-developer-machine-setup-guide/800/400
 ---
 
 Setting up a Windows development machine for DevOps and cloud development requires a different approach than traditional Unix-like systems. This guide focuses on leveraging Windows-native tools and PowerShell to create a powerful, efficient development environment that stays within the Windows ecosystem.

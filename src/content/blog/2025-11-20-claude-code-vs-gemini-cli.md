@@ -12,7 +12,6 @@ tags:
   - coding
 author: owner
 pubDate: 2025-11-20T10:00:00.000Z
-heroImage: 'https://picsum.photos/seed/2025-11-20-claude-code-vs-gemini-cli/800/400'
 ---
 
 ## Introduction

@@ -11,7 +11,6 @@ tags:
   - cloud
   - intermediate
 icon: "\U0001F504"
-heroImage: 'https://picsum.photos/seed/2025-07-11-terraform-intermediate-concepts/800/400'
 ---
 
 

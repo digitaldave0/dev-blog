@@ -12,7 +12,6 @@ tags:
   - machine-learning-series
   - pattern-recognition
 description: Learn about classification in machine learning with everyday examples.
-heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-classification/800/400'
 ---
 
 # Understanding Classification in Machine Learning

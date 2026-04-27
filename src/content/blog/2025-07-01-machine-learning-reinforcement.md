@@ -14,7 +14,6 @@ tags:
 description: >-
   Learn how reinforcement learning works through simple examples and real-world
   applications.
-heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-reinforcement/800/400'
 ---
 
 

@@ -16,7 +16,6 @@ tags:
 icon: "\U0001F50D"
 author: owner
 pubDate: 2025-11-10T13:00:00.000Z
-heroImage: 'https://picsum.photos/seed/2025-11-10-semgrep-static-analysis/800/400'
 ---
 
 # Semgrep: Fast and Scalable Static Analysis for Code Security

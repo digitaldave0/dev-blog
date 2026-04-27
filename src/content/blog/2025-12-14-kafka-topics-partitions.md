@@ -12,7 +12,6 @@ description: >-
   retention policies, scaling, and performance optimization strategies.
 tags:
   - devops
-heroImage: 'https://picsum.photos/seed/2025-12-14-kafka-topics-partitions/800/400'
 ---
 
 # Kafka Topics and Partitions - Management and Optimization

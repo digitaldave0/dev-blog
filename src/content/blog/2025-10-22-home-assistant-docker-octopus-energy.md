@@ -8,8 +8,6 @@ categories:
 description: A detailed DevOps and Platform Engineering guide.
 tags:
   - devops
-heroImage: >-
-  https://picsum.photos/seed/2025-10-22-home-assistant-docker-octopus-energy/800/400
 ---
 
 

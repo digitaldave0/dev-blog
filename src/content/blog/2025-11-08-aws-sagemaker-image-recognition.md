@@ -27,7 +27,6 @@ description: >-
   Master image recognition with AWS SageMaker: Learn traditional ML approaches,
   deep learning CNNs, and AWS Rekognition. Understand when to use each algorithm
   for optimal results.
-heroImage: 'https://picsum.photos/seed/2025-11-08-aws-sagemaker-image-recognition/800/400'
 ---
 
 # AWS SageMaker Image Recognition: From Traditional ML to Deep Learning
