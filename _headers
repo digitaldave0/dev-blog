@@ -1,7 +1,0 @@
-/*
-  Basic-Auth: dave:pass1234%
-  WWW-Authenticate: Basic realm="Restricted Area"
-  Cache-Control: no-store, no-cache, must-revalidate
-  X-Content-Type-Options: nosniff
-  X-XSS-Protection: 1; mode=block
-  Referrer-Policy: strict-origin-only

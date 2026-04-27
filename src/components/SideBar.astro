@@ -1,0 +1,30 @@
+---
+import SideBarFooter from "./SideBarFooter.astro";
+import { Image } from "astro:assets";
+import SideBarMenu from "./SideBarMenu.astro";
+import Search from "astro-pagefind/components/Search";
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<div class="drawer-side z-40">
+  <label for="my-drawer" class="drawer-overlay"></label>
+  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+    <div class="w-fit mx-auto mt-5 mb-6">
+      <a href="/">
+        <div class="text-2xl font-bold text-center">Human in the Loop</div>
+      </a>
+    </div>
+    <div class="px-4 mb-4">
+      <Search id="search" className="pagefind-ui" uiOptions={{ showImages: false }} />
+    </div>
+    <div class="w-fit mx-auto mb-6">
+      <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
+        <div class="w-[8.5rem]">
+          <Image class="mask mask-circle" format="webp" width={300} height={300} src="/avatar.png" alt="Human in the Loop Avatar" />
+        </div>
+      </div>
+    </div>
+    <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    <SideBarFooter />
+  </aside>
+</div>

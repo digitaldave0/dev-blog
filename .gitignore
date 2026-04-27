@@ -1,29 +1,22 @@
+# build output
+dist/
+.cache
+# dependencies
+node_modules/
 
-# Obsidian workspace and plugin cache
-.obsidian/
-.obsidian/plugins/
-.obsidian/workspace
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# OS-specific
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
-Thumbs.db
 
-# Jekyll build artifacts
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-
-# Logs and temp files
-*.log
-*.tmp
-
-# Backup or swap files
-*~
-*.swp
-*.bak
-*.tmp
-
-# Optional: VSCode or JetBrains settings if you use an editor
-.vscode/
-.idea/
+# Astro
+.astro/
