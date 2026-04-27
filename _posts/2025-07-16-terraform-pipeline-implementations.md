@@ -419,10 +419,10 @@ contexts:
        steps:
          - restore_cache:
              keys:
-               - terraform-{{ .Branch }}-{{ checksum "terraform.tfstate" }}
+               - terraform-{% raw %}{{ .Branch }}-{{ checksum "terraform.tfstate" }}{% endraw %}
          - terraform/plan
          - save_cache:
-             key: terraform-{{ .Branch }}-{{ checksum "terraform.tfstate" }}
+             key: terraform-{% raw %}{{ .Branch }}-{{ checksum "terraform.tfstate" }}{% endraw %}
              paths:
                - .terraform
    ```

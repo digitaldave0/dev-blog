@@ -2,7 +2,7 @@
 ---
 
 /* prettier-ignore */
-@use 'main' {%- if jekyll.environment == 'production' -%} .bundle {%- endif -%};
+@use 'main{%- if jekyll.environment == 'production' -%}.bundle{%- endif -%}';
 
 /* 
    ==========================================================================

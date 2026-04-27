@@ -176,26 +176,26 @@ helm package mychart
 metadata:
   name: {% raw %}{{ include "mychart.fullname" . }}{% endraw %}
   labels:
-    {{- include "mychart.labels" . | nindent 4 }}
+    {% raw %}{{- include "mychart.labels" . | nindent 4 }}{% endraw %}
 
 # Using conditionals
-{{- if .Values.ingress.enabled }}
+{% raw %}{{- if .Values.ingress.enabled }}{% endraw %}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
-{{- end }}
+{% raw %}{{- end }}{% endraw %}
 
 # Loops
-{{- range .Values.configMaps }}
+{% raw %}{{- range .Values.configMaps }}{% endraw %}
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {% raw %}{{ .name }}{% endraw %}
 data:
-  {{- range $key, $value := .data }}
-  {{ $key }}: {{ $value }}
-  {{- end }}
-{{- end }}
+  {% raw %}{{- range $key, $value := .data }}{% endraw %}
+  {% raw %}{{ $key }}: {{ $value }}{% endraw %}
+  {% raw %}{{- end }}{% endraw %}
+{% raw %}{{- end }}{% endraw %}
 ```
 
 ## Advanced Helm Features
@@ -261,11 +261,11 @@ spec:
 
 ```yaml
 # _helpers.tpl
-{{- define "mychart.labels" -}}
-app.kubernetes.io/name: {{ include "mychart.name" . }}
+{% raw %}{{- define "mychart.labels" -}}{% endraw %}
+app.kubernetes.io/name: {% raw %}{{ include "mychart.name" . }}{% endraw %}
 app.kubernetes.io/instance: {% raw %}{{ .Release.Name }}{% endraw %}
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-{{- end }}
+app.kubernetes.io/version: {% raw %}{{ .Chart.AppVersion | quote }}{% endraw %}
+{% raw %}{{- end }}{% endraw %}
 ```
 
 ### 2. Values Management
@@ -303,9 +303,9 @@ metadata:
   name: {% raw %}{{ include "mychart.fullname" . }}{% endraw %}
 type: Opaque
 data:
-  {{- range $key, $value := .Values.secrets }}
-  {{ $key }}: {{ $value | b64enc }}
-  {{- end }}
+  {% raw %}{{- range $key, $value := .Values.secrets }}{% endraw %}
+  {% raw %}{{ $key }}: {{ $value | b64enc }}{% endraw %}
+  {% raw %}{{- end }}{% endraw %}
 ```
 
 ## Helm Commands Cheatsheet
