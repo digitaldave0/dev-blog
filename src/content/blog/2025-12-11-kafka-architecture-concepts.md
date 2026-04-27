@@ -22,7 +22,32 @@ This post will take you through Kafka's core concepts and architecture. We'll ex
 
 ## The Big Picture
 
-At its core, Kafka is a distributed commit log. Events are written to topics in an append-only fashion, and consumers can read from any point in the log. This simple abstraction enables complex distributed systems.
+At its core, Kafka is a distributed commit log. Events are written to topics in an append-only fashion, and consumers can read from any point in the log.
+
+```mermaid
+graph LR
+    subgraph Producers
+        P1[Producer A]
+        P2[Producer B]
+    end
+
+    subgraph Cluster["Kafka Cluster (Brokers)"]
+        direction TB
+        T1[Topic: orders]
+        T1P1[Partition 0]
+        T1P2[Partition 1]
+    end
+
+    subgraph Consumers
+        C1[Consumer Group 1]
+        C2[Consumer Group 2]
+    end
+
+    P1 & P2 --> T1
+    T1 --> T1P1 & T1P2
+    T1P1 --> C1
+    T1P2 --> C2
+```
 
 Let's break down the key components:
 

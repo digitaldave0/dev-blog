@@ -18,7 +18,30 @@ heroImage: >-
 
 # Machine Learning Basics: A Beginner's Guide
 
-Have you ever wondered how Netflix knows what shows you might like? Or how your email knows which messages are spam? That's machine learning in action! Let's break it down in simple terms.
+Have you ever wondered how Netflix knows what shows you might like? Or how your email knows which messages are spam? That's machine learning in action!
+
+```mermaid
+graph LR
+    subgraph DataCollection["1. Data"]
+        D1[Images]
+        D2[Text]
+        D3[Numbers]
+    end
+
+    subgraph Learning["2. Training"]
+        Model[ML Model]
+        Algo[Algorithm]
+        DataCollection --> Algo
+        Algo --> Model
+    end
+
+    subgraph Prediction["3. Results"]
+        Input[New Data] --> Model
+        Model --> Output[Prediction]
+    end
+```
+
+Let's break it down in simple terms.
 
 ## What is Machine Learning?
 

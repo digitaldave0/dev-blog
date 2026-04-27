@@ -17,7 +17,28 @@ heroImage: 'https://picsum.photos/seed/2025-07-10-ansible-basics-getting-started
 
 # Getting Started with Ansible Automation
 
-In this beginner-friendly tutorial, we'll explore the basics of Ansible and create a simple playbook to configure a web server. You'll learn how to install Ansible, set up your inventory, and write your first playbook.
+In this beginner-friendly tutorial, we'll explore the basics of Ansible and create a simple playbook to configure a web server.
+
+```mermaid
+graph TD
+    subgraph ControlNode["Control Node (Your Laptop/Jumpbox)"]
+        Ansible[Ansible Engine]
+        Inventory[Inventory File]
+        Playbook[YAML Playbooks]
+    end
+
+    subgraph ManagedNodes["Managed Nodes (Target Servers)"]
+        S1[Web Server 1]
+        S2[DB Server]
+        S3[App Server]
+    end
+
+    Ansible -->|SSH / WinRM| S1 & S2 & S3
+    Inventory -.-> Ansible
+    Playbook -.-> Ansible
+```
+
+You'll learn how to install Ansible, set up your inventory, and write your first playbook.
 
 ## What is Ansible?
 

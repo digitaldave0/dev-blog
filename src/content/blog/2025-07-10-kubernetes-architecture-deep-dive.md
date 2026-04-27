@@ -19,7 +19,40 @@ heroImage: >-
 
 # Understanding Kubernetes Architecture
 
-In this comprehensive guide, we'll explore the architecture of Kubernetes, breaking down each component and understanding how they work together to create a robust container orchestration platform. We'll dive deep into both control plane (master) and worker node components, their responsibilities, and how they interact.
+In this comprehensive guide, we'll explore the architecture of Kubernetes, breaking down each component and understanding how they work together to create a robust container orchestration platform.
+
+```mermaid
+graph TB
+    subgraph ControlPlane["Control Plane (Master Node)"]
+        API[API Server]
+        ETCD[(etcd store)]
+        CM[Controller Manager]
+        SCH[Scheduler]
+        API <--> ETCD
+        API <--> CM
+        API <--> SCH
+    end
+
+    subgraph WorkerNode1["Worker Node 1"]
+        K1[Kubelet]
+        KP1[kube-proxy]
+        CR1[Container Runtime]
+        K1 --- CR1
+    end
+
+    subgraph WorkerNode2["Worker Node 2"]
+        K2[Kubelet]
+        KP2[kube-proxy]
+        CR2[Container Runtime]
+        K2 --- CR2
+    end
+
+    API <--> K1
+    API <--> K2
+    User((User/Admin)) --> API
+```
+
+We'll dive deep into both control plane (master) and worker node components, their responsibilities, and how they interact.
 
 ## Control Plane Components (Master Node)
 

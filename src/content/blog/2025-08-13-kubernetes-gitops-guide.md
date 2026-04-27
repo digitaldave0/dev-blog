@@ -21,6 +21,26 @@ heroImage: 'https://picsum.photos/seed/2025-08-13-kubernetes-gitops-guide/800/40
 
 Learn how to implement GitOps practices and establish robust CI/CD pipelines for your Kubernetes clusters using modern tools and techniques.
 
+```mermaid
+graph LR
+    Dev[Developer] -->|Push Code| Git[Git Repository]
+    
+    subgraph CI["CI Pipeline (GitHub Actions)"]
+        Git --> Build[Build & Test]
+        Build --> Push[Push Image]
+    end
+    
+    Push --> Registry[Container Registry]
+    
+    subgraph GitOps["GitOps Controller (ArgoCD/Flux)"]
+        Repo[Config Repo] --> Sync[Sync Engine]
+        Sync -->|Apply| K8s[Kubernetes Cluster]
+    end
+    
+    Git -->|Update Manifests| Repo
+    K8s -- "Reconciliation" --> Sync
+```
+
 ## What We'll Cover
 
 1. GitOps Principles and Tools

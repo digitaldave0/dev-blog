@@ -39,10 +39,19 @@ Chain of Thought is like teaching AI to "show its work" instead of just giving t
 
 ### Chain of Thought Response
 **Question**: Same as above
-**Thinking Process**:
-1. "First, John has 5 apples"
-2. "After giving 2 to Mary, he has 5 - 2 = 3 apples"
-3. "Then he buys 3 more, so 3 + 3 = 6 apples"
+
+```mermaid
+graph TD
+    Step1["Step 1: Identify Initial State<br/>'John has 5 apples'"]
+    Step2["Step 2: Process Subtraction<br/>'Gives 2 to Mary (5 - 2 = 3)'"]
+    Step3["Step 3: Process Addition<br/>'Buys 3 more (3 + 3 = 6)'"]
+    Answer["Final Answer: 6 apples"]
+
+    Step1 --> Step2
+    Step2 --> Step3
+    Step3 --> Answer
+```
+
 **Answer**: "6 apples"
 
 ## Real-World Examples
