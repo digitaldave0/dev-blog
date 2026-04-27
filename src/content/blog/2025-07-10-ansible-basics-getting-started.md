@@ -15,7 +15,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-10-ansible-basics-getting-started
 ---
 
 
-# Getting Started with Ansible Automation
 
 In this beginner-friendly tutorial, we'll explore the basics of Ansible and create a simple playbook to configure a web server.
 

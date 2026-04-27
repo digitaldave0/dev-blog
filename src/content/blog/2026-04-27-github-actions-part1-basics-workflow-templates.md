@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/github-actions-basics/800/400'
 ---
 
-# GitHub Actions Masterclass Part 1: Mastering Workflow Templates
 
 Automating your software development lifecycle shouldn't feel like a chore. While YAML is the language of GitHub Actions, you don't always need to start with a blank file. GitHub provides a powerful library of **Workflow Templates** that can get your CI/CD pipelines running in seconds.
 

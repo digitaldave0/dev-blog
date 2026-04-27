@@ -18,7 +18,6 @@ heroImage: >-
   https://picsum.photos/seed/2026-01-25-spring-boot-part5-advanced-features-best-practices/800/400
 ---
 
-# Spring Boot Development Series - Part 5: Advanced Features and Best Practices
 
 Welcome to the final part! By now, you know how to create a basic Spring Boot app. In this part, we'll add professional features to make your app production-ready.
 

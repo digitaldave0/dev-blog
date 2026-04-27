@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/github-actions-intermediate/800/400'
 ---
 
-# GitHub Actions Masterclass Part 2: Custom Organization Templates
 
 In [Part 1](./2026-04-27-github-actions-part1-basics-workflow-templates), we learned how to use GitHub's built-in templates. But what if your company has specific security requirements, or you want every project to use a specific internal deployment tool?
 

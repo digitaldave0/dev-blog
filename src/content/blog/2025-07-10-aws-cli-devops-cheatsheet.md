@@ -22,7 +22,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-07-10-aws-cli-devops-cheatsheet/800/400'
 ---
 
-# AWS CLI Commands Cheatsheet for DevOps Engineers
 
 This comprehensive cheatsheet provides the most commonly used AWS CLI commands for DevOps engineers, organized by service and use case. Each command includes a practical example and common use cases.
 

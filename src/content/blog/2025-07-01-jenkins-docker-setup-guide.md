@@ -15,7 +15,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-01-jenkins-docker-setup-guide/800
 ---
 
 
-# Running Jenkins in Docker: A Complete Setup Guide
 
 Running Jenkins in Docker provides numerous benefits: easy setup, consistent environments, simple upgrades, and better resource isolation. In this guide, I'll show you how to get Jenkins running in Docker with a custom installation script that handles all the complexity for you.
 

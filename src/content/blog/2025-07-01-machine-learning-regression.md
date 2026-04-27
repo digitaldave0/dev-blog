@@ -16,7 +16,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-regression/80
 ---
 
 
-# Understanding Regression in Machine Learning
 
 Remember trying to guess how much a house costs based on its size? That's essentially what regression does in machine learning - it helps predict numerical values based on data.
 

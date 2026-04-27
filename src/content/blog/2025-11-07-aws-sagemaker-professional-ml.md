@@ -25,7 +25,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-07-aws-sagemaker-professional-ml/800/400'
 ---
 
-# AWS SageMaker Professional ML: Real Dataset House Price Prediction
 
 Building on our [beginner's SageMaker house price predictor]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}), it's time to level up to professional machine learning practices. In this post, we'll use a **real dataset**, implement **industry-standard ML techniques**, and follow **production-ready workflows**.
 

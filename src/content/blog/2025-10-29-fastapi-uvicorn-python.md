@@ -22,7 +22,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-10-29-fastapi-uvicorn-python/800/400'
 ---
 
-# FastAPI with Uvicorn: Building High-Performance Python APIs
 
 FastAPI is a modern, fast web framework for building APIs with Python. Combined with Uvicorn, an ASGI web server, you can create production-ready applications with minimal boilerplate and excellent performance.
 

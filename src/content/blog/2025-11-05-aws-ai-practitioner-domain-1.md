@@ -25,7 +25,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-1/800/400'
 ---
 
-# AWS Certified AI Practitioner Domain 1: AI/ML Fundamentals Made Simple
 
 Welcome to Domain 1 of the AWS Certified AI Practitioner certification! This domain covers the basic building blocks of Artificial Intelligence and Machine Learning. Don't worry if you're new to this - we'll explain everything in simple terms with easy examples.
 

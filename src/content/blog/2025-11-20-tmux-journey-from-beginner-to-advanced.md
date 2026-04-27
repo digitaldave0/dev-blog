@@ -14,7 +14,6 @@ heroImage: >-
   https://picsum.photos/seed/2025-11-20-tmux-journey-from-beginner-to-advanced/800/400
 ---
 
-# Tmux: A Journey from Beginner to Advanced User
 
 Welcome to your tmux journey! Whether you're tired of losing work when your terminal closes or want to boost your productivity with multiple terminal sessions, tmux is your gateway to a more powerful command-line experience. This guide will take you from complete beginner to advanced user, building your skills step by step.
 

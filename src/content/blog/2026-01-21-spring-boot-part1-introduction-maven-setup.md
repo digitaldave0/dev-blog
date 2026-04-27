@@ -16,7 +16,6 @@ heroImage: >-
   https://picsum.photos/seed/2026-01-21-spring-boot-part1-introduction-maven-setup/800/400
 ---
 
-# Spring Boot Development Series - Part 1: Introduction and Maven Setup
 
 Welcome to the first part of our Spring Boot Development Series! This series will take you from beginner to advanced Spring Boot concepts, building practical skills along the way. In this post, we'll cover the fundamentals of Spring Boot and dive into Maven setup, which is essential for managing your projects.
 

@@ -17,7 +17,6 @@ heroImage: >-
   https://picsum.photos/seed/2025-07-02-machine-learning-cross-validation/800/400
 ---
 
-# Cross-Validation and Overfitting: Finding the Right Balance
 
 One of the biggest challenges in machine learning is building models that perform well not just on training data, but on new, unseen data. Let's explore how to achieve this through proper validation techniques.
 

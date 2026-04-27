@@ -12,7 +12,6 @@ heroImage: >-
   https://picsum.photos/seed/2026-04-27-openclaw-installation-walkthrough/800/400
 ---
 
-# Installing OpenClaw: Hatching Your AI Team
 
 With your hardware isolated and ready, it’s time to perform the actual installation. OpenClaw’s onboarding is famously smooth, but there are several critical decisions you’ll need to make during the process.
 

@@ -30,7 +30,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-08-aws-sagemaker-image-recognition/800/400'
 ---
 
-# AWS SageMaker Image Recognition: From Traditional ML to Deep Learning
 
 Welcome to the fascinating world of **computer vision**! After mastering [basic ML concepts]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}) and [professional ML techniques]({% post_url 2025-11-07-aws-sagemaker-professional-ml %}), it's time to dive into **image recognition** - one of the most exciting applications of machine learning.
 

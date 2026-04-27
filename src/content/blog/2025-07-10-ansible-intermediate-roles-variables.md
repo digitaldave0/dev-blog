@@ -16,7 +16,6 @@ heroImage: >-
 ---
 
 
-# Intermediate Ansible: Beyond the Basics
 
 Building on our previous tutorial, we'll explore intermediate Ansible concepts by creating a more complex deployment: a load-balanced web application with customizable configurations.
 

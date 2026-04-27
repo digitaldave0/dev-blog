@@ -17,7 +17,6 @@ heroImage: 'https://picsum.photos/seed/2025-08-06-kubernetes-monitoring-guide/80
 ---
 
 
-# Kubernetes Monitoring and Observability
 
 Learn how to implement comprehensive monitoring and observability in your Kubernetes clusters to ensure optimal performance and quick troubleshooting.
 

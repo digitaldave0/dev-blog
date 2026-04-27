@@ -17,7 +17,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-10-azure-cli-devops-cheatsheet/80
 ---
 
 
-# Azure CLI Commands Cheatsheet for DevOps Engineers
 
 A comprehensive collection of Azure CLI commands organized by service and common use cases. Each command includes practical examples and typical DevOps scenarios.
 

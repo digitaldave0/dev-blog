@@ -16,7 +16,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-10-linux-commands-devops-cheatshe
 ---
 
 
-# Linux Commands Cheatsheet for DevOps Engineers
 
 A comprehensive collection of essential Linux commands organized by category, with practical examples and common DevOps use cases.
 

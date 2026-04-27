@@ -17,7 +17,6 @@ heroImage: >-
   https://picsum.photos/seed/2025-07-16-terraform-pipeline-implementations/800/400
 ---
 
-# Platform-Specific Terraform Pipeline Implementations
 
 Following our comprehensive guide to Terraform CI/CD, let's explore detailed implementations in popular CI/CD platforms.
 

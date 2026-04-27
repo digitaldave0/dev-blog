@@ -19,7 +19,6 @@ pubDate: 2025-11-10T13:00:00.000Z
 heroImage: 'https://picsum.photos/seed/2025-11-10-semgrep-static-analysis/800/400'
 ---
 
-# Semgrep: Fast and Scalable Static Analysis for Code Security
 
 In the fast-paced world of software development, maintaining code security without slowing down development velocity is a constant challenge. **Semgrep** emerges as a revolutionary solution, offering lightning-fast static analysis that combines traditional security testing with AI-powered intelligence to deliver accurate, actionable results.
 

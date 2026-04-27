@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-19-kafka-monitoring-operations/800/400'
 ---
 
-# Kafka Monitoring, Operations, and Troubleshooting
 
 Welcome to Part 10 of our Apache Kafka series! We've covered the [fundamentals]({% post_url 2025-12-10-kafka-introduction-basics %}), [architecture]({% post_url 2025-12-11-kafka-architecture-concepts %}), [producers]({% post_url 2025-12-12-kafka-producers-api %}), [consumers]({% post_url 2025-12-13-kafka-consumers-api %}), [topics/partitions]({% post_url 2025-12-14-kafka-topics-partitions %}), [Streams]({% post_url 2025-12-15-kafka-streams-processing %}), [Connect]({% post_url 2025-12-16-kafka-connect-integration %}), [Schema Registry]({% post_url 2025-12-17-schema-registry-governance %}), and [security]({% post_url 2025-12-18-kafka-security-hardening %}). Now we focus on **operations** - keeping your Kafka clusters running smoothly in production.
 

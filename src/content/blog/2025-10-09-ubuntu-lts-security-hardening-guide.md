@@ -22,7 +22,6 @@ heroImage: >-
   https://picsum.photos/seed/2025-10-09-ubuntu-lts-security-hardening-guide/800/400
 ---
 
-# Ubuntu LTS Security Hardening Guide: Complete Server Setup
 
 Setting up a secure Ubuntu LTS server doesn't have to be complicated. This guide walks you through **enterprise-grade security hardening** step by step, explaining **why** each security measure matters and **how** it protects your server.
 

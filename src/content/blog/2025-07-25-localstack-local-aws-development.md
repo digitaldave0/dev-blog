@@ -17,7 +17,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-25-localstack-local-aws-developme
 ---
 
 
-# LocalStack: Your Local AWS Cloud Environment
 
 LocalStack provides a fully functional local AWS cloud stack for development and testing. This guide will show you how to get started, create resources, and integrate LocalStack into your development workflow.
 

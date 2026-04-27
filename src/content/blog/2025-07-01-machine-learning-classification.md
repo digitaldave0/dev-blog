@@ -15,7 +15,6 @@ description: Learn about classification in machine learning with everyday exampl
 heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-classification/800/400'
 ---
 
-# Understanding Classification in Machine Learning
 
 Ever wonder how your email knows whether a message is spam or not? That's classification at work! Let's explore this fundamental machine learning concept.
 

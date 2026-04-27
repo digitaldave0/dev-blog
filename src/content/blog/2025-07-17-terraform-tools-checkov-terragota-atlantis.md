@@ -20,7 +20,6 @@ heroImage: >-
 ---
 
 
-# Advanced Terraform Tooling: A Deep Dive
 
 Managing infrastructure at scale requires specialized tools beyond basic Terraform. This guide explores three powerful tools that can enhance your infrastructure management capabilities: Checkov for security and compliance, Terragota for migration and analysis, and Atlantis for GitOps workflows.
 

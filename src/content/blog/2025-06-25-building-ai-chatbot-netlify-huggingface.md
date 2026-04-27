@@ -18,7 +18,6 @@ heroImage: >-
 ---
 
 
-# Building an AI Chatbot with Netlify and Together AI
 
 Over the past week, I spent about 4 hours building a proof-of-concept AI chatbot that demonstrates how to leverage modern AI services to create a functional AI assistant. In this post, I'll share my experience, explain the technical decisions, and outline the security considerations.
 

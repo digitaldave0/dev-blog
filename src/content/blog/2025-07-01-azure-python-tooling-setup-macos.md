@@ -15,7 +15,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-01-azure-python-tooling-setup-mac
 ---
 
 
-# Setting Up Azure Development Tools with Python on macOS
 
 As a DevOps engineer working with Azure, having a properly configured local development environment is crucial. In this guide, I'll walk you through setting up Azure tools for Python development on macOS, including some tips and tricks I've learned along the way.
 

@@ -22,7 +22,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-10-29-50-great-git-commands-cheatsheet/800/400'
 ---
 
-# 50 Great Git Commands: Complete Cheatsheet with Examples
 
 Git is the most widely used version control system in software development. This comprehensive cheatsheet covers 50 essential Git commands, starting with the basics and progressing to advanced techniques. Each command includes a practical example to help you understand its usage.
 

@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-07-10-ansible-advanced-custom-modules/800/400'
 ---
 
-# Advanced Ansible: Enterprise-Level Automation
 
 In this advanced tutorial, we'll explore sophisticated Ansible features by implementing a complex microservices deployment with custom modules and dynamic inventory management.
 

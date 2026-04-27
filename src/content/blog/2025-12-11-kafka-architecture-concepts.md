@@ -14,7 +14,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-11-kafka-architecture-concepts/800/400'
 ---
 
-# Kafka Architecture and Core Concepts - Understanding the Foundation
 
 Welcome back to our Apache Kafka series! In [Part 1]({% post_url 2025-12-10-kafka-introduction-basics %}), we explored what Kafka is and why it matters. Now it's time to understand the architecture that makes Kafka so powerful and reliable.
 

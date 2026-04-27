@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-14-kafka-topics-partitions/800/400'
 ---
 
-# Kafka Topics and Partitions - Management and Optimization
 
 Welcome to Part 5 of our Apache Kafka series! We've covered the [basics]({% post_url 2025-12-10-kafka-introduction-basics %}), [architecture]({% post_url 2025-12-11-kafka-architecture-concepts %}), [producers]({% post_url 2025-12-12-kafka-producers-api %}), and [consumers]({% post_url 2025-12-13-kafka-consumers-api %}). Now we dive into **topics and partitions** - the core abstractions for organizing and scaling your data in Kafka.
 

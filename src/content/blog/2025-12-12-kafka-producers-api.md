@@ -14,7 +14,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-12-kafka-producers-api/800/400'
 ---
 
-# Kafka Producers API - Publishing Events to Kafka
 
 Welcome to Part 3 of our Apache Kafka series! In [Part 1]({% post_url 2025-12-10-kafka-introduction-basics %}), we introduced Kafka, and in [Part 2]({% post_url 2025-12-11-kafka-architecture-concepts %}), we explored the architecture. Now it's time to get hands-on with **producers** - the applications that publish events to Kafka.
 

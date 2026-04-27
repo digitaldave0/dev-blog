@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-16-kafka-connect-integration/800/400'
 ---
 
-# Kafka Connect - Integrating with External Systems
 
 Welcome to Part 7 of our Apache Kafka series! We've covered the [fundamentals]({% post_url 2025-12-10-kafka-introduction-basics %}), [architecture]({% post_url 2025-12-11-kafka-architecture-concepts %}), [producers]({% post_url 2025-12-12-kafka-producers-api %}), [consumers]({% post_url 2025-12-13-kafka-consumers-api %}), [topics/partitions]({% post_url 2025-12-14-kafka-topics-partitions %}), and [Streams]({% post_url 2025-12-15-kafka-streams-processing %}). Now we explore **Kafka Connect** - the framework for building reliable, scalable data pipelines between Kafka and external systems.
 

@@ -14,7 +14,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-15-kafka-streams-processing/800/400'
 ---
 
-# Kafka Streams - Real-Time Stream Processing
 
 Welcome to Part 6 of our Apache Kafka series! We've covered the [fundamentals]({% post_url 2025-12-10-kafka-introduction-basics %}), [architecture]({% post_url 2025-12-11-kafka-architecture-concepts %}), [producers]({% post_url 2025-12-12-kafka-producers-api %}), [consumers]({% post_url 2025-12-13-kafka-consumers-api %}), and [topics/partitions]({% post_url 2025-12-14-kafka-topics-partitions %}). Now we explore **Kafka Streams** - the powerful library for building real-time stream processing applications.
 

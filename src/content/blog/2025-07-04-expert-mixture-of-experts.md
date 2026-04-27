@@ -18,7 +18,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-04-expert-mixture-of-experts/800/
 ---
 
 
-# Mixture of Experts: Many Brains Are Better Than One
 
 Imagine you're building a house. You don't want one person doing everything - you want specialists: an electrician for wiring, a plumber for pipes, and so on. That's exactly how Mixture of Experts (MoE) works in AI! Let's explore this fascinating approach.
 

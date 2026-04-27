@@ -18,7 +18,6 @@ heroImage: >-
 ---
 
 
-# Model Evaluation: Beyond Accuracy
 
 When building machine learning models, many beginners focus solely on accuracy. But is a model that's 99% accurate always good? Let's dive into why we need to look beyond simple accuracy and explore the metrics that really matter.
 

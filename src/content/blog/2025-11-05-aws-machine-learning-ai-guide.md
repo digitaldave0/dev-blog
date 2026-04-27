@@ -25,7 +25,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-machine-learning-ai-guide/800/400'
 ---
 
-# AWS Machine Learning and AI Services: Complete Guide for Exam Preparation
 
 As organizations increasingly adopt artificial intelligence and machine learning, understanding AWS's comprehensive AI/ML ecosystem is crucial for the AWS Certified Machine Learning Specialty exam. This guide covers all major AWS AI/ML services, their key features, use cases, and exam-relevant concepts.
 

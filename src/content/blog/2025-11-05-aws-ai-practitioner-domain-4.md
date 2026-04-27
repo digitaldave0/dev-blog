@@ -25,7 +25,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-4/800/400'
 ---
 
-# AWS Certified AI Practitioner Domain 4: AI Ethics and Responsible AI
 
 Domain 4, "AI Ethics and Responsible AI," accounts for 10% of the AWS Certified AI Practitioner exam but represents a crucial aspect of AI implementation. This domain tests your understanding of ethical considerations, bias mitigation, privacy protection, and responsible AI development practices.
 

@@ -14,7 +14,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-01-migrating-to-netlify/800/400'
 ---
 
 
-# Migrating from GitHub Pages to Netlify: A Step-by-Step Guide
 
 Moving a Jekyll blog from GitHub Pages to Netlify is surprisingly straightforward. Here's how to do it while maintaining all functionality and improving your deployment options.
 

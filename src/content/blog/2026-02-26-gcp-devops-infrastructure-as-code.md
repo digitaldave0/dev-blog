@@ -18,7 +18,6 @@ heroImage: >-
   https://picsum.photos/seed/2026-02-26-gcp-devops-infrastructure-as-code/800/400
 ---
 
-# GCP DevOps & Infrastructure-as-Code (IaC) Guide
 
 Welcome to the world of Infrastructure-as-Code on Google Cloud Platform! This guide walks you through deploying GCP resources using Terraform and Infracost from within a containerized development environment.
 

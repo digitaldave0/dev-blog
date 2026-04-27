@@ -18,7 +18,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-05-ai-safety-risks/800/400'
 ---
 
 
-# AI Safety: Navigating the Risks of Advanced AI
 
 As AI systems become more powerful, understanding and managing their risks becomes crucial. Let's explore the current and future challenges of AI safety, from today's concerns to potential future scenarios.
 

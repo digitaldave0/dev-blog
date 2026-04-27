@@ -17,7 +17,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-07-03-deep-learning-neural-networks/800/400'
 ---
 
-# Introduction to Neural Networks
 
 Think of a neural network as a digital brain - it's inspired by how our own brains work, with neurons connecting and passing signals to each other. Let's break down this complex topic into digestible pieces.
 

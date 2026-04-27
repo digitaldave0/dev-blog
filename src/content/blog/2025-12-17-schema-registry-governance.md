@@ -14,7 +14,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-17-schema-registry-governance/800/400'
 ---
 
-# Schema Registry and Data Governance in Kafka
 
 Welcome to Part 8 of our Apache Kafka series! We've covered the [fundamentals]({% post_url 2025-12-10-kafka-introduction-basics %}), [architecture]({% post_url 2025-12-11-kafka-architecture-concepts %}), [producers]({% post_url 2025-12-12-kafka-producers-api %}), [consumers]({% post_url 2025-12-13-kafka-consumers-api %}), [topics/partitions]({% post_url 2025-12-14-kafka-topics-partitions %}), [Streams]({% post_url 2025-12-15-kafka-streams-processing %}), and [Connect]({% post_url 2025-12-16-kafka-connect-integration %}). Now we explore **Schema Registry** - the cornerstone of data governance in Kafka ecosystems.
 

@@ -14,7 +14,6 @@ heroImage: >-
   https://picsum.photos/seed/2026-01-24-spring-boot-part4-building-first-application/800/400
 ---
 
-# Spring Boot Development Series - Part 4: Building Your First Application
 
 Time to put it all together! In [Part 1](2026-01-21-spring-boot-part1-introduction-maven-setup.md), we set up Maven. In [Part 2](2026-01-22-spring-boot-part2-annotations-deep-dive.md), we learned annotations. In [Part 3](2026-01-23-spring-boot-part3-dependency-injection-fundamentals.md), we mastered dependency injection. Now we'll build a complete Spring Boot application with a REST API.
 

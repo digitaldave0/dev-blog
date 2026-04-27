@@ -17,7 +17,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-30-kubernetes-security-guide/800/
 ---
 
 
-# Kubernetes Security: Protecting Your Cluster and Applications
 
 In this advanced tutorial, we'll dive deep into Kubernetes security practices and implementations that every DevOps engineer should know.
 

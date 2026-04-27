@@ -435,7 +435,6 @@ Help me:
 **~/.zshrc or ~/.bashrc:**
 
 ```bash
-# Generate commit message using Gemini
 alias gitmsg='~/.gemini/commands/git-commit-message.sh'
 
 # Generate test for a file

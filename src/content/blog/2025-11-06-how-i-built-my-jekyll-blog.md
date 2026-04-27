@@ -25,7 +25,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-06-how-i-built-my-jekyll-blog/800/400'
 ---
 
-# How I Built My Jekyll Blog: Automation, AI, and GitHub Actions Workflow
 
 Building and maintaining a technical blog can be time-consuming, but with the right tools and automation, it becomes an efficient and enjoyable process. In this post, I'll share my complete workflow for creating this Jekyll blog, from initial setup to automated deployment and AI-assisted content creation.
 

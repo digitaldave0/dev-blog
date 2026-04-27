@@ -16,7 +16,6 @@ heroImage: >-
 ---
 
 
-# Machine Learning Basics: A Beginner's Guide
 
 Have you ever wondered how Netflix knows what shows you might like? Or how your email knows which messages are spam? That's machine learning in action!
 

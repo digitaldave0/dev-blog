@@ -14,7 +14,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-13-kafka-consumers-api/800/400'
 ---
 
-# Kafka Consumers API - Reading and Processing Events
 
 Welcome to Part 4 of our Apache Kafka series! We've covered [introduction]({% post_url 2025-12-10-kafka-introduction-basics %}), [architecture]({% post_url 2025-12-11-kafka-architecture-concepts %}), and [producers]({% post_url 2025-12-12-kafka-producers-api %}). Now we turn to **consumers** - the applications that read and process events from Kafka topics.
 

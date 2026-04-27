@@ -17,7 +17,6 @@ heroImage: >-
   https://picsum.photos/seed/2025-07-10-helm-charts-kubernetes-package-manager/800/400
 ---
 
-# Introduction to Helm
 
 Helm is the package manager for Kubernetes, helping you manage Kubernetes applications through Helm Charts. These charts provide templating, versioning, and dependency management for your Kubernetes manifests.
 

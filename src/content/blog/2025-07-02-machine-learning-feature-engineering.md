@@ -19,7 +19,6 @@ heroImage: >-
 ---
 
 
-# Feature Engineering: The Art of Creating Better Data
 
 If data is the fuel for machine learning, feature engineering is the refinery. It's often said that better features are more valuable than better algorithms. Let's explore why and how to create powerful features.
 

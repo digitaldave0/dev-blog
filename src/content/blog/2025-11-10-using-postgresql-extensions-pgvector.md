@@ -19,7 +19,6 @@ heroImage: >-
   https://picsum.photos/seed/2025-11-10-using-postgresql-extensions-pgvector/800/400
 ---
 
-# Using PostgreSQL Extensions: A Deep Dive into pgvector for Vector Search
 
 PostgreSQL is renowned for its extensibility, and extensions are one of its most powerful features. Extensions allow you to add new functionality to your database without modifying the core PostgreSQL code. In this article, we'll explore PostgreSQL extensions with a focus on **pgvector**, an extension that enables vector similarity search - a crucial component for modern AI and machine learning applications.
 

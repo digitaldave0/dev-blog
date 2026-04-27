@@ -17,7 +17,6 @@ heroImage: >-
 ---
 
 
-# Understanding Kubernetes Architecture
 
 In this comprehensive guide, we'll explore the architecture of Kubernetes, breaking down each component and understanding how they work together to create a robust container orchestration platform.
 

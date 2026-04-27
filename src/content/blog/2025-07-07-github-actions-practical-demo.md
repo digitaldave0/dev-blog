@@ -15,7 +15,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-07-07-github-actions-practical-demo/800/400'
 ---
 
-# GitHub Actions in Practice: Building a Complete CI/CD Pipeline
 
 In this practical guide, we'll create a complete CI/CD pipeline using GitHub Actions. We'll build a Node.js application, run tests, and deploy it to different environments with manual approval gates.
 

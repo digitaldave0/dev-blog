@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-18-kafka-security-hardening/800/400'
 ---
 
-# Kafka Security - Authentication, Authorization, and Encryption
 
 Welcome to Part 9 of our Apache Kafka series! We've covered the [fundamentals]({% post_url 2025-12-10-kafka-introduction-basics %}), [architecture]({% post_url 2025-12-11-kafka-architecture-concepts %}), [producers]({% post_url 2025-12-12-kafka-producers-api %}), [consumers]({% post_url 2025-12-13-kafka-consumers-api %}), [topics/partitions]({% post_url 2025-12-14-kafka-topics-partitions %}), [Streams]({% post_url 2025-12-15-kafka-streams-processing %}), [Connect]({% post_url 2025-12-16-kafka-connect-integration %}), and [Schema Registry]({% post_url 2025-12-17-schema-registry-governance %}). Now we focus on **security** - protecting your Kafka clusters from unauthorized access and ensuring data privacy.
 

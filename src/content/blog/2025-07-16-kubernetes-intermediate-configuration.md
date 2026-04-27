@@ -17,7 +17,6 @@ heroImage: >-
 ---
 
 
-# Kubernetes Intermediate: Configuration and Resource Management
 
 Welcome to part 2 of our Kubernetes tutorial series! As your applications grow in complexity, proper configuration management becomes crucial. In this post, we'll explore the tools and practices that make Kubernetes applications maintainable, secure, and resource-efficient in production environments.
 

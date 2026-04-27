@@ -16,7 +16,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-09-kubernetes-basics-introduction
 ---
 
 
-# Introduction to Kubernetes with Kind
 
 In this first post of our Kubernetes tutorial series, we'll get hands-on experience with Kubernetes using Kind (Kubernetes in Docker), a tool that lets you run local Kubernetes clusters using Docker containers as nodes.
 

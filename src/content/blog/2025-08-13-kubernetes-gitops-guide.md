@@ -17,7 +17,6 @@ heroImage: 'https://picsum.photos/seed/2025-08-13-kubernetes-gitops-guide/800/40
 ---
 
 
-# Kubernetes GitOps and CI/CD Implementation
 
 Learn how to implement GitOps practices and establish robust CI/CD pipelines for your Kubernetes clusters using modern tools and techniques.
 

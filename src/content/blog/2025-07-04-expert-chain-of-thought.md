@@ -16,7 +16,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-04-expert-chain-of-thought/800/40
 ---
 
 
-# Chain of Thought: Teaching AI to Think Step by Step
 
 Have you ever solved a complex math problem by breaking it down into smaller steps? That's exactly what Chain of Thought (CoT) helps AI do! Let's explore this fascinating technique in simple terms.
 

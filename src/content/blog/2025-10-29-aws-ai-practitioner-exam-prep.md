@@ -22,7 +22,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-10-29-aws-ai-practitioner-exam-prep/800/400'
 ---
 
-# AWS AI Practitioner Exam Preparation: Complete Study Guide
 
 The AWS Certified AI Practitioner certification validates your knowledge of artificial intelligence (AI), machine learning (ML), and generative AI concepts and their practical applications on AWS. This foundational-level certification is perfect for professionals who work with AI technologies but don't necessarily build them from scratch.
 

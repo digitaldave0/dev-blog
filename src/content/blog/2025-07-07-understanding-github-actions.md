@@ -15,7 +15,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-07-07-understanding-github-actions/800/400'
 ---
 
-# Understanding GitHub Actions: A Complete Guide
 
 GitHub Actions is a powerful continuous integration and continuous delivery (CI/CD) platform that allows you to automate your software development workflows right from your GitHub repository. In this guide, we'll explore what GitHub Actions is, how to set it up, and understand its different pricing tiers.
 

@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/2025-12-20-kafka-real-world-use-cases/800/400'
 ---
 
-# Real-World Kafka Use Cases and Best Practices
 
 Welcome to Part 11 of our Apache Kafka series! We've covered the [fundamentals]({% post_url 2025-12-10-kafka-introduction-basics %}), [architecture]({% post_url 2025-12-11-kafka-architecture-concepts %}), [producers]({% post_url 2025-12-12-kafka-producers-api %}), [consumers]({% post_url 2025-12-13-kafka-consumers-api %}), [topics/partitions]({% post_url 2025-12-14-kafka-topics-partitions %}), [Streams]({% post_url 2025-12-15-kafka-streams-processing %}), [Connect]({% post_url 2025-12-16-kafka-connect-integration %}), [Schema Registry]({% post_url 2025-12-17-schema-registry-governance %}), [security]({% post_url 2025-12-18-kafka-security-hardening %}), and [operations]({% post_url 2025-12-19-kafka-monitoring-operations %}). Now we explore **real-world applications** - how companies use Kafka to solve complex problems and build scalable systems.
 

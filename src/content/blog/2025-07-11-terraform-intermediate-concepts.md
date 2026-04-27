@@ -15,7 +15,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-11-terraform-intermediate-concept
 ---
 
 
-# Terraform Intermediate Concepts
 
 After understanding the basics, it's time to make your Terraform configurations more flexible and maintainable. This post covers essential intermediate concepts that will help you write better infrastructure code.
 

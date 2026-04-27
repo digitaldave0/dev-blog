@@ -18,7 +18,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-05-future-superintelligence/800/4
 ---
 
 
-# The Path to AGI and ASI: Understanding Superintelligence
 
 As we stand in 2025, AI has become incredibly powerful - but we're still in the era of narrow AI. Let's explore what comes next, and what it means for humanity's future.
 

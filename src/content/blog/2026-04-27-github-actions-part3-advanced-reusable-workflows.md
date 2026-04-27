@@ -15,7 +15,6 @@ tags:
 heroImage: 'https://picsum.photos/seed/github-actions-advanced/800/400'
 ---
 
-# GitHub Actions Masterclass Part 3: Reusable Workflows and Advanced Logic
 
 We've covered [Basics](./2026-04-27-github-actions-part1-basics-workflow-templates) and [Organization Templates](./2026-04-27-github-actions-part2-intermediate-organization-templates). Now, it’s time to talk about the "holy grail" of GitHub Actions: **DRY (Don't Repeat Yourself)** pipelines.
 

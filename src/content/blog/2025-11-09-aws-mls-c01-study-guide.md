@@ -30,7 +30,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-09-aws-mls-c01-study-guide/800/400'
 ---
 
-# AWS Certified Machine Learning Specialty (MLS-C01) Study Guide: Complete Learning Path
 
 Preparing for the **AWS Certified Machine Learning - Specialty (MLS-C01)** exam? This comprehensive study guide maps our three-part SageMaker tutorial series to all exam domains, providing you with practical, hands-on preparation for certification success.
 

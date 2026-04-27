@@ -27,7 +27,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-2/800/400'
 ---
 
-# AWS Certified AI Practitioner Domain 2: AWS AI Services Deep Dive
 
 Domain 2, "AI/ML Services and Solutions," is the largest domain in the AWS Certified AI Practitioner exam, accounting for 35% of the total score. This domain tests your knowledge of AWS's comprehensive AI and ML service offerings, when to use each service, and how they integrate together.
 

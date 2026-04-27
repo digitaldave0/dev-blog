@@ -15,7 +15,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-12-terraform-advanced-concepts/80
 ---
 
 
-# Advanced Terraform: Scaling Your Infrastructure
 
 As your infrastructure grows, you need more sophisticated ways to manage it. This post covers advanced Terraform concepts that help you scale and maintain complex infrastructure effectively.
 

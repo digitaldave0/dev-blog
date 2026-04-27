@@ -15,7 +15,6 @@ icon: "\U0001F331"
 heroImage: 'https://picsum.photos/seed/2025-07-13-opentofu-guide-and-migration/800/400'
 ---
 
-# OpenTofu: The Open Source Alternative to Terraform
 
 After HashiCorp's switch to the Business Source License (BSL) for Terraform, OpenTofu emerged as a community-driven, fully open-source alternative. This guide will help you understand OpenTofu, how to migrate from Terraform, and what differences to expect.
 

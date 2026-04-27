@@ -16,7 +16,6 @@ heroImage: >-
   https://picsum.photos/seed/2026-01-23-spring-boot-part3-dependency-injection-fundamentals/800/400
 ---
 
-# Spring Boot Development Series - Part 3: Dependency Injection Fundamentals
 
 Welcome back! In [Part 1](2026-01-21-spring-boot-part1-introduction-maven-setup.md), we set up Maven and learned Spring Boot basics. In [Part 2](2026-01-22-spring-boot-part2-annotations-deep-dive.md), we explored annotations. Now we'll learn about **dependency injection** - how Spring Boot automatically connects your classes together.
 

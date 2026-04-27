@@ -16,7 +16,6 @@ heroImage: >-
 ---
 
 
-# Serverless on a Budget: Why I Chose Netlify over AWS and Azure
 
 As a developer working on side projects, I was looking for a cost-effective way to deploy serverless functions without worrying about unexpected cloud bills. After experimenting with AWS Lambda and Azure Functions, I discovered Netlify's serverless platform. Here's why it became my go-to solution for hobby projects.
 

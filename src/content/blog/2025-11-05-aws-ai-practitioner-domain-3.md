@@ -25,7 +25,6 @@ description: >-
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-3/800/400'
 ---
 
-# AWS Certified AI Practitioner Domain 3: Generative AI Deep Dive
 
 Domain 3, "Generative AI," represents 25% of the AWS Certified AI Practitioner exam and covers the rapidly evolving field of artificial intelligence that creates new content. This domain tests your understanding of foundation models, prompt engineering techniques, and AWS's generative AI offerings.
 

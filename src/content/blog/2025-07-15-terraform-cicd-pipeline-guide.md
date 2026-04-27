@@ -17,7 +17,6 @@ heroImage: 'https://picsum.photos/seed/2025-07-15-terraform-cicd-pipeline-guide/
 ---
 
 
-# Infrastructure as Code Pipelines: A Comprehensive Guide
 
 Implementing CI/CD for infrastructure code requires different considerations than application code. This guide explores how to build robust, secure, and efficient pipelines for Terraform deployments.
 
