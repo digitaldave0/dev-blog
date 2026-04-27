@@ -78,3 +78,95 @@ Backstage's power lies in its **Plugin API**. You can integrate:
 - **Data Governance**: Keeping the catalog updated requires automated discovery mechanisms.
 
 Platform engineering with Backstage is about creating a developer experience that is "Golden," not "Gilded"—providing freedom within a framework of safety.
+
+## Advanced Topics
+
+### Security Plugins & Policy Enforcement
+- **OPA Integration**: Use the `@backstage/plugin-opa` plugin to evaluate policy decisions for catalog entities. Example policy to enforce required labels:
+```rego
+package backstage.catalog
+default allow = false
+allow {
+  input.metadata.labels.owner != ""
+}
+```
+- **Snyk Scan**: Configure the `@backstage/plugin-snyk` to surface vulnerability reports directly in the UI.
+
+### Scaling Backstage in Kubernetes
+Deploy Backstage as a Helm chart with autoscaling:
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backstage
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  template:
+    spec:
+      containers:
+        - name: backstage
+          image: backstage:latest
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          env:
+            - name: NODE_ENV
+              value: "production"
+```
+Enable HPA based on CPU:
+```yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: backstage-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: backstage
+  minReplicas: 2
+  maxReplicas: 6
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
+```
+
+### CI/CD Integration Example (GitHub Actions)
+```yaml
+name: Backstage CI
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint & Test
+        run: npm run lint && npm test
+      - name: Build image
+        run: |
+          docker build -t myorg/backstage:${{ github.sha }} .
+      - name: Push to registry
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASS }}
+      - name: Deploy to K8s
+        uses: azure/k8s-deploy@v4
+        with:
+          manifests: |
+            k8s/deployment.yaml
+```

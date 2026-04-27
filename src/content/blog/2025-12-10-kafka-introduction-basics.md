@@ -46,6 +46,43 @@ The existing messaging systems like RabbitMQ and ActiveMQ weren't designed for t
 
 ## Core Concepts and Terminology
 
+```mermaid
+graph TD
+    subgraph Producers
+        P1[Web App]
+        P2[IoT Sensor]
+        P3[Log Agent]
+    end
+    
+    P1 -->|Publish| T1
+    P2 -->|Publish| T2
+    P3 -->|Publish| T3
+
+    subgraph Kafka Cluster
+        B1[Broker 1]
+        B2[Broker 2]
+        B3[Broker 3]
+        
+        subgraph Topics
+            T1[User Clicks]
+            T2[Sensor Data]
+            T3[System Logs]
+        end
+    end
+
+    T1 -->|Consume| C1
+    T2 -->|Consume| C2
+    T3 -->|Consume| C3
+    T1 -->|Consume| C4
+
+    subgraph Consumers
+        C1[Analytics Service]
+        C2[Real-time Alerting]
+        C3[Log Storage]
+        C4[Audit Service]
+    end
+```
+
 Before we dive deeper, let's understand Kafka's fundamental building blocks:
 
 ### Events

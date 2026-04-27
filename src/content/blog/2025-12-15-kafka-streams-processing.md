@@ -29,12 +29,36 @@ Kafka Streams is a client library for building applications that process and ana
 - **Exactly-Once Processing**: Guaranteed processing semantics
 - **Scalability**: Distributed processing across multiple instances
 
-### Key Concepts
+### KStream vs KTable
+
+```mermaid
+graph TD
+    subgraph KStream ["KStream (Event Stream)"]
+        S1["User A: Click Page 1"]
+        S2["User A: Click Page 2"]
+        S3["User A: Click Page 3"]
+    end
+    
+    subgraph KTable ["KTable (Latest State)"]
+        T1["User A: Page 3"]
+    end
+
+    S1 --> S2 --> S3
+    S3 -->|Updates| T1
+```
 
 - **KStream**: Represents a stream of events (append-only)
 - **KTable**: Represents a changelog stream (upserts/deletes)
 - **GlobalKTable**: Read-only KTable replicated to all instances
-- **Topology**: The processing graph of operations
+### Stream Processing Topology
+
+```mermaid
+graph LR
+    Input[Input Topic] -->|Stream| Process[Transformation/Filter]
+    Process -->|Aggregations| State[State Store]
+    State -->|Materialized View| KTable[KTable]
+    Process -->|Output| Result[Output Topic]
+```
 
 ## Getting Started with Kafka Streams
 

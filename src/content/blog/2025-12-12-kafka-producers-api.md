@@ -28,6 +28,29 @@ A Kafka producer is responsible for:
 - **Handling retries** and errors
 - **Ensuring delivery** guarantees
 
+### Producer Internal Workflow
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant App as Application
+    participant P as KafkaProducer
+    participant S as Serializer
+    participant K as Partitioner
+    participant B as Broker
+
+    App->>P: send(Record)
+    P->>S: Serialize Key/Value
+    S-->>P: Byte Arrays
+    P->>K: Get Partition
+    K-->>P: Partition ID
+    P->>P: Add to Batch
+    Note over P: When batch is full<br/>or linger.ms reached
+    P->>B: Send Batch
+    B-->>P: Acknowledgment (acks)
+    P-->>App: RecordMetadata
+```
+
 ### Basic Producer Setup
 
 ```java

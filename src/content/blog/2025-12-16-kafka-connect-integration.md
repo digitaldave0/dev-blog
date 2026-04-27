@@ -30,6 +30,38 @@ Kafka Connect is a framework for:
 - **Scalability**: Distributed deployment across multiple workers
 - **Management**: REST API for configuration and monitoring
 
+### Kafka Connect Data Flow
+
+```mermaid
+graph LR
+    subgraph "Source Systems"
+        DB[(PostgreSQL)]
+        MSG[RabbitMQ]
+        FILE[Log Files]
+    end
+
+    subgraph "Kafka Connect Cluster"
+        SC[Source Connector]
+        SK[Sink Connector]
+    end
+
+    subgraph "Kafka Cluster"
+        T1[Topic A]
+        T2[Topic B]
+    end
+
+    subgraph "Sink Systems"
+        ES[Elasticsearch]
+        S3[S3 Bucket]
+        SF[Snowflake]
+    end
+
+    DB & MSG & FILE --> SC
+    SC --> T1 & T2
+    T1 & T2 --> SK
+    SK --> ES & S3 & SF
+```
+
 ### Key Components
 
 - **Connectors**: High-level abstractions for data movement

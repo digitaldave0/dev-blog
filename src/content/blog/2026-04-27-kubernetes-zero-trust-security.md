@@ -63,3 +63,86 @@ To enforce Zero Trust at the API level, we use Admission Controllers:
 - **Kyverno**: Kubernetes-native policy engine using YAML-like syntax.
 
 Zero Trust is the only way to secure high-scale, dynamic cloud environments where "Trust" is a vulnerability.
+
+## Advanced Topics
+
+### eBPF‑Based L7 Policies with Cilium
+Cilium can enforce HTTP method and path checks directly in the kernel, providing near‑zero overhead:
+```yaml
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "api-gateway"
+spec:
+  endpointSelector:
+    matchLabels:
+      app: api-gateway
+  ingress:
+    - fromEndpoints:
+        - matchLabels:
+            app: frontend
+      toPorts:
+        - ports:
+            - port: "443"
+              protocol: TCP
+          rules:
+            http:
+              - method: "POST"
+                path: "/v1/secure/.*"
+```
+
+### SPIFFE/SPIRE Identity Provider
+Deploy a minimal SPIRE server to issue short‑lived X.509 SVIDs:
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spire-server-config
+  namespace: spire
+data:
+  server.conf: |
+    domain = "example.org"
+    trust_domain = "example.org"
+    data_dir = "/run/spire/server/data"
+    log_level = "INFO"
+```
+A `Agent` DaemonSet injects the SVID into each pod via the Workload API socket (`/run/spire/sockets/agent.sock`).
+
+### Istio Strict mTLS
+Enforce mutual TLS for all services:
+```yaml
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: default
+spec:
+  mtls:
+    mode: STRICT
+```
+Combine with AuthorizationPolicy to whitelist only allowed callers.
+
+### Policy‑as‑Code with OPA Gatekeeper
+Define a `ConstraintTemplate` to require a `team` label on every workload:
+```yaml
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: k8srequiredlabels
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sRequiredLabels
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8srequiredlabels
+        violation[{"msg": msg}] {
+          input.review.object.metadata.labels.team == ""
+          msg = "All workloads must have a 'team' label"
+        }
+```
+Apply the `Constraint` to enforce the rule.
+
+These patterns give you a truly Zero Trust perimeter that works at scale.
+

@@ -77,3 +77,69 @@ With the introduction of **OpenMetrics**, Prometheus can now handle OTel-native 
 3. **Semantic Conventions**: Follow the OTel specification for attribute naming to ensure cross-tool compatibility.
 
 By mastering OpenTelemetry, you decouple your observability strategy from your tooling, ensuring your data remains portable and powerful.
+
+## Advanced Topics
+
+### Exporting Traces to Jaeger & Zipkin
+Add sidecar exporters for low‑latency trace shipping:
+```yaml
+exporters:
+  jaeger:
+    endpoint: "http://jaeger-collector:14250"
+  zipkin:
+    endpoint: "http://zipkin:9411/api/v2/spans"
+service:
+  pipelines:
+    traces:
+      exporters: [jaeger, zipkin]
+```
+
+### Grafana Dashboards for OTel Metrics
+Create a dashboard that queries the `otelcol` Prometheus endpoint:
+```json
+{
+  "title": "OTel Metrics",
+  "panels": [{
+    "type": "graph",
+    "title": "CPU Usage",
+    "targets": [{
+      "expr": "process_cpu_seconds_total"
+    }]
+  }]
+}
+```
+Import via Grafana UI or `grafana-cli`.
+
+### Java Auto‑Instrumentation with Spring Boot
+Add the OpenTelemetry Java agent to your `Dockerfile`:
+```Dockerfile
+FROM eclipse-temurin:21-jdk-alpine
+ARG OTEL_AGENT_VERSION=1.27.0
+ADD https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v${OTEL_AGENT_VERSION}/opentelemetry-javaagent.jar /otel/opentelemetry-javaagent.jar
+ENV JAVA_TOOL_OPTIONS="-javaagent:/otel/opentelemetry-javaagent.jar"
+COPY target/app.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+```
+Enable exporter via env vars:
+```bash
+OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+OTEL_RESOURCE_ATTRIBUTES=service.name=my-spring-app
+```
+
+### Sampling Strategies in Production
+- **Tail‑Sampling**: Already demonstrated; add a second policy for `high‑value` traces:
+```yaml
+policies:
+  - name: high-value
+    type: span_attributes
+    span_attributes:
+      key: "environment"
+      string_values: ["prod"]
+```
+- **Probabilistic Sampling**: Simple 1% sample for low‑traffic services.
+```yaml
+processors:
+  probabilistic_sampling:
+    sampling_percentage: 1
+```
+These extensions give you a production‑grade observability stack that scales with your services.

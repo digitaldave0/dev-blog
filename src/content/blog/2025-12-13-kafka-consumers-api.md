@@ -105,6 +105,36 @@ heartbeat.interval.ms=3000     # Heartbeat frequency
 
 Consumer groups enable parallel processing of topics.
 
+### Consumer Group Partition Assignment
+
+```mermaid
+graph TD
+    subgraph Topic: 6 Partitions
+        P0[P0]
+        P1[P1]
+        P2[P2]
+        P3[P3]
+        P4[P4]
+        P5[P5]
+    end
+
+    subgraph "Consumer Group A (3 Instances)"
+        C1[Consumer 1]
+        C2[Consumer 2]
+        C3[Consumer 3]
+    end
+
+    P0 --> C1
+    P1 --> C1
+    P2 --> C2
+    P3 --> C2
+    P4 --> C3
+    P5 --> C3
+
+    classDef consumer fill:#f9f,stroke:#333,stroke-width:2px;
+    class C1,C2,C3 consumer;
+```
+
 ### Group Concepts
 
 - **Group ID**: Identifies the consumer group

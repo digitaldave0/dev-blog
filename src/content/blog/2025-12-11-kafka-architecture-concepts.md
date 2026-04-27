@@ -82,6 +82,23 @@ Topics are divided into **partitions**, which are the unit of parallelism in Kaf
 
 ### Why Partitions Matter
 
+```mermaid
+graph TD
+    subgraph Topic: UserEvents
+        P0[Partition 0]
+        P1[Partition 1]
+        P2[Partition 2]
+    end
+    
+    Prod[Producer] -->|Key: user-123| P0
+    Prod -->|Key: user-456| P1
+    Prod -->|Key: user-789| P2
+    
+    P0 -->|Reads| Cons1[Consumer A]
+    P1 -->|Reads| Cons2[Consumer B]
+    P2 -->|Reads| Cons3[Consumer C]
+```
+
 1. **Parallelism**: Multiple consumers in a group can read different partitions simultaneously
 2. **Scalability**: Partitions can be distributed across brokers
 3. **Ordering**: Events in a partition are totally ordered
@@ -145,6 +162,22 @@ Replication is Kafka's mechanism for fault tolerance. Each partition can have mu
 - **Replication Factor**: Total number of replicas per partition
 
 ### How Replication Works
+
+```mermaid
+graph TD
+    subgraph "Cluster: 3 Brokers"
+        B1["Broker 1 (Leader)"]
+        B2["Broker 2 (Follower)"]
+        B3["Broker 3 (Follower)"]
+    end
+
+    Prod[Producer] -->|1. Write| B1
+    B1 -->|2. Replicate| B2
+    B1 -->|3. Replicate| B3
+    B2 -- 4. Ack --> B1
+    B3 -- 5. Ack --> B1
+    B1 -- 6. Response --> Prod
+```
 
 1. Producer sends event to partition leader
 2. Leader writes event to its log
