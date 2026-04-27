@@ -1,5 +1,5 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const { title, img, desc, url, badge, tags, readingTime, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
@@ -25,6 +25,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
         <h1 class="text-xl font-bold">
           {title}
         </h1>
+        {readingTime && <p class="text-sm opacity-60 mb-1">{readingTime}</p>}
         <p class="py-1 text-1xl">{desc}</p>
       </div>
     </div>
