@@ -41,16 +41,18 @@ const {
         });
         
         // Find all code blocks that should be mermaid diagrams
-        // Standard markdown: pre code.language-mermaid
-        // Astro/Shiki might have varied structures
-        const blocks = document.querySelectorAll('pre code.language-mermaid, pre.mermaid, div.mermaid');
+        // Astro/Shiki structure: pre.astro-code[data-language="mermaid"]
+        const blocks = document.querySelectorAll('pre[data-language="mermaid"], pre.mermaid, div.mermaid, pre code.language-mermaid');
         
         console.log(`[Mermaid] Found ${blocks.length} potential diagrams`);
 
         blocks.forEach((block, index) => {
-          const container = block.tagName === 'CODE' ? block.parentElement : block;
+          // For Astro/Shiki, the text is inside code > spans
+          // .innerText usually works well to strip spans
           const rawContent = block.innerText || block.textContent;
           
+          if (!rawContent) return;
+
           const id = `mermaid-svg-${index}`;
           const div = document.createElement('div');
           div.className = 'mermaid-container flex justify-center my-8 p-4 bg-white/5 rounded-lg';
@@ -59,8 +61,8 @@ const {
           // Set the raw content for mermaid to process
           div.innerHTML = rawContent.trim();
           
-          // Replace the original block
-          container.replaceWith(div);
+          // Replace the original block (pre tag)
+          block.replaceWith(div);
         });
         
         mermaid.run({
