@@ -83,4 +83,4 @@ It gives me:
 
 If you're someone who learns best by **making connections**, and wants full control of your notes — give Obsidian a shot. It's more than a note app — it's a thinking tool.
 
-**Dave**
+**Human in the Loop**

@@ -123,4 +123,4 @@ Prompt engineering is the practice of writing effective instructions for AI mode
 
 Stay tuned for future posts where we dive deeper into LangChain, agents, and how prompt design impacts model behavior in real-world applications.
 
-Thanks for reading, **Dave**
+Thanks for reading, **Human in the Loop**

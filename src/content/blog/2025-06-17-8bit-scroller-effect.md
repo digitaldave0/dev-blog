@@ -36,7 +36,7 @@ We need a container structure for our scrolling text:
 <div class="title-container">
   <div class="marquee">
     <div class="marquee-content">
-      <span class="site-name">Dave's Dev Blog</span>
+      <span class="site-name">Human in the Loop</span>
       <span class="site-description">🚀 DevOps, AI and notes worth documenting.</span>
     </div>
   </div>
@@ -135,4 +135,4 @@ With just a bit of CSS, we've created a nostalgic, retro-gaming inspired header 
 Want to see more posts like this? Let me know in the comments!
 
 ---
-Thanks for reading! Dave🎮
+Thanks for reading! Human in the Loop

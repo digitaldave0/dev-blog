@@ -102,7 +102,7 @@ I'm planning several enhancements:
 
 ## Try it Now! 🚀
 
-Experience the chatbot in action: [DaveBot Demo](https://686d8970ef8cee0008ba5bd0--funny-bienenstitch-0c3a88.netlify.app/)
+Experience the chatbot in action: [AI Bot Demo](https://686d8970ef8cee0008ba5bd0--funny-bienenstitch-0c3a88.netlify.app/)
 
 The demo showcases:
 - Real-time AI responses using Together AI's DeepSeek-V3 model
