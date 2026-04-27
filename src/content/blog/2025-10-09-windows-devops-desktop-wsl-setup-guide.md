@@ -19,6 +19,8 @@ description: >
   Docker integration, development tools configuration, security hardening, and
   DevOps workflows. Get the best of both Windows and Linux worlds for modern
   development.
+heroImage: >-
+  https://picsum.photos/seed/2025-10-09-windows-devops-desktop-wsl-setup-guide/800/400
 ---
 
 Setting up a Windows desktop for DevOps development requires balancing Windows productivity with Linux tooling. Windows Subsystem for Linux (WSL) bridges this gap perfectly, giving you native Linux performance while maintaining Windows compatibility.

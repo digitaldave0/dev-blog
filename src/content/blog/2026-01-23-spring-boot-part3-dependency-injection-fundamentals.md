@@ -12,6 +12,8 @@ series: Spring Boot Development Series
 part: 3
 tags:
   - devops
+heroImage: >-
+  https://picsum.photos/seed/2026-01-23-spring-boot-part3-dependency-injection-fundamentals/800/400
 ---
 
 # Spring Boot Development Series - Part 3: Dependency Injection Fundamentals

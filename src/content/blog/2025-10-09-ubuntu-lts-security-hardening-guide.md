@@ -18,6 +18,8 @@ tags:
   - sudo
   - cybersecurity
 icon: "\U0001F512"
+heroImage: >-
+  https://picsum.photos/seed/2025-10-09-ubuntu-lts-security-hardening-guide/800/400
 ---
 
 # Ubuntu LTS Security Hardening Guide: Complete Server Setup

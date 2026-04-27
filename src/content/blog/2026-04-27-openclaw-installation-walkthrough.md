@@ -1,8 +1,15 @@
 ---
-title: "Installing OpenClaw: From Binary to Container"
-description: "A step-by-step walkthrough of the OpenClaw installation process, covering containerized deployment and local source builds for advanced customization."
-pubDate: 2026-04-27
-tags: ["openclaw", "installation", "devops"]
+title: 'Installing OpenClaw: From Binary to Container'
+description: >-
+  A step-by-step walkthrough of the OpenClaw installation process, covering
+  containerized deployment and local source builds for advanced customization.
+pubDate: 2026-04-27T00:00:00.000Z
+tags:
+  - openclaw
+  - installation
+  - devops
+heroImage: >-
+  https://picsum.photos/seed/2026-04-27-openclaw-installation-walkthrough/800/400
 ---
 
 # Installing OpenClaw: From Binary to Container

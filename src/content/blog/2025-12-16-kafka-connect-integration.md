@@ -12,6 +12,7 @@ description: >-
   connectors for databases, message queues, and external systems.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-12-16-kafka-connect-integration/800/400'
 ---
 
 # Kafka Connect - Integrating with External Systems

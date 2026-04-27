@@ -18,6 +18,8 @@ categories:
   - Development
   - Tutorial
 permalink: /posts/developer-machine-setup/
+heroImage: >-
+  https://picsum.photos/seed/2025-10-29-setting-up-developer-machine-python-node-ubuntu-lts/800/400
 ---
 
 ## Introduction

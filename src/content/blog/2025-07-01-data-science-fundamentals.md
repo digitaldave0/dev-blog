@@ -14,6 +14,7 @@ tags:
 description: >-
   Understanding the crucial steps of data preparation and how to achieve the
   right model fit.
+heroImage: 'https://picsum.photos/seed/2025-07-01-data-science-fundamentals/800/400'
 ---
 
 

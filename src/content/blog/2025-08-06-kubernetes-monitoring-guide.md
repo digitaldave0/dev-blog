@@ -13,6 +13,7 @@ description: >-
   knowledge for maintaining production-grade Kubernetes clusters.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-08-06-kubernetes-monitoring-guide/800/400'
 ---
 
 

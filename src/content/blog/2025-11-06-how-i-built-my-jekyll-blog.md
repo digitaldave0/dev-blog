@@ -22,6 +22,7 @@ description: >-
   A deep dive into my Jekyll blog development workflow, featuring GitHub Actions
   automation, AI-assisted content creation, and custom prompts for technical
   writing.
+heroImage: 'https://picsum.photos/seed/2025-11-06-how-i-built-my-jekyll-blog/800/400'
 ---
 
 # How I Built My Jekyll Blog: Automation, AI, and GitHub Actions Workflow

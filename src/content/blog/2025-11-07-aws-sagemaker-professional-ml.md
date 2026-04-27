@@ -22,6 +22,7 @@ description: >-
   Take your SageMaker skills to the next level with professional ML practices
   using real datasets. Learn feature engineering, cross-validation,
   hyperparameter tuning, and model deployment.
+heroImage: 'https://picsum.photos/seed/2025-11-07-aws-sagemaker-professional-ml/800/400'
 ---
 
 # AWS SageMaker Professional ML: Real Dataset House Price Prediction

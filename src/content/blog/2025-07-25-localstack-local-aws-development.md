@@ -13,6 +13,7 @@ tags:
   - devops
   - s3
 icon: "\U0001F3D7️"
+heroImage: 'https://picsum.photos/seed/2025-07-25-localstack-local-aws-development/800/400'
 ---
 
 

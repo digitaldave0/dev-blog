@@ -22,6 +22,7 @@ description: >-
   Simple guide to Domain 1 of AWS Certified AI Practitioner exam: AI/ML
   Fundamentals. Learn core concepts, algorithms, data preparation, and model
   evaluation with easy-to-understand examples.
+heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-1/800/400'
 ---
 
 # AWS Certified AI Practitioner Domain 1: AI/ML Fundamentals Made Simple

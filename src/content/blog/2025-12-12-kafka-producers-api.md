@@ -11,6 +11,7 @@ description: >-
   configure reliability, and implement exactly-once semantics.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-12-12-kafka-producers-api/800/400'
 ---
 
 # Kafka Producers API - Publishing Events to Kafka

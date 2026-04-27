@@ -14,6 +14,8 @@ series: Spring Boot Development Series
 part: 5
 tags:
   - devops
+heroImage: >-
+  https://picsum.photos/seed/2026-01-25-spring-boot-part5-advanced-features-best-practices/800/400
 ---
 
 # Spring Boot Development Series - Part 5: Advanced Features and Best Practices

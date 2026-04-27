@@ -24,6 +24,7 @@ categories:
   - ETL
   - Tutorial
 permalink: /posts/aws-glue-complete-tutorial/
+heroImage: 'https://picsum.photos/seed/2025-10-29-aws-glue-complete-tutorial/800/400'
 ---
 
 ## Introduction

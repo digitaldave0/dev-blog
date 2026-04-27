@@ -16,6 +16,7 @@ tags:
 icon: "\U0001F40D"
 author: owner
 pubDate: 2025-11-10T14:00:00.000Z
+heroImage: 'https://picsum.photos/seed/2025-11-10-bandit-python-security/800/400'
 ---
 
 # Bandit: Python-Specific Static Security Analysis Tool

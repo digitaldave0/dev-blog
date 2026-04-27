@@ -19,6 +19,7 @@ description: >-
   Comprehensive guide to preparing for the AWS AI Practitioner certification
   exam. Covers exam domains, key concepts, AWS AI services, and practical study
   strategies with real-world examples.
+heroImage: 'https://picsum.photos/seed/2025-10-29-aws-ai-practitioner-exam-prep/800/400'
 ---
 
 # AWS AI Practitioner Exam Preparation: Complete Study Guide

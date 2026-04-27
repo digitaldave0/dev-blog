@@ -12,6 +12,7 @@ tags:
   - cloud
   - migration
 icon: "\U0001F331"
+heroImage: 'https://picsum.photos/seed/2025-07-13-opentofu-guide-and-migration/800/400'
 ---
 
 # OpenTofu: The Open Source Alternative to Terraform

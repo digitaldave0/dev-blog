@@ -12,6 +12,8 @@ tags:
   - prompts
 author: owner
 pubDate: 2025-11-17T10:00:00.000Z
+heroImage: >-
+  https://picsum.photos/seed/2025-11-17-advanced-gemini-cli-customization/800/400
 ---
 
 Welcome to **Part 3** of the Gemini CLI tutorial series. In the [previous post](/posts/gemini-cli-tools-deep-dive/), we explored the built-in tools and how they work.

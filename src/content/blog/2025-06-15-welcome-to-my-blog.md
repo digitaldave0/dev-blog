@@ -4,6 +4,7 @@ title: How I Built This Blog with GitHub Pages & Jekyll
 description: 'A quick guide to how I set up my blog using GitHub Pages, Jekyll, and is-a.dev'
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-06-15-welcome-to-my-blog/800/400'
 ---
 
 Setting up this blog was simpler than you’d think — and **completely free**. Here’s how I did it:

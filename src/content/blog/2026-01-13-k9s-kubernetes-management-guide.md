@@ -13,6 +13,7 @@ tags:
   - cli
   - container-orchestration
 description: A detailed DevOps and Platform Engineering guide.
+heroImage: 'https://picsum.photos/seed/2026-01-13-k9s-kubernetes-management-guide/800/400'
 ---
 
 ## Introduction

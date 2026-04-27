@@ -12,6 +12,8 @@ description: >-
   understand Kubernetes internals.
 tags:
   - devops
+heroImage: >-
+  https://picsum.photos/seed/2025-07-10-kubernetes-architecture-deep-dive/800/400
 ---
 
 

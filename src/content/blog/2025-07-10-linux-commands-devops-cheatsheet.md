@@ -12,6 +12,7 @@ description: >-
   common use cases, and best practices for daily operations.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-07-10-linux-commands-devops-cheatsheet/800/400'
 ---
 
 

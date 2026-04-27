@@ -22,6 +22,7 @@ description: >-
   Comprehensive guide to Domain 4 of AWS Certified AI Practitioner exam: AI
   Ethics and Responsible AI. Learn fairness, bias mitigation, privacy,
   transparency, and responsible AI practices.
+heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-4/800/400'
 ---
 
 # AWS Certified AI Practitioner Domain 4: AI Ethics and Responsible AI

@@ -11,6 +11,8 @@ description: >-
   load-balanced web application with customizable configurations.
 tags:
   - devops
+heroImage: >-
+  https://picsum.photos/seed/2025-07-10-ansible-intermediate-roles-variables/800/400
 ---
 
 

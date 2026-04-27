@@ -11,6 +11,7 @@ description: >-
   macOS, including authentication, CLI, and SDK setup.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-07-01-azure-python-tooling-setup-macos/800/400'
 ---
 
 

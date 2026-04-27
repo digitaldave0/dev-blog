@@ -4,6 +4,7 @@ title: "\U0001F9E0 Prompt Engineering: How to Talk to AI and Get What You Need"
 description: 'Prompt engineering is the art of crafting clear, accurate, useful results.'
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-06-16-prompt-engineering/800/400'
 ---
 
 

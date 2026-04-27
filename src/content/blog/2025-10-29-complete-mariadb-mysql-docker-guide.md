@@ -27,6 +27,8 @@ categories:
   - Docker
   - Tutorial
 permalink: /posts/mariadb-mysql-docker-setup/
+heroImage: >-
+  https://picsum.photos/seed/2025-10-29-complete-mariadb-mysql-docker-guide/800/400
 ---
 
 ## Introduction

@@ -10,6 +10,8 @@ series: Spring Boot Development Series
 part: 4
 tags:
   - devops
+heroImage: >-
+  https://picsum.photos/seed/2026-01-24-spring-boot-part4-building-first-application/800/400
 ---
 
 # Spring Boot Development Series - Part 4: Building Your First Application

@@ -11,6 +11,7 @@ description: >-
   KStreams, KTables, windowing, joins, and stateful operations.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-12-15-kafka-streams-processing/800/400'
 ---
 
 # Kafka Streams - Real-Time Stream Processing

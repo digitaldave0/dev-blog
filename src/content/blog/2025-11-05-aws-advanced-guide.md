@@ -18,6 +18,7 @@ categories:
   - AWS
   - DevOps
 permalink: /posts/aws-advanced-guide/
+heroImage: 'https://picsum.photos/seed/2025-11-05-aws-advanced-guide/800/400'
 ---
 
 ## Introduction

@@ -13,6 +13,7 @@ tags:
   - circleci
   - automation
 icon: "\U0001F504"
+heroImage: 'https://picsum.photos/seed/2025-07-15-terraform-cicd-pipeline-guide/800/400'
 ---
 
 

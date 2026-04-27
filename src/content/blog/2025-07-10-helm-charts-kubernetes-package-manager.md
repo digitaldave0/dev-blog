@@ -13,6 +13,8 @@ description: >-
   with Kubernetes.
 tags:
   - devops
+heroImage: >-
+  https://picsum.photos/seed/2025-07-10-helm-charts-kubernetes-package-manager/800/400
 ---
 
 # Introduction to Helm

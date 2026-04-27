@@ -19,6 +19,7 @@ description: >-
   Comprehensive cheatsheet of 50 essential Git commands with examples. From
   basic operations to advanced techniques, this guide covers everything you need
   to master Git version control.
+heroImage: 'https://picsum.photos/seed/2025-10-29-50-great-git-commands-cheatsheet/800/400'
 ---
 
 # 50 Great Git Commands: Complete Cheatsheet with Examples

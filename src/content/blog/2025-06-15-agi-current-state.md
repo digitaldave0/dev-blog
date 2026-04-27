@@ -6,6 +6,7 @@ description: >-
   memory, messiness, and embodied learning.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-06-15-agi-current-state/800/400'
 ---
 
 Thoughts on AI Today – Why Persistence Matters

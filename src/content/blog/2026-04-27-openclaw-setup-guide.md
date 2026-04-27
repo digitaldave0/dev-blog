@@ -1,8 +1,15 @@
 ---
-title: "OpenClaw Setup: Preparing Your Environment for Agentic Automation"
-description: "A comprehensive guide to configuring your local and cloud environments for OpenClaw, ensuring all prerequisites and dependencies are met for a smooth startup."
-pubDate: 2026-04-27
-tags: ["openclaw", "setup", "automation"]
+title: 'OpenClaw Setup: Preparing Your Environment for Agentic Automation'
+description: >-
+  A comprehensive guide to configuring your local and cloud environments for
+  OpenClaw, ensuring all prerequisites and dependencies are met for a smooth
+  startup.
+pubDate: 2026-04-27T00:00:00.000Z
+tags:
+  - openclaw
+  - setup
+  - automation
+heroImage: 'https://picsum.photos/seed/2026-04-27-openclaw-setup-guide/800/400'
 ---
 
 # OpenClaw Setup: Preparing Your Environment

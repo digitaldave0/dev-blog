@@ -12,6 +12,7 @@ tags:
   - extensions
 author: owner
 pubDate: 2025-11-16T10:00:00.000Z
+heroImage: 'https://picsum.photos/seed/2025-11-16-gemini-cli-tools-deep-dive/800/400'
 ---
 
 Welcome to **Part 2** of the Gemini CLI tutorial series. In the [previous post](/posts/gemini-cli-getting-started/), we covered installation, authentication, and your first interactive session.

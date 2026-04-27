@@ -19,6 +19,7 @@ description: >-
   Master the AWS CLI with this detailed cheatsheet covering 100 essential
   commands across different AWS services. Perfect for DevOps engineers working
   with AWS infrastructure, featuring real-world examples and common use cases.
+heroImage: 'https://picsum.photos/seed/2025-07-10-aws-cli-devops-cheatsheet/800/400'
 ---
 
 # AWS CLI Commands Cheatsheet for DevOps Engineers

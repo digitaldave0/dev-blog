@@ -11,6 +11,7 @@ description: >-
   deserialization, and building scalable event processing applications.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-12-13-kafka-consumers-api/800/400'
 ---
 
 # Kafka Consumers API - Reading and Processing Events

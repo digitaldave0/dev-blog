@@ -12,6 +12,7 @@ tags:
   - machine-learning-series
   - data-patterns
 description: Discover how unsupervised learning finds patterns in data automatically.
+heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-unsupervised/800/400'
 ---
 
 

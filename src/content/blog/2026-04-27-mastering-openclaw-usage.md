@@ -1,8 +1,14 @@
 ---
-title: "Mastering OpenClaw: Practical Use Cases for DevOps"
-description: "How to use OpenClaw for daily operations, including automated log analysis, PR reviews, and infrastructure orchestration."
-pubDate: 2026-04-27
-tags: ["openclaw", "usage", "automation"]
+title: 'Mastering OpenClaw: Practical Use Cases for DevOps'
+description: >-
+  How to use OpenClaw for daily operations, including automated log analysis, PR
+  reviews, and infrastructure orchestration.
+pubDate: 2026-04-27T00:00:00.000Z
+tags:
+  - openclaw
+  - usage
+  - automation
+heroImage: 'https://picsum.photos/seed/2026-04-27-mastering-openclaw-usage/800/400'
 ---
 
 # Mastering OpenClaw: Practical Use Cases

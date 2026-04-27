@@ -11,6 +11,7 @@ description: >-
   topics, partitions, and replication work together.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-12-11-kafka-architecture-concepts/800/400'
 ---
 
 # Kafka Architecture and Core Concepts - Understanding the Foundation

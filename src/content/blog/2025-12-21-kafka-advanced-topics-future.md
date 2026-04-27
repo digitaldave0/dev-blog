@@ -13,6 +13,7 @@ description: >-
   future trends in event streaming technology.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-12-21-kafka-advanced-topics-future/800/400'
 ---
 
 # Advanced Kafka Topics and the Future of Event Streaming

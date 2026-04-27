@@ -22,6 +22,8 @@ description: >-
   practices for production-ready clusters.
 series: Apache Kafka Deep Dive
 part: 13
+heroImage: >-
+  https://picsum.photos/seed/2025-12-22-kafka-kubernetes-deployment-guide/800/400
 ---
 
 Welcome back to our Kafka series! In previous posts, we've explored the fundamentals of Apache Kafka, its architecture, and use cases for real-time data streaming. Today, we're diving into deploying Kafka on Kubernetes (K8s), a powerful combination that enables scalable, resilient, and manageable Kafka clusters. This guide builds on our earlier discussions by focusing on production-ready deployments, with an emphasis on why node architecture directly impacts Kafka's performance and reliability.

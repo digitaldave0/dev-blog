@@ -12,6 +12,7 @@ description: >-
   issues, perform maintenance, and ensure high availability.
 tags:
   - devops
+heroImage: 'https://picsum.photos/seed/2025-12-19-kafka-monitoring-operations/800/400'
 ---
 
 # Kafka Monitoring, Operations, and Troubleshooting

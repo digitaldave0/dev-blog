@@ -12,6 +12,7 @@ tags:
   - automation
   - enterprise
 icon: "\U0001F6E0️"
+heroImage: 'https://picsum.photos/seed/2025-07-14-terraform-advanced-tooling/800/400'
 ---
 
 

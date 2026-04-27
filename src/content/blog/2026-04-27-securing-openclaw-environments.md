@@ -1,8 +1,14 @@
 ---
-title: "Securing OpenClaw: Hardening Your Agentic Infrastructure"
-description: "Best practices for securing OpenClaw, including sandboxing agent execution, managing secrets, and implementing zero-trust access controls."
-pubDate: 2026-04-27
-tags: ["openclaw", "security", "hardening"]
+title: 'Securing OpenClaw: Hardening Your Agentic Infrastructure'
+description: >-
+  Best practices for securing OpenClaw, including sandboxing agent execution,
+  managing secrets, and implementing zero-trust access controls.
+pubDate: 2026-04-27T00:00:00.000Z
+tags:
+  - openclaw
+  - security
+  - hardening
+heroImage: 'https://picsum.photos/seed/2026-04-27-securing-openclaw-environments/800/400'
 ---
 
 # Securing OpenClaw: Hardening Your Infrastructure

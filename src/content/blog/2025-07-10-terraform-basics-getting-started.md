@@ -10,6 +10,7 @@ tags:
   - devops
   - cloud
 icon: "\U0001F3D7️"
+heroImage: 'https://picsum.photos/seed/2025-07-10-terraform-basics-getting-started/800/400'
 ---
 
 # Getting Started with Terraform

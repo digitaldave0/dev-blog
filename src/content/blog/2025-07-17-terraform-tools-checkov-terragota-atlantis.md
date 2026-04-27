@@ -15,6 +15,8 @@ tags:
   - infrastructure
   - cost-management
 icon: "\U0001F6E0️"
+heroImage: >-
+  https://picsum.photos/seed/2025-07-17-terraform-tools-checkov-terragota-atlantis/800/400
 ---
 
 

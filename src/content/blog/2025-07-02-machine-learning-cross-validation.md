@@ -13,6 +13,8 @@ tags:
 description: >-
   Understanding cross-validation techniques and how to prevent overfitting in
   machine learning models.
+heroImage: >-
+  https://picsum.photos/seed/2025-07-02-machine-learning-cross-validation/800/400
 ---
 
 # Cross-Validation and Overfitting: Finding the Right Balance

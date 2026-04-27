@@ -12,6 +12,7 @@ tags:
 description: >-
   A hands-on guide to building a complete CI/CD pipeline with GitHub Actions,
   including manual approvals, secrets management, and deployment strategies.
+heroImage: 'https://picsum.photos/seed/2025-07-07-github-actions-practical-demo/800/400'
 ---
 
 # GitHub Actions in Practice: Building a Complete CI/CD Pipeline

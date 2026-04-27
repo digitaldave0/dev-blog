@@ -13,6 +13,8 @@ description: >-
   costs.
 tags:
   - devops
+heroImage: >-
+  https://picsum.photos/seed/2025-06-25-building-ai-chatbot-netlify-huggingface/800/400
 ---
 
 
