@@ -1,54 +1,75 @@
 ---
 pubDate: 2025-06-15T00:00:00.000Z
-title: How I Built This Blog with GitHub Pages & Jekyll
-description: 'A quick guide to how I set up my blog using GitHub Pages, Jekyll, and is-a.dev'
+title: 'Building a High-Performance DevOps Blog with Astro & GitHub Actions'
+description: 'How I migrated to a modern stack using Astro, TailwindCSS, and automated CI/CD pipelines.'
 tags:
   - devops
+  - astro
+  - github-actions
+  - tailwindcss
+  - automation
 heroImage: 'https://picsum.photos/seed/2025-06-15-welcome-to-my-blog/800/400'
 ---
 
-Setting up this blog was simpler than you’d think — and **completely free**. Here’s how I did it:
+What started as a simple Jekyll project has evolved. As my needs for performance, customization, and "Everything-as-Code" grew, I migrated this blog to **Astro**. This shift wasn't just about a new look—it was about building a professional-grade DevOps workbench.
 
-## 🍥 The Stack
-- **GitHub Pages** for free static hosting  
-- **Jekyll** (via [jekyll-now](https://github.com/barryclark/jekyll-now))  
-- **Markdown** for writing posts  
-- **Custom domain** via [is-a.dev](https://is-a.dev)
-
-## 🗺️ Step-by-Step Setup
-1. **Forked a Jekyll template repo**  
-   Used [barryclark/jekyll-now](https://github.com/barryclark/jekyll-now)
-2. **Renamed the repo** to `dev-blog`
-3. **Enabled GitHub Pages** under Settings → Pages
-4. **Edited `_config.yml`** for name, description, links
-5. **Created this post** using Markdown in `_posts/`
-
-3. **Wait for the PR to be approved and merged.**  
-→ The subdomain will then point to your GitHub Pages site.
+Here is the breakdown of the current architecture powering this site.
 
 ---
 
-## 🔒 Enabling HTTPS/SSL
+## The Modern Stack
 
-After your CNAME is active:
+The current iteration of this blog is built for speed and developer experience:
 
-1. Go to **Settings > Pages** in your repo.
-2. Scroll to **Custom domain** and make sure `davedevops.is-a.dev` is filled in.
-3. Check the box for **"Enforce HTTPS"**.
-
-GitHub will issue a free SSL certificate (via Let's Encrypt), and HTTPS should activate within minutes.
+*   **Astro 4.0**: A modern web framework that pulls "Islands of Interactivity" into static HTML for lightning-fast loads.
+*   **Astrofy Template**: A versatile, professional-grade foundation for blogs and portfolios.
+*   **TailwindCSS & DaisyUI**: Utility-first styling with a premium component library for consistent, beautiful UI.
+*   **GitHub Actions**: A robust CI/CD pipeline that handles the build-and-deploy cycle automatically.
+*   **GitHub Pages**: Reliable, global hosting for our static assets.
 
 ---
 
-## ✅ Done!
+## The Automation Pipeline (GitHub Actions)
 
-Now you have:
-- A personal blog
-- Running on GitHub Pages
-- With your own domain
-- Fully secured with HTTPS
-- And easily extensible with Markdown
+Manual deployments are a thing of the past. I've implemented a **GitOps workflow** where every push to the `master` branch triggers an automated build.
 
-🧠 Next up: Adding more posts and customizing styles!
+### The deploy.yml Workflow
+My GitHub Actions pipeline handles the heavy lifting in two stages:
+
+1.  **Build Stage**:
+    *   Set up a Node.js 20 environment.
+    *   Install dependencies via `npm`.
+    *   Run `npm run build` to generate the optimized Astro site in the `dist/` folder.
+    *   Upload the output as a secure deployment artifact.
+
+2.  **Deploy Stage**:
+    *   Triggers automatically after a successful build.
+    *   Uses the `actions/deploy-pages` official action to push the `dist/` contents directly to GitHub Pages.
+
+> [!NOTE]
+> This automation ensures that the site is always in sync with the repository, providing a seamless "Push-to-Deploy" experience.
+
+---
+
+## Design & Customization
+
+By moving to the **Astrofy** theme, I've gained a structure that supports more than just blog posts. The new architecture includes:
+*   **Component-Based Design**: Reusable Astro components for headers, footers, and sidebars.
+*   **MDX Support**: The ability to use JSX-like components directly inside Markdown posts.
+*   **Responsive Layouts**: A mobile-first approach powered by Tailwind’s grid and flexbox utilities.
+*   **Rich Navigation**: Integrated Table of Contents and series navigation for better readability.
+
+---
+
+## The Results
+
+The migration to Astro has resulted in:
+*   **Perfect Lighthouse Scores**: Near-instant page loads and better SEO.
+*   **Low Maintenance**: GitHub Actions manages the lifecycle, letting me focus on writing content.
+*   **Scalability**: Easy to add new features like a project store, CV section, or custom interactive dashboards.
+
+> [!TIP]
+> **Continuous Improvement**
+> In DevOps, "done" is never finished. This blog serves as a living laboratory for testing new CI/CD patterns and web technologies. Stay tuned for deeper dives into the specific components and workflows!
 
 ---
