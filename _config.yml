@@ -1,6 +1,6 @@
 title: "human in the loop"
-description: "A blog about AI, DevOps, programming, and more"
-author: "owner"
+tagline: "DevOps, MLOps & Platform Engineering"
+author: "David Hibbitts"
 email: ""
 markdown: kramdown
 theme: jekyll-theme-chirpy
