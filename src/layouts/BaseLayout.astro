@@ -28,6 +28,37 @@ const {
       const theme = localStorage.getItem('theme') || 'lofi';
       document.documentElement.setAttribute('data-theme', theme);
     </script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script is:inline>
+      const initializeMermaid = () => {
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: localStorage.getItem('theme') === 'black' ? 'dark' : 'default',
+        });
+        
+        // Find all code blocks with the class 'language-mermaid'
+        const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+        mermaidBlocks.forEach((block, index) => {
+          const pre = block.parentElement;
+          const content = block.textContent;
+          const id = `mermaid-${index}`;
+          
+          // Create a new div for mermaid
+          const div = document.createElement('div');
+          div.className = 'mermaid flex justify-center my-8';
+          div.id = id;
+          div.innerHTML = content;
+          
+          // Replace the pre with the div
+          pre.replaceWith(div);
+        });
+        
+        mermaid.run();
+      };
+
+      document.addEventListener('DOMContentLoaded', initializeMermaid);
+      document.addEventListener('astro:after-swap', initializeMermaid);
+    </script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">

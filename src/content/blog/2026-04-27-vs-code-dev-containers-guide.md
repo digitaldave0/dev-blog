@@ -33,6 +33,33 @@ By defining your environment in a `.devcontainer` folder, you treat your tools e
 - **Onboarding:** Zero-to-code in minutes.
 - **Consistency:** The same environment in development, CI, and potentially production.
 
+---
+
+## Visualizing the Workflow
+
+Here is how the VS Code Dev Container lifecycle works from initialization to a ready-to-code state:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant VSCode as VS Code (Host)
+    participant Docker as Docker Engine
+    participant DevContainer as Dev Container (Server)
+
+    User->>VSCode: Open Project
+    VSCode->>User: Detection: "Reopen in Container?"
+    User->>VSCode: Click "Reopen"
+    VSCode->>Docker: Build Image (Dockerfile/Compose)
+    Docker-->>VSCode: Container Ready
+    VSCode->>DevContainer: Start VS Code Server
+    VSCode->>DevContainer: Mount Workspace & SSH Keys
+    DevContainer->>DevContainer: Run postCreateCommand
+    DevContainer-->>VSCode: Environment Ready
+    VSCode-->>User: Ready to Code!
+```
+
+---
+
 ## 2. The Architecture: How It Works Under the Hood
 
 To truly master Dev Containers, you need to understand the client-server architecture that VS Code employs. When you "Reopen in Container," VS Code doesn't just mount your files; it actually splits itself in two:
