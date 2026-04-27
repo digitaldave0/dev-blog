@@ -127,16 +127,37 @@ aws lambda put-function-concurrency \
 
 ## VPC Design Patterns
 
-### Multi-AZ Architecture
+### 3-Tier VPC Architecture
 
-```
-Internet Gateway
-  ↓
-Public Subnets (AZ-A, AZ-B) - Load Balancer, NAT Gateway
-  ↓
-Private Subnets (AZ-A, AZ-B) - Application Servers
-  ↓
-Database Subnets (AZ-A, AZ-B) - RDS Multi-AZ
+A standard production VPC architecture distributes resources across public and private subnets in multiple Availability Zones for high availability and security.
+
+```mermaid
+graph TD
+    subgraph VPC["AWS VPC (10.0.0.0/16)"]
+        subgraph PublicSubnets["Public Subnets (Internet Facing)"]
+            ALB[ALB / NLB]
+            NAT[NAT Gateway]
+        end
+        
+        subgraph PrivateSubnets["Private Subnets (App Tier)"]
+            ASG[Auto Scaling Group]
+            App1[EC2 Instance]
+            App2[EC2 Instance]
+        end
+        
+        subgraph DBSubnets["Database Subnets (Data Tier)"]
+            RDS_P[(RDS Primary)]
+            RDS_S[(RDS Standby)]
+        end
+        
+        IGW[Internet Gateway] <--> ALB
+        ALB --> ASG
+        ASG --> App1 & App2
+        App1 & App2 --> RDS_P
+        RDS_P -.-> RDS_S
+        App1 & App2 --> NAT
+        NAT --> IGW
+    end
 ```
 
 ### Security Groups and Network ACLs

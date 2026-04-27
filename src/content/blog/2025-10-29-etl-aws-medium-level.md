@@ -33,27 +33,42 @@ Welcome to Part 2 of our ETL series! In [Part 1](/posts/etl-fundamentals-basics/
 
 This medium-level guide focuses on AWS services that make ETL pipelines more robust, scalable, and maintainable. We'll cover AWS Glue, Lambda functions, Step Functions, and build complete data workflows.
 
-## AWS ETL Architecture Overview
+### AWS ETL Architecture Overview
 
-### Core AWS ETL Services
+Modern AWS ETL architectures combine batch processing (Glue), event-driven tasks (Lambda), and complex orchestration (Step Functions).
 
 ```mermaid
-graph TB
-    A[Data Sources] --> B[AWS Glue Crawler]
-    B --> C[AWS Glue Catalog]
-    C --> D[AWS Glue ETL Job]
-    D --> E[Transformed Data]
-    E --> F[Data Targets]
+graph TD
+    subgraph DataIngestion["1. Data Ingestion"]
+        S3_Raw[S3 Raw Bucket]
+        API[External APIs]
+        DB_Source[(Source DBs)]
+    end
 
-    G[Event Sources] --> H[AWS Lambda]
-    H --> I[Data Processing]
-    I --> J[Data Targets]
+    subgraph DataDiscovery["2. Discovery & Catalog"]
+        Crawler[Glue Crawler]
+        Catalog[(Glue Data Catalog)]
+    end
 
-    K[Workflow Triggers] --> L[AWS Step Functions]
-    L --> M[Glue Job]
-    L --> N[Lambda Function]
-    M --> O[Data Warehouse]
-    N --> O
+    subgraph Processing["3. Processing & Transformation"]
+        GlueJob[Glue ETL Job]
+        Lambda[AWS Lambda]
+        StepFn{Step Functions}
+    end
+
+    subgraph Storage["4. Optimized Storage"]
+        S3_Proc[S3 Processed Bucket]
+        Redshift[(Amazon Redshift)]
+    end
+
+    S3_Raw & API & DB_Source --> Crawler
+    Crawler --> Catalog
+    Catalog --> GlueJob
+    StepFn --> GlueJob
+    StepFn --> Lambda
+    GlueJob --> S3_Proc
+    Lambda --> S3_Proc
+    S3_Proc --> Redshift
 ```
 
 ### Service Comparison
