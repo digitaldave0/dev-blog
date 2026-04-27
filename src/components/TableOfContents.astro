@@ -1,13 +1,13 @@
 ---
-const { headings } = Astro.props;
+const { headings = [] } = Astro.props;
 
-// Filter to only include H2 and H3 for the TOC to keep it clean
-const tocHeadings = headings.filter((h) => h.depth > 1 && h.depth < 4);
+// Filter to include H2, H3, and H4
+const tocHeadings = headings.filter((h) => h.depth > 1 && h.depth < 5);
 ---
 
 {
   tocHeadings.length > 0 && (
-    <div class="toc-container mb-8 p-6 bg-base-200/50 rounded-xl border border-base-300">
+    <div class="toc-container mb-8 p-6 bg-base-200 rounded-xl border border-base-300">
       <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
         Table of Contents
