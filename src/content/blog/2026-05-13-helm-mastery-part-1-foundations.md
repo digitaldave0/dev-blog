@@ -36,13 +36,13 @@ Helm 3 (the current standard) is a client-side tool that interacts directly with
 
 ```mermaid
 graph LR
-    User((User)) -->|helm install| Client[Helm Client CLI]
-    Client -->|gRPC / REST| API[K8s API Server]
+    User((fa:fa-user User)) -->|helm install| Client[fa:fa-terminal Helm Client CLI]
+    Client -->|gRPC / REST| API[fa:fa-server K8s API Server]
     subgraph "Kubernetes Cluster"
-        API --> DB[(etcd)]
-        API --> Controller[Controllers]
+        API --> DB[(fa:fa-database etcd)]
+        API --> Controller[fa:fa-cogs Controllers]
     end
-    Client -.->|Fetch| Registry[Chart Registry / Artifact Hub]
+    Client -.->|Fetch| Registry[fa:fa-box-open Chart Registry]
 
     style Client fill:#0f1623,color:#fff,stroke:#38bdf8
     style Registry fill:#1e293b,color:#fff,stroke:#94a3b8

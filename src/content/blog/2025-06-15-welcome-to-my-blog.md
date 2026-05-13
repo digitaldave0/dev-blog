@@ -38,20 +38,20 @@ The following diagram illustrates how a code change travels from my local machin
 
 ```mermaid
 graph TD
-    A[Local Code Change] -->|git push| B(GitHub Repository)
-    B -->|Trigger| C{GitHub Actions Runner}
+    A[fa:fa-laptop-code Local Code Change] -->|git push| B(fa:fa-github GitHub Repository)
+    B -->|Trigger| C{fa:fa-gear GitHub Actions Runner}
     subgraph "Build Job"
-        C --> D[Checkout Repository]
-        D --> E[Setup Node.js 20]
-        E --> F[Install Dependencies]
-        F --> G[Build Astro Site]
-        G --> H[Upload dist/ as Artifact]
+        C --> D[fa:fa-download Checkout Repository]
+        D --> E[fa:fa-node-js Setup Node.js 20]
+        E --> F[fa:fa-box Install Dependencies]
+        F --> G[fa:fa-rocket Build Astro Site]
+        G --> H[fa:fa-file-export Upload dist/ as Artifact]
     end
     subgraph "Deploy Job"
-        H --> I[Download Artifact]
-        I --> J[Deploy to GitHub Pages]
+        H --> I[fa:fa-file-import Download Artifact]
+        I --> J[fa:fa-cloud-upload-alt Deploy to GitHub Pages]
     end
-    J --> K((Live Site Updated))
+    J --> K((fa:fa-check-circle Live Site Updated))
 
     style C fill:#f9f,stroke:#333,stroke-width:4px
     style K fill:#00ff00,stroke:#333,stroke-width:2px

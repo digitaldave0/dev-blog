@@ -83,12 +83,12 @@ A typical production deployment flow in 2026 looks like this:
 
 ```mermaid
 graph TD
-    A[Git Repo] -->|CI Trigger| B{Linter & Unit Tests}
-    B -->|Pass| C[Helm Chart Testing / KITS]
-    C -->|Pass| D[Package & Push to OCI Registry]
-    D --> E[GitOps Controller / ArgoCD]
-    E -->|Detect Change| F[Sync Cluster State]
-    F --> G((Production Site Updated))
+    A[fa:fa-code Git Repo] -->|CI Trigger| B{fa:fa-vial Linter & Tests}
+    B -->|Pass| C[fa:fa-check-double Helm Testing]
+    C -->|Pass| D[fa:fa-archive Package & Push]
+    D --> E[fa:fa-anchor GitOps / ArgoCD]
+    E -->|Detect Change| F[fa:fa-sync Cluster Sync]
+    F --> G((fa:fa-globe Production Live))
 
     style B fill:#f9f,stroke:#333
     style E fill:#38bdf8,color:#fff

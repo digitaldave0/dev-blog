@@ -30,7 +30,24 @@ The **Model Context Protocol (MCP)**, pioneered by Anthropic, provides a standar
 
 ## How the Dynatrace MCP Server Works
 
-The MCP server acts as a secure proxy. When you ask an AI agent, *"Why is the checkout service slow?"*, the agent doesn't just guess. It uses the MCP server to:
+The MCP server acts as a secure proxy. The following diagram illustrates how an AI agent interacts with your environment through this bridge:
+
+```mermaid
+graph TD
+    User((fa:fa-user User)) -->|Natural Language| Agent[fa:fa-robot AI Agent]
+    Agent -->|MCP Request| Server[fa:fa-bridge Dynatrace MCP Server]
+    Server -->|DQL / API| DT[fa:fa-chart-line Dynatrace Platform]
+    DT -->|Smartscape| Context[fa:fa-network-wired Topology Context]
+    DT -->|Grail| Data[fa:fa-database Observability Data]
+    Data & Context --> Server
+    Server -->|Tool Result| Agent
+    Agent -->|Solution| User
+
+    style Server fill:#f9f,stroke:#333
+    style DT fill:#38bdf8,color:#fff
+```
+
+The server acts as a secure proxy. When you ask an AI agent, *"Why is the checkout service slow?"*, the agent doesn't just guess. It uses the MCP server to:
 
 1.  **Query DQL**: Execute Dynatrace Query Language commands to fetch specific logs or metrics.
 2.  **Analyze Problems**: Retrieve Davis AI's root-cause analysis for any open problems.
