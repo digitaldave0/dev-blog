@@ -99,7 +99,7 @@ helm create my-first-chart
 This generates a boilerplate chart. While it's tempting to use this as-is, the true mastery comes from building one from scratch or cleaning up the boilerplate to fit your exact needs.
 
 ### Verifying Your Chart
-Before deploying, always lint and dry-run:
+Before deploying, always lint and dry-run. If your terminal isn't already setup with the necessary K8s tools, check out the [Zero-Day DevOps Setup Guide](/blog/2026-05-13-devops-setup-guide).
 
 ```bash
 # Check for syntax errors

@@ -28,6 +28,10 @@ Setting up a robust development environment is crucial for efficient coding, deb
 
 Ubuntu LTS versions (like 22.04 or 24.04) are ideal for development due to their stability and long support cycles. This guide assumes you're starting with a fresh Ubuntu LTS installation.
 
+> [!NOTE]
+> **Looking for a macOS or cross-platform guide?**
+> If you are setting up a new Mac or want a broader look at advanced terminal tools (zoxide, fzf, etc.) and Git aliases, see my updated [Zero-Day DevOps Setup Guide](/blog/2026-05-13-devops-setup-guide).
+
 ## Prerequisites
 
 Before we begin, ensure you have:

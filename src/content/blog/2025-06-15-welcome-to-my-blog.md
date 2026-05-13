@@ -94,7 +94,7 @@ The migration to Astro has resulted in:
 *   **Scalability**: Easy to add new features like a project store, CV section, or custom interactive dashboards.
 
 > [!TIP]
-> **Continuous Improvement**
-> In DevOps, "done" is never finished. This blog serves as a living laboratory for testing new CI/CD patterns and web technologies. Stay tuned for deeper dives into the specific components and workflows!
+> **Ready to Build Your Own Command Center?**
+> If you're inspired by this architecture and want to set up your own professional-grade DevOps workbench on macOS or Ubuntu, check out my [Zero-Day DevOps Setup Guide](/blog/2026-05-13-devops-setup-guide).
 
 ---
