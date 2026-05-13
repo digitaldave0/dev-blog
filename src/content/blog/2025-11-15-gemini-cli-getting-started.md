@@ -27,7 +27,10 @@ Imagine having an AI assistant that sits in your terminal and can:
 
 That's Gemini CLI—an open-source AI agent that transforms how developers work.
 
-Gemini CLI brings the power of Google's Gemini directly into your terminal. It's designed for both coding tasks and general productivity, comes integrated with various tools, supports MCP (Model Context Protocol) servers, and offers a generous free tier: **60 requests/min and 1,000 requests/day with a personal Google account**.
+Gemini CLI brings the power of Google's Gemini directly into your terminal. It's designed for both coding tasks and general productivity, comes integrated with various tools, supports MCP (Model Context Protocol) servers, and offers a generous free tier for development and prototyping.
+
+> [!IMPORTANT]
+> **Update (May 2026):** As of early 2026, the free tier focus has shifted toward high-efficiency models like **Gemini 3.1 Flash-Lite**. Many "Pro" series models now require a paid tier for production usage. Always check your live quotas in [Google AI Studio](https://aistudio.google.com/).
 
 This is Part 1 of the Gemini CLI tutorial series. In this post, we'll cover installation, authentication, and your first interactive session with Gemini CLI.
 
@@ -70,7 +73,13 @@ npm install -g @google/gemini-cli
 gemini -v
 ```
 
-This should display the version number (e.g., `0.4.0`).
+This should display the version number (e.g., `0.42.0`).
+
+### Release Channels
+The Gemini CLI now supports multiple release channels for different stability needs:
+- **Stable**: The default, vetted version (`npm install -g @google/gemini-cli@latest`)
+- **Preview**: For testing upcoming features (`npm install -g @google/gemini-cli@preview`)
+- **Nightly**: The bleeding edge from the main branch (`npm install -g @google/gemini-cli@nightly`)
 
 ## Initial Setup and Authentication
 
@@ -114,7 +123,7 @@ See the [Authentication documentation](https://github.com/google-gemini/gemini-c
 Once authenticated, you'll see the interactive Gemini CLI interface. Notice the status bar at the bottom showing:
 
 - **Current folder** (left side) - The project directory you're working in
-- **Current model** (center) - The model being used (e.g., `gemini-2.5-pro`)
+- **Current model** (center) - The model being used (e.g., `gemini-3.1-flash`)
 - **Context remaining** (right side) - Available context window
 
 ### Important: Start from Your Project Directory
