@@ -79,7 +79,7 @@ Instead of installing these one-by-one, we can use a "Brewfile" on Mac or a simp
 ### Core Infrastructure
 - **Terraform / OpenTofu**: For IaC.
 - **Kubectl**: The K8s steering wheel.
-- **Helm**: For Kubernetes packaging.
+- **Helm**: For Kubernetes packaging (See my [Helm Mastery Series](/blog/2026-05-13-helm-mastery-part-1-foundations)).
 - **AWS/GCP/Azure CLIs**: Depending on your cloud of choice.
 
 ### Development Runtimes (Use Version Managers!)
@@ -94,7 +94,7 @@ Never install Node or Python directly into your system path. It will break thing
 Forget the heavy "Docker Desktop." For a faster, lighter experience, use **OrbStack** or **Colima**. They are significantly more resource-efficient on Apple Silicon.
 
 ### Ubuntu
-Install the native Docker Engine. It's more stable than the Snap version for professional work.
+Install the native Docker Engine. It's more stable than the Snap version for professional work. Once installed, dive into my [Docker Mastery Series](/blog/2026-05-13-docker-mastery-part-1-networking) to learn how to scale and secure your containers.
 
 ```bash
 # Quick Ubuntu Docker Install
@@ -140,6 +140,8 @@ alias cd='z'
 # Modern tools replacements
 alias ls='eza --icons'
 alias cat='bat'
+
+# For deeper automation patterns, see my guide on [Taskfile.dev](/blog/2026-05-13-taskfile-devops-guide).
 ```
 
 ## 6. The "Secret Sauce": Dotfiles
@@ -158,3 +160,7 @@ Within 10 minutes, my new machine looks and feels **exactly** like my old one.
 Setting up a machine manually is a rite of passage, but doing it twice is a waste of time. By using package managers and versioning your configuration, you ensure that your DevOps workbench is portable, reproducible, and ready for whatever the cloud throws at you.
 
 **Now go build something great!**
+
+> [!TIP]
+> **Next Step: AI-Powered Terminal**
+> Now that your environment is ready, take it to the next level with an AI assistant. Check out my [Gemini CLI Getting Started Guide](/blog/2025-11-15-gemini-cli-getting-started) to integrate Google's latest models directly into your new workflow.
