@@ -103,6 +103,16 @@ This is the future of server access. It allows you to SSH into your machines wit
 sudo tailscale up --ssh
 ```
 
+### Tailscale HTTPS (SSL/TLS)
+Running services like Grafana or a home dashboard? Tired of the "Not Secure" browser warning for internal IPs? Tailscale can automatically provision and renew **Let's Encrypt certificates** for your MagicDNS hostnames.
+
+1.  **Enable HTTPS** in your Tailscale admin console.
+2.  **Generate a certificate** locally on your machine:
+```bash
+sudo tailscale cert <hostname>.<tailnet-name>.ts.net
+```
+This generates a `.crt` and `.key` file that you can plug directly into Nginx, Caddy, or any other web server.
+
 ## 5. Automation with `tailscale set`
 
 You can change configurations on the fly without restarting the service using `tailscale set`. This is great for scripts or temporary changes.
