@@ -79,7 +79,7 @@ Instead of installing these one-by-one, we can use a "Brewfile" on Mac or a simp
 ### Core Infrastructure
 - **Terraform / OpenTofu**: For IaC.
 - **Kubectl**: The K8s steering wheel.
-- **Helm**: For Kubernetes packaging (See my [Helm Mastery Series](/blog/helm-chart-mastery-part-1-foundations-architecture)).
+- **Helm**: For Kubernetes packaging.
 - **AWS/GCP/Azure CLIs**: Depending on your cloud of choice.
 
 ### Development Runtimes (Use Version Managers!)
