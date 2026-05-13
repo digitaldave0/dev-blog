@@ -13,6 +13,8 @@ export default function (title: string, staticSlug: string) {
       .replace(/\s+/g, '-')
       // remove special characters
       .replace(/[^\w-]/g, '')
+      // collapse multiple hyphens
+      .replace(/-+/g, '-')
       // remove leading & trailing separtors
       .replace(/^-+|-+$/g, '')
   )

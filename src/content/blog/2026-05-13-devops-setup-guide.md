@@ -79,7 +79,7 @@ Instead of installing these one-by-one, we can use a "Brewfile" on Mac or a simp
 ### Core Infrastructure
 - **Terraform / OpenTofu**: For IaC.
 - **Kubectl**: The K8s steering wheel.
-- **Helm**: For Kubernetes packaging (See my [Helm Mastery Series](/blog/helm-chart-mastery-part-1-foundations--architecture)).
+- **Helm**: For Kubernetes packaging (See my [Helm Mastery Series](/blog/helm-chart-mastery-part-1-foundations-architecture)).
 - **AWS/GCP/Azure CLIs**: Depending on your cloud of choice.
 
 ### Development Runtimes (Use Version Managers!)
@@ -94,7 +94,7 @@ Never install Node or Python directly into your system path. It will break thing
 Forget the heavy "Docker Desktop." For a faster, lighter experience, use **OrbStack** or **Colima**. They are significantly more resource-efficient on Apple Silicon.
 
 ### Ubuntu
-Install the native Docker Engine. It's more stable than the Snap version for professional work. Once installed, dive into my [Docker Mastery Series](/blog/docker-mastery-part-1-advanced-networking--multi-host-connectivity) to learn how to scale and secure your containers.
+Install the native Docker Engine. It's more stable than the Snap version for professional work. Once installed, dive into my [Docker Mastery Series](/blog/docker-mastery-part-1-advanced-networking-multi-host-connectivity) to learn how to scale and secure your containers.
 
 ```bash
 # Quick Ubuntu Docker Install
