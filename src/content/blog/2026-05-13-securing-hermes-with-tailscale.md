@@ -1,11 +1,9 @@
 ---
 title: "The Fortress Agent: Securing Hermes with Tailscale & Tirith"
-pubDate: 2026-05-13
+pubDate: 2026-05-13T00:00:11.000Z
 description: "A deep dive into securing your agentic AI infrastructure using Tailscale for networking and the Tirith policy engine for operational safety."
 author: "David Hibbitts"
-image:
-    url: "/blog-placeholder.jpg"
-    alt: "Secure AI Infrastructure"
+heroImage: 'https://picsum.photos/seed/2026-05-13-securing-hermes/800/400'
 tags: ["DevOps", "AI", "Tailscale", "Security", "Hermes"]
 ---
 
