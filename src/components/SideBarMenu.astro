@@ -1,11 +1,46 @@
 ---
+import { getCollection } from "astro:content";
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
+
+const posts = await getCollection("blog");
+const tagCounts = {};
+posts.forEach(post => {
+  (post.data.tags || []).forEach(tag => {
+    const t = tag.trim();
+    if (t && t.length < 30 && !t.includes('@')) {
+      tagCounts[t] = (tagCounts[t] || 0) + 1;
+    }
+  });
+});
+
+const sortedTags = Object.entries(tagCounts)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 30)
+  .sort((a, b) => a[0].localeCompare(b[0]));
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
     <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
     <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
+
+    {sortedTags.length > 0 && (
+        <>
+            <div class="divider my-4 mx-4"></div>
+            <div class="px-4 py-2 text-xs font-bold uppercase opacity-50 tracking-wider">Subjects</div>
+            <div class="flex flex-wrap gap-2 px-4 pb-6">
+                {sortedTags.map(([tag, count]) => (
+                    <a 
+                        href={`/blog/tag/${tag}`} 
+                        class="badge badge-sm badge-outline hover:badge-primary transition-all duration-200 border-base-content/20 hover:scale-105 no-underline whitespace-nowrap"
+                        title={`${count} posts`}
+                    >
+                        {tag}
+                    </a>
+                ))}
+            </div>
+        </>
+    )}
 </ul>
 
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
