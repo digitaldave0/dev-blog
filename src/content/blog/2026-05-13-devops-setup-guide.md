@@ -27,9 +27,10 @@ graph TD
     B -->|Install| D[fa:fa-code Development Runtimes]
     B -->|Install| E[fa:fa-cloud-arrow-up Cloud & K8s Tools]
     B -->|Install| F[fa:fa-docker Container Engine]
+    B -->|Configure| G[fa:fa-alias Git & Shell Aliases]
     
     subgraph "The Stack"
-        C & D & E & F
+        C & D & E & F & G
     end
 
     style B fill:#f9f,stroke:#333
@@ -49,7 +50,7 @@ Ubuntu comes with `apt`, but for the latest DevOps tools, you'll often want to a
 
 ## 2. The Command Line: Your Real Home
 
-You're going to spend 90% of your time in the terminal. Make it comfortable.
+You're going to spend 90% of your time in the terminal. Make it comfortable and powerful.
 
 - **Shell**: Use **Zsh** (default on macOS).
 - **Framework**: **Oh My Zsh** for plugin management.
@@ -58,9 +59,17 @@ You're going to spend 90% of your time in the terminal. Make it comfortable.
   - **macOS**: iTerm2 or Warp.
   - **Ubuntu**: Tilix or Alacritty.
 
+### Modern CLI Tooling (The "Rust" Revolution)
+In 2026, we don't use the standard GNU tools. We use their modern, faster counterparts:
+- **`zoxide`**: A smarter `cd` command (it learns where you go).
+- **`fzf`**: A fuzzy finder for everything (files, history, branches).
+- **`bat`**: `cat` with syntax highlighting and git integration.
+- **`eza`**: A modern `ls` with icons and colors.
+- **`jq` / `yq`**: Essential for parsing JSON/YAML from APIs.
+
 ```bash
-# Install Starship
-curl -sS https://starship.rs/install.sh | sh
+# macOS install
+brew install zoxide fzf bat eza jq yq
 ```
 
 ## 3. The DevOps Toolchain
@@ -93,9 +102,45 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-## 5. Automation: Taskfile.dev
+## 5. Automation & Shortcuts
 
-As I discussed in my [previous post on Taskfile](/blog/2026-05-13-taskfile-devops-guide), I use `task` to manage my local projects. It's the first tool I install after the package manager.
+### Essential Git Aliases
+Add these to your `~/.gitconfig` to save thousands of keystrokes over your career:
+
+```ini
+[alias]
+  st = status -sb
+  co = checkout
+  cb = checkout -b
+  cm = commit -m
+  lg = log --graph --oneline --all
+  please = push --force-with-lease
+  undo = reset --soft HEAD~1
+  # The DevOps Lifesaver: Trigger an empty commit to restart CI
+  trigger = commit --allow-empty -m "chore: re-trigger pipeline"
+```
+
+### Productivity Shell Aliases
+Add these to your `~/.zshrc` or `~/.bashrc`:
+
+```bash
+# Kubernetes
+alias k='kubectl'
+alias kgp='kubectl get pods'
+alias kgs='kubectl get services'
+alias kga='kubectl get all'
+
+# Docker
+alias d='docker'
+alias dc='docker-compose'
+
+# Navigation (zoxide)
+alias cd='z'
+
+# Modern tools replacements
+alias ls='eza --icons'
+alias cat='bat'
+```
 
 ## 6. The "Secret Sauce": Dotfiles
 
