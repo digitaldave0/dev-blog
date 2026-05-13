@@ -50,7 +50,7 @@ If you don't want to install Gemini CLI locally, you can use it directly in **Go
 
 The Gemini CLI is a Node.js application, so you'll need **Node.js version 20 or higher** installed on your system.
 
-If you need a more comprehensive guide on setting up a professional-grade DevOps environment on macOS or Ubuntu (including Node.js, version managers, and terminal productivity tools), check out my [Zero-Day DevOps Setup Guide](/blog/2026-05-13-devops-setup-guide) first.
+If you need a more comprehensive guide on setting up a professional-grade DevOps environment on macOS or Ubuntu (including Node.js, version managers, and terminal productivity tools), check out my [Zero-Day DevOps Setup Guide](/blog/the-zero-day-devops-setup-from-fresh-os-to-production-ready) first.
 
 **Step 1: Verify Node.js Installation**
 

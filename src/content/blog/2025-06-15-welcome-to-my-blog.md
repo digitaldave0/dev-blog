@@ -95,6 +95,6 @@ The migration to Astro has resulted in:
 
 > [!TIP]
 > **Ready to Build Your Own Command Center?**
-> If you're inspired by this architecture and want to set up your own professional-grade DevOps workbench on macOS or Ubuntu, check out my [Zero-Day DevOps Setup Guide](/blog/2026-05-13-devops-setup-guide).
+> If you're inspired by this architecture and want to set up your own professional-grade DevOps workbench on macOS or Ubuntu, check out my [Zero-Day DevOps Setup Guide](/blog/the-zero-day-devops-setup-from-fresh-os-to-production-ready).
 
 ---

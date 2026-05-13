@@ -30,7 +30,7 @@ Ubuntu LTS versions (like 22.04 or 24.04) are ideal for development due to their
 
 > [!NOTE]
 > **Looking for a macOS or cross-platform guide?**
-> If you are setting up a new Mac or want a broader look at advanced terminal tools (zoxide, fzf, etc.) and Git aliases, see my updated [Zero-Day DevOps Setup Guide](/blog/2026-05-13-devops-setup-guide).
+> If you are setting up a new Mac or want a broader look at advanced terminal tools (zoxide, fzf, etc.) and Git aliases, see my updated [Zero-Day DevOps Setup Guide](/blog/the-zero-day-devops-setup-from-fresh-os-to-production-ready).
 
 ## Prerequisites
 

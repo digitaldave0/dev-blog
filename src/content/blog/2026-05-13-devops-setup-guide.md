@@ -79,7 +79,7 @@ Instead of installing these one-by-one, we can use a "Brewfile" on Mac or a simp
 ### Core Infrastructure
 - **Terraform / OpenTofu**: For IaC.
 - **Kubectl**: The K8s steering wheel.
-- **Helm**: For Kubernetes packaging (See my [Helm Mastery Series](/blog/2026-05-13-helm-mastery-part-1-foundations)).
+- **Helm**: For Kubernetes packaging (See my [Helm Mastery Series](/blog/helm-chart-mastery-part-1-foundations--architecture)).
 - **AWS/GCP/Azure CLIs**: Depending on your cloud of choice.
 
 ### Development Runtimes (Use Version Managers!)
@@ -94,7 +94,7 @@ Never install Node or Python directly into your system path. It will break thing
 Forget the heavy "Docker Desktop." For a faster, lighter experience, use **OrbStack** or **Colima**. They are significantly more resource-efficient on Apple Silicon.
 
 ### Ubuntu
-Install the native Docker Engine. It's more stable than the Snap version for professional work. Once installed, dive into my [Docker Mastery Series](/blog/2026-05-13-docker-mastery-part-1-networking) to learn how to scale and secure your containers.
+Install the native Docker Engine. It's more stable than the Snap version for professional work. Once installed, dive into my [Docker Mastery Series](/blog/docker-mastery-part-1-advanced-networking--multi-host-connectivity) to learn how to scale and secure your containers.
 
 ```bash
 # Quick Ubuntu Docker Install
@@ -141,7 +141,7 @@ alias cd='z'
 alias ls='eza --icons'
 alias cat='bat'
 
-# For deeper automation patterns, see my guide on [Taskfile.dev](/blog/2026-05-13-taskfile-devops-guide).
+# For deeper automation patterns, see my guide on [Taskfile.dev](/blog/beyond-makefiles-modern-devops-automation-with-taskfiledev).
 ```
 
 ## 6. The "Secret Sauce": Dotfiles
@@ -163,4 +163,4 @@ Setting up a machine manually is a rite of passage, but doing it twice is a wast
 
 > [!TIP]
 > **Next Step: AI-Powered Terminal**
-> Now that your environment is ready, take it to the next level with an AI assistant. Check out my [Gemini CLI Getting Started Guide](/blog/2025-11-15-gemini-cli-getting-started) to integrate Google's latest models directly into your new workflow.
+> Now that your environment is ready, take it to the next level with an AI assistant. Check out my [Gemini CLI Getting Started Guide](/blog/gemini-cli-getting-started) to integrate Google's latest models directly into your new workflow.
