@@ -127,6 +127,5 @@ tailscale set --exit-node=
 
 Tailscale is more than a VPN; it's a foundational layer for modern DevOps. It allows you to treat the entire world as one local network, secured by WireGuard and authenticated by your existing identity provider. 
 
-If you're following my [Zero-Day DevOps Setup Guide](/blog/the-zero-day-devops-setup-from-fresh-os-to-production-ready), Tailscale is the final piece of the puzzle that connects your fresh machine to your global infrastructure.
 
 **Happy Networking!**
