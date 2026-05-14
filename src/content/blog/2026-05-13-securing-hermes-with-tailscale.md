@@ -24,11 +24,11 @@ By default, services often bind to `0.0.0.0`. We want Hermes to only listen on t
 
 ```yaml
 gateway:
-  host: "100.69.72.22" # Your Tailnet IP
+  host: "<your-tailnet-ip>" # Restricted to your private mesh
   port: 8080
 ```
 
-Now, you can access your agent's dashboard from any of your devices using **MagicDNS**: `http://hermesma:8080`.
+Now, you can access your agent's dashboard from any of your devices using **MagicDNS**: `http://<your-hostname>:8080`.
 
 ---
 
@@ -37,62 +37,75 @@ Now, you can access your agent's dashboard from any of your devices using **Magi
 A "stateless" agent is a forgetful agent. While Hermes has built-in session memory, **Mem0** provides a persistent "long-term brain" that allows the agent to learn about you over time.
 
 ### Why Mem0?
-Mem0 doesn't just store logs; it extracts **semantic facts**. It learns that you prefer Python over Go, that your production database is on AWS, and that you like "deep space blue" for your UI.
+Mem0 doesn't just store logs; it extracts **semantic facts**. It learns your technology preferences, project locations, and operational habits, injecting this context into every new session.
 
-### The Stack: Qdrant + Local Embeddings
-To keep your data private, we run the memory stack entirely on your server:
-1.  **Vector Store (Qdrant)**: A high-performance vector database running in a Docker container.
-2.  **Embedder**: We use a local `sentence-transformers` model (`all-MiniLM-L6-v2`) that runs on your CPU, ensuring your memories never leave your machine.
-3.  **Fact Extraction**: Hermes uses your primary LLM (e.g., Qwen 3.5) to "read" the conversation and extract facts to be stored in Qdrant.
+### Step 1: Install the Memory Stack
+To run Mem0 locally, you need a vector database and the required Python libraries.
 
-### Configuration
-We created a custom `mem0_local` plugin that hooks into Hermes' `MemoryProvider` interface. This allows Hermes to pre-fetch relevant memories before every turn, giving the LLM instant context without manual prompting.
-
----
-
-## 3. Infrastructure Efficiency & Cost Routing
-
-Running high-end models like Claude 3.5 Sonnet or GPT-4o for every minor task is expensive. Hermes uses **OpenRouter price-sorting** to keep costs low.
-
-### Cost-Based Sorting
-By injecting `sort: price` into the OpenRouter provider configuration, Hermes automatically selects the cheapest available provider for your chosen model at that exact moment.
-
-### The Fallback Strategy
-In 2026, we use a "Flash" fallback model. If your primary model hits a rate limit or becomes too expensive, Hermes automatically drops back to a high-speed, low-cost model like **Gemini 3.1 Flash-Lite**.
-
-```yaml
-# ~/.hermes/config.yaml snippet
-model_gateway:
-  sort: price
-  allow_fallbacks: true
-  fallback_providers:
-    - google/gemini-3.1-flash-lite
+**Start the Vector Database (Qdrant):**
+```bash
+docker run -d -p 6333:6333 -p 6334:6334 \
+  -v ~/.hermes/qdrant_storage:/qdrant/storage:z \
+  --name qdrant qdrant/qdrant
 ```
 
+**Install Dependencies:**
+```bash
+# In your Hermes virtual environment
+pip install mem0ai sentence-transformers
+```
+
+### Step 2: Configure Hermes to use Local Mem0
+We use a local embedding model (`all-MiniLM-L6-v2`) to ensure that vectorization happens on your CPU and never leaves the server. Update your `~/.hermes/config.yaml` to point to your local provider:
+
+```yaml
+memory:
+  provider: "mem0_local" # Uses our custom local-first plugin
+  memory_enabled: true
+```
+
+The `mem0_local` plugin handles the bridge between the Mem0 library, your local Qdrant instance, and the LLM fact-extraction logic.
+
 ---
 
-## 4. Maintenance: The "Self-Healing" Agent
+## 3. Infrastructure Efficiency & Model Fallbacks
 
-A DevOps workbench is only as good as its maintenance. We've implemented a two-tier maintenance strategy for Hermes.
+Running high-end models like Claude 3.5 Sonnet for every task is expensive. We optimize this at two levels: **Cost-Routing** and **Automatic Fallbacks**.
 
-### Automated Updates
-The `hermes update` command keeps the agentic engine current. It pulls the latest commits, rebuilds the Web UI, and reconciles Python/Node dependencies automatically.
+### Cost-Based Routing
+Hermes can be configured to prioritize the lowest-cost provider for a specific model (via OpenRouter). This ensures you always get the best price for inference.
 
-### The "Safety Net" Backup Script
-To protect your memories (the Qdrant database) and your configurations, we use a custom backup script (`~/scripts/hermes_backup.sh`) that runs daily at 3:30 AM via `crontab`.
+### Configuring Model Fallbacks
+Reliability is key. If your primary model hits a rate limit or a provider goes down, Hermes can automatically "fail over" to a cheaper, high-availability model. 
+
+In your `config.yaml`, define your primary model and a list of fallbacks:
+
+```yaml
+# ~/.hermes/config.yaml
+model: "qwen/qwen3.5-35b-a3b" # Your primary powerhouse
+allow_fallbacks: true
+fallback_providers:
+  - "google/gemini-3.1-flash-lite" # Low-cost, high-speed fallback
+```
+
+This ensures that even if the powerhouse model is unavailable, your agent remains operational using a "Flash" class model for a fraction of the cost.
+
+---
+
+## 4. Maintenance & Automated Backups
+
+To protect your memories and configuration, we use a custom backup script (`~/scripts/hermes_backup.sh`) that runs daily at 3:30 AM.
 
 **The Backup Workflow:**
-1.  **Stop Qdrant**: We pause the database to ensure a clean binary snapshot (preventing "hot" backup corruption).
-2.  **Snapshot**: Run `hermes backup` to create a single, encrypted zip archive.
-3.  **Resume**: Restart Qdrant to minimize agent downtime.
-4.  **Prune**: Automatically delete backups older than 30 days.
+1.  **Stop Qdrant**: `docker stop qdrant` (ensures database integrity).
+2.  **Snapshot**: `hermes backup --output ~/backups/hermes_full.zip`.
+3.  **Resume**: `docker start qdrant`.
+4.  **Prune**: Keep the last 30 days of archives.
 
 ---
 
 ## Conclusion
 
-By wrapping Hermes in **Tailscale**, grounding it with **local Mem0 memory**, and optimizing it with **cost-aware routing**, you move from an "experimental chatbot" to a "production-ready operator." 
+By wrapping Hermes in **Tailscale**, grounding it with **local Mem0 memory**, and enforcing **model fallbacks**, you move from an "experimental chatbot" to a "production-ready operator." 
 
-Your agent now remembers who you are, protects your data, and manages its own infrastructure costs—the hallmark of a true AI-native DevOps workflow.
-
-**Next Steps**: Check out my [Tailscale Mastery Guide](/blog/2026-05-13-tailscale-mastery-guide) to learn how to automate SSL certificates for your Hermes dashboard.
+Your agent now remembers who you are, protects your data, and stays alive even when providers fail—the hallmark of a true AI-native DevOps workflow.
