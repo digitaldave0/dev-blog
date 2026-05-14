@@ -68,27 +68,40 @@ The `mem0_local` plugin handles the bridge between the Mem0 library, your local 
 
 ---
 
-## 3. Infrastructure Efficiency & Model Fallbacks
+## 3. Infrastructure Efficiency & Intelligent Routing
 
-Running high-end models like Claude 3.5 Sonnet for every task is expensive. We optimize this at two levels: **Cost-Routing** and **Automatic Fallbacks**.
+Running high-end models for every task is expensive. We optimize this at two levels: **Intelligent Auto-Routing** and **Extended Fallback Chains**.
 
-### Cost-Based Routing
-Hermes can be configured to prioritize the lowest-cost provider for a specific model (via OpenRouter). This ensures you always get the best price for inference.
+### Intelligent Model Routing (Auto-Router)
+Instead of hard-coding a single primary model, we can use an **Auto-Router**. This tells Hermes to analyze the complexity of each request and dynamically choose between models based on their strengths and current pricing.
 
-### Configuring Model Fallbacks
-Reliability is key. If your primary model hits a rate limit or a provider goes down, Hermes can automatically "fail over" to a cheaper, high-availability model. 
-
-In your `config.yaml`, define your primary model and a list of fallbacks:
+For example, you can configure OpenRouter to "intelligently" switch between a reasoning powerhouse and a coding specialist:
 
 ```yaml
 # ~/.hermes/config.yaml
-model: "qwen/qwen3.5-35b-a3b" # Your primary powerhouse
-allow_fallbacks: true
-fallback_providers:
-  - "google/gemini-3.1-flash-lite" # Low-cost, high-speed fallback
+model:
+  default: "openrouter/auto"
+  extra_body:
+    models:
+      - "qwen/qwen3.5-35b-a3b"  # Preferred for complex reasoning
+      - "deepseek/deepseek-v3.2" # Preferred for high-efficiency coding
+    provider:
+      sort: "price"            # Always pick the cheapest available provider
+      allow_fallbacks: true
 ```
 
-This ensures that even if the powerhouse model is unavailable, your agent remains operational using a "Flash" class model for a fraction of the cost.
+### Extended Fallback Chains (The Free-Tier Net)
+Reliability is key. If your primary routing fails or you hit a credit limit, Hermes can cascade through a prioritized list of fallbacks. We can even include "Free Tier" models as a final safety net to ensure your agent never goes dark.
+
+```yaml
+# ~/.hermes/config.yaml
+fallback_providers:
+  - model: "google/gemini-3.1-flash-lite" # High-speed, 1M context safety net
+  - model: "deepseek/deepseek-v3.2"       # Low output cost backup
+  - model: "meta-llama/llama-4-scout"     # Free-tier ultimate fallback
+```
+
+This tiered strategy ensures that even if a major provider has an outage or your balance runs low, your agent remains operational.
 
 ---
 
