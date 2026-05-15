@@ -132,4 +132,4 @@ Tailscale is more than a VPN; it's a foundational layer for modern DevOps. It al
 
 ---
 
-**Next Steps**: Now that your mesh network is ready, learn how to use it to secure your AI operations in my [Fortress Agent Guide](/blog/2026-05-13-securing-hermes-with-tailscale).
+**Next Steps**: Now that your mesh network is ready, learn how to use it to secure your AI operations in my [Fortress Agent Guide](/blog/the-ultimate-hermes-operator-guide-persistence-security-and-cost-optimization).

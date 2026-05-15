@@ -1,5 +1,7 @@
 ---
-title: "The Ultimate Hermes Operator Guide: Persistence, Security, and Cost-Optimization"
+title: "Hermes Mastery Part 1: The Sovereign Architecture"
+series: "Hermes Mastery"
+part: 1
 pubDate: 2026-05-13T00:00:11.000Z
 description: "A comprehensive deep dive into mastering the Hermes Agent: From zero-trust networking with Tailscale to local-first persistent memory with Mem0 and Qdrant."
 author: "David Hibbitts"
