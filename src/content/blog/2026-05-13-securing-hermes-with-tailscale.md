@@ -19,7 +19,27 @@ This guide moves beyond the basic installation to build a **Hardened, Persistent
 
 One of the first decisions a Hermes operator must make is the deployment model. This choice determines the agent's "reach" into your local environment.
 
-### The Native (System) Install: The "Operator" Choice
+### The "One-Liner" Quick Start
+If you're on Linux, macOS, or WSL2, you can bootstrap the entire environment with a single command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+```
+
+### The Setup Wizard: Your AI Orientation
+Once the script completes and you've reloaded your shell, the real magic begins with the **Setup Wizard**. Run:
+
+```bash
+hermes setup
+```
+
+This interactive CLI tool is the "brain surgery" phase of your installation. It guides you through:
+1.  **Provider Selection**: Choosing between OpenRouter, OpenAI, or local Ollama.
+2.  **API Keys**: Securely injecting your credentials into the `.env`.
+3.  **Platform Pairing**: Linking your Telegram bot or Slack workspace.
+4.  **Persona Tuning**: Selecting the default voice and behavior of your agent.
+
+### Native (System) Install: The "Operator" Choice
 Running Hermes natively in a Python virtual environment (`venv`) is the preferred method for power users. This gives the agent direct access to your local CLI tools (kubectl, git, terraform) and your filesystem.
 - **Pros**: Direct system access, zero-latency tool execution, easier to integrate with local hardware (GPU/Audio).
 - **Cons**: Requires manual management of Python dependencies and environmental isolation.
