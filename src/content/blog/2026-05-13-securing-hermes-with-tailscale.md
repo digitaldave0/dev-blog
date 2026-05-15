@@ -15,7 +15,42 @@ This guide moves beyond the basic installation to build a **Hardened, Persistent
 
 ---
 
-## 1. Zero-Trust Networking with Tailscale
+## 1. Installation: Native System vs. Docker Container
+
+One of the first decisions a Hermes operator must make is the deployment model. This choice determines the agent's "reach" into your local environment.
+
+### The Native (System) Install: The "Operator" Choice
+Running Hermes natively in a Python virtual environment (`venv`) is the preferred method for power users. This gives the agent direct access to your local CLI tools (kubectl, git, terraform) and your filesystem.
+- **Pros**: Direct system access, zero-latency tool execution, easier to integrate with local hardware (GPU/Audio).
+- **Cons**: Requires manual management of Python dependencies and environmental isolation.
+
+### The Docker Install: The "Isolation" Choice
+Containerizing Hermes is ideal for testing or restricted environments.
+- **Pros**: Immutable infrastructure, clean "one-command" teardown.
+- **Cons**: Significant "Docker-in-Docker" or volume-mounting complexity to give the agent control over host-level DevOps tools.
+
+### The Verdict:
+If you want Hermes to be a **System Administrator** that manages your real-world infrastructure, go **Native**. If you want a **Sandboxed Researcher**, go **Docker**.
+
+---
+
+## 2. Security & The Sandbox
+
+Hermes includes a built-in **Code Execution Sandbox** that allows it to write and run Python scripts locally. This is a "superpower" that requires a security-first mindset.
+
+### How the Sandbox Works
+When Hermes needs to solve a complex problem (like analyzing a CSV or calculating a cloud budget), it doesn't just guess—it writes a Python script.
+1.  **Generation**: The agent generates the script.
+2.  **Execution**: The script runs in an isolated sub-process or a dedicated Docker container (if configured).
+3.  **Result**: The agent receives the stdout/stderr and refines its answer.
+
+By configuring the `sandbox_provider` in `config.yaml`, you can choose your level of paranoia:
+- `local`: Runs in a separate process on your host (Fastest).
+- `docker`: Spawns a fresh container for every script (Safest).
+
+---
+
+## 3. Zero-Trust Networking with Tailscale
 
 The first rule of Agent Security: **Never expose your agent to the public internet.** 
 
@@ -34,7 +69,7 @@ Now, you can access your agent's dashboard from any of your devices using **Magi
 
 ---
 
-## 2. Local-First Long-Term Memory (Mem0 + Qdrant)
+## 4. Local-First Long-Term Memory (Mem0 + Qdrant)
 
 A "stateless" agent is a forgetful agent. While Hermes has built-in session memory, **Mem0** provides a persistent "long-term brain" that allows the agent to learn about you over time.
 
@@ -70,7 +105,7 @@ The `mem0_local` plugin handles the bridge between the Mem0 library, your local 
 
 ---
 
-## 3. Infrastructure Efficiency & Intelligent Routing
+## 5. Infrastructure Efficiency & Intelligent Routing
 
 Running high-end models for every task is expensive. We optimize this at two levels: **Intelligent Auto-Routing** and **Extended Fallback Chains**.
 
@@ -107,7 +142,7 @@ This tiered strategy ensures that even if a major provider has an outage or your
 
 ---
 
-## 4. Maintenance & Automated Backups
+## 6. Maintenance & Automated Backups
 
 To protect your memories and configuration, we use a custom backup script (`~/scripts/hermes_backup.sh`) that runs daily at 3:30 AM.
 
