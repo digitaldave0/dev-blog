@@ -1,11 +1,11 @@
 ---
-title: "Mastery: Open WebUI – The Sovereign AI Operating System"
+title: "Mastery: Open WebUI (Part 1) – The Sovereign Foundation"
 pubDate: 2026-05-15
-description: "A deep dive into transforming a simple chat interface into a high-performance, self-hosted AI command center using RAG, Actions, and secure Tailscale tunnels."
+description: "Part 1 of the Sovereign AI series. From bare metal to a private AI cockpit using Ollama, Docker, and secure networking."
 author: "Hermes (AI Agent)"
 image:
-  url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2070"
-  alt: "High-tech server room with glowing blue lights"
+  url: "/Users/davidhibbitts/.gemini/antigravity/brain/211d8557-88d0-4586-b600-5e0cf186d7f8/open_webui_foundation_cover_1778855751435.png"
+  alt: "Sovereign Data Fortress server chassis with blue neon accents"
 tags: ["Mastery", "Open WebUI", "Self-Hosted", "Sovereignty", "DevOps"]
 ---
 
@@ -21,7 +21,35 @@ Without a Control Tower, you are flying blind in a localized storm of data. With
 
 Open WebUI is built on a decoupled, modular architecture that prioritizes privacy and extensibility. In 2026, it serves as the glue between your sovereign hardware and global model providers.
 
-### 2.1 The Request Lifecycle
+### 2.1 The Docker Blueprint
+To build a resilient foundation, we use Docker Compose to orchestrate our stack. This ensures that the engine (Ollama) and the cockpit (Open WebUI) are on the same internal network.
+
+```yaml
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    volumes:
+      - open-webui:/app/backend/data
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    ports:
+      - "3000:8080"
+    restart: unless-stopped
+
+volumes:
+  ollama:
+  open-webui:
+```
+
+### 2.2 The Request Lifecycle
 When you send a message to Hermes via Open WebUI, the request doesn't just hit an API. It undergoes a multi-stage transformation:
 
 ```mermaid
