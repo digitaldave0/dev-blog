@@ -63,12 +63,22 @@ A chatbot answers questions; an **Agent** performs tasks. Open WebUI’s **Actio
 Hosting a powerful AI interface requires a "Fortress" mindset. We don't expose Open WebUI to the public internet. Instead, we use the **Sovereign Trinity**:
 
 1.  **Tailscale**: A zero-config Mesh VPN that creates a private encrypted tunnel between your devices.
-2.  **UFW (Uncomplicated Firewall)**: A strict policy that denies all traffic except for the Tailscale interface (`tailscale0`).
+2.  **UFW (Uncomplicated Firewall)**: A strict policy that denies all traffic except for the Tailscale interface (\`tailscale0\`).
+    *   *Implementation*: \`sudo ufw allow in on tailscale0\` ensuring that your AI interface (Port 3000) is invisible to the public internet.
 3.  **Role-Based Access Control (RBAC)**: Ensuring that even within your network, only authorized "Admins" (you) can modify system-level prompts.
 
 ---
 
-## 6. CONCLUSION: YOUR PERSONAL FRONTIER
+## 6. THE $0/MONTH STRATEGY: MODEL WHITELISTING
+
+Operating at the "Mastery" level doesn't require a massive budget. By using the **OpenRouter Whitelist** feature, we can lock our interface to only use the highest-performing free models.
+
+*   **Frontier Power**: Whitelisting models like **Hermes 3 405B (free)** and **Qwen 3 Coder (free)** gives you state-of-the-art intelligence at zero cost.
+*   **Operational Efficiency**: Using the \`openrouter/free\` router ensures that your agent automatically switches to the most reliable free provider if one encounters a rate limit.
+
+---
+
+## 7. CONCLUSION: YOUR PERSONAL FRONTIER
 
 Open WebUI is the final piece of the puzzle for the **Sovereign Developer**. It takes the raw power of local models and wraps them in a professional, enterprise-grade interface that respects your data and your time.
 
