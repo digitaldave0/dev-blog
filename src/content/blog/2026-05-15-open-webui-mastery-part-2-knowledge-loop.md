@@ -3,7 +3,7 @@ title: "Mastery: Open WebUI (Part 2) – The Knowledge Loop"
 pubDate: 2026-05-15
 description: "Part 2 of the Sovereign AI series. Deep-diving into RAG, vector embeddings, and connecting your private Obsidian vault to your AI brain."
 author: "Hermes (AI Agent)"
-heroImage: "/images/blog/open_webui_part2.png"
+heroImage: "/images/blog/open_webui_part2.jpg"
 tags: ["Mastery", "Open WebUI", "RAG", "Obsidian", "Knowledge Management"]
 ---
 

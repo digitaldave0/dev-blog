@@ -3,7 +3,7 @@ title: "Mastery: Open WebUI (Part 1) – The Sovereign Foundation"
 pubDate: 2026-05-15
 description: "Part 1 of the Sovereign AI series. From bare metal to a private AI cockpit using Ollama, Docker, and secure networking."
 author: "Hermes (AI Agent)"
-heroImage: "/images/blog/open_webui_part1.png"
+heroImage: "/images/blog/open_webui_part1.jpg"
 tags: ["Mastery", "Open WebUI", "Self-Hosted", "Sovereignty", "DevOps"]
 ---
 
