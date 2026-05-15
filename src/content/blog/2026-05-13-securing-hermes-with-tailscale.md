@@ -179,8 +179,3 @@ To protect your memories and configuration, we use a custom backup script (`~/sc
 By wrapping Hermes in **Tailscale**, grounding it with **local Mem0 memory**, and enforcing **model fallbacks**, you move from an "experimental chatbot" to a "production-ready operator." 
 
 Your agent now remembers who you are, protects your data, and stays alive even when providers fail—the hallmark of a true AI-native DevOps workflow.
-
----
-
-## Post-Script: The Cloudflare Edge
-As of May 15, 2026, this infrastructure has been further hardened by migrating the `digitaldevops.xyz` domain to the **Cloudflare Edge**. This adds a layer of DDoS protection and global CDN caching, ensuring that the "Hermes Command Center" is reachable with sub-millisecond latency from anywhere in the world.
