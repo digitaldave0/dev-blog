@@ -24,8 +24,18 @@ const {
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
     <script is:inline>
-      // Initialize theme from local storage or default to 'lofi'
-      const theme = localStorage.getItem('theme') || 'lofi';
+      // Initialize theme from local storage or default based on path
+      let theme = localStorage.getItem('theme');
+      
+      if (!theme) {
+        // If it's a blog page, default to 'business' (gray)
+        if (window.location.pathname.startsWith('/blog')) {
+          theme = 'business';
+        } else {
+          theme = 'lofi'; // default white
+        }
+      }
+      
       document.documentElement.setAttribute('data-theme', theme);
     </script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>

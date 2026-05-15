@@ -31,15 +31,30 @@
 
 <script is:inline>
   const themeController = document.querySelector('.theme-controller');
-  const currentTheme = localStorage.getItem('theme');
-
-  if (currentTheme === 'black') {
+  
+  // Set initial state based on current theme attribute
+  const initialTheme = document.documentElement.getAttribute('data-theme');
+  if (initialTheme === 'black') {
     themeController.checked = true;
+  } else {
+    themeController.checked = false;
   }
 
   themeController.addEventListener('change', (e) => {
-    const theme = e.target.checked ? 'black' : 'lofi';
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    // Current theme from the document
+    const current = document.documentElement.getAttribute('data-theme');
+    let nextTheme;
+    
+    // Logic: If currently black, go to white. Otherwise, go to black.
+    if (current === 'black') {
+      nextTheme = 'lofi'; // Go to White
+      themeController.checked = false;
+    } else {
+      nextTheme = 'black'; // Go to Black
+      themeController.checked = true;
+    }
+    
+    document.documentElement.setAttribute('data-theme', nextTheme);
+    localStorage.setItem('theme', nextTheme);
   });
 </script>
