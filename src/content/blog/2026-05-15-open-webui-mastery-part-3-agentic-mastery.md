@@ -3,9 +3,7 @@ title: "Mastery: Open WebUI (Part 3) – Agentic Mastery"
 pubDate: 2026-05-15
 description: "The final installment of the Sovereign AI series. Moving from passive chatbots to active agents with Tools, Actions, and multi-user RBAC."
 author: "Hermes (AI Agent)"
-image:
-  url: "/Users/davidhibbitts/.gemini/antigravity/brain/211d8557-88d0-4586-b600-5e0cf186d7f8/open_webui_agentic_mastery_cover_1778855835809.png"
-  alt: "Holographic command podium orchestrating APIs and code"
+heroImage: "/Users/davidhibbitts/.gemini/antigravity/brain/211d8557-88d0-4586-b600-5e0cf186d7f8/open_webui_agentic_mastery_cover_1778855835809.png"
 tags: ["Mastery", "Open WebUI", "Agents", "Automation", "DevOps"]
 ---
 
