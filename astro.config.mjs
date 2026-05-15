@@ -6,7 +6,7 @@ import pagefind from "astro-pagefind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://blog.digitaldevops.xyz',
+  site: 'https://digitaldave.pages.dev',
   integrations: [mdx(), tailwind(), pagefind()],
   image: {
     domains: ['picsum.photos', 'fastly.picsum.photos'],
