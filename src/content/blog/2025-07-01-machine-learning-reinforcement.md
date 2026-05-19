@@ -6,19 +6,15 @@ categories:
   - Machine Learning
   - Tutorial
 tags:
-  - ml-basics
-  - reinforcement-learning
-  - machine-learning-series
   - ai-gaming
+  - machine-learning
+  - reinforcement-learning
   - robotics
 description: >-
   Learn how reinforcement learning works through simple examples and real-world
   applications.
 heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-reinforcement/800/400'
 ---
-
-
-
 Ever watched a child learn to walk? They try, fall, adjust, and try again. That's exactly how reinforcement learning works! Let's explore this fascinating branch of machine learning.
 
 ## What is Reinforcement Learning?

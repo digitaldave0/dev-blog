@@ -10,13 +10,12 @@ description: >-
   Finalize your ACE prep with a deep dive into Identity and Access Management (IAM), 
   Service Accounts, and Cloud Security best practices.
 tags:
+  - compliance
   - gcp
   - iam
   - security
-  - compliance
 heroImage: 'https://picsum.photos/seed/gcp-ace-security/800/400'
 ---
-
 ![GCP Security](https://picsum.photos/seed/gcp-ace-security/800/400)
 
 Welcome to the final installment of our **Google Cloud Associate Cloud Engineer (ACE)** series. We saved the most important for last: **Configuring access and security**. In the cloud, identity is the new perimeter. Understanding how to manage who can do what is critical for passing the exam and for professional excellence.

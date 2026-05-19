@@ -4,17 +4,16 @@ description: >-
   Learn the basics of getting started with the Gemini CLI, including
   installation, authentication, and your first commands.
 tags:
-  - gemini
-  - cli
   - ai
+  - cli
+  - gemini
+  - getting-started
   - google
   - tutorial
-  - getting-started
 author: owner
 pubDate: 2025-11-15T10:00:00.000Z
 heroImage: 'https://picsum.photos/seed/2025-11-15-gemini-cli-getting-started/800/400'
 ---
-
 ## Why Gemini CLI?
 
 Imagine having an AI assistant that sits in your terminal and can:

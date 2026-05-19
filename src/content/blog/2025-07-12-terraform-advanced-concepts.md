@@ -5,17 +5,14 @@ description: >-
   Master advanced Terraform concepts including modules, workspaces, remote
   state, and best practices for large-scale infrastructure
 tags:
-  - terraform
-  - iac
-  - devops
-  - cloud
   - advanced
+  - cloud
+  - devops
+  - iac
+  - terraform
 icon: "\U0001F680"
 heroImage: 'https://picsum.photos/seed/2025-07-12-terraform-advanced-concepts/800/400'
 ---
-
-
-
 As your infrastructure grows, you need more sophisticated ways to manage it. This post covers advanced Terraform concepts that help you scale and maintain complex infrastructure effectively.
 
 ## Terraform Modules

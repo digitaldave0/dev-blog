@@ -5,16 +5,16 @@ description: >-
   pipelines, use Glue Studio, crawlers, and catalog for data integration at any
   scale.
 tags:
-  - aws-glue
-  - etl
-  - data-engineering
-  - serverless
-  - data-catalog
-  - aws
-  - tutorial
-  - data-pipeline
   - apache-spark
+  - aws
+  - aws-glue
+  - data-catalog
+  - data-engineering
   - data-lake
+  - data-pipeline
+  - etl
+  - serverless
+  - tutorial
 icon: "\U0001F527"
 author: owner
 pubDate: 2025-10-29T17:00:00.000Z
@@ -26,7 +26,6 @@ categories:
 permalink: /posts/aws-glue-complete-tutorial/
 heroImage: 'https://picsum.photos/seed/2025-10-29-aws-glue-complete-tutorial/800/400'
 ---
-
 ## Introduction
 
 AWS Glue has revolutionized how organizations handle data integration and ETL (Extract, Transform, Load) processes. As a fully managed, serverless data integration service, Glue eliminates the complexity of managing infrastructure while providing powerful capabilities for data discovery, cataloging, and transformation.

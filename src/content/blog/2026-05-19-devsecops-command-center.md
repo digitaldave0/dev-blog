@@ -6,9 +6,15 @@ pubDate: 2026-05-19T00:00:00.000Z
 description: "A comprehensive 5-part engineering guide detailing the serverless architecture, Markdown scratchpad UI, remote Hermes agent context pruning, and parallel DevSecOps CI/CD pipelines."
 author: "David Hibbitts"
 heroImage: 'https://picsum.photos/seed/2026-05-19-devsecops/800/400'
-tags: ["DevOps", "CI-CD", "Serverless", "Cloudflare", "Trivy", "Terraform", "Upstash"]
+tags:
+  - ci-cd
+  - cloudflare
+  - devops
+  - serverless
+  - terraform
+  - trivy
+  - upstash
 ---
-
 # The Autonomous DevSecOps Command Center: Complete Architecture Guide
 
 This comprehensive 5-part series details the design, implementation, and deployment of a high-performance, $0-budget serverless habit tracking dashboard and autonomous AI agent hub.

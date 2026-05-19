@@ -5,14 +5,12 @@ description: >-
   containerized deployment and local source builds for advanced customization.
 pubDate: 2026-04-27T00:00:00.000Z
 tags:
-  - openclaw
-  - installation
   - devops
+  - installation
+  - openclaw
 heroImage: >-
   https://picsum.photos/seed/2026-04-27-openclaw-installation-walkthrough/800/400
 ---
-
-
 With your hardware isolated and ready, it’s time to perform the actual installation. OpenClaw’s onboarding is famously smooth, but there are several critical decisions you’ll need to make during the process.
 
 ## The Installation One-Liner

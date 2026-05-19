@@ -5,17 +5,14 @@ description: >-
   Master Terraform variables, outputs, data sources, and learn how to structure
   your configurations effectively
 tags:
-  - terraform
-  - iac
-  - devops
   - cloud
+  - devops
+  - iac
   - intermediate
+  - terraform
 icon: "\U0001F504"
 heroImage: 'https://picsum.photos/seed/2025-07-11-terraform-intermediate-concepts/800/400'
 ---
-
-
-
 After understanding the basics, it's time to make your Terraform configurations more flexible and maintainable. This post covers essential intermediate concepts that will help you write better infrastructure code.
 
 ## Variables and Inputs

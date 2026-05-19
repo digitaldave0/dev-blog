@@ -7,16 +7,14 @@ description: >-
   writing YAML from scratch.
 pubDate: 2026-04-27T00:00:00.000Z
 tags:
-  - github-actions
-  - cicd
   - automation
+  - ci-cd
   - devops
+  - github-actions
   - series
 series: "GitHub Actions Masterclass"
 heroImage: 'https://picsum.photos/seed/github-actions-basics/800/400'
 ---
-
-
 Automating your software development lifecycle shouldn't feel like a chore. While YAML is the language of GitHub Actions, you don't always need to start with a blank file. GitHub provides a powerful library of **Workflow Templates** that can get your CI/CD pipelines running in seconds.
 
 In this first part of our series, we’ll cover the basics of using these templates to standardize and speed up your development.

@@ -10,12 +10,11 @@ description: >-
   Master the foundations of Google Cloud: Projects, Organizations, Folders, and 
   Billing. Learn how to set up your cloud environment for the Associate Cloud Engineer exam.
 tags:
-  - gcp
   - cloud-engineer
   - devops
+  - gcp
 heroImage: 'https://picsum.photos/seed/gcp-ace-setup/800/400'
 ---
-
 ![Google Cloud ACE Setup](https://picsum.photos/seed/gcp-ace-setup/800/400)
 
 Welcome to the first part of our **Google Cloud Associate Cloud Engineer (ACE)** mastery series. The ACE exam isn't just about knowing services; it's about knowing how to *operate* them within the Google Cloud ecosystem. 

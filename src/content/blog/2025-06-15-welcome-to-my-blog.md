@@ -3,14 +3,13 @@ pubDate: 2025-06-15T00:00:00.000Z
 title: 'Building a High-Performance DevOps Blog with Astro & GitHub Actions'
 description: 'How I migrated to a modern stack using Astro, TailwindCSS, and automated CI/CD pipelines.'
 tags:
-  - devops
   - astro
+  - automation
+  - devops
   - github-actions
   - tailwindcss
-  - automation
 heroImage: 'https://picsum.photos/seed/2025-06-15-welcome-to-my-blog/800/400'
 ---
-
 What started as a simple Jekyll project has evolved. As my needs for performance, customization, and "Everything-as-Code" grew, I migrated this blog to **Astro**. This shift wasn't just about a new look—it was about building a professional-grade DevOps workbench.
 
 Here is the breakdown of the current architecture powering this site.

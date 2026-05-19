@@ -3,14 +3,13 @@ title: 'Helm Chart Mastery Part 1: Foundations & Architecture'
 description: 'The first part of a deep-dive series into Kubernetes Helm charts. We cover the core architecture, chart structure, and creating your first package.'
 pubDate: 2026-05-13T00:00:00.000Z
 tags:
-  - kubernetes
-  - helm
-  - devops
   - cloud-native
+  - devops
+  - helm
+  - kubernetes
 series: 'Helm Chart Mastery'
 heroImage: 'https://picsum.photos/seed/2026-05-13-helm-mastery-part-1/800/400'
 ---
-
 Kubernetes is powerful, but managing raw YAML manifests for complex applications is a recipe for disaster. As your infrastructure grows, you need a way to package, version, and share your application definitions. This is where **Helm** comes in.
 
 Welcome to the first installment of the **Helm Chart Mastery** series. In this series, we will go from "Helm curious" to "Chart Architect."

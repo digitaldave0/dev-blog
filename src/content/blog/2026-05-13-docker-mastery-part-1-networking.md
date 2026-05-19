@@ -3,14 +3,13 @@ title: 'Docker Mastery Part 1: Advanced Networking & Multi-Host Connectivity'
 description: 'Go beyond the bridge. Explore Docker networking deep dives, custom network drivers, and multi-host connectivity using Overlay networks.'
 pubDate: 2026-05-13T00:00:05.000Z
 tags:
+  - containers
+  - devops
   - docker
   - networking
-  - devops
-  - containers
 series: 'Docker Mastery'
 heroImage: 'https://picsum.photos/seed/2026-05-13-docker-mastery-part-1/800/400'
 ---
-
 Most developers stop at `docker run -p 80:80`. While that works for local development, production-grade containerization requires a deep understanding of how packets move between isolated environments. 
 
 Welcome to the **Docker Mastery** series. In this first installment, we are diving deep into the plumbing of container communication. If you're just starting with a fresh machine and need a robust local Docker environment, see my [Zero-Day DevOps Setup Guide](/blog/the-zero-day-devops-setup-from-fresh-os-to-production-ready).

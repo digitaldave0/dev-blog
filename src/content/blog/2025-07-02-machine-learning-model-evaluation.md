@@ -6,19 +6,14 @@ categories:
   - Machine Learning
   - Tutorial
 tags:
-  - ml-intermediate
-  - model-evaluation
+  - machine-learning
   - metrics
-  - machine-learning-series
 description: >-
   A comprehensive guide to evaluating machine learning models beyond simple
   accuracy metrics.
 heroImage: >-
   https://picsum.photos/seed/2025-07-02-machine-learning-model-evaluation/800/400
 ---
-
-
-
 When building machine learning models, many beginners focus solely on accuracy. But is a model that's 99% accurate always good? Let's dive into why we need to look beyond simple accuracy and explore the metrics that really matter.
 
 ## The Problem with Accuracy Alone

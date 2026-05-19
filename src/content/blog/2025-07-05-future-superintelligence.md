@@ -6,19 +6,14 @@ categories:
   - Future
   - Ethics
 tags:
-  - agi
-  - asi
-  - superintelligence
-  - future-of-ai
+  - ai
   - ai-ethics
+  - generative-ai
 description: >-
   Exploring the journey from current AI to Artificial General Intelligence (AGI)
   and Artificial Superintelligence (ASI).
 heroImage: 'https://picsum.photos/seed/2025-07-05-future-superintelligence/800/400'
 ---
-
-
-
 As we stand in 2025, AI has become incredibly powerful - but we're still in the era of narrow AI. Let's explore what comes next, and what it means for humanity's future.
 
 ## Understanding the AI Evolution

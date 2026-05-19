@@ -4,13 +4,13 @@ description: >-
   Learn the best patterns for container registry architecture. From global
   geo-replication to pull-through caches and environment promotion workflows.
 tags:
-  - docker
-  - kubernetes
-  - devops
-  - containers
   - architecture
-  - harbor
+  - containers
+  - devops
+  - docker
   - ecr
+  - harbor
+  - kubernetes
 icon: "🐳"
 author: owner
 pubDate: 2026-04-27T15:00:00.000Z
@@ -21,7 +21,6 @@ categories:
 permalink: /posts/container-registry-patterns/
 heroImage: 'https://picsum.photos/seed/2026-04-27-containers/800/400'
 ---
-
 ## Introduction
 
 As your Kubernetes clusters grow, how you store and distribute container images becomes a critical bottleneck. A poorly designed registry architecture leads to slow deployments, high egress costs, and potential single points of failure.

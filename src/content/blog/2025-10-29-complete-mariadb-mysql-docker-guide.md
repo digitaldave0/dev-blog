@@ -7,18 +7,13 @@ description: >-
   data management, backup strategies, security hardening, and extensive
   housekeeping commands.
 tags:
-  - mariadb
-  - mysql
-  - docker
-  - database
   - backup
+  - data-management
+  - databases
+  - docker
+  - docker-compose
   - security
   - tutorial
-  - data-management
-  - docker-compose
-  - database-administration
-  - mysql-docker
-  - mariadb-docker
 icon: "\U0001F42C"
 author: owner
 pubDate: 2025-10-29T11:00:00.000Z
@@ -30,7 +25,6 @@ permalink: /posts/mariadb-mysql-docker-setup/
 heroImage: >-
   https://picsum.photos/seed/2025-10-29-complete-mariadb-mysql-docker-guide/800/400
 ---
-
 ## Introduction
 
 MariaDB and MySQL are powerful relational database management systems widely used in web applications, data analytics, and enterprise systems. Running them in Docker containers provides excellent isolation, portability, and ease of management. This comprehensive guide will walk you through setting up, managing, and securing MariaDB/MySQL databases in Docker containers.

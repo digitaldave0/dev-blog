@@ -4,18 +4,17 @@ description: >-
   Master advanced customization of Gemini CLI, including configuration files,
   custom tools, and building instruction libraries.
 tags:
-  - gemini
   - cli
-  - customization
   - configuration
-  - tools
+  - customization
+  - gemini
   - prompts
+  - tools
 author: owner
 pubDate: 2025-11-17T10:00:00.000Z
 heroImage: >-
   https://picsum.photos/seed/2025-11-17-advanced-gemini-cli-customization/800/400
 ---
-
 Welcome to **Part 3** of the Gemini CLI tutorial series. In the [previous post](/posts/gemini-cli-tools-deep-dive/), we explored the built-in tools and how they work.
 
 **Gemini CLI out-of-the-box is powerful. But customized for YOUR needs, it becomes unstoppable.**

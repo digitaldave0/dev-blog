@@ -3,19 +3,17 @@ title: 'GitHub Actions in Practice: A Complete CI/CD Pipeline Demo'
 pubDate: 2025-07-07T00:00:00.000Z
 categories: devops ci-cd
 tags:
-  - github-actions
+  - automation
   - ci-cd
   - deployment
-  - security
-  - automation
   - devops
+  - github-actions
+  - security
 description: >-
   A hands-on guide to building a complete CI/CD pipeline with GitHub Actions,
   including manual approvals, secrets management, and deployment strategies.
 heroImage: 'https://picsum.photos/seed/2025-07-07-github-actions-practical-demo/800/400'
 ---
-
-
 In this practical guide, we'll create a complete CI/CD pipeline using GitHub Actions. We'll build a Node.js application, run tests, and deploy it to different environments with manual approval gates.
 
 ## Project Setup

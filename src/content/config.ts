@@ -10,6 +10,7 @@ const blogSchema = z.object({
         message: 'tags must be unique',
     }).optional(),
     series: z.string().optional(),
+    draft: z.boolean().optional(),
 });
 
 const storeSchema = z.object({

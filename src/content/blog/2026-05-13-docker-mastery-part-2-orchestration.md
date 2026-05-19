@@ -3,14 +3,13 @@ title: 'Docker Mastery Part 2: Orchestration with Docker Swarm & Compose'
 description: 'Scale your applications beyond a single host. Learn advanced Docker Compose patterns, Swarm mode orchestration, and multi-environment management.'
 pubDate: 2026-05-13T00:00:06.000Z
 tags:
-  - docker
-  - swarm
-  - orchestration
   - devops
+  - docker
+  - orchestration
+  - swarm
 series: 'Docker Mastery'
 heroImage: 'https://picsum.photos/seed/2026-05-13-docker-mastery-part-2/800/400'
 ---
-
 Running a single container is easy. Running a fleet of containers that can self-heal, scale on demand, and update without downtime is the true challenge of DevOps. 
 
 In [Part 1](/blog/docker-mastery-part-1-advanced-networking-multi-host-connectivity), we mastered the networking. Now, we're going to put those networks to work with **Orchestration**.

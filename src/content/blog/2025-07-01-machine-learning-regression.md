@@ -6,17 +6,11 @@ categories:
   - Machine Learning
   - Tutorial
 tags:
-  - ml-basics
-  - regression
-  - supervised-learning
-  - machine-learning-series
+  - machine-learning
   - predictive-modeling
 description: 'Learn about regression in machine learning with simple, real-world examples.'
 heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-regression/800/400'
 ---
-
-
-
 Remember trying to guess how much a house costs based on its size? That's essentially what regression does in machine learning - it helps predict numerical values based on data.
 
 ## What is Regression?

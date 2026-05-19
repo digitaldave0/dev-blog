@@ -6,17 +6,12 @@ categories:
   - Machine Learning
   - Expert Series
 tags:
-  - chain-of-thought
+  - machine-learning
   - prompt-engineering
-  - machine-learning-series
-  - advanced-ml
   - reasoning
 description: Understanding how Chain of Thought helps AI models think like humans.
 heroImage: 'https://picsum.photos/seed/2025-07-04-expert-chain-of-thought/800/400'
 ---
-
-
-
 Have you ever solved a complex math problem by breaking it down into smaller steps? That's exactly what Chain of Thought (CoT) helps AI do! Let's explore this fascinating technique in simple terms.
 
 ## What is Chain of Thought?

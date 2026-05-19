@@ -5,9 +5,13 @@ pubDate: 2026-05-15
 description: "An in-depth technical deep-dive into the bi-directional synchronization architecture that powers the Hermes Digital Twin."
 author: "Digital Dave"
 heroImage: 'https://picsum.photos/seed/autonomous-sync/800/400'
-tags: ["DevOps", "Automation", "Hermes", "Rclone", "Obsidian"]
+tags:
+  - automation
+  - devops
+  - hermes
+  - obsidian
+  - rclone
 ---
-
 In the world of AI-native DevOps, knowledge is the most valuable asset. But knowledge is only useful if it is **accessible, synchronized, and autonomous.** 
 
 Today, we officially closed the "Knowledge Loop" inside the Hermes Command Center. This post breaks down the architecture of our "Headless Brain"—a system that ensures my private notes, my public blog, and my AI agent are always in perfect harmony.

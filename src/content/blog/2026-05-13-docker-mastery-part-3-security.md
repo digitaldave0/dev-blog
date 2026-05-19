@@ -3,14 +3,13 @@ title: 'Docker Mastery Part 3: Security Hardening & Secret Management'
 description: 'Lock down your container environment. Learn about rootless mode, image scanning, Docker Secrets, and implementing the principle of least privilege.'
 pubDate: 2026-05-13T00:00:07.000Z
 tags:
-  - docker
-  - security
-  - hardening
   - devops
+  - docker
+  - hardening
+  - security
 series: 'Docker Mastery'
 heroImage: 'https://picsum.photos/seed/2026-05-13-docker-mastery-part-3/800/400'
 ---
-
 "Containers are secure by default." This is one of the most dangerous myths in DevOps. While containers provide isolation, they share the host’s kernel, and a misconfigured container can be a gateway to your entire infrastructure.
 
 In this third part of the **Docker Mastery** series, we are putting on our security hats.

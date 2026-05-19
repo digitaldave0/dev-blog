@@ -6,9 +6,14 @@ pubDate: 2026-05-13T00:00:11.000Z
 description: "A comprehensive deep dive into mastering the Hermes Agent: From zero-trust networking with Tailscale to local-first persistent memory with Mem0 and Qdrant."
 author: "David Hibbitts"
 heroImage: 'https://picsum.photos/seed/2026-05-13-hermes-operator/800/400'
-tags: ["DevOps", "AI", "Tailscale", "Mem0", "Hermes", "Qdrant"]
+tags:
+  - ai
+  - devops
+  - hermes
+  - mem0
+  - qdrant
+  - tailscale
 ---
-
 In the era of agentic AI, your assistant isn't just a chatbot—it's a system-level operator with the power to run code, manage infrastructure, and interact with your private data. While this power is transformative, it requires a "production-grade" mindset. 
 
 This guide moves beyond the basic installation to build a **Hardened, Persistent, and Cost-Optimized** Hermes instance. We’ll combine **Tailscale** for secure networking, **Mem0 + Qdrant** for long-term memory, and advanced **OpenRouter** routing for infrastructure efficiency.

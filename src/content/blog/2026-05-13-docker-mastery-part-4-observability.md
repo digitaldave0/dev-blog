@@ -4,14 +4,13 @@ description: 'Master the "Day 2" operations of Docker. Explore logging drivers, 
 pubDate: 2026-05-13T00:00:08.000Z
 tags:
   - docker
-  - observability
   - logging
   - monitoring
+  - observability
   - troubleshooting
 series: 'Docker Mastery'
 heroImage: 'https://picsum.photos/seed/2026-05-13-docker-mastery-part-4/800/400'
 ---
-
 Your containers are networked, orchestrated, and secured. But do you know what they're actually doing? In production, you don't use `docker logs -f` and hope for the best. You need a structured approach to **Observability**.
 
 In this final part of the **Docker Mastery** series, we focus on operational excellence.

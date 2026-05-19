@@ -7,25 +7,21 @@ categories:
   - ai
   - certification
 tags:
+  - ai
+  - ai-fundamentals
   - aws
-  - aws-ml-specialty
-  - ai-services
-  - sagemaker
   - bedrock
   - comprehend
-  - rekognition
   - exam-prep
-  - ai-fundamentals
-  - ml-basics
-  - regression
+  - machine-learning
+  - rekognition
+  - sagemaker
 description: >-
   Comprehensive guide to AWS Machine Learning and AI services for the AWS
   Certified Machine Learning Specialty exam. Learn key concepts, features, and
   practical applications.
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-machine-learning-ai-guide/800/400'
 ---
-
-
 As organizations increasingly adopt artificial intelligence and machine learning, understanding AWS's comprehensive AI/ML ecosystem is crucial for the AWS Certified Machine Learning Specialty exam. This guide covers all major AWS AI/ML services, their key features, use cases, and exam-relevant concepts.
 
 ## 🎯 MLS-C01 Exam Preparation Guide

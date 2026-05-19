@@ -6,9 +6,9 @@ description: >-
 tags:
   - aws
   - cloud
-  - infrastructure
-  - devops
   - cost-optimization
+  - devops
+  - infrastructure
   - security
 icon: ☁️
 author: owner
@@ -20,7 +20,6 @@ categories:
 permalink: /posts/aws-advanced-guide/
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-advanced-guide/800/400'
 ---
-
 ## Introduction
 
 AWS has become the de facto standard for cloud infrastructure globally. While many developers understand the basics, mastering AWS requires understanding its nuanced services, architecture patterns, and cost implications. This guide covers advanced AWS concepts and best practices for production deployments.

@@ -5,18 +5,15 @@ description: >-
   Master advanced Terraform tooling with Terragrunt, pre-commit hooks, automated
   testing, and enterprise features
 tags:
+  - automation
+  - devops
+  - enterprise
   - terraform
   - terragrunt
-  - devops
   - testing
-  - automation
-  - enterprise
 icon: "\U0001F6E0️"
 heroImage: 'https://picsum.photos/seed/2025-07-14-terraform-advanced-tooling/800/400'
 ---
-
-
-
 While Terraform itself is powerful, the ecosystem around it provides additional tools that can enhance your Infrastructure as Code (IaC) workflow. This post explores these tools and best practices for maintaining enterprise-grade Terraform code.
 
 ## Terragrunt: Keep Your Terraform Code DRY

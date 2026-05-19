@@ -6,17 +6,11 @@ categories:
   - Machine Learning
   - Tutorial
 tags:
-  - ml-basics
-  - unsupervised-learning
-  - clustering
-  - machine-learning-series
   - data-patterns
+  - machine-learning
 description: Discover how unsupervised learning finds patterns in data automatically.
 heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-unsupervised/800/400'
 ---
-
-
-
 Imagine going through your closet and organizing clothes without any predefined categories. You might naturally group similar items together based on color, style, or season. That's exactly what unsupervised learning does with data!
 
 ## What is Unsupervised Learning?

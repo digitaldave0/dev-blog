@@ -8,21 +8,19 @@ categories:
   - commands
   - version-control
 tags:
+  - cheatsheet
+  - command-line
+  - development-tools
   - git
   - git-commands
-  - cheatsheet
-  - version-control
-  - development-tools
-  - command-line
   - tutorial
+  - version-control
 description: >-
   Comprehensive cheatsheet of 50 essential Git commands with examples. From
   basic operations to advanced techniques, this guide covers everything you need
   to master Git version control.
 heroImage: 'https://picsum.photos/seed/2025-10-29-50-great-git-commands-cheatsheet/800/400'
 ---
-
-
 Git is the most widely used version control system in software development. This comprehensive cheatsheet covers 50 essential Git commands, starting with the basics and progressing to advanced techniques. Each command includes a practical example to help you understand its usage.
 
 ## Getting Started & Configuration

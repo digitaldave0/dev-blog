@@ -10,12 +10,12 @@ categories:
   - RAG
   - Ollama
 tags:
-  - ollama
-  - rag
-  - pdf-indexing
-  - python
+  - ai-rag
   - gui
   - langchain
+  - ollama
+  - pdf-indexing
+  - python
   - streamlit
 description: >
   Retrieval-Augmented Generation (RAG) is a powerful technique that combines the
@@ -25,7 +25,6 @@ description: >
   create a simple GUI for interactive searching.
 heroImage: 'https://picsum.photos/seed/2025-10-24-local-rag-ollama-pdf-gui/800/400'
 ---
-
 ## What We'll Build
 
 - **Local AI Setup**: Use Ollama to run a language model locally

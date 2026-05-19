@@ -7,16 +7,14 @@ description: >-
   are dry, scalable, and secure.
 pubDate: 2026-04-27T00:00:00.000Z
 tags:
+  - ci-cd
   - github-actions
-  - security
-  - reusable-workflows
   - oidc
+  - security
   - series
 series: "GitHub Actions Masterclass"
 heroImage: 'https://picsum.photos/seed/github-actions-advanced/800/400'
 ---
-
-
 We've covered [Basics](/blog/github-actions-masterclass-part-1-mastering-workflow-templates) and [Organization Templates](/blog/github-actions-masterclass-part-2-custom-organization-templates). Now, it’s time to talk about the "holy grail" of GitHub Actions: **DRY (Don't Repeat Yourself)** pipelines.
 
 In this final part, we’ll dive into Reusable Workflows and advanced security practices that separate the hobbyists from the professional DevOps engineers.

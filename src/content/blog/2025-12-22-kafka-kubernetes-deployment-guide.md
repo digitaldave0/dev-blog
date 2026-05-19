@@ -8,14 +8,14 @@ categories:
   - architecture
 tags:
   - apache-kafka
-  - kubernetes
-  - k8s
-  - deployment
-  - node-architecture
-  - strimzi
   - confluent
-  - scalability
+  - deployment
+  - k8s
+  - kubernetes
   - monitoring
+  - node-architecture
+  - scalability
+  - strimzi
 description: >-
   A deep dive into deploying Apache Kafka on Kubernetes, covering node
   architecture considerations, deployment patterns, storage solutions, and best
@@ -25,7 +25,6 @@ part: 13
 heroImage: >-
   https://picsum.photos/seed/2025-12-22-kafka-kubernetes-deployment-guide/800/400
 ---
-
 Welcome back to our Kafka series! In previous posts, we've explored the fundamentals of Apache Kafka, its architecture, and use cases for real-time data streaming. Today, we're diving into deploying Kafka on Kubernetes (K8s), a powerful combination that enables scalable, resilient, and manageable Kafka clusters. This guide builds on our earlier discussions by focusing on production-ready deployments, with an emphasis on why node architecture directly impacts Kafka's performance and reliability.
 
 Whether you're migrating from on-premises setups or building cloud-native applications, this post will equip you with the knowledge to run Kafka effectively on K8s. We'll cover everything from infrastructure considerations to best practices, complete with code examples and YAML configurations.

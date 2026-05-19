@@ -4,17 +4,17 @@ description: >-
   Master ETL pipelines on AWS. Learn AWS Glue, Lambda functions, Step Functions,
   and build complete data processing workflows in the cloud.
 tags:
-  - etl
   - aws
-  - data-engineering
   - aws-glue
-  - lambda
-  - step-functions
-  - data-pipeline
   - cloud-etl
-  - tutorial
+  - data-engineering
+  - data-pipeline
+  - etl
+  - lambda
   - python
   - sql
+  - step-functions
+  - tutorial
 icon: ☁️
 author: owner
 pubDate: 2025-10-29T15:00:00.000Z
@@ -26,7 +26,6 @@ categories:
 permalink: /posts/etl-aws-medium-level/
 heroImage: 'https://picsum.photos/seed/2025-10-29-etl-aws-medium-level/800/400'
 ---
-
 ## Introduction
 
 Welcome to Part 2 of our ETL series! In [Part 1](/posts/etl-fundamentals-basics/), we covered ETL fundamentals and built a simple Python-based pipeline. Now we'll dive into **AWS-based ETL solutions**, leveraging cloud services for scalable, managed data processing.

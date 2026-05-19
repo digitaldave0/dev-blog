@@ -5,19 +5,15 @@ description: >-
   Detailed examples of implementing Terraform pipelines in Jenkins, GitLab CI,
   and CircleCI with real-world configurations
 tags:
-  - terraform
-  - cicd
-  - devops
-  - jenkins
-  - gitlab
-  - circleci
   - automation
+  - ci-cd
+  - devops
+  - gitlab
+  - terraform
 icon: ⚡
 heroImage: >-
   https://picsum.photos/seed/2025-07-16-terraform-pipeline-implementations/800/400
 ---
-
-
 Following our comprehensive guide to Terraform CI/CD, let's explore detailed implementations in popular CI/CD platforms.
 
 ## Jenkins Pipeline Implementation

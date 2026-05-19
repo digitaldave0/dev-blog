@@ -6,16 +6,11 @@ categories:
   - Machine Learning
   - Tutorial
 tags:
-  - ml-basics
-  - classification
-  - supervised-learning
-  - machine-learning-series
+  - machine-learning
   - pattern-recognition
 description: Learn about classification in machine learning with everyday examples.
 heroImage: 'https://picsum.photos/seed/2025-07-01-machine-learning-classification/800/400'
 ---
-
-
 Ever wonder how your email knows whether a message is spam or not? That's classification at work! Let's explore this fundamental machine learning concept.
 
 ## What is Classification?

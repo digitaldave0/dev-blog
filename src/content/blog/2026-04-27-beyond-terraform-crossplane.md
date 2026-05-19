@@ -6,15 +6,14 @@ categories:
   - Kubernetes
 description: 'Transitioning from Infrastructure-as-Code (IaC) to Infrastructure-as-a-Control-Plane (IaCP) using Crossplane Compositions and Composite Resources.'
 tags:
-  - crossplane
-  - terraform
-  - kubernetes
-  - iac
-  - control-plane
   - cloud-native
+  - control-plane
+  - crossplane
+  - iac
+  - kubernetes
+  - terraform
 heroImage: 'https://picsum.photos/seed/crossplane-iac/800/400'
 ---
-
 As infrastructure scales, the "Static" nature of Terraform pipelines can become a bottleneck. **Crossplane** represents a paradigm shift toward **Infrastructure-as-a-Control-Plane (IaCP)**, leveraging the Kubernetes reconciliation loop for cloud resources.
 
 ## 🏗️ The Anatomy of Crossplane

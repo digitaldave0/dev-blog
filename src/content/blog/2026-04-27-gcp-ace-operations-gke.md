@@ -12,11 +12,10 @@ description: >-
 tags:
   - gcp
   - gke
-  - monitoring
   - kubernetes
+  - monitoring
 heroImage: 'https://picsum.photos/seed/gcp-ace-operations/800/400'
 ---
-
 ![GCP Operations](https://picsum.photos/seed/gcp-ace-operations/800/400)
 
 Welcome to Part 4 of our **Google Cloud ACE** series. This domain, **Ensuring Successful Operation of a Cloud Solution**, accounts for a significant portion of the exam. It’s all about the day-to-day tasks: monitoring, scaling, and maintaining your deployments.

@@ -6,9 +6,13 @@ pubDate: 2026-05-15T09:00:00.000Z
 description: "Mastering the feedback loop: How to use Hermes to automate habit tracking and persistent audit logging using Google Service Accounts and Telegram."
 author: "David Hibbitts"
 heroImage: 'https://picsum.photos/seed/hermes-habits/800/400'
-tags: ["AI", "Automation", "Google-Sheets", "Habit-Tracking", "DevOps"]
+tags:
+  - ai
+  - automation
+  - devops
+  - google-sheets
+  - habit-tracking
 ---
-
 With the foundation of security and disaster recovery in place, it's time to turn Hermes into a proactive productivity partner. The goal: **Zero-friction habit tracking and audit logging.**
 
 In this part of the series, we explore how to build a persistent data pipeline that bridges the gap between a Telegram chat and a structured Google Sheet, all while maintaining our "Private AI" principles.

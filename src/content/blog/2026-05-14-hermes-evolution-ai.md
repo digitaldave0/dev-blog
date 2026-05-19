@@ -6,9 +6,14 @@ pubDate: 2026-05-14T00:00:11.000Z
 description: "The journey of transforming an experimental AI agent into a hardened, monitored, and disaster-proof digital twin using rclone, Netdata, and Telegram."
 author: "David Hibbitts"
 heroImage: 'https://picsum.photos/seed/2026-05-14-hermes-evolution/800/400'
-tags: ["DevOps", "AI", "Observability", "Netdata", "Rclone", "Self-Hosting"]
+tags:
+  - ai
+  - devops
+  - netdata
+  - observability
+  - rclone
+  - self-hosting
 ---
-
 In my [previous post](/blog/the-ultimate-hermes-operator-guide-persistence-security-and-cost-optimization), we laid the foundation for a secure and persistent Hermes agent. But as the agent becomes more integrated into my daily workflow—handling code reviews, infrastructure tasks, and private data—it moves from being a "cool tool" to "critical infrastructure."
 
 Critical infrastructure requires a **Five-Star Management Tier**. 

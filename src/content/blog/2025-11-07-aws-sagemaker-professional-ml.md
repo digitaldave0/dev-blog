@@ -9,23 +9,17 @@ categories:
   - professional-ml
 tags:
   - aws
-  - sagemaker
-  - machine-learning
   - california-housing
-  - feature-engineering
-  - cross-validation
-  - hyperparameter-tuning
-  - model-comparison
-  - professional-ml
   - data-science
+  - machine-learning
+  - model-comparison
+  - sagemaker
 description: >-
   Take your SageMaker skills to the next level with professional ML practices
   using real datasets. Learn feature engineering, cross-validation,
   hyperparameter tuning, and model deployment.
 heroImage: 'https://picsum.photos/seed/2025-11-07-aws-sagemaker-professional-ml/800/400'
 ---
-
-
 Building on our [beginner's SageMaker house price predictor]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}), it's time to level up to professional machine learning practices. In this post, we'll use a **real dataset**, implement **industry-standard ML techniques**, and follow **production-ready workflows**.
 
 **Ready for computer vision?** Check out our [comprehensive image recognition guide]({% post_url 2025-11-08-aws-sagemaker-image-recognition %}) covering traditional ML, deep learning CNNs, and AWS Rekognition!

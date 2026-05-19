@@ -6,15 +6,14 @@ categories:
   - SRE
 description: 'A technical deep-dive into standardizing telemetry data with OTel, including collector configurations, sampling strategies, and Prometheus integration.'
 tags:
+  - grafana
+  - monitoring
   - observability
   - opentelemetry
   - prometheus
-  - grafana
-  - monitoring
   - sre
 heroImage: 'https://picsum.photos/seed/otel-prometheus/800/400'
 ---
-
 Modern observability is defined by the shift from vendor-specific agents to open standards. **OpenTelemetry (OTel)** provides a unified framework for traces, metrics, and logs, while **Prometheus** remains the industry leader for time-series storage.
 
 ## The OpenTelemetry Collector: The Nervous System

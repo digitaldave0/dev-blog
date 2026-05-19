@@ -5,14 +5,14 @@ description: >-
   what ETL is, why it's important, basic concepts, and simple implementation
   examples.
 tags:
-  - etl
   - data-engineering
   - data-pipeline
-  - extract-transform-load
   - data-processing
-  - tutorial
+  - etl
+  - extract-transform-load
   - python
   - sql
+  - tutorial
 icon: "\U0001F504"
 author: owner
 pubDate: 2025-10-29T14:00:00.000Z
@@ -23,7 +23,6 @@ categories:
 permalink: /posts/etl-fundamentals-basics/
 heroImage: 'https://picsum.photos/seed/2025-10-29-etl-fundamentals-basics/800/400'
 ---
-
 ## Introduction
 
 ETL (Extract, Transform, Load) is the backbone of modern data engineering and business intelligence. Whether you're building data warehouses, feeding machine learning models, or creating business dashboards, understanding ETL is essential for any data professional.

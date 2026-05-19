@@ -6,9 +6,14 @@ pubDate: 2026-05-15T10:00:00.000Z
 description: "Breaking the silence: Patching the Hermes Gateway to enable native Telegram voice bubbles and universal vocal interaction."
 author: "David Hibbitts"
 heroImage: 'https://picsum.photos/seed/hermes-voice/800/400'
-tags: ["AI", "TTS", "Telegram", "Python", "DevOps", "Hacking"]
+tags:
+  - ai
+  - devops
+  - hacking
+  - python
+  - telegram
+  - tts
 ---
-
 We have built a secure, persistent, and monitored AI command center. But there was one final barrier to a truly immersive "JARVIS" experience: **The Silence.**
 
 In this final part of the Hermes Mastery series, we perform "open-heart surgery" on the Hermes Gateway to enable native high-fidelity vocal responses and universal voice mode.

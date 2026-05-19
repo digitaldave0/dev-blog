@@ -5,21 +5,19 @@ description: >-
   secrets detection with AI-powered analysis that reduces false positives and
   integrates seamlessly into development workflows.
 tags:
-  - security
-  - static-analysis
-  - semgrep
-  - sast
-  - secrets-detection
-  - devsecops
   - ai-security
   - code-scanning
+  - devsecops
+  - sast
+  - secrets-detection
+  - security
+  - semgrep
+  - static-analysis
 icon: "\U0001F50D"
 author: owner
 pubDate: 2025-11-10T13:00:00.000Z
 heroImage: 'https://picsum.photos/seed/2025-11-10-semgrep-static-analysis/800/400'
 ---
-
-
 In the fast-paced world of software development, maintaining code security without slowing down development velocity is a constant challenge. **Semgrep** emerges as a revolutionary solution, offering lightning-fast static analysis that combines traditional security testing with AI-powered intelligence to deliver accurate, actionable results.
 
 ## What is Semgrep?

@@ -6,16 +6,15 @@ categories:
   - devops
   - tools
 tags:
-  - kubernetes
-  - k9s
-  - devops
-  - terminal
   - cli
   - container-orchestration
+  - devops
+  - k9s
+  - kubernetes
+  - terminal
 description: A detailed DevOps and Platform Engineering guide.
 heroImage: 'https://picsum.photos/seed/2026-01-13-k9s-kubernetes-management-guide/800/400'
 ---
-
 ## Introduction
 
 Managing Kubernetes clusters from the command line with `kubectl` can be tedious and time-consuming. Enter **k9s** - a powerful terminal-based UI that provides a real-time, interactive way to manage your Kubernetes clusters. Think of it as a "top" command for Kubernetes, but with superpowers.

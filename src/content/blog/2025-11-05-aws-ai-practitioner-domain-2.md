@@ -10,24 +10,21 @@ categories:
 tags:
   - aws
   - aws-ai-practitioner
-  - domain-2
   - aws-services
-  - sagemaker
-  - rekognition
   - comprehend
+  - exam-prep
+  - lex
   - polly
+  - rekognition
+  - sagemaker
   - transcribe
   - translate
-  - lex
-  - exam-prep
 description: >-
   Comprehensive guide to Domain 2 of AWS Certified AI Practitioner exam: AWS AI
   Services. Learn SageMaker, Rekognition, Comprehend, and other AWS AI services
   with practical examples and use cases.
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-2/800/400'
 ---
-
-
 Domain 2, "AI/ML Services and Solutions," is the largest domain in the AWS Certified AI Practitioner exam, accounting for 35% of the total score. This domain tests your knowledge of AWS's comprehensive AI and ML service offerings, when to use each service, and how they integrate together.
 
 In this post, we'll explore each major AWS AI service in detail with practical examples, use cases, and implementation considerations that will help you not just pass the exam, but apply these services effectively in real-world scenarios.

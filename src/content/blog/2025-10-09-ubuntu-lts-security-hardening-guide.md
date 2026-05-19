@@ -7,22 +7,20 @@ description: >-
   and automated security monitoring. Perfect for beginners who want
   enterprise-level security.
 tags:
-  - ubuntu
+  - cybersecurity
+  - fail2ban
+  - firewall
+  - hardening
   - linux
   - security
-  - hardening
   - server
   - ssh
-  - firewall
-  - fail2ban
   - sudo
-  - cybersecurity
+  - ubuntu
 icon: "\U0001F512"
 heroImage: >-
   https://picsum.photos/seed/2025-10-09-ubuntu-lts-security-hardening-guide/800/400
 ---
-
-
 Setting up a secure Ubuntu LTS server doesn't have to be complicated. This guide walks you through **enterprise-grade security hardening** step by step, explaining **why** each security measure matters and **how** it protects your server.
 
 Whether you're setting up a web server, development environment, or personal cloud server, these security practices will protect you from common attacks and keep your data safe.

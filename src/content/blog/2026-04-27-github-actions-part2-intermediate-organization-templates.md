@@ -7,16 +7,14 @@ description: >-
   every repository in your fleet.
 pubDate: 2026-04-27T00:00:00.000Z
 tags:
-  - github-actions
   - automation
-  - organization
   - devops
+  - github-actions
+  - organization
   - series
 series: "GitHub Actions Masterclass"
 heroImage: 'https://picsum.photos/seed/github-actions-intermediate/800/400'
 ---
-
-
 In [Part 1](/blog/github-actions-masterclass-part-1-mastering-workflow-templates), we learned how to use GitHub's built-in templates. But what if your company has specific security requirements, or you want every project to use a specific internal deployment tool?
 
 This is where **Custom Organization Templates** come in. They allow you to define "golden paths" for your developers, ensuring that every new project starts with the right foundation.

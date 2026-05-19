@@ -4,18 +4,17 @@ description: >-
   Integrate Gemini CLI into your development workflow for enhanced productivity,
   including Git automation, shell scripts, and tool integrations.
 tags:
-  - gemini
+  - automation
   - cli
   - development
-  - workflow
+  - gemini
   - git
-  - automation
   - productivity
+  - workflow
 author: owner
 pubDate: 2025-11-19T10:00:00.000Z
 heroImage: 'https://picsum.photos/seed/2025-11-19-gemini-cli-development-workflow/800/400'
 ---
-
 Welcome to **Part 6** of the Gemini CLI tutorial series—our final post! In the [previous post](/posts/gemini-cli-mcp-jekyll/), we explored MCP servers and powerful integrations.
 
 **Now it's time to bring it all together—integrating Gemini CLI into your daily development workflow to multiply your productivity.**

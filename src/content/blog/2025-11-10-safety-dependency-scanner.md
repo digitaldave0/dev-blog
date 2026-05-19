@@ -5,21 +5,19 @@ description: >-
   detect vulnerable and malicious packages, integrate with CI/CD, and strengthen
   your software supply chain security.
 tags:
-  - python
-  - security
-  - vulnerabilities
   - dependencies
-  - safety
-  - supply-chain
   - devsecops
   - licenses
+  - python
+  - safety
+  - security
+  - supply-chain
+  - vulnerabilities
 icon: "\U0001F512"
 author: owner
 pubDate: 2025-11-10T12:00:00.000Z
 heroImage: 'https://picsum.photos/seed/2025-11-10-safety-dependency-scanner/800/400'
 ---
-
-
 In the realm of Python development, ensuring the security of your dependencies is paramount. With thousands of packages available on PyPI, it's challenging to keep track of vulnerabilities and malicious code. **Safety CLI** emerges as a comprehensive solution, offering advanced scanning capabilities for Python dependencies, including vulnerability detection, malicious package identification, and license compliance checking.
 
 ## What is Safety CLI?

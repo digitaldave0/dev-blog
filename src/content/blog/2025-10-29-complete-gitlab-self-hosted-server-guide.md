@@ -7,19 +7,18 @@ description: >-
   pipelines, and exploring advanced GitLab features from basics to
   enterprise-level usage.
 tags:
-  - gitlab
-  - cicd
-  - docker
-  - devops
-  - self-hosted
-  - git
   - automation
-  - tutorial
-  - kubernetes
-  - security
-  - gitlab-runner
-  - pipelines
+  - ci-cd
+  - devops
+  - docker
   - docker-compose
+  - git
+  - gitlab
+  - kubernetes
+  - pipelines
+  - security
+  - self-hosting
+  - tutorial
 icon: "\U0001F98A"
 author: owner
 pubDate: 2025-10-29T13:00:00.000Z
@@ -32,7 +31,6 @@ permalink: /posts/gitlab-self-hosted-server-guide/
 heroImage: >-
   https://picsum.photos/seed/2025-10-29-complete-gitlab-self-hosted-server-guide/800/400
 ---
-
 ## Introduction
 
 GitLab is a complete DevOps platform that provides Git repository management, CI/CD pipelines, issue tracking, and much more. While GitLab.com offers a hosted solution, running your own self-hosted GitLab server gives you complete control over your data, security, and infrastructure.

@@ -5,17 +5,15 @@ description: >-
   Learn about OpenTofu, how to migrate from Terraform, and understand the key
   differences between these Infrastructure as Code tools
 tags:
+  - cloud
+  - devops
+  - iac
+  - migration
   - opentofu
   - terraform
-  - iac
-  - devops
-  - cloud
-  - migration
 icon: "\U0001F331"
 heroImage: 'https://picsum.photos/seed/2025-07-13-opentofu-guide-and-migration/800/400'
 ---
-
-
 After HashiCorp's switch to the Business Source License (BSL) for Terraform, OpenTofu emerged as a community-driven, fully open-source alternative. This guide will help you understand OpenTofu, how to migrate from Terraform, and what differences to expect.
 
 ## What is OpenTofu?

@@ -5,21 +5,19 @@ description: >-
   common security issues, integrate with development workflows, and write custom
   security rules for your Python projects.
 tags:
+  - bandit
+  - best-practices
+  - code-security
+  - devsecops
   - python
   - security
   - static-analysis
-  - bandit
-  - code-security
   - vulnerabilities
-  - devsecops
-  - best-practices
 icon: "\U0001F40D"
 author: owner
 pubDate: 2025-11-10T14:00:00.000Z
 heroImage: 'https://picsum.photos/seed/2025-11-10-bandit-python-security/800/400'
 ---
-
-
 Python's popularity in web development, data science, and automation makes it a prime target for security vulnerabilities. While general-purpose static analysis tools exist, **Bandit** offers Python-specific security analysis that understands the language's nuances and common security pitfalls. As part of the PyCQA (Python Code Quality Authority), Bandit provides targeted security scanning designed specifically for Python codebases.
 
 ## What is Bandit?

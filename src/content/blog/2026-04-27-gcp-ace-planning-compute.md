@@ -10,13 +10,12 @@ description: >-
   Learn how to choose the right compute services and storage options in Google Cloud. 
   A deep dive into GCE, GKE, App Engine, and Cloud Run for the ACE exam.
 tags:
-  - gcp
   - compute-engine
+  - gcp
   - kubernetes
   - serverless
 heroImage: 'https://picsum.photos/seed/gcp-ace-planning/800/400'
 ---
-
 ![GCP Compute Planning](https://picsum.photos/seed/gcp-ace-planning/800/400)
 
 Planning is the second domain of the **Google Cloud Associate Cloud Engineer (ACE)** exam. This section tests your ability to map business requirements to technical services. The most critical decision you'll face is: **Which compute service should I use?**

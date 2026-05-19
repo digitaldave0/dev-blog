@@ -6,14 +6,13 @@ categories:
   - DevOps
 description: 'An enterprise-grade guide to building Internal Developer Portals (IDP) using Backstage, focusing on Scaffolder, Software Catalog, and TechDocs.'
 tags:
-  - platform-engineering
   - backstage
   - developer-experience
   - idp
+  - platform-engineering
   - software-catalog
 heroImage: 'https://picsum.photos/seed/backstage-idp/800/400'
 ---
-
 Platform Engineering is the strategic practice of designing and building self-service capabilities for software engineering organizations. At the heart of this movement is **Backstage**, an open-source framework for building developer portals.
 
 ## The Three Pillars of Backstage

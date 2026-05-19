@@ -10,23 +10,21 @@ categories:
   - cost-optimization
 tags:
   - aws
-  - sagemaker
-  - machine-learning
-  - jupyter-notebook
-  - terraform
-  - cost-optimization
   - beginners-guide
-  - ml-workspace
-  - data-science
   - cloud-ml
+  - cost-optimization
+  - data-science
+  - jupyter-notebook
+  - machine-learning
+  - ml-workspace
+  - sagemaker
+  - terraform
 description: >-
   Complete beginner's guide to AWS SageMaker: what it is, how to set up, cost
   optimization tips, Terraform automation, and hands-on Jupyter notebook
   examples.
 heroImage: 'https://picsum.photos/seed/2025-11-06-aws-sagemaker-beginners-guide/800/400'
 ---
-
-
 ## Introduction to AWS SageMaker
 
 AWS SageMaker is Amazon's comprehensive machine learning platform that simplifies the entire ML lifecycle. Whether you're a data scientist, ML engineer, or business analyst, SageMaker provides all the tools you need to build, train, and deploy machine learning models at scale.

@@ -6,11 +6,9 @@ description: >-
   modern AI systems.
 tags:
   - ai
-  - machine-learning
-  - neural-networks
-  - transformers
-  - deep-learning
   - foundation-models
+  - machine-learning
+  - transformers
 icon: "\U0001F916"
 author: owner
 pubDate: 2025-11-05T10:00:00.000Z
@@ -21,7 +19,6 @@ categories:
 permalink: /posts/ai-foundation/
 heroImage: 'https://picsum.photos/seed/2025-11-05-ai-foundation/800/400'
 ---
-
 ## Introduction
 
 Artificial Intelligence has evolved from academic research to production systems powering billions of interactions daily. Understanding AI foundations is essential for developers, data scientists, and architects. This guide covers the core concepts that underpin modern AI systems.

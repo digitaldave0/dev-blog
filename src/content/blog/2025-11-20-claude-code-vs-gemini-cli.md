@@ -4,17 +4,16 @@ description: >-
   Compare Claude Code and Gemini CLI side-by-side. Understand the key
   differences, strengths, and which tool fits your workflow best.
 tags:
-  - claude
-  - gemini
   - ai
+  - claude
   - cli
-  - comparison
   - coding
+  - comparison
+  - gemini
 author: owner
 pubDate: 2025-11-20T10:00:00.000Z
 heroImage: 'https://picsum.photos/seed/2025-11-20-claude-code-vs-gemini-cli/800/400'
 ---
-
 ## Introduction
 
 If you've been exploring AI-powered development tools, you've likely encountered both **Claude Code** and **Gemini CLI**. Both are excellent, but they have different strengths and approaches. This guide is designed for developers who want to understand which tool better fits their workflow.

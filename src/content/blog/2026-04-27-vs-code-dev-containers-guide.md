@@ -8,15 +8,13 @@ description: >-
   eliminates 'works on my machine' forever.
 pubDate: 2026-04-27T00:00:00.000Z
 tags:
+  - automation
+  - devcontainer
+  - devops
   - docker
   - vscode
-  - devops
-  - devcontainer
-  - automation
 heroImage: 'https://picsum.photos/seed/2026-04-27-vs-code-dev-containers-guide/800/400'
 ---
-
-
 The "works on my machine" problem has been the bane of developers and DevOps engineers for decades. We spend hours—sometimes days—configuring local environments, managing conflicting versions of Node.js, Python, and Ruby, and ensuring that our Terraform providers match our teammates'.
 
 **VS Code Dev Containers** (defined via the `.devcontainer` folder) solve this by moving the entire development environment into a Docker container. In this guide, we will build a reusable, high-performance DevOps workbench that is fully version-controlled and portable.

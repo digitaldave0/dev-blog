@@ -6,19 +6,15 @@ categories:
   - Future
   - Ethics
 tags:
-  - ai-safety
-  - ai-risks
   - ai-ethics
-  - future-of-ai
-  - machine-learning-series
+  - ai-safety
+  - generative-ai
+  - machine-learning
 description: >-
   Understanding the potential risks of advanced AI systems and how to address
   them.
 heroImage: 'https://picsum.photos/seed/2025-07-05-ai-safety-risks/800/400'
 ---
-
-
-
 As AI systems become more powerful, understanding and managing their risks becomes crucial. Let's explore the current and future challenges of AI safety, from today's concerns to potential future scenarios.
 
 ## Current AI Risks (2025)

@@ -6,15 +6,14 @@ categories:
   - Kubernetes
 description: 'Implementing Zero Trust architecture using eBPF, Service Meshes, and SPIFFE/SPIRE for cryptographically verifiable identity.'
 tags:
-  - security
-  - kubernetes
-  - zero-trust
-  - istio
   - cilium
   - ebpf
+  - istio
+  - kubernetes
+  - security
+  - zero-trust
 heroImage: 'https://picsum.photos/seed/k8s-security/800/400'
 ---
-
 Zero Trust in Kubernetes means moving away from "Castle and Moat" security toward a model where every packet is authenticated and every connection is authorized.
 
 ## 🛡️ eBPF-Powered Security with Cilium

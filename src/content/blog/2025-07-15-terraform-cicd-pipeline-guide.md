@@ -5,19 +5,14 @@ description: >-
   Learn how to implement robust CI/CD pipelines for your Terraform code,
   including best practices and security considerations
 tags:
-  - terraform
-  - cicd
-  - devops
-  - jenkins
-  - gitlab
-  - circleci
   - automation
+  - ci-cd
+  - devops
+  - gitlab
+  - terraform
 icon: "\U0001F504"
 heroImage: 'https://picsum.photos/seed/2025-07-15-terraform-cicd-pipeline-guide/800/400'
 ---
-
-
-
 Implementing CI/CD for infrastructure code requires different considerations than application code. This guide explores how to build robust, secure, and efficient pipelines for Terraform deployments.
 
 ## Why CI/CD for Infrastructure?

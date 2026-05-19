@@ -11,12 +11,11 @@ description: >-
   Learn how to deploy scalable infrastructure for the ACE exam.
 tags:
   - gcp
-  - vpc
   - load-balancing
   - networking
+  - vpc
 heroImage: 'https://picsum.photos/seed/gcp-ace-networking/800/400'
 ---
-
 ![GCP Networking](https://picsum.photos/seed/gcp-ace-networking/800/400)
 
 Welcome to Part 3 of our **Google Cloud ACE** series. Today we tackle the "plumbing" of the cloud: **Networking and Deployment**. For the exam, networking is often the most challenging section because it involves complex concepts like IP CIDR ranges, firewall rules, and global load balancing.

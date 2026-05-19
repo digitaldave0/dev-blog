@@ -13,24 +13,20 @@ categories:
 tags:
   - aws
   - certification
-  - mls-c01
-  - machine-learning-specialty
-  - exam-prep
-  - sagemaker
-  - data-engineering
-  - exploratory-data-analysis
-  - modeling
-  - ml-operations
   - computer-vision
-  - professional-ml
+  - data-engineering
+  - exam-prep
+  - exploratory-data-analysis
+  - machine-learning
+  - ml-operations
+  - modeling
+  - sagemaker
 description: >-
   Complete study guide for AWS Certified Machine Learning Specialty (MLS-C01)
   exam. Maps our comprehensive SageMaker tutorials to all exam domains with
   practical examples and exam tips.
 heroImage: 'https://picsum.photos/seed/2025-11-09-aws-mls-c01-study-guide/800/400'
 ---
-
-
 Preparing for the **AWS Certified Machine Learning - Specialty (MLS-C01)** exam? This comprehensive study guide maps our three-part SageMaker tutorial series to all exam domains, providing you with practical, hands-on preparation for certification success.
 
 ## 📋 Exam Overview

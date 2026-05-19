@@ -9,23 +9,21 @@ categories:
   - ai
   - development
 tags:
-  - jekyll
-  - github-actions
-  - automation
   - ai-assisted-writing
-  - grok
-  - markdown
+  - automation
   - blogging-workflow
-  - devops
   - ci-cd
+  - devops
+  - github-actions
+  - grok
+  - jekyll
+  - markdown
 description: >-
   A deep dive into my Jekyll blog development workflow, featuring GitHub Actions
   automation, AI-assisted content creation, and custom prompts for technical
   writing.
 heroImage: 'https://picsum.photos/seed/2025-11-06-how-i-built-my-jekyll-blog/800/400'
 ---
-
-
 Building and maintaining a technical blog can be time-consuming, but with the right tools and automation, it becomes an efficient and enjoyable process. In this post, I'll share my complete workflow for creating this Jekyll blog, from initial setup to automated deployment and AI-assisted content creation.
 
 ## The Tech Stack

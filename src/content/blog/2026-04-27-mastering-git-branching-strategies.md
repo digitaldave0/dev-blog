@@ -3,11 +3,11 @@ title: 'Mastering Git Branching Strategies: A Guide for DevOps and Platform Team
 description: >-
   A deep dive into Git branching strategies—GitFlow, GitHub Flow, Trunk-Based Development, and GitLab Flow. Learn when to use each and how they impact your CI/CD velocity.
 tags:
-  - git
-  - devops
-  - cicd
-  - workflow
   - best-practices
+  - ci-cd
+  - devops
+  - git
+  - workflow
 icon: "🌿"
 author: owner
 pubDate: 2026-04-27T12:00:00.000Z
@@ -18,7 +18,6 @@ categories:
 permalink: /posts/mastering-git-branching-strategies/
 heroImage: 'https://picsum.photos/seed/2026-04-27-git-branching/800/400'
 ---
-
 ## Introduction
 
 In the world of DevOps and Platform Engineering, code is the foundation of everything. But as teams grow, how you manage that code becomes as important as the code itself. A well-chosen **Git Branching Strategy** is the difference between a high-velocity CI/CD pipeline and a "merge hell" that grinds development to a halt.

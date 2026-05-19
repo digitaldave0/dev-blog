@@ -5,12 +5,12 @@ description: >-
   on Ubuntu LTS, including installation, configuration, tools, databases,
   security, and troubleshooting.
 tags:
-  - python
-  - nodejs
-  - ubuntu
-  - setup
   - development-environment
+  - nodejs
+  - python
+  - setup
   - tutorial
+  - ubuntu
 icon: "\U0001F4BB"
 author: owner
 pubDate: 2025-10-29T10:00:00.000Z
@@ -21,7 +21,6 @@ permalink: /posts/developer-machine-setup/
 heroImage: >-
   https://picsum.photos/seed/2025-10-29-setting-up-developer-machine-python-node-ubuntu-lts/800/400
 ---
-
 ## Introduction
 
 Setting up a robust development environment is crucial for efficient coding, debugging, and deployment. This guide will walk you through setting up a developer machine for Python and Node.js development on Ubuntu LTS (Long Term Support). We'll cover everything from basic installations to advanced configurations, and highlight common pitfalls to avoid.

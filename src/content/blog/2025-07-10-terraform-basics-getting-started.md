@@ -5,15 +5,13 @@ description: >-
   Learn the fundamentals of Terraform, including installation, basic concepts,
   and your first configuration
 tags:
-  - terraform
-  - iac
-  - devops
   - cloud
+  - devops
+  - iac
+  - terraform
 icon: "\U0001F3D7️"
 heroImage: 'https://picsum.photos/seed/2025-07-10-terraform-basics-getting-started/800/400'
 ---
-
-
 Infrastructure as Code (IaC) has revolutionized how we manage cloud resources, and Terraform is at the forefront of this revolution. In this first post of our Terraform series, we'll cover the essentials you need to start your IaC journey.
 
 ## What is Terraform?

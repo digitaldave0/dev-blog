@@ -6,17 +6,13 @@ categories:
   - Machine Learning
   - Tutorial
 tags:
-  - ml-basics
-  - introduction
   - getting-started
-  - machine-learning-series
+  - introduction
+  - machine-learning
 description: Understanding the fundamentals of machine learning in simple terms.
 heroImage: >-
   https://picsum.photos/seed/2025-07-01-machine-learning-basics-introduction/800/400
 ---
-
-
-
 Have you ever wondered how Netflix knows what shows you might like? Or how your email knows which messages are spam? That's machine learning in action!
 
 ```mermaid

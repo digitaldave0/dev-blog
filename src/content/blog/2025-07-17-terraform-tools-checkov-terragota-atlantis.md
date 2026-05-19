@@ -7,20 +7,17 @@ description: >-
   Learn how to leverage Checkov, Terragota, and Atlantis for infrastructure
   migration, cost optimization, and GitOps workflows
 tags:
-  - terraform
-  - checkov
-  - terragota
   - atlantis
+  - checkov
+  - cost-management
   - gitops
   - infrastructure
-  - cost-management
+  - terraform
+  - terragota
 icon: "\U0001F6E0️"
 heroImage: >-
   https://picsum.photos/seed/2025-07-17-terraform-tools-checkov-terragota-atlantis/800/400
 ---
-
-
-
 Managing infrastructure at scale requires specialized tools beyond basic Terraform. This guide explores three powerful tools that can enhance your infrastructure management capabilities: Checkov for security and compliance, Terragota for migration and analysis, and Atlantis for GitOps workflows.
 
 ## Checkov: Security and Compliance Scanner

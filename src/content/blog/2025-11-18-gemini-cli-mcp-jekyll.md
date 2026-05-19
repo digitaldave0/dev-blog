@@ -4,17 +4,16 @@ description: >-
   Discover the Model Context Protocol (MCP) and learn how to automate Jekyll
   blog management using Gemini CLI with MCP servers.
 tags:
-  - gemini
-  - cli
-  - mcp
-  - jekyll
   - automation
   - blogging
+  - cli
+  - gemini
+  - jekyll
+  - mcp
 author: owner
 pubDate: 2025-11-18T10:00:00.000Z
 heroImage: 'https://picsum.photos/seed/2025-11-18-gemini-cli-mcp-jekyll/800/400'
 ---
-
 Welcome to **Part 5** of the Gemini CLI tutorial series. In the [previous post](/posts/advanced-gemini-cli-customization/), we explored configuration and customization.
 
 **This is where Gemini CLI becomes a development superpower.** MCP servers transform Gemini CLI from a general AI assistant into a specialized agent with deep integration into your entire development infrastructure.

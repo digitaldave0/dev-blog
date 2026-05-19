@@ -3,14 +3,13 @@ title: 'Helm Chart Mastery Part 2: Values, Templates & The Engine'
 description: 'Deep dive into the Go templating engine, values hierarchy, and how to make your Kubernetes manifests truly dynamic.'
 pubDate: 2026-05-13T00:00:01.000Z
 tags:
-  - kubernetes
-  - helm
-  - templates
   - automation
+  - helm
+  - kubernetes
+  - templates
 series: 'Helm Chart Mastery'
 heroImage: 'https://picsum.photos/seed/2026-05-13-helm-mastery-part-2/800/400'
 ---
-
 In [Part 1](/blog/helm-chart-mastery-part-1-foundations-architecture), we covered the structure and architecture of Helm. Now, it's time to get our hands dirty with the "magic" of Helm: **The Templating Engine**.
 
 Helm uses the Go `text/template` library, augmented by the **Sprig** library, which provides over 70 useful template functions.

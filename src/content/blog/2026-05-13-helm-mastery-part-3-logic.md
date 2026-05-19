@@ -3,14 +3,13 @@ title: 'Helm Chart Mastery Part 3: Advanced Patterns & Control Flow'
 description: 'Master logic in your charts. Learn how to use if/else conditionals, range loops, and named templates to reduce duplication.'
 pubDate: 2026-05-13T00:00:02.000Z
 tags:
-  - kubernetes
-  - helm
   - automation
+  - helm
+  - kubernetes
   - programming
 series: 'Helm Chart Mastery'
 heroImage: 'https://picsum.photos/seed/2026-05-13-helm-mastery-part-3/800/400'
 ---
-
 Static templates are great, but the real power of Helm shines when you need to make decisions. In this third part of the **Helm Chart Mastery** series, we explore logic, iteration, and reusable code snippets.
 
 ## Conditionals: If/Else

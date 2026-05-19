@@ -5,21 +5,18 @@ description: >-
   implementing vector search functionality. From basic setup to advanced
   similarity search examples.
 tags:
-  - postgresql
+  - ai
+  - databases
   - extensions
+  - machine-learning
   - pgvector
   - vector-search
-  - ai
-  - machine-learning
-  - database
 icon: "\U0001F418"
 author: owner
 pubDate: 2025-11-10T10:00:00.000Z
 heroImage: >-
   https://picsum.photos/seed/2025-11-10-using-postgresql-extensions-pgvector/800/400
 ---
-
-
 PostgreSQL is renowned for its extensibility, and extensions are one of its most powerful features. Extensions allow you to add new functionality to your database without modifying the core PostgreSQL code. In this article, we'll explore PostgreSQL extensions with a focus on **pgvector**, an extension that enables vector similarity search - a crucial component for modern AI and machine learning applications.
 
 ## What are PostgreSQL Extensions?

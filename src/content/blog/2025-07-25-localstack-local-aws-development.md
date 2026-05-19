@@ -6,18 +6,15 @@ description: >-
   installation, examples, and CI/CD integration
 tags:
   - aws
-  - localstack
-  - docker
-  - testing
   - development
   - devops
+  - docker
+  - localstack
   - s3
+  - testing
 icon: "\U0001F3D7️"
 heroImage: 'https://picsum.photos/seed/2025-07-25-localstack-local-aws-development/800/400'
 ---
-
-
-
 LocalStack provides a fully functional local AWS cloud stack for development and testing. This guide will show you how to get started, create resources, and integrate LocalStack into your development workflow.
 
 ## Installation and Setup

@@ -3,13 +3,12 @@ title: 'Observability for the Agentic Era: Mastering the Dynatrace MCP Server'
 description: 'Explore what Dynatrace is and how its new MCP server allows AI agents to perform real-time observability, troubleshooting, and data analysis.'
 pubDate: 2026-05-13T00:00:00.000Z
 tags:
+  - ai-agents
   - dynatrace
   - mcp
   - observability
-  - ai-agents
 heroImage: 'https://picsum.photos/seed/2026-05-13-dynatrace-mcp-server-guide/800/400'
 ---
-
 Observability has traditionally been a human-centric discipline. We build dashboards, set alerts, and dive into logs when something breaks. But in the age of agentic AI, the scale and complexity of modern infrastructure demand a new approach: **Agentic Observability**.
 
 Enter the **Dynatrace MCP Server**. By leveraging the Model Context Protocol (MCP), Dynatrace is bridging the gap between AI assistants and the world's most powerful observability platform.

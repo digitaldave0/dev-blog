@@ -5,12 +5,12 @@ description: >-
   centralized vaults, cloud-native managers, and GitOps-friendly solutions like
   Sealed Secrets.
 tags:
-  - security
-  - devops
-  - secrets
-  - kubernetes
-  - vault
   - cloud-native
+  - devops
+  - kubernetes
+  - secrets
+  - security
+  - vault
 icon: "🔐"
 author: owner
 pubDate: 2026-04-27T14:00:00.000Z
@@ -21,7 +21,6 @@ categories:
 permalink: /posts/secret-management-strategies/
 heroImage: 'https://picsum.photos/seed/2026-04-27-secrets/800/400'
 ---
-
 ## Introduction
 
 In the age of automated infrastructure, "Secret Sprawl" is one of the greatest security risks. Hardcoded API keys, database passwords in environment variables, and unencrypted secrets in Git repositories are the low-hanging fruit for attackers.

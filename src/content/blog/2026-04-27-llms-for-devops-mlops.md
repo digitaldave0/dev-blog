@@ -7,14 +7,13 @@ categories:
 description: 'A technical guide to building domain-specific DevOps AI assistants using Vector Databases, RAG pipelines, and fine-tuning techniques.'
 tags:
   - ai
-  - llm
+  - ai-rag
   - devops-ai
   - fine-tuning
-  - rag
+  - generative-ai
   - langchain
 heroImage: 'https://picsum.photos/seed/ai-devops/800/400'
 ---
-
 Artificial Intelligence is revolutionizing DevOps by moving from "Automation" to "Augmentation." Building a reliable AI assistant requires a combination of **RAG (Retrieval-Augmented Generation)** and strategic **Fine-Tuning**.
 
 ## 🧠 The RAG Architecture

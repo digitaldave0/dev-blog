@@ -11,26 +11,23 @@ categories:
   - traditional-ml
 tags:
   - aws
-  - sagemaker
-  - computer-vision
-  - image-recognition
-  - convolutional-neural-networks
   - cnn
-  - svm
-  - random-forest
-  - rekognition
+  - computer-vision
+  - convolutional-neural-networks
   - feature-extraction
-  - transfer-learning
-  - object-detection
   - image-classification
+  - image-recognition
+  - machine-learning
+  - object-detection
+  - rekognition
+  - sagemaker
+  - transfer-learning
 description: >-
   Master image recognition with AWS SageMaker: Learn traditional ML approaches,
   deep learning CNNs, and AWS Rekognition. Understand when to use each algorithm
   for optimal results.
 heroImage: 'https://picsum.photos/seed/2025-11-08-aws-sagemaker-image-recognition/800/400'
 ---
-
-
 Welcome to the fascinating world of **computer vision**! After mastering [basic ML concepts]({% post_url 2025-11-06-aws-sagemaker-beginners-guide %}) and [professional ML techniques]({% post_url 2025-11-07-aws-sagemaker-professional-ml %}), it's time to dive into **image recognition** - one of the most exciting applications of machine learning.
 
 This medium-level guide covers everything from traditional machine learning approaches to cutting-edge deep learning, with practical AWS SageMaker implementations.

@@ -6,19 +6,15 @@ categories:
   - Machine Learning
   - Tutorial
 tags:
-  - ml-basics
   - data-preparation
-  - deduplication
   - data-science
-  - machine-learning-series
+  - deduplication
+  - machine-learning
 description: >-
   Understanding the crucial steps of data preparation and how to achieve the
   right model fit.
 heroImage: 'https://picsum.photos/seed/2025-07-01-data-science-fundamentals/800/400'
 ---
-
-
-
 Before diving into fancy algorithms and complex models, there's something even more important: your data. As the saying goes, "garbage in, garbage out." Let's learn how to prepare your data properly and avoid common pitfalls.
 
 ## The Data Preparation Pipeline

@@ -6,20 +6,15 @@ categories:
   - Machine Learning
   - Tutorial
 tags:
-  - ml-intermediate
-  - feature-engineering
   - data-preprocessing
-  - machine-learning-series
   - data-science
+  - machine-learning
 description: >-
   Learn how to create and select better features for your machine learning
   models.
 heroImage: >-
   https://picsum.photos/seed/2025-07-02-machine-learning-feature-engineering/800/400
 ---
-
-
-
 If data is the fuel for machine learning, feature engineering is the refinery. It's often said that better features are more valuable than better algorithms. Let's explore why and how to create powerful features.
 
 ## What is Feature Engineering?

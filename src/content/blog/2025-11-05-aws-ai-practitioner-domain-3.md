@@ -8,24 +8,20 @@ categories:
   - generative-ai
   - machine-learning
 tags:
-  - aws
-  - aws-ai-practitioner
-  - domain-3
-  - generative-ai
-  - foundation-models
-  - prompt-engineering
   - amazon-q
   - amazon-titan
-  - large-language-models
+  - aws
+  - aws-ai-practitioner
   - exam-prep
+  - foundation-models
+  - generative-ai
+  - prompt-engineering
 description: >-
   Comprehensive guide to Domain 3 of AWS Certified AI Practitioner exam:
   Generative AI. Learn foundation models, prompt engineering, Amazon Q, Titan,
   and responsible AI practices.
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-3/800/400'
 ---
-
-
 Domain 3, "Generative AI," represents 25% of the AWS Certified AI Practitioner exam and covers the rapidly evolving field of artificial intelligence that creates new content. This domain tests your understanding of foundation models, prompt engineering techniques, and AWS's generative AI offerings.
 
 In this comprehensive guide, we'll explore generative AI concepts, practical applications, and AWS services with detailed examples that will help you not just pass the exam, but effectively work with generative AI technologies.

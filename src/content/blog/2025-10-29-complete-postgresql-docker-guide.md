@@ -7,19 +7,14 @@ description: >-
   management, backup strategies, security hardening, and extensive housekeeping
   commands.
 tags:
-  - postgresql
-  - postgres
-  - docker
-  - database
   - backup
+  - data-management
+  - databases
+  - docker
+  - docker-compose
+  - pgadmin
   - security
   - tutorial
-  - data-management
-  - docker-compose
-  - database-administration
-  - postgresql-docker
-  - psql
-  - pgadmin
 icon: "\U0001F418"
 author: owner
 pubDate: 2025-10-29T12:00:00.000Z
@@ -30,7 +25,6 @@ categories:
 permalink: /posts/postgresql-docker-setup/
 heroImage: 'https://picsum.photos/seed/2025-10-29-complete-postgresql-docker-guide/800/400'
 ---
-
 ## Introduction
 
 PostgreSQL is a powerful, open-source object-relational database management system known for its robustness, extensibility, and standards compliance. Running PostgreSQL in Docker containers provides excellent isolation, portability, and ease of management. This comprehensive guide will walk you through setting up, managing, and securing PostgreSQL databases in Docker containers.
