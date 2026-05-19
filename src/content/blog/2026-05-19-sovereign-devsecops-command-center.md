@@ -35,22 +35,22 @@ The application's static assets (HTML5, Vanilla CSS3, PWA Service Worker) are di
 
 ```mermaid
 graph TD
-    User(["User Browser / Mobile PWA"]) -->|1. Requests Static Assets| CF_Pages[Cloudflare Pages Global CDN]
+    User["User Browser / Mobile PWA"] -->|1. Requests Static Assets| CF_Pages["Cloudflare Pages Global CDN"]
     CF_Pages -->|2. Serves index.html, app.css, app.js| User
     
     User -->|3. POST /api/sync| CF_Worker["Cloudflare Edge Worker /api/sync"]
     
-    subgraph Edge Layer (Cloudflare)
+    subgraph "Edge Layer (Cloudflare)"
         CF_Pages
         CF_Worker
     end
     
-    subgraph Data Layer (Upstash)
-        CF_Worker -->|4. Authenticated REST Call| Upstash_Redis[("Upstash Global Redis DB")]
+    subgraph "Data Layer (Upstash)"
+        CF_Worker -->|4. Authenticated REST Call| Upstash_Redis["Upstash Global Redis DB"]
     end
     
-    subgraph Remote Agent Isolation
-        Hermes[Hermes Python Agent] -->|5. Autonomous Sync Cron| Upstash_Redis
+    subgraph "Remote Agent Isolation"
+        Hermes["Hermes Python Agent"] -->|5. Autonomous Sync Cron| Upstash_Redis
     end
 ```
 
@@ -77,9 +77,9 @@ Rather than having the frontend JavaScript communicate directly with Upstash (wh
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Browser as Client Browser
+    actor Browser as "Client Browser"
     participant Edge as "Cloudflare Edge Worker (/api/sync)"
-    participant Upstash as Upstash Redis API
+    participant Upstash as "Upstash Redis API"
     
     Browser->>Edge: POST /api/sync (Payload: Local Habits State)
     Note over Edge: Load Encrypted Secrets:<br/>UPSTASH_REDIS_REST_TOKEN<br/>UPSTASH_REDIS_REST_URL
@@ -142,9 +142,9 @@ We integrated a Preview/Edit toggler into the UI using a dual-container CSS grid
 
 ```mermaid
 graph LR
-    Input[Raw Text Input] -->|Click Preview| Toggle{Toggle Mode}
-    Toggle -->|Render HTML| Output[Parsed Rich Text div]
-    Toggle -->|Edit Raw| Textarea[Textarea Input]
+    Input["Raw Text Input"] -->|Click Preview| Toggle{Toggle Mode}
+    Toggle -->|Render HTML| Output["Parsed Rich Text div"]
+    Toggle -->|Edit Raw| Textarea["Textarea Input"]
     
     subgraph "JS Engine (app.js)"
         Regex1["Convert # to h1/h2/h3"]
@@ -193,14 +193,14 @@ To optimize the **Hermes Remote Agent**, we audited its command configuration an
 ```mermaid
 graph TD
     subgraph "Context Bloat (92 Active Skills)"
-        Skill_A[Obsidian]
-        Skill_B[GitHub PRs]
-        Skill_C[Spotify API]
-        Skill_D[Minecraft Client]
-        Skill_E[Home Assistant]
+        Skill_A["Obsidian"]
+        Skill_B["GitHub PRs"]
+        Skill_C["Spotify API"]
+        Skill_D["Minecraft Client"]
+        Skill_E["Home Assistant"]
     end
     
-    Surgical_Pruning{Surgical Python Script} -->|Disables 56 Unused Skills| Clean_State[Optimized Hermes Profile]
+    Surgical_Pruning{Surgical Python Script} -->|Disables 56 Unused Skills| Clean_State["Optimized Hermes Profile"]
     
     subgraph "Optimized State (36 Active Skills)"
         Skill_A
@@ -226,22 +226,22 @@ The pipeline is designed with a **parallel-to-sequential dependency topology**. 
 
 ```mermaid
 graph TD
-    Commit[Git Push to main] -->|Triggers Pipeline| Start{GitHub Actions}
+    Commit["Git Push to main"] -->|Triggers Pipeline| Start{GitHub Actions}
     
-    subgraph Parallel Validation Phase
-        Start --> Job1[Security Audit: Trivy Scanner]
-        Start --> Job2[Integration Tests: Vitest Suite]
+    subgraph "Parallel Validation Phase"
+        Start --> Job1["Security Audit: Trivy Scanner"]
+        Start --> Job2["Integration Tests: Vitest Suite"]
     end
     
     Job1 -->|PASS| Gate{Needs Dependency Gate}
     Job2 -->|PASS| Gate
     
-    subgraph Deployment Phase
-        Gate -->|Deploy| Job3[Artifact Upload: Save Zip]
+    subgraph "Deployment Phase"
+        Gate -->|Deploy| Job3["Artifact Upload: Save Zip"]
         Gate -->|Deploy| Job4["Deploy to Cloudflare Pages: Wrangler CLI"]
     end
     
-    Job4 --> Live(["Live Web Application PWA"])
+    Job4 --> Live["Live Web Application PWA"]
 ```
 
 ### Complete, Production-Ready GitHub Actions Workflow (`deploy.yml`):
