@@ -19,7 +19,7 @@ This evolution focuses on the three pillars of high-availability systems: **Resi
 
 ## 1. The Resilience Tier: Disaster-Proof Backups
 
-A "Sovereign AI" must own its data. If the local server fails, the agent’s "brain" (Mem0 facts and session history) must be recoverable in minutes, not days.
+A "Private AI" must own its data. If the local server fails, the agent’s "brain" (Mem0 facts and session history) must be recoverable in minutes, not days.
 
 ### Multi-Tier Backup Strategy
 We implemented a two-stage pipeline using a custom Taskfile and `rclone`:
@@ -75,11 +75,11 @@ It is a system that:
 2.  **Never Stops**: Thanks to model fallbacks and multi-cloud backups.
 3.  **Never Hides**: Thanks to real-time dashboards and instant alerts.
 
-This is the standard for anyone building a serious AI-native personal infrastructure. The "Experimental" phase is over; the "Sovereign" phase has begun.
+This is the standard for anyone building a serious AI-native personal infrastructure. The "Experimental" phase is over; the "Autonomous" phase has begun.
 
 ---
 
 ### What’s Next?
 Stay tuned for the next entry where we’ll dive into **Multi-Agent Orchestration**—connecting Hermes to a fleet of specialist sub-agents.
 
-🚀 **Stay Sovereign.**
+🚀 **Stay Autonomous.**

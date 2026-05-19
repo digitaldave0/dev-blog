@@ -48,9 +48,9 @@ if self._should_auto_tts_for_chat(chat_id):
 
 Now, whether you type or speak, Hermes responds with a voice that matches its personality.
 
-## 4. Conclusion: The Sovereign Twin
+## 4. Conclusion: The Autonomous Twin
 
-Hermes has evolved from a simple chatbot into a **Vocal, Sovereign, and Disaster-Proof Command Center**. It watches my house (HASS), tracks my habits (Sheets), monitors itself (Netdata), and speaks to me like a companion.
+Hermes has evolved from a simple chatbot into a **Vocal, Autonomous, and Disaster-Proof Command Center**. It watches my house (HASS), tracks my habits (Sheets), monitors itself (Netdata), and speaks to me like a companion.
 
 This is the power of **Everything-as-Code** DevOps applied to Personal AI.
 

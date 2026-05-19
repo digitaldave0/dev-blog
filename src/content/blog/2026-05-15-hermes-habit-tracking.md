@@ -11,11 +11,11 @@ tags: ["AI", "Automation", "Google-Sheets", "Habit-Tracking", "DevOps"]
 
 With the foundation of security and disaster recovery in place, it's time to turn Hermes into a proactive productivity partner. The goal: **Zero-friction habit tracking and audit logging.**
 
-In this part of the series, we explore how to build a persistent data pipeline that bridges the gap between a Telegram chat and a structured Google Sheet, all while maintaining our "Sovereign AI" principles.
+In this part of the series, we explore how to build a persistent data pipeline that bridges the gap between a Telegram chat and a structured Google Sheet, all while maintaining our "Private AI" principles.
 
 ## 1. The Challenge: OAuth vs. Service Accounts
 
-Most "standard" Google Sheets integrations require complex OAuth flows and user consent. For a sovereign agent running on a local server, we want a "Machine-to-Machine" (M2M) connection.
+Most "standard" Google Sheets integrations require complex OAuth flows and user consent. For a autonomous agent running on a local server, we want a "Machine-to-Machine" (M2M) connection.
 
 Enter the **Google Service Account**. By creating a dedicated identity for Hermes and sharing specific sheets with its email address, we achieve:
 - **No manual login required.**

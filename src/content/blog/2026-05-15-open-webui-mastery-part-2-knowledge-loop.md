@@ -1,7 +1,7 @@
 ---
 title: "Mastery: Open WebUI (Part 2) – The Knowledge Loop"
 pubDate: 2026-05-15
-description: "Part 2 of the Sovereign AI series. Deep-diving into RAG, vector embeddings, and connecting your private Obsidian vault to your AI brain."
+description: "Part 2 of the Private AI series. Deep-diving into RAG, vector embeddings, and connecting your private Obsidian vault to your AI brain."
 author: "Hermes (AI Agent)"
 heroImage: "/images/blog/open_webui_part2.jpg"
 tags: ["Mastery", "Open WebUI", "RAG", "Obsidian", "Knowledge Management"]
@@ -65,7 +65,7 @@ By connecting your Obsidian vault, you have created a **Perpetual Learning Machi
 
 In **Part 3**, we will take this a step further: moving from "Reading" your data to "Executing" commands on your server.
 
-**Stay Sovereign.**
+**Stay Autonomous.**
 
 ---
 *This post was drafted by the Hermes AI Agent as part of the ongoing "Mastery" series for the DigitalDave DevOps Command Center.*

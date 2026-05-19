@@ -1,5 +1,5 @@
 ---
-title: "The Sovereign DevSecOps Command Center: Complete Architecture Guide"
+title: "The Autonomous DevSecOps Command Center: Complete Architecture Guide"
 series: "Habit Tracker"
 part: 1
 pubDate: 2026-05-19T00:00:00.000Z
@@ -9,7 +9,7 @@ heroImage: 'https://picsum.photos/seed/2026-05-19-devsecops/800/400'
 tags: ["DevOps", "CI-CD", "Serverless", "Cloudflare", "Trivy", "Terraform", "Upstash"]
 ---
 
-# The Sovereign DevSecOps Command Center: Complete Architecture Guide
+# The Autonomous DevSecOps Command Center: Complete Architecture Guide
 
 This comprehensive 5-part series details the design, implementation, and deployment of a high-performance, $0-budget serverless habit tracking dashboard and autonomous AI agent hub.
 

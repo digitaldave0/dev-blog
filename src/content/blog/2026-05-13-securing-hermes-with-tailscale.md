@@ -1,5 +1,5 @@
 ---
-title: "Hermes Mastery Part 1: The Sovereign Architecture"
+title: "Hermes Mastery Part 1: The Autonomous Architecture"
 series: "Hermes Mastery"
 part: 1
 pubDate: 2026-05-13T00:00:11.000Z

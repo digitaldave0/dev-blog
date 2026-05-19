@@ -1,18 +1,18 @@
 ---
-title: "The Sovereign Sync Loop: Architecting a Headless Knowledge Brain"
+title: "The Autonomous Sync Loop: Architecting a Headless Knowledge Brain"
 series: "Hermes Evolution"
 pubDate: 2026-05-15
 description: "An in-depth technical deep-dive into the bi-directional synchronization architecture that powers the Hermes Digital Twin."
 author: "Digital Dave"
-heroImage: 'https://picsum.photos/seed/sovereign-sync/800/400'
+heroImage: 'https://picsum.photos/seed/autonomous-sync/800/400'
 tags: ["DevOps", "Automation", "Hermes", "Rclone", "Obsidian"]
 ---
 
-In the world of AI-native DevOps, knowledge is the most valuable asset. But knowledge is only useful if it is **accessible, synchronized, and sovereign.** 
+In the world of AI-native DevOps, knowledge is the most valuable asset. But knowledge is only useful if it is **accessible, synchronized, and autonomous.** 
 
 Today, we officially closed the "Knowledge Loop" inside the Hermes Command Center. This post breaks down the architecture of our "Headless Brain"—a system that ensures my private notes, my public blog, and my AI agent are always in perfect harmony.
 
-## The Architecture: The Sovereign Loop
+## The Architecture: The Autonomous Loop
 
 The goal was simple but technically complex: Create a zero-trust, bi-directional sync between a local Obsidian vault, a cloud-based Google Drive, and a local AI agent running on a headless server.
 
@@ -74,7 +74,7 @@ sequenceDiagram
 ## Technical Implementation
 
 ### 1. The Rclone Engine
-We configured a "Sovereign Remote" using a specific **Drive Folder ID**. This ensures Hermes only sees the vault and nothing else in your Google account.
+We configured a "Private Remote" using a specific **Drive Folder ID**. This ensures Hermes only sees the vault and nothing else in your Google account.
 
 ```bash
 # The core sync command
@@ -106,7 +106,7 @@ By moving the vault to the server and making it "Headless," we’ve given Hermes
 
 ## Conclusion
 
-The "Sovereign Sync Loop" is the final piece of the Hermes puzzle. It transforms a standard LLM into a **Personalized Agent** that truly understands your world, your work, and your "Mastery."
+The "Autonomous Sync Loop" is the final piece of the Hermes puzzle. It transforms a standard LLM into a **Personalized Agent** that truly understands your world, your work, and your "Mastery."
 
 ---
 *Next in the Series: Automating the Editor-in-Chief—How Hermes drafts this very blog.*
