@@ -35,10 +35,10 @@ The application's static assets (HTML5, Vanilla CSS3, PWA Service Worker) are di
 
 ```mermaid
 graph TD
-    User([User Browser / Mobile PWA]) -->|1. Requests Static Assets| CF_Pages[Cloudflare Pages Global CDN]
+    User(["User Browser / Mobile PWA"]) -->|1. Requests Static Assets| CF_Pages[Cloudflare Pages Global CDN]
     CF_Pages -->|2. Serves index.html, app.css, app.js| User
     
-    User -->|3. POST /api/sync| CF_Worker[Cloudflare Edge Worker /api/sync]
+    User -->|3. POST /api/sync| CF_Worker["Cloudflare Edge Worker /api/sync"]
     
     subgraph Edge Layer (Cloudflare)
         CF_Pages
@@ -46,7 +46,7 @@ graph TD
     end
     
     subgraph Data Layer (Upstash)
-        CF_Worker -->|4. Authenticated REST Call| Upstash_Redis[(Upstash Global Redis DB)]
+        CF_Worker -->|4. Authenticated REST Call| Upstash_Redis[("Upstash Global Redis DB")]
     end
     
     subgraph Remote Agent Isolation
@@ -78,7 +78,7 @@ Rather than having the frontend JavaScript communicate directly with Upstash (wh
 sequenceDiagram
     autonumber
     actor Browser as Client Browser
-    participant Edge as Cloudflare Edge Worker (/api/sync)
+    participant Edge as "Cloudflare Edge Worker (/api/sync)"
     participant Upstash as Upstash Redis API
     
     Browser->>Edge: POST /api/sync (Payload: Local Habits State)
@@ -146,10 +146,10 @@ graph LR
     Toggle -->|Render HTML| Output[Parsed Rich Text div]
     Toggle -->|Edit Raw| Textarea[Textarea Input]
     
-    subgraph JS Engine (app.js)
-        Regex1[Convert # to h1/h2/h3]
-        Regex2[Convert * / - to lists]
-        Regex3[Convert ** to bold]
+    subgraph "JS Engine (app.js)"
+        Regex1["Convert # to h1/h2/h3"]
+        Regex2["Convert * / - to lists"]
+        Regex3["Convert ** to bold"]
         Regex1 --> Regex2 --> Regex3
     end
     Input --> Regex1
@@ -192,7 +192,7 @@ To optimize the **Hermes Remote Agent**, we audited its command configuration an
 
 ```mermaid
 graph TD
-    subgraph Context Bloat (92 Active Skills)
+    subgraph "Context Bloat (92 Active Skills)"
         Skill_A[Obsidian]
         Skill_B[GitHub PRs]
         Skill_C[Spotify API]
@@ -202,7 +202,7 @@ graph TD
     
     Surgical_Pruning{Surgical Python Script} -->|Disables 56 Unused Skills| Clean_State[Optimized Hermes Profile]
     
-    subgraph Optimized State (36 Active Skills)
+    subgraph "Optimized State (36 Active Skills)"
         Skill_A
         Skill_B
         Skill_E
@@ -238,10 +238,10 @@ graph TD
     
     subgraph Deployment Phase
         Gate -->|Deploy| Job3[Artifact Upload: Save Zip]
-        Gate -->|Deploy| Job4[Deploy to Cloudflare Pages: Wrangler CLI]
+        Gate -->|Deploy| Job4["Deploy to Cloudflare Pages: Wrangler CLI"]
     end
     
-    Job4 --> Live([Live Web Application PWA])
+    Job4 --> Live(["Live Web Application PWA"])
 ```
 
 ### Complete, Production-Ready GitHub Actions Workflow (`deploy.yml`):
