@@ -1,18 +1,30 @@
-# Astrofy | Personal Portfolio Website Template
+# Digital Dave's Dev Blog & Hermes Command Center
 
-![Astrofy | Personal Porfolio Website Template](public/social_img.webp)
+This repository contains my personal developer portfolio and blog, alongside a collection of **Hermes Automation** scripts that run behind the scenes. The frontend is built on top of the Astrofy template (Astro + TailwindCSS).
 
-Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with a Blog, CV, Project Section, Store, and RSS Feed.
+## 🚀 Custom Automations (Hermes Scripts)
+
+In addition to the Astro site, this repository houses custom Python scripts that automate my workflows:
+
+### 1. `job_hunter.py`
+A highly customized AI job curation agent built for a family member. It automates daily DuckDuckGo searches for specific roles (Customer Service/Travel) within a 1-hour public transport radius of Bolton. It uses the Gemini API to filter, curate, and append "Dad's calming commentary" to the job listings, and then distributes the results via Telegram, Email (SMTP), and directly to an Obsidian vault.
+
+### 2. `blog_drafter.py`
+Automates the creation of a weekly "Hermes Weekly Digest" blog post in the Astro project. It scaffolds the markdown frontmatter, generates a summary of the week's infrastructure updates, and saves it directly to `src/content/blog/`.
+
+### 3. `del_boy_translator.py`
+A fun CLI utility that translates system alerts, error logs, and standard text into "Only Fools and Horses" Del Boy slang using regex mapping (e.g., "error" -> "a bit of a pony", "excellent" -> "cushty").
+
+---
+
+## 💻 Website Frontend (Astrofy)
+
+*The below instructions belong to the underlying open-source Astrofy template used to render the blog.*
 
 ## Demo
 
-View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
+View a live demo of the base template at [Astrofy](https://astrofy-template.netlify.app/)
 
-## Custom Projects Included
-
-### `prompt-gen/`
-A **DevOps Ask-Mode Prompt Generator**. 
-A local, interactive CLI tool embedded in this repository that assembles context-rich prompts from customizable templates (e.g., Architecture Deep Dive, Troubleshooting RCA). It automatically discovers your workspace context and pre-fills variables, scrubs PII/Secrets to prevent sensitive data leaks, and copies the compiled prompts directly to your clipboard. Navigate to the `prompt-gen/` directory for its dedicated README and setup instructions.
 
 ## Installation
 
