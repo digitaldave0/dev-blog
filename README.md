@@ -8,6 +8,12 @@ Astrofy is a free and open-source template for your Personal Portfolio Website b
 
 View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
 
+## Custom Projects Included
+
+### `prompt-gen/`
+A **DevOps Ask-Mode Prompt Generator**. 
+A local, interactive CLI tool embedded in this repository that assembles context-rich prompts from customizable templates (e.g., Architecture Deep Dive, Troubleshooting RCA). It automatically discovers your workspace context and pre-fills variables, scrubs PII/Secrets to prevent sensitive data leaks, and copies the compiled prompts directly to your clipboard. Navigate to the `prompt-gen/` directory for its dedicated README and setup instructions.
+
 ## Installation
 
 Run the following command in your terminal
