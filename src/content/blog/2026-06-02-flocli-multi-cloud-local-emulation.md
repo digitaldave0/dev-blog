@@ -13,7 +13,6 @@ tags:
   - devops
   - cloud-native
 ---
-# Local Cloud Emulation Reimagined: Multi-Cloud Development with flocli and Floci UI
 
 Modern cloud-native engineering relies heavily on managed cloud services. However, testing these pipelines during local development has traditionally been challenging. Developing directly against public cloud providers introduces network latency, unexpected cloud bills, and credential management overhead. While emulators like LocalStack have helped bridge this gap for single-cloud (AWS) environments, the modern enterprise is increasingly multi-cloud, requiring a unified, lightweight solution for AWS, Azure, and GCP.
 
