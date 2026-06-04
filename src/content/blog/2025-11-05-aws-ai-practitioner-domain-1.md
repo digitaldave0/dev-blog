@@ -1275,55 +1275,54 @@ C | $450 | $150 | $250
 
 ### Common Exam Traps
 
-**Confusion Between Metrics**
+> [!WARNING]
+> **Trap 1: Precision vs. Recall**
+> - **Precision:** Use this when the cost of a **False Positive** is high (e.g., classifying a legitimate transaction as fraud, locking a customer's account). You want to be absolutely sure when you say "Yes".
+> - **Recall:** Use this when the cost of a **False Negative** is high (e.g., missing a cancer diagnosis or a severe security threat). You want to catch *every* possible case, even if you get some false alarms.
+>
+> **Trap 2: Accuracy on Imbalanced Datasets**
+> - If 99% of your emails are clean and 1% is spam, a model that simply guesses "Not Spam" every time will have **99% accuracy**, but it is completely useless at detecting spam. For imbalanced datasets, **F1-Score** or **AUC** is the right choice, NOT accuracy.
 
-- Precision vs Recall: Precision cares about false positives, Recall cares about false negatives
-- Accuracy vs AUC: Accuracy works for balanced data, AUC works for any distribution
+---
 
-**Algorithm Selection**
+## 📝 Scenario-Based Practice Questions
 
-- Don't always choose the most complex algorithm
-- Consider interpretability, training time, and data size
+### Question 1
+A healthcare organization wants to deploy an ML model to screen medical scans for potential tumors. If the model misses a tumor, the patient will not receive critical early treatment. However, if the model incorrectly flags a healthy scan, the patient will undergo a secondary diagnostic test. Which metric should the data science team prioritize?
+A) Accuracy
+B) Precision
+C) Recall
+D) Mean Squared Error (MSE)
 
-**Data Leakage**
+**Answer: C**
+*Explanation: Missed tumors are False Negatives, which have a severe health cost. Priority must be given to finding all positive cases (minimizing False Negatives), which is the definition of Recall. Precision targets False Positives, and MSE is used for regression, not classification.*
 
-- Never use future information to predict past events
-- Be careful with time series data
+### Question 2
+An online retailer wants to group customers who have similar purchasing frequencies, average cart values, and favorite categories in order to run targeted marketing campaigns. The retailer does not have any pre-existing groups or labels defined. Which paradigm should they choose?
+A) Supervised Learning
+B) Unsupervised Learning
+C) Reinforcement Learning
+D) Deep Reinforcement Learning
 
-## Final Comprehensive Study Guide
+**Answer: B**
+*Explanation: Because the dataset lacks pre-existing labels or correct answers, this is an unsupervised learning task. Specifically, the goal is clustering (grouping similar items together based on features).*
 
-### Must-Know Concepts
+### Question 3
+During training, a model obtains 98% accuracy on the training dataset. However, when tested on a validation dataset, its accuracy drops to 63%. What is happening, and how can it be fixed?
+A) The model is underfitting. Fix it by reducing regularization.
+B) The model is overfitting. Fix it by adding regularization or gathering more training data.
+C) The model is suffering from low variance. Fix it by increasing model complexity.
+D) The data is stationary. Fix it by applying seasonality transforms.
 
-1. **Supervised vs Unsupervised Learning**
-2. **Bias-Variance Tradeoff**
-3. **Overfitting vs Underfitting**
-4. **Cross-Validation**
-5. **Evaluation Metrics (Precision, Recall, F1, AUC)**
-6. **Feature Engineering**
-7. **Data Preprocessing**
-8. **Common Algorithms and When to Use Them**
+**Answer: B**
+*Explanation: High performance on training data but poor performance on unseen data indicates overfitting (the model memorized the training data). Regularization (L1/L2), pruning, or obtaining more training data helps generalize the model.*
 
-### Practice Questions
+---
 
-**Q: What's the difference between L1 and L2 regularization?**
-A: L1 (LASSO) can make weights exactly zero (feature selection), L2 (Ridge) shrinks weights but keeps all features.
+## Study Tips and Hands-On Recommendations
 
-**Q: When would you use stratified k-fold cross-validation?**
-A: When you have imbalanced classes and want to maintain class distribution in each fold.
+1. **Focus on Trade-offs:** The exam will not ask you to calculate derivatives or matrix multiplications, but it will test your ability to balance **Bias vs. Variance** and when to use **L1 (LASSO) vs. L2 (Ridge)**.
+2. **Terminology Mapping:** Understand that **Features** are your input columns (e.g., house size, bedrooms) and **Labels** are your target outputs (e.g., sale price).
+3. **Practice datasets:** Use Google Colab or SageMaker Studio notebooks to train simple Scikit-Learn models on the Iris (classification) or Boston housing (regression) datasets to see these metrics in action.
 
-**Q: What does an AUC of 0.8 mean?**
-A: The model is 80% good at distinguishing between positive and negative classes.
-
-**Q: Why is feature scaling important for some algorithms?**
-A: Algorithms like KNN, SVM, and neural networks use distance calculations that are sensitive to different scales.
-
-### Hands-On Practice
-
-1. **Implement linear regression from scratch**
-2. **Build a decision tree classifier**
-3. **Try different preprocessing techniques**
-4. **Experiment with cross-validation**
-5. **Compare different evaluation metrics**
-
-This expanded guide covers all the fundamental concepts you'll need for Domain 1 of the AWS AI Practitioner exam, with simpler examples and additional topics like PTOP analysis, K-top evaluation, and advanced techniques. Focus on understanding the concepts rather than memorizing formulas - the exam tests your comprehension of how ML works in practice.
 ```

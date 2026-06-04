@@ -164,6 +164,60 @@ Asking the model to explain its reasoning step-by-step before outputting the fin
 Instructing the model to adopt a specific persona to tailor its tone, complexity, and expertise level.
 *   *Prompt:* `"You are a senior AWS Solutions Architect. Review the following architecture diagram for single-points-of-failure..."`
 
+## 💡 Real-World Analogies and Concepts
+
+> [!TIP]
+> **Analogy: The Self-Attention Mechanism**
+> Think of self-attention like a reader processing a sentence with a highlighter. When they reach the pronoun "it" in the sentence: *"The trophy did not fit in the brown suitcase because **it** was too large,"* the reader immediately highlights and draws a mental line back to "trophy". If the sentence ended with *"...because **it** was too small,"* they would draw a line to "suitcase". Self-attention mathematically calculates these connection lines simultaneously.
+
+---
+
+### Common Exam Traps
+
+> [!WARNING]
+> **Trap 1: Temperature vs. Top-P**
+> - **Temperature** scales the *relative probability* of all possible words. High temperature = lets wildcards slip in; Low temperature = strictly chooses the highest-probability words.
+> - **Top-P** cuts off the *cumulative list* of words. If Top-P is 0.1, the model *only* looks at the absolute top 10% most likely words. Even if temperature is high, if Top-P is low, the output is restricted.
+>
+> **Trap 2: Encoder vs. Decoder Use Cases**
+> - The exam may ask you what model architecture is best for a text translation or classification task.
+> - **Classification/Sentiment Analysis:** Choose **Encoder-only** (like BERT) because it analyzes context bidirectionally.
+> - **Creative/Open generation:** Choose **Decoder-only** (like GPT/Claude/Titan) because it predicts forwards autoregressively.
+
+---
+
+## 📝 Scenario-Based Practice Questions
+
+### Question 1
+A developer is configuring a customer support chatbot on Amazon Bedrock. The chatbot needs to look up billing status and answer customer inquiries with high factual accuracy, avoiding creative phrasing or hallucinations. Which combination of inference parameters should the developer choose?
+A) High Temperature (0.9), High Top-P (0.95)
+B) Low Temperature (0.1), Low Top-P (0.2)
+C) High Temperature (0.9), Low Top-P (0.1)
+D) Low Temperature (0.1), High Top-P (0.95)
+
+**Answer: B**
+*Explanation: For factual accuracy and low creativity (predictable, deterministic replies), both temperature and Top-P should be set low. This forces the model to choose only the most probable, mathematically sound tokens.*
+
+### Question 2
+A marketing team wants an LLM to generate creative headlines. However, they want to ensure that the model formats every output as a JSON object with exactly two keys: "headline" and "target_audience". Which prompt engineering strategy is best suited for this task?
+A) Zero-shot prompting
+B) Few-shot prompting
+C) Chain-of-Thought prompting
+D) Role-based prompting
+
+**Answer: B**
+*Explanation: Few-shot prompting (giving 1 or more examples of inputs mapped to JSON outputs) is the most reliable way to teach a model structured formatting rules on the fly.*
+
+### Question 3
+An AI engineer needs to summarize large 50-page financial audit reports. During testing, they notice that the model starts outputting summaries that omit the findings from the first 10 pages of the document. What is the most likely cause of this issue?
+A) The model's temperature is set too low.
+B) The input exceeded the model's context window.
+C) The vector database chunking size was too small.
+D) The model is Encoder-only.
+
+**Answer: B**
+*Explanation: Exceeding a model's context window causes it to truncate or drop tokens, typically starting from the beginning of the conversation prompt. To resolve this, the developer must chunk the document or use a model with a larger context window.*
+
 ---
 
 ## Exam Cram Summary
@@ -178,3 +232,4 @@ Instructing the model to adopt a specific persona to tailor its tone, complexity
 *   Use **Few-shot prompting** to train the model's output formatting on the fly.
 
 In the next post, we will dive into **Domain 3: Applications of Foundation Models**, where we will explore how to select, customize (using RAG and fine-tuning), and deploy these models using **Amazon Bedrock** and **Amazon SageMaker**.
+

@@ -123,6 +123,60 @@ AWS provides specialized, pre-trained AI services. You do not need machine learn
 *   **Amazon Forecast:** Time-series forecasting tool designed to predict demand, sales, and inventory levels.
 *   **Amazon Lookout for Metrics:** Automatically monitors metrics (like web traffic or server load) and alerts on anomalies.
 
+## 💡 Real-World Analogies and Concepts
+
+> [!TIP]
+> **Analogy: RAG vs. Fine-Tuning**
+> - **RAG is an Open-Book Exam:** When you ask a question, the application runs to the bookshelf (vector database), grabs the exact pages containing the answer, and hands them to the student (foundation model) to write a clean summary. The student doesn't need to memorize anything.
+> - **Fine-Tuning is studying for months to learn a new style/domain:** The student goes to class and updates their brain (model weights) to learn a new specialty (e.g. learning how to write medical reports or legal arguments). They don't have the textbook in front of them during the exam, but they know the rules.
+
+---
+
+### Common Exam Traps
+
+> [!WARNING]
+> **Trap 1: Amazon Bedrock Pricing Options**
+> - **On-Demand:** You pay per token processed. Best for unpredictable or low-traffic applications.
+> - **Provisioned Throughput:** You purchase dedicated throughput (measured in model units) for a specific model under a contract (1-month or 3-month). Required if you want to deploy **customized/fine-tuned models** on Bedrock, or if you need guaranteed latency.
+>
+> **Trap 2: SageMaker Autopilot vs. Pre-trained AI Services**
+> - If a question mentions predicting customer churn from a **CSV file** or building a **custom regression/classification model on tabular data** with *zero coding*, choose **SageMaker Autopilot**.
+> - If the question asks to process general documents, translate speech, or detect faces *without* building a custom model, choose the pre-trained API services (**Comprehend, Polly, Transcribe, Rekognition**).
+
+---
+
+## 📝 Scenario-Based Practice Questions
+
+### Question 1
+A financial company wants to build an AI assistant that answers employees' questions about the company's internal HR travel policies. The policies are updated weekly in an S3 bucket. The company wants to minimize implementation time and avoid retraining costs, while ensuring the model does not hallucinate outdated policy rules. Which AWS solution is best?
+A) Fine-tune an Amazon Titan model with the HR documents using SageMaker.
+B) Build a Retrieval-Augmented Generation (RAG) system using Knowledge Bases for Amazon Bedrock connected to the S3 bucket.
+C) Train a custom classification model using SageMaker Autopilot.
+D) Write a custom python script using Amazon Transcribe to parse the HR documents.
+
+**Answer: B**
+*Explanation: RAG is perfect for dynamic data that updates frequently (weekly policy files) because it retrieves facts in real-time from a vector database without model retraining. Knowledge Bases for Amazon Bedrock automate this process serverlessly.*
+
+### Question 2
+A retail company wants to compare the performance of different LLMs on Bedrock (such as Claude and Titan) to see which model is best at summarizing product reviews. The company wants to include corporate team feedback as part of the evaluation. Which feature of Bedrock should they use?
+A) Bedrock Playgrounds
+B) Model Evaluation (Human Evaluation)
+C) Amazon SageMaker Model Cards
+D) Bedrock Agents
+
+**Answer: B**
+*Explanation: Model Evaluation on Amazon Bedrock allows you to set up human evaluation workflows where internal team members can review and rate model responses side-by-side, or use automated benchmarks.*
+
+### Question 3
+An industrial manufacturer needs to automatically inspect finished metal parts on a conveyor belt and flag structural surface cracks. They have installed cameras over the assembly line. Which service should they choose to build this computer vision solution with minimal effort?
+A) Amazon Rekognition
+B) Amazon Lookout for Vision
+C) SageMaker Ground Truth
+D) Amazon Lookout for Metrics
+
+**Answer: B**
+*Explanation: Amazon Lookout for Vision is a specialized computer vision service specifically designed to identify manufacturing defects, anomalies, and cracks in industrial items using camera inputs. Rekognition is for general image/video analysis (faces, labels, text).*
+
 ---
 
 ## Exam Cram Summary
@@ -135,3 +189,4 @@ AWS provides specialized, pre-trained AI services. You do not need machine learn
 *   **Kendra** is an enterprise search engine; **Comprehend** is for text sentiment; **Rekognition** is for image analysis; **Polly** is speech output; **Transcribe** is speech input.
 
 In the next post, we will look at **Domain 4: Guidelines for Responsible AI**, exploring how to detect bias, establish explainability, and configure safety guardrails.
+
