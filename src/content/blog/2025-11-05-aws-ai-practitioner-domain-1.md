@@ -1,5 +1,5 @@
 ---
-title: 'AWS Certified AI Practitioner Domain 1: AI/ML Fundamentals Made Simple'
+title: 'AWS Certified AI Practitioner Domain 1: Fundamentals of AI and ML'
 pubDate: 2025-11-05T10:00:00.000Z
 categories:
   - aws
@@ -15,14 +15,13 @@ tags:
   - exam-prep
   - machine-learning
 description: >-
-  Simple guide to Domain 1 of AWS Certified AI Practitioner exam: AI/ML
-  Fundamentals. Learn core concepts, algorithms, data preparation, and model
-  evaluation with easy-to-understand examples.
+  Detailed study guide for Domain 1 of the AWS Certified AI Practitioner (AIF-C01) exam:
+  Fundamentals of AI and ML. Learn core differences, learning paradigms, ML lifecycle, and evaluation metrics.
 heroImage: 'https://picsum.photos/seed/2025-11-05-aws-ai-practitioner-domain-1/800/400'
 ---
-Welcome to Domain 1 of the AWS Certified AI Practitioner certification! This domain covers the basic building blocks of Artificial Intelligence and Machine Learning. Don't worry if you're new to this - we'll explain everything in simple terms with easy examples.
+Welcome to Domain 1 of the AWS Certified AI Practitioner (AIF-C01) certification series! This domain establishes the core building blocks of Artificial Intelligence (AI) and Machine Learning (ML).
 
-**Domain 1 accounts for 30% of the exam** and focuses on foundational concepts you need to understand AI and ML.
+**Domain 1 accounts for 20% of the exam** and focuses on foundational concepts you need to understand AI and ML before moving into generative AI and implementation on AWS.
 
 ## 📚 Quick Glossary: All the Important Terms Explained
 
