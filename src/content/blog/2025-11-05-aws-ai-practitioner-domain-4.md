@@ -36,6 +36,8 @@ AWS defines Responsible AI through several key pillars. When deploying models, o
 4.  **Privacy and Security:** Protecting customer data (PII) from leakages or manipulation.
 5.  **Safety:** Mitigating toxic outputs, hate speech, or dangerous instructions.
 
+![Responsible AI Safeguards](/images/blog/responsible_ai_safeguards.png)
+
 ---
 
 ## 🔍 Understanding Bias and Toxicity
@@ -95,6 +97,18 @@ Guardrail Filter Types:
   - Denied Topics: Stop models from answering specific business topics (e.g., preventing a retail bot from offering investment advice).
   - Word Filters: Block custom lists of words or profanities.
   - Sensitive Information Filters: Redact or block Personally Identifiable Information (PII) like SSNs, emails, or phone numbers.
+```
+
+```mermaid
+graph TD
+    UserQuery[User Prompt] --> ContentFilter[1. Content Filters]
+    ContentFilter --> TopicFilter[2. Denied Topics]
+    TopicFilter --> WordFilter[3. Custom Word Filters]
+    WordFilter --> PIIFilter[4. PII Masking / Redaction]
+    PIIFilter -->|Clean Prompt| BedrockFM[Bedrock Foundation Model]
+    
+    style UserQuery fill:#1a1a2e,stroke:#3b5998,stroke-width:2px,color:#fff
+    style BedrockFM fill:#1a1a2e,stroke:#8b9dc3,stroke-width:2px,color:#fff
 ```
 
 ### 3. Amazon SageMaker Model Monitor

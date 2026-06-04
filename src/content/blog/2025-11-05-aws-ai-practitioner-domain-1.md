@@ -91,6 +91,8 @@ Here's a simple table of all the technical terms we'll use in this post. Think o
 
 ## Understanding AI vs ML vs Deep Learning (Super Simple!)
 
+![AI/ML Hierarchy](/images/blog/ai_ml_hierarchy.png)
+
 Let's start with the basics. These three terms are often confused, but they're like Russian nesting dolls - each one fits inside the next.
 
 ### Artificial Intelligence (AI) = The Big Picture
@@ -493,6 +495,20 @@ MAE = ($5K + $5K + $5K) / 3 = $5K (off by $5,000 on average)
 
 ### Common Problems and Solutions
 
+```mermaid
+graph TD
+    subgraph Underfitting ["Underfitting (High Bias)"]
+        U_Desc["Model is too simple.<br>Fails to learn patterns in training data.<br>Error is high on both Train & Test sets."]
+    end
+    subgraph Optimal ["Optimal Fit (Sweet Spot)"]
+        Opt_Desc["Model is balanced.<br>Generalizes well to new data.<br>Error is low on both Train & Test sets."]
+    end
+    subgraph Overfitting ["Overfitting (High Variance)"]
+        O_Desc["Model is too complex.<br>Memorizes noise & training data.<br>Error is low on Train, high on Test."]
+    end
+end
+```
+
 **Underfitting**: AI is too simple and doesn't learn enough
 
 - **Like**: Using basic addition to solve calculus problems
@@ -613,6 +629,21 @@ Training: Adjust weights to minimize prediction errors
 ```
 
 ## Practical ML Workflow
+
+```mermaid
+flowchart TD
+    A[1. Problem Definition] --> B[2. Data Collection]
+    B --> C[3. Data Preprocessing & Split]
+    C --> D[4. Model Selection & Training]
+    D --> E[5. Hyperparameter Tuning]
+    E --> F[6. Evaluation on Test Data]
+    F --> G[7. Production Deployment]
+    G -->|Model Drift Detected| B
+    
+    style A fill:#1a1a2e,stroke:#3b5998,stroke-width:2px,color:#fff
+    style D fill:#1a1a2e,stroke:#3b5998,stroke-width:2px,color:#fff
+    style G fill:#1a1a2e,stroke:#8b9dc3,stroke-width:2px,color:#fff
+```
 
 ### Step 1: Problem Definition
 

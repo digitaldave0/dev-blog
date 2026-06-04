@@ -29,6 +29,8 @@ Welcome to Domain 3 of the AWS Certified AI Practitioner (AIF-C01) certification
 
 When you consume a Foundation Model (FM), its default training might not know about your private company data or specific industry jargon. You have three main paths to customize its performance.
 
+![RAG vs Fine-Tuning](/images/blog/rag_vs_finetuning.png)
+
 ```mermaid
 graph TD
     Start[Need Custom Model Output?] --> Prompt[1. Prompt Engineering / Context window]
@@ -47,6 +49,21 @@ RAG connects a foundation model to an external database (usually a Vector DB) co
     3. The documents are added to the user's prompt as context.
     4. The model generates a response based *only* on the retrieved context.
 *   **Benefits:** Highly dynamic, zero model training costs, stops hallucinations by pinning answers to factual sources, and allows easy document access control.
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant App as Application Layer
+    participant KB as Knowledge Base (Vector DB)
+    participant Bedrock as Amazon Bedrock (LLM)
+
+    User->>App: Ask question (e.g., policy details)
+    App->>KB: Query embeddings & retrieve relevant chunks
+    KB-->>App: Return matching text documents
+    App->>Bedrock: Send Prompt + Retrieved Context documents
+    Bedrock-->>App: Generate grounded response
+    App-->>User: Present final answer
+```
 
 ### 2. Fine-Tuning (Full vs. PEFT)
 Fine-tuning updates the internal weights of the foundation model using a curated dataset of labeled examples.

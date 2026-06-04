@@ -43,6 +43,9 @@ Before diving in, it is critical to understand the distinction between tradition
 Modern Generative AI models (like Large Language Models) are built using the **Transformer architecture**, introduced in 2017. Transformers replaced older sequence models (like RNNs) by introducing a mechanism called **Self-Attention**.
 
 ### The Self-Attention Mechanism
+
+![Transformer Self-Attention](/images/blog/transformer_attention.png)
+
 Traditional models read sentences word-by-word and forgot early words in long sentences. Self-attention allows a model to look at **every word in a sentence simultaneously** and determine which words are most relevant to one another, regardless of their distance.
 
 *   *Example:* In the sentence *"The bank of the river was muddy, so the bank manager didn't walk there,"* self-attention helps the model distinguish between a *river bank* and a *financial bank* by looking at surrounding words like "river/muddy" vs. "manager/walk".
@@ -116,6 +119,17 @@ Inference parameters control how creative or predictable a model's output is:
 ## ✍️ Prompt Engineering Strategies
 
 Prompt engineering is the practice of designing inputs (prompts) to get the best possible output from a Foundation Model without modifying the model's weights.
+
+```mermaid
+graph TD
+    Prompt[Prompt Input] --> Zero[Zero-Shot: Simple request, no examples]
+    Prompt --> Few[Few-Shot: Prompt contains 1+ formatted examples]
+    Prompt --> CoT[Chain-of-Thought: Prompt asks model to think step-by-step]
+    
+    style Zero fill:#1a1a2e,stroke:#3b5998,stroke-width:2px,color:#fff
+    style Few fill:#1a1a2e,stroke:#3b5998,stroke-width:2px,color:#fff
+    style CoT fill:#1a1a2e,stroke:#8b9dc3,stroke-width:2px,color:#fff
+```
 
 ```yaml
 Basic Prompt Components:

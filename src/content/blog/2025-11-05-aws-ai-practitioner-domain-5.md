@@ -25,6 +25,10 @@ Welcome to Domain 5 of the AWS Certified AI Practitioner (AIF-C01) certification
 
 ---
 
+![AI Security and Encryption](/images/blog/ai_security_encryption.png)
+
+---
+
 ## 🤝 The Shared Responsibility Model for AI
 
 The standard AWS Shared Responsibility Model separates security tasks into **"Security of the Cloud" (AWS's job)** and **"Security in the Cloud" (Your job)**. When working with AI, specifically Amazon Bedrock and SageMaker, this division updates depending on how you deploy models.
@@ -96,6 +100,20 @@ A common concern is that public prompts might train public models. **Amazon Bedr
 To prevent traffic from traversing the public internet:
 *   Configure **VPC Endpoints (powered by AWS PrivateLink)** to route queries from your private network directly to Bedrock or SageMaker internally.
 *   Set up SageMaker instances inside a private subnet with no internet access (no NAT Gateway) if working with highly classified research datasets.
+
+```mermaid
+graph LR
+    subgraph PrivateVPC ["Your AWS Private VPC"]
+        App[Your App Server] -->|No Internet Traffic| VPCE[Interface VPC Endpoint <br> PrivateLink]
+    end
+    subgraph AWSService ["AWS Managed Services"]
+        VPCE --> BedrockAPI[Amazon Bedrock API]
+        BedrockAPI -->|Decrypted via KMS| S3[Encrypted S3 Data Lake]
+    end
+    
+    style App fill:#1a1a2e,stroke:#3b5998,stroke-width:2px,color:#fff
+    style S3 fill:#1a1a2e,stroke:#8b9dc3,stroke-width:2px,color:#fff
+```
 
 ---
 
