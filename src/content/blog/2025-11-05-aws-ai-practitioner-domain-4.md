@@ -26,7 +26,7 @@ Welcome to Domain 4 of the AWS Certified AI Practitioner (AIF-C01) certification
 
 ---
 
-## ⚖️ Core Concepts of Responsible AI
+## Core Concepts of Responsible AI
 
 AWS defines Responsible AI through several key pillars. When deploying models, organizations must ensure their systems adhere to these values:
 
@@ -40,7 +40,7 @@ AWS defines Responsible AI through several key pillars. When deploying models, o
 
 ---
 
-## 🔍 Understanding Bias and Toxicity
+## Understanding Bias and Toxicity
 
 Bias and security issues can creep into machine learning models at different stages. Understanding how they manifest is critical for the exam.
 
@@ -65,7 +65,7 @@ graph TD
 
 ---
 
-## 🧠 Explainability: SHAP vs. LIME
+## Explainability: SHAP vs. LIME
 
 Explainable AI (XAI) helps humans understand *why* a model made a specific prediction.
 
@@ -78,7 +78,7 @@ Explainable AI (XAI) helps humans understand *why* a model made a specific predi
 
 ---
 
-## 🛡️ AWS Responsible AI Tooling
+## AWS Responsible AI Tooling
 
 AWS provides native tools to audit models, identify bias, and filter harmful inputs/outputs.
 
@@ -116,7 +116,7 @@ Model Monitor monitors production endpoints. If the incoming data changes over t
 
 ---
 
-## 🎓 Exam Cram Summary
+## Exam Cram Summary
 
 *   **SageMaker Clarify** detects bias (pre-training/post-training) and calculates feature importance via **SHAP**.
 *   **Guardrails for Amazon Bedrock** filters toxicity, denylist topics, and blocks PII across all Bedrock models.

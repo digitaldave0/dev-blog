@@ -25,7 +25,7 @@ Welcome to Domain 2 of the AWS Certified AI Practitioner (AIF-C01) certification
 
 ---
 
-## 💡 Generative AI vs. Traditional Machine Learning
+## Generative AI vs. Traditional Machine Learning
 
 Before diving in, it is critical to understand the distinction between traditional machine learning and generative AI.
 
@@ -38,7 +38,7 @@ Before diving in, it is critical to understand the distinction between tradition
 
 ---
 
-## 🏗️ Transformer Architecture: The Engine of GenAI
+## Transformer Architecture: The Engine of GenAI
 
 Modern Generative AI models (like Large Language Models) are built using the **Transformer architecture**, introduced in 2017. Transformers replaced older sequence models (like RNNs) by introducing a mechanism called **Self-Attention**.
 
@@ -81,7 +81,7 @@ graph LR
 
 ---
 
-## 📖 Key Generative AI Terminology
+## Key Generative AI Terminology
 
 To pass Domain 2, you must know these foundational terms and how they affect model performance:
 
@@ -116,7 +116,7 @@ Inference parameters control how creative or predictable a model's output is:
 
 ---
 
-## ✍️ Prompt Engineering Strategies
+## Prompt Engineering Strategies
 
 Prompt engineering is the practice of designing inputs (prompts) to get the best possible output from a Foundation Model without modifying the model's weights.
 
@@ -166,7 +166,7 @@ Instructing the model to adopt a specific persona to tailor its tone, complexity
 
 ---
 
-## 🎓 Exam Cram Summary
+## Exam Cram Summary
 
 *   **Discriminative models** classify/predict; **Generative models** create.
 *   **Transformers** use **Self-Attention** to process context bidirectionally and globally.

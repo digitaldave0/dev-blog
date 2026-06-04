@@ -23,7 +23,7 @@ Welcome to Domain 1 of the AWS Certified AI Practitioner (AIF-C01) certification
 
 **Domain 1 accounts for 20% of the exam** and focuses on foundational concepts you need to understand AI and ML before moving into generative AI and implementation on AWS.
 
-## 📚 Quick Glossary: All the Important Terms Explained
+## Quick Glossary: All the Important Terms Explained
 
 Here's a simple table of all the technical terms we'll use in this post. Think of this as your cheat sheet!
 

@@ -25,7 +25,7 @@ Welcome to Domain 3 of the AWS Certified AI Practitioner (AIF-C01) certification
 
 ---
 
-## 🛠️ Model Customization: RAG vs. Fine-Tuning
+## Model Customization: RAG vs. Fine-Tuning
 
 When you consume a Foundation Model (FM), its default training might not know about your private company data or specific industry jargon. You have three main paths to customize its performance.
 
@@ -73,7 +73,7 @@ Fine-tuning updates the internal weights of the foundation model using a curated
 
 ---
 
-## ☁️ Amazon Bedrock: Serverless GenAI Platform
+## Amazon Bedrock: Serverless GenAI Platform
 
 Amazon Bedrock is a fully managed, serverless service that provides access to industry-leading foundation models (Anthropic Claude, Meta Llama, AI21 Jurassic, Cohere, Stability AI, and Amazon Titan) via a single API.
 
@@ -91,7 +91,7 @@ Amazon Titan is AWS's proprietary family of foundation models:
 
 ---
 
-## 🧪 Amazon SageMaker: The Complete ML Lifecycle
+## Amazon SageMaker: The Complete ML Lifecycle
 
 For workloads where you need to build, train, deploy, and manage custom machine learning models from scratch, use **Amazon SageMaker**.
 
@@ -103,29 +103,29 @@ For workloads where you need to build, train, deploy, and manage custom machine 
 
 ---
 
-## 🤖 Pre-Trained AWS AI Services (Low Code / No Code)
+## Pre-Trained AWS AI Services (Low Code / No Code)
 
 AWS provides specialized, pre-trained AI services. You do not need machine learning expertise to use these; you interact with them via simple API calls.
 
-### 👁️ Computer Vision
+### Computer Vision
 *   **Amazon Rekognition:** Detects objects, scenes, faces, text, and inappropriate content (moderation) in images and video.
 *   **Amazon Lookout for Vision:** Specialized industrial anomaly detector that uses cameras to find manufacturing defects on assembly lines.
 
-### ✍️ Natural Language Processing (NLP)
+### Natural Language Processing (NLP)
 *   **Amazon Comprehend:** Extracts insights, sentiment, key phrases, and languages from unstructured text. Includes *Comprehend Medical* for extracting healthcare entities (dosage, diseases).
 *   **Amazon Translate:** Real-time, fluent language translation.
 *   **Amazon Polly:** Text-to-speech service that converts written text into lifelike speech (neural and standard voices). Supports SSML.
 *   **Amazon Transcribe:** Speech-to-text service that transcribes audio files or live speech into text.
 *   **Amazon Kendra:** Intelligent enterprise search engine that uses ML to search across various corporate data repositories (SharePoint, S3, databases) and answer natural language questions.
 
-### 📈 Business & Personalization
+### Business & Personalization
 *   **Amazon Personalize:** Real-time recommendation engine modeled after Amazon.com.
 *   **Amazon Forecast:** Time-series forecasting tool designed to predict demand, sales, and inventory levels.
 *   **Amazon Lookout for Metrics:** Automatically monitors metrics (like web traffic or server load) and alerts on anomalies.
 
 ---
 
-## 🎓 Exam Cram Summary
+## Exam Cram Summary
 
 *   Use **RAG** for real-time data lookup without retraining weights.
 *   Use **Fine-Tuning (PEFT/LoRA)** to customize style, tone, or specific tasks.

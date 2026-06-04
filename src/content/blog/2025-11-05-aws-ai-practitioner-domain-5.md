@@ -29,7 +29,7 @@ Welcome to Domain 5 of the AWS Certified AI Practitioner (AIF-C01) certification
 
 ---
 
-## 🤝 The Shared Responsibility Model for AI
+## The Shared Responsibility Model for AI
 
 The standard AWS Shared Responsibility Model separates security tasks into **"Security of the Cloud" (AWS's job)** and **"Security in the Cloud" (Your job)**. When working with AI, specifically Amazon Bedrock and SageMaker, this division updates depending on how you deploy models.
 
@@ -58,7 +58,7 @@ graph TD
 
 ---
 
-## 🔒 Access Control and IAM Policies
+## Access Control and IAM Policies
 
 AWS Identity and Access Management (IAM) is the gatekeeper for AI resources. For the exam, know how to write or interpret policies that restrict model access.
 
@@ -85,7 +85,7 @@ SageMaker notebooks require an **execution role** (an IAM Role assumed by the se
 
 ---
 
-## 🛡️ Data Protection, Privacy, and Network Isolation
+## Data Protection, Privacy, and Network Isolation
 
 Securing your proprietary business datasets and customer prompts is paramount when deploying Generative AI.
 
@@ -117,7 +117,7 @@ graph LR
 
 ---
 
-## 📋 Compliance, Governance, and Auditing
+## Compliance, Governance, and Auditing
 
 AWS provides several governance tools to audit your AI applications and ensure compliance with medical, financial, and governmental guidelines.
 
@@ -135,7 +135,7 @@ AWS provides several governance tools to audit your AI applications and ensure c
 
 ---
 
-## 🎓 Exam Cram Summary
+## Exam Cram Summary
 
 *   **Shared Responsibility Model:** AWS manages model hosting infrastructure; you manage IAM policies, KMS encryption keys, and prompts.
 *   **Data Privacy Guarantee:** Amazon Bedrock never uses your inputs/outputs to train base models.
